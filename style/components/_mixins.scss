@@ -1,0 +1,24 @@
+//mixin for flexbox
+@mixin flexBox {
+    display: flex;
+    align-items: center;
+}
+
+//mixin for default margin
+@mixin leftMargin {
+    margin: 0 0 0 70px;
+}
+
+@mixin rightMargin {
+    margin: 0 70px 0 0;
+}
+
+//mixin for screen width and height size
+@mixin screen-size {
+    height: 100vh;
+    width: 100%;
+}
+
+@mixin half-width {
+    width: 50%;
+}

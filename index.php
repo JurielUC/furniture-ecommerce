@@ -32,7 +32,17 @@
     <!--Main content-->
     <main>
         <section id="landing-page">
-            
+            <div class="landing-text">
+                <h1>Lorem Ipsum Shop</h1>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, dolore cumque optio eum facilis tenetur ipsam voluptates enim mollitia aut, iure illum odit dolor suscipit perferendis saepe, repudiandae accusamus dolores.</p>
+                <div>
+                    <button>PRODUCT</button>
+                    <button>LOGIN</button>
+                </div>
+            </div>
+            <div class="image-slide">
+                <img src="./image/bg-img.jpg" alt="">
+            </div>
         </section>
     </main>
 </body>
