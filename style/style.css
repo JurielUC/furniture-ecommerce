@@ -4,7 +4,7 @@
 /*white color*/
 /*mountain background color*/
 /*WOOD FURNITURE DESIGN CUSTOMIZATION AND ORDERING SYSTEM*/
-/*UNIVERSAL STYLE*/
+/*imported styles*/
 * {
   padding: 0;
   margin: 0;
@@ -21,6 +21,9 @@ header {
   background-color: #a8896c;
   height: 8vh;
   width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 header .app-name {
   width: 50%;
@@ -58,4 +61,9 @@ header nav a:hover {
   margin: 0 0 0 70px;
   font-size: 0.5rem;
   color: #a8896c;
+}
+
+#landing-page {
+  height: 100vh;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

@@ -1,5 +1,5 @@
 /*WOOD FURNITURE DESIGN CUSTOMIZATION AND ORDERING SYSTEM*/
-/*UNIVERSAL STYLE*/
+/*imported styles*/
 @use "variables/colors" as c;
 @use "variables/font" as f;
 
@@ -16,6 +16,11 @@
 
 @mixin rightMargin {
     margin: 0 70px 0 0;
+}
+
+@mixin screen-size {
+    height: 100vh;
+    width: 100%;
 }
 
 * {
@@ -35,6 +40,8 @@ header {
     background-color: c.$header-color;
     height: 8vh;
     width: 100%;
+    position: sticky;
+    top: 0;
 
     .app-name {
         width: 50%;
@@ -83,3 +90,8 @@ header {
     }
 
 }
+
+#landing-page {
+    @include screen-size();
+}
+
