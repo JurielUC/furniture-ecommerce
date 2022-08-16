@@ -40,9 +40,10 @@ header nav a {
   margin: 0 70px 0 0;
   text-decoration: none;
   color: #ffffff;
+  font-size: 1rem;
 }
 header nav a:hover {
-  border-bottom: 5px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
   padding-bottom: 5px;
 }
 

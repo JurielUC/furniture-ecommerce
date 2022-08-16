@@ -57,9 +57,10 @@ header {
 
             text-decoration: none;
             color: c.$white-color;
+            font-size: f.$nav-size;
 
             &:hover {
-                border-bottom: 5px solid c.$white-color;
+                border-bottom: 3px solid c.$white-color;
                 padding-bottom: 5px;
             }
         }
@@ -77,7 +78,7 @@ header {
     p {
         @include leftMargin();
 
-        font-size: .5rem;
+        font-size: f.$divider-size;
         color: c.$header-color;
     }
 
