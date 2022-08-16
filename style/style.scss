@@ -3,7 +3,6 @@
 @use "variables/colors" as c;
 @use "variables/font" as f;
 @use "components/mixins" as m;
-@use "varu/mixins" as m;
 
 * {
     padding: 0;
@@ -126,4 +125,3 @@ header {
         }
     }
 }
-

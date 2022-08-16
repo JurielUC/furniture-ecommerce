@@ -1,31 +1,11 @@
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
-);
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
 
-// Source mixins
+// Small tablets (portrait view)
+$screen-md-min: 768px;
 
-// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
-@include media-breakpoint-up(sm) { 
+// Tablets and small desktops
+$screen-lg-min: 992px;
 
- }
-
-@include media-breakpoint-up(md) { 
-
- }
-
-@include media-breakpoint-up(lg) { 
-
- }
-
-@include media-breakpoint-up(xl) { 
-
- }
- 
-@include media-breakpoint-up(xxl) { 
-
- }
+// Large tablets and desktops
+$screen-xl-min: 1200px;

@@ -1,3 +1,5 @@
+@use "../variables/breakpoints";
+
 //mixin for flexbox
 @mixin flexBox {
     display: flex;
@@ -22,3 +24,39 @@
 @mixin half-width {
     width: 50%;
 }
+ /*
+// BREAKPOINTS
+// Small devices
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+ }
+ 
+ // Medium devices
+ @mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+ }
+ 
+ // Large devices
+ @mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+ }
+ 
+ // Extra large devices
+ @mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+ }
+
+ // Custom devices
+@mixin rwd($screen) {
+    @media (min-width: ($screen+'px')) {
+        @content;
+    }
+ }*/
