@@ -44,6 +44,7 @@ header nav a {
   text-decoration: none;
   color: #ffffff;
   font-size: 1rem;
+  font-weight: 600;
 }
 header nav a:hover {
   border-bottom: 3px solid #ffffff;
@@ -90,6 +91,7 @@ header nav a:hover {
 }
 #landing-page .landing-text p {
   font-size: 1rem;
+  line-height: 2.5;
 }
 #landing-page .landing-text button {
   padding: 15px 20px 15px 20px;

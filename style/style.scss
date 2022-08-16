@@ -3,6 +3,7 @@
 @use "variables/colors" as c;
 @use "variables/font" as f;
 @use "components/mixins" as m;
+@use "varu/mixins" as m;
 
 * {
     padding: 0;
@@ -46,6 +47,7 @@ header {
             text-decoration: none;
             color: c.$white-color;
             font-size: f.$nav-size;
+            font-weight: 600;
 
             &:hover {
                 border-bottom: 3px solid c.$white-color;
@@ -98,6 +100,7 @@ header {
 
         p {
             font-size: f.$nav-size;
+            line-height: 2.5;
         }
 
         button {
