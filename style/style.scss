@@ -1,0 +1,84 @@
+/*WOOD FURNITURE DESIGN CUSTOMIZATION AND ORDERING SYSTEM*/
+/*UNIVERSAL STYLE*/
+@use "variables/colors" as c;
+@use "variables/font" as f;
+
+//mixin for flexbox
+@mixin flexBox {
+    display: flex;
+    align-items: center;
+}
+
+//mixin for default margin
+@mixin leftMargin {
+    margin: 0 0 0 70px;
+}
+
+@mixin rightMargin {
+    margin: 0 70px 0 0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: f.$font-family;
+}
+
+//default header design
+header {
+    @include flexBox();
+
+    background-color: c.$header-color;
+    height: 8vh;
+    width: 100%;
+
+    .app-name {
+        width: 50%;
+        a {
+            text-decoration: none;
+            color: c.$white-color;
+        }
+    }
+    
+    h1 {
+        @include leftMargin();
+    }
+
+    nav {
+        width: 50%;
+        text-align: right;
+        
+        a {
+            @include rightMargin();
+
+            text-decoration: none;
+            color: c.$white-color;
+
+            &:hover {
+                border-bottom: 5px solid c.$white-color;
+                padding-bottom: 5px;
+            }
+        }
+    }
+}
+
+//divider
+.divider {
+    @include flexBox();
+
+    height: 2vh;
+    width: 100%;
+    background-color: c.$divider-color;
+
+    p {
+        @include leftMargin();
+
+        font-size: .5rem;
+        color: c.$header-color;
+    }
+
+}

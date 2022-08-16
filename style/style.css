@@ -1,0 +1,60 @@
+/*header and button color*/
+/*divider color*/
+/*login container color*/
+/*white color*/
+/*mountain background color*/
+/*WOOD FURNITURE DESIGN CUSTOMIZATION AND ORDERING SYSTEM*/
+/*UNIVERSAL STYLE*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: #a8896c;
+  height: 8vh;
+  width: 100%;
+}
+header .app-name {
+  width: 50%;
+}
+header .app-name a {
+  text-decoration: none;
+  color: #ffffff;
+}
+header h1 {
+  margin: 0 0 0 70px;
+}
+header nav {
+  width: 50%;
+  text-align: right;
+}
+header nav a {
+  margin: 0 70px 0 0;
+  text-decoration: none;
+  color: #ffffff;
+}
+header nav a:hover {
+  border-bottom: 5px solid #ffffff;
+  padding-bottom: 5px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  height: 2vh;
+  width: 100%;
+  background-color: #f2e5db;
+}
+.divider p {
+  margin: 0 0 0 70px;
+  font-size: 0.5rem;
+  color: #a8896c;
+}/*# sourceMappingURL=style.css.map */
