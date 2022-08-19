@@ -3,6 +3,7 @@
 @use "variables/colors" as c;
 @use "variables/font" as f;
 @use "components/mixins" as m;
+@use "components/breakpoints" as b;
 
 * {
     padding: 0;
@@ -24,6 +25,24 @@ header {
     position: sticky;
     top: 0;
 
+    //Media Queries
+    @include b.extra-small {
+
+    }
+
+    @include b.sm-only {
+        
+    }
+
+    @include b.md-only {
+        
+    }
+
+    @include b.lg-only {
+        
+    }
+
+    //Tags design
     .app-name {
         width: 50%;
         a {
@@ -101,6 +120,7 @@ header {
         p {
             font-size: f.$nav-size;
             line-height: 2.5;
+            word-break: keep-all;
         }
 
         button {
@@ -120,9 +140,15 @@ header {
 
     .image-slide {
         img {
-            width: 500px;
-            height: 500px;
+            width: 31.25rem;
+            height: 31.25rem;
             border-radius: 0 100px 0 100px;
+
+            @include b.xl-only {
+                width: 28.125rem;
+                height: 28.125rem;
+                border-radius: 0 90px 0 90px;
+            }
         }
     }
 }

@@ -1,0 +1,43 @@
+//media queries
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+@mixin extra-small {
+  @media (max-width: #{$sm - 1px}) {
+    @content;
+  }
+}
+
+@mixin sm-only {
+  @media (min-width: #{$sm}) and (max-width: #{$md - 1px}) {
+    @content;
+  }
+}
+
+@mixin md-only {
+  @media (min-width: #{$md}) and (max-width: #{$lg - 1px}) {
+    @content;
+  }
+}
+
+@mixin lg-only {
+  @media (min-width: #{$lg}) and (max-width: #{$xl - 1px}) {
+    @content;
+  }
+}
+
+@mixin xl-only {
+  @media (min-width: #{$xl}) and (max-width: #{$xxl - 1px}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$xxl}) {
+    @content;
+  }
+}

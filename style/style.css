@@ -92,6 +92,7 @@ header nav a:hover {
 #landing-page .landing-text p {
   font-size: 1rem;
   line-height: 2.5;
+  word-break: keep-all;
 }
 #landing-page .landing-text button {
   padding: 15px 20px 15px 20px;
@@ -106,7 +107,14 @@ header nav a:hover {
   opacity: 75%;
 }
 #landing-page .image-slide img {
-  width: 500px;
-  height: 500px;
+  width: 31.25rem;
+  height: 31.25rem;
   border-radius: 0 100px 0 100px;
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  #landing-page .image-slide img {
+    width: 28.125rem;
+    height: 28.125rem;
+    border-radius: 0 90px 0 90px;
+  }
 }/*# sourceMappingURL=style.css.map */
