@@ -29,11 +29,17 @@ header .app-name {
   width: 50%;
 }
 header .app-name a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: #ffffff;
-}
-header h1 {
   margin: 0 0 0 70px;
+}
+header .app-name a img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 header nav {
   width: 50%;
@@ -111,10 +117,32 @@ header nav a:hover {
   height: 31.25rem;
   border-radius: 0 100px 0 100px;
 }
-@media (min-width: 1200px) and (max-width: 1399px) {
-  #landing-page .image-slide img {
-    width: 28.125rem;
-    height: 28.125rem;
-    border-radius: 0 90px 0 90px;
+
+#product-list {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+#product-list .product-cont {
+  height: 80vh;
+  width: 90%;
+  background-color: #cc5577;
+}
+
+@media (max-width: 575px) {
+  header {
+    height: 6vh;
+  }
+  header .app-name a {
+    margin-left: 20px;
+  }
+  header .app-name a h1 {
+    display: none;
+  }
+  #landing-page {
+    height: 92vh;
   }
 }/*# sourceMappingURL=style.css.map */

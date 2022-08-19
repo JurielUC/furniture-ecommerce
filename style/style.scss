@@ -25,34 +25,23 @@ header {
     position: sticky;
     top: 0;
 
-    //Media Queries
-    @include b.extra-small {
-
-    }
-
-    @include b.sm-only {
-        
-    }
-
-    @include b.md-only {
-        
-    }
-
-    @include b.lg-only {
-        
-    }
-
     //Tags design
     .app-name {
         width: 50%;
         a {
+            display: flex;
+            align-items: center;
             text-decoration: none;
             color: c.$white-color;
+            @include m.leftMargin();
+
+            img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
         }
-    }
-    
-    h1 {
-        @include m.leftMargin();
     }
 
     nav {
@@ -143,12 +132,64 @@ header {
             width: 31.25rem;
             height: 31.25rem;
             border-radius: 0 100px 0 100px;
+        }
+    }
+}
 
-            @include b.xl-only {
-                width: 28.125rem;
-                height: 28.125rem;
-                border-radius: 0 90px 0 90px;
+//Product Section
+#product-list {
+    @include m.screen-size();
+    @include m.flexBox();
+    flex-direction: column;
+    justify-content: center;
+
+    .product-cont {
+        height: 80vh;
+        width: 90%;
+        background-color: #cc5577;
+    }
+}
+
+
+
+
+
+
+
+//Media Queries/Responsive design
+@include b.extra-small {
+    //header
+    header {
+        height: 6vh;
+
+        .app-name {
+            a {
+                margin-left: 20px;
+                h1 {
+                    display: none;
+                }
             }
         }
     }
+
+    //landing page
+    #landing-page {
+        height: 92vh;
+    }
+}
+
+@include b.sm-only {
+    
+}
+
+@include b.md-only {
+    
+}
+
+@include b.lg-only {
+    
+}
+
+@include b.xl-only {
+
 }
