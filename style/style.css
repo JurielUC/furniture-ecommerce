@@ -159,6 +159,8 @@ header nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  color: #a8896c;
   height: 88%;
   width: 29.5%;
   background-color: #f2e5db;
@@ -170,6 +172,11 @@ header nav a:hover {
   height: 55%;
   background-color: #ffffff;
   border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+#product-list .product-cont .prod-cont-parent .prod-child .prod-content h2 {
+  margin: 20px;
+  font-weight: 800;
 }
 
 @media (max-width: 575px) {
