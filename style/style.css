@@ -191,12 +191,10 @@ header nav a:hover {
 #contact .profile {
   width: 50%;
   height: 100vh;
-  background-color: #cc5577;
 }
 #contact .contact-form {
   width: 50%;
   height: 100vh;
-  background-color: aquamarine;
 }
 
 @media (max-width: 575px) {
