@@ -1,9 +1,6 @@
 /*WOOD FURNITURE DESIGN CUSTOMIZATION AND ORDERING SYSTEM*/
 /*imported styles*/
-@use "variables/colors" as c;
-@use "variables/font" as f;
-@use "components/mixins" as m;
-@use "components/breakpoints" as b;
+@use 'globals' as *;
 
 * {
     padding: 0;
@@ -12,14 +9,14 @@
 }
 
 body {
-    font-family: f.$font-family;
+    font-family: $font-family;
 }
 
 //default header design
 header {
-    @include m.flexBox();
+    @include flexBox();
 
-    background-color: c.$header-color;
+    background-color: $header-color;
     height: 8vh;
     width: 100%;
     position: sticky;
@@ -32,8 +29,8 @@ header {
             display: flex;
             align-items: center;
             text-decoration: none;
-            color: c.$white-color;
-            @include m.leftMargin();
+            color: $white-color;
+            @include leftMargin();
 
             img {
                 width: 30px;
@@ -49,15 +46,15 @@ header {
         text-align: right;
         
         a {
-            @include m.rightMargin();
+            @include rightMargin();
 
             text-decoration: none;
-            color: c.$white-color;
-            font-size: f.$nav-size;
+            color: $white-color;
+            font-size: $nav-size;
             font-weight: 600;
 
             &:hover {
-                border-bottom: 3px solid c.$white-color;
+                border-bottom: 3px solid $white-color;
                 padding-bottom: 5px;
             }
         }
@@ -66,24 +63,24 @@ header {
 
 //divider
 .divider {
-    @include m.flexBox();
+    @include flexBox();
 
     height: 2vh;
     width: 100%;
-    background-color: c.$divider-color;
+    background-color: $divider-color;
 
     p {
-        @include m.leftMargin();
+        @include leftMargin();
 
-        font-size: f.$divider-size;
-        color: c.$header-color;
+        font-size: $divider-size;
+        color: $header-color;
     }
 
 }
 
 //landing page
 #landing-page {
-    @include m.flexBox();
+    @include flexBox();
     height: 90vh;
     width: 100%;
     justify-content: space-evenly;
@@ -96,18 +93,18 @@ header {
     .landing-text {
         width: 700px;
         height: 500px;
-        @include m.flexBox();
+        @include flexBox();
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-evenly;
 
         h1 {
-            font-size: f.$large;
-            color: c.$header-color;
+            font-size: $large;
+            color: $header-color;
         }
 
         p {
-            font-size: f.$nav-size;
+            font-size: $nav-size;
             line-height: 2.5;
             word-break: keep-all;
         }
@@ -116,9 +113,9 @@ header {
             padding: 15px 20px 15px 20px;
             border-radius: 20px;
             border: none;
-            background-color: c.$header-color;
-            font-size: f.$nav-size;
-            color: c.$white-color;
+            background-color: $header-color;
+            font-size: $nav-size;
+            color: $white-color;
             cursor: pointer;
 
             &:hover {
@@ -138,8 +135,8 @@ header {
 
 //Product Section
 #product-list {
-    @include m.screen-size();
-    @include m.flexBox();
+    @include screen-size();
+    @include flexBox();
     flex-direction: column;
     justify-content: center;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1066%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M655 524L-375 523' stroke-width='6' stroke='url(%23SvgjsLinearGradient1067)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M706 84L-239 83' stroke-width='8' stroke='url(%23SvgjsLinearGradient1068)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M64 99L-801 98' stroke-width='6' stroke='url(%23SvgjsLinearGradient1067)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M1044 18L1415 17' stroke-width='6' stroke='url(%23SvgjsLinearGradient1068)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M1310 136L437 135' stroke-width='8' stroke='url(%23SvgjsLinearGradient1068)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M1032 400L1811 399' stroke-width='10' stroke='url(%23SvgjsLinearGradient1067)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M1327 518L1694 517' stroke-width='8' stroke='url(%23SvgjsLinearGradient1068)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M1139 351L1981 350' stroke-width='6' stroke='url(%23SvgjsLinearGradient1067)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M1191 455L126 454' stroke-width='10' stroke='url(%23SvgjsLinearGradient1068)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M586 37L103 36' stroke-width='6' stroke='url(%23SvgjsLinearGradient1068)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M1393 331L661 330' stroke-width='10' stroke='url(%23SvgjsLinearGradient1067)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M931 476L134 475' stroke-width='8' stroke='url(%23SvgjsLinearGradient1067)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M989 270L304 269' stroke-width='6' stroke='url(%23SvgjsLinearGradient1068)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M719 356L1325 355' stroke-width='6' stroke='url(%23SvgjsLinearGradient1068)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1066'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='100%25' y1='0%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1067'%3e%3cstop stop-color='rgba(219%2c 176%2c 123%2c 0)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(219%2c 176%2c 123%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='0%25' y1='0%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1068'%3e%3cstop stop-color='rgba(219%2c 176%2c 123%2c 0)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(219%2c 176%2c 123%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
@@ -147,45 +144,45 @@ header {
     background-size: cover;
 
     .product-cont {
-        @include m.flexBox();
+        @include flexBox();
         height: 80vh;
         width: 90%;
         justify-content: center;
         flex-direction: column;
 
         h1 {
-            color: c.$header-color;
-            font-size: f.$large;
+            color: $header-color;
+            font-size: $large;
         }
 
         .prod-cont-parent {
             width: 100%;
             height: 70vh;
-            @include m.flexBox();
+            @include flexBox();
             justify-content: space-evenly;
 
 
             .prod-child {
                 width: 90%;
                 height: 90%;
-                @include m.flexBox();
+                @include flexBox();
                 justify-content: space-evenly;
 
                 .prod-content {
-                    @include m.flexBox();
+                    @include flexBox();
                     justify-content: center;
                     flex-direction: column;
-                    color: c.$header-color;
+                    color: $header-color;
                     height: 88%;
                     width: 29.5%;
-                    background-color: c.$divider-color;
+                    background-color: $divider-color;
                     border-radius: 25px;
                     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
                     
                     .prod-img {
                         width: 90%;
                         height: 55%;
-                        background-color: c.$white-color;
+                        background-color: $white-color;
                         border-radius: 20px;
                         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
                     }
@@ -202,8 +199,8 @@ header {
 }
 
 #contact {
-    @include m.screen-size();
-    @include m.flexBox();
+    @include screen-size();
+    @include flexBox();
 
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1066%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M655 524L-375 523' stroke-width='6' stroke='url(%23SvgjsLinearGradient1067)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M706 84L-239 83' stroke-width='8' stroke='url(%23SvgjsLinearGradient1068)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M64 99L-801 98' stroke-width='6' stroke='url(%23SvgjsLinearGradient1067)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M1044 18L1415 17' stroke-width='6' stroke='url(%23SvgjsLinearGradient1068)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M1310 136L437 135' stroke-width='8' stroke='url(%23SvgjsLinearGradient1068)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M1032 400L1811 399' stroke-width='10' stroke='url(%23SvgjsLinearGradient1067)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M1327 518L1694 517' stroke-width='8' stroke='url(%23SvgjsLinearGradient1068)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M1139 351L1981 350' stroke-width='6' stroke='url(%23SvgjsLinearGradient1067)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M1191 455L126 454' stroke-width='10' stroke='url(%23SvgjsLinearGradient1068)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M586 37L103 36' stroke-width='6' stroke='url(%23SvgjsLinearGradient1068)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M1393 331L661 330' stroke-width='10' stroke='url(%23SvgjsLinearGradient1067)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M931 476L134 475' stroke-width='8' stroke='url(%23SvgjsLinearGradient1067)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M989 270L304 269' stroke-width='6' stroke='url(%23SvgjsLinearGradient1068)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M719 356L1325 355' stroke-width='6' stroke='url(%23SvgjsLinearGradient1068)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1066'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='100%25' y1='0%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1067'%3e%3cstop stop-color='rgba(219%2c 176%2c 123%2c 0)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(219%2c 176%2c 123%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='0%25' y1='0%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1068'%3e%3cstop stop-color='rgba(219%2c 176%2c 123%2c 0)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(219%2c 176%2c 123%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
     background-attachment: fixed;
@@ -227,7 +224,7 @@ header {
 
 
 //Media Queries/Responsive design
-@include b.extra-small {
+@include extra-small {
     //header
     header {
         height: 6vh;
@@ -248,19 +245,19 @@ header {
     }
 }
 
-@include b.sm-only {
+@include sm-only {
     
 }
 
-@include b.md-only {
+@include md-only {
     
 }
 
-@include b.lg-only {
+@include lg-only {
     
 }
 
-@include b.xl-only {
+@include xl-only {
 
 }
 
