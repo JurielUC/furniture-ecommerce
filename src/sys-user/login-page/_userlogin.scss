@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+}
+
+//default header design
+header {
+    @include flexBox();
+
+    background-color: $header-color;
+    height: 8vh;
+    width: 100%;
+    position: sticky;
+    top: 0;
+
+    //Tags design
+    .app-name {
+        width: 50%;
+        a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: $white-color;
+            @include leftMargin();
+
+            img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    nav {
+        width: 50%;
+        text-align: right;
+        
+        a {
+            @include rightMargin();
+
+            text-decoration: none;
+            color: $white-color;
+            font-size: $nav-size;
+            font-weight: 600;
+
+            &:hover {
+                border-bottom: 3px solid $white-color;
+                padding-bottom: 5px;
+            }
+        }
+    }
+}

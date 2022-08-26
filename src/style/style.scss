@@ -1,6 +1,8 @@
 /*WOOD FURNITURE DESIGN CUSTOMIZATION AND ORDERING SYSTEM*/
 /*imported styles*/
 @use 'globals' as *;
+@forward 'sys-admin';
+@forward 'sys-user';
 
 * {
     padding: 0;
