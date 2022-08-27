@@ -3,8 +3,6 @@
 /*login container color*/
 /*white color*/
 /*mountain background color*/
-/*WOOD FURNITURE DESIGN CUSTOMIZATION AND ORDERING SYSTEM*/
-/*imported styles*/
 * {
   padding: 0;
   margin: 0;
@@ -70,6 +68,8 @@ header nav a:hover {
   color: #a8896c;
 }
 
+/*WOOD FURNITURE DESIGN CUSTOMIZATION AND ORDERING SYSTEM*/
+/*imported styles*/
 #landing-page {
   display: flex;
   align-items: center;

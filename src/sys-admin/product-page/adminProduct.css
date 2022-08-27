@@ -1,0 +1,69 @@
+/*header and button color*/
+/*divider color*/
+/*login container color*/
+/*white color*/
+/*mountain background color*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: #a8896c;
+  height: 8vh;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+header .app-name {
+  width: 50%;
+}
+header .app-name a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 0 0 70px;
+}
+header .app-name a img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+header nav {
+  width: 50%;
+  text-align: right;
+}
+header nav a {
+  margin: 0 70px 0 0;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+header nav a:hover {
+  border-bottom: 3px solid #ffffff;
+  padding-bottom: 5px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  height: 2vh;
+  width: 100%;
+  background-color: #f2e5db;
+}
+.divider p {
+  margin: 0 0 0 70px;
+  font-size: 0.5rem;
+  color: #a8896c;
+}/*# sourceMappingURL=adminProduct.css.map */
