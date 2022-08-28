@@ -35,17 +35,15 @@
             <img src="../../../image/icon/account.png" alt="">
             <h1>Login Here</h1>
             <form action="">
-            <div class="container">
-                <label for="uname">Username</label>
-                <input type="text" placeholder="Username" name="uname" required>
+                <div class="container">
+                    <label for="uname">Username</label>
+                    <input type="text" placeholder="Username" name="uname" required>
 
-                <label for="psw">Password</label>
-                <input type="password" placeholder="Password" name="psw" required>
+                    <label for="psw">Password</label>
+                    <input type="password" placeholder="Password" name="psw" required>
 
-                <button type="submit">Login</button>
-            </div>
-            
-
+                    <button type="submit">Login</button>
+                </div>
             </form>
         </section>
     </main>
