@@ -208,6 +208,26 @@ header nav a:hover {
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+#contact .profile .prof-cont::-webkit-scrollbar {
+  display: block;
+  width: 5px;
+}
+#contact .profile .prof-cont::-webkit-scrollbar-track {
+  background: transparent;
+}
+#contact .profile .prof-cont::-webkit-scrollbar-thumb {
+  background-color: #a8896c;
+  border-right: none;
+  border-left: none;
+}
+#contact .profile .prof-cont::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+  margin-bottom: 10px;
+}
+#contact .profile .prof-cont::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+  margin-top: 10px;
+}
 #contact .profile .prof-cont img {
   width: 150px;
   height: 150px;
@@ -224,12 +244,12 @@ header nav a:hover {
   width: 100%;
 }
 #contact .profile .prof-cont .location p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-left: 60px;
 }
 #contact .profile .prof-cont .location p img {
-  width: 20px;
-  height: 20px;
+  width: 12px;
+  height: 12px;
 }
 #contact .profile .prof-cont .location .loc {
   margin-top: -70px;
@@ -238,8 +258,8 @@ header nav a:hover {
   margin-top: -50px;
 }
 #contact .profile .prof-cont .google-map img {
-  width: 600px;
-  height: 400px;
+  width: 400px;
+  height: 200px;
   margin-bottom: 30px;
 }
 #contact .contact-form {

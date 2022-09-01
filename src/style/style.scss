@@ -150,6 +150,29 @@
             flex-direction: column;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
+            &::-webkit-scrollbar {
+                display: block;
+                width: 5px;
+            }
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+                
+            &::-webkit-scrollbar-thumb {
+                background-color: $header-color;
+                border-right: none;
+                border-left: none;
+            }
+            
+            &::-webkit-scrollbar-track-piece:end {
+                background: transparent;
+                margin-bottom: 10px; 
+            }
+            
+            &::-webkit-scrollbar-track-piece:start {
+                background: transparent;
+                margin-top: 10px;
+            }
             
             img {
                 width: 150px;
@@ -170,12 +193,12 @@
                 width: 100%;
 
                 p {
-                    font-size: 1.5rem;
+                    font-size: 1rem;
                     margin-left: 60px;
 
                     img {
-                        width: 20px;
-                        height: 20px;
+                        width: 12px;
+                        height: 12px;
                     }
                 }
 
@@ -188,8 +211,8 @@
                 margin-top: -50px;
 
                 img {
-                    width: 600px;
-                    height: 400px;
+                    width: 400px;
+                    height: 200px;
                     margin-bottom: 30px;
                     
                 }
