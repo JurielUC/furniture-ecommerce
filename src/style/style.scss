@@ -134,7 +134,67 @@
     .profile {
         width: 50%;
         height: 100vh;
+        @include flexBox();
+        justify-content: center;
         //background-color: #cc5577;
+
+        .prof-cont {
+            overflow-y: scroll;
+            scrollbar-color: red green;
+            width: 80%;
+            height: 80vh;
+            margin-top: 60px;
+            background-color: $loginbg-color-op;
+            border-radius: 20px;
+            @include flexBox();
+            flex-direction: column;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+            
+            img {
+                width: 150px;
+                height: 150px;
+                margin-top: 80px;
+            }
+
+            h1 {
+                color: $header-color;
+                text-decoration: underline;
+            }
+
+            p {
+                color: $header-color;
+            }
+
+            .location {
+                width: 100%;
+
+                p {
+                    font-size: 1.5rem;
+                    margin-left: 60px;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
+                .loc {
+                    margin-top: -70px;
+                }
+            }
+
+            .google-map {
+                margin-top: -50px;
+
+                img {
+                    width: 600px;
+                    height: 400px;
+                    margin-bottom: 30px;
+                    
+                }
+            }
+        }
     }
 
     .contact-form {

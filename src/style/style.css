@@ -191,6 +191,56 @@ header nav a:hover {
 #contact .profile {
   width: 50%;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contact .profile .prof-cont {
+  overflow-y: scroll;
+  scrollbar-color: red green;
+  width: 80%;
+  height: 80vh;
+  margin-top: 60px;
+  background-color: rgba(245, 236, 227, 0.6039215686);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+#contact .profile .prof-cont img {
+  width: 150px;
+  height: 150px;
+  margin-top: 80px;
+}
+#contact .profile .prof-cont h1 {
+  color: #a8896c;
+  text-decoration: underline;
+}
+#contact .profile .prof-cont p {
+  color: #a8896c;
+}
+#contact .profile .prof-cont .location {
+  width: 100%;
+}
+#contact .profile .prof-cont .location p {
+  font-size: 1.5rem;
+  margin-left: 60px;
+}
+#contact .profile .prof-cont .location p img {
+  width: 20px;
+  height: 20px;
+}
+#contact .profile .prof-cont .location .loc {
+  margin-top: -70px;
+}
+#contact .profile .prof-cont .google-map {
+  margin-top: -50px;
+}
+#contact .profile .prof-cont .google-map img {
+  width: 600px;
+  height: 400px;
+  margin-bottom: 30px;
 }
 #contact .contact-form {
   width: 50%;
