@@ -86,6 +86,26 @@
             @include flexBox();
             justify-content: space-evenly;
 
+            button {
+                position: absolute;
+                right: 150px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: none;
+                cursor: pointer;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+                img {
+                    width: 55px;
+                    height: 55px;
+                }
+
+                &:hover {
+                    opacity: 80%;
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                }
+            }
 
             .prod-child {
                 width: 90%;
@@ -123,6 +143,7 @@
     }
 }
 
+//Design for contact page
 #contact {
     @include screen-size();
     @include flexBox();
@@ -136,7 +157,6 @@
         height: 100vh;
         @include flexBox();
         justify-content: center;
-        //background-color: #cc5577;
 
         .prof-cont {
             overflow-y: scroll;
@@ -294,7 +314,7 @@
                         padding: 15px 8px;
                         margin: 3px 0;
                         display: inline-block;
-                        border: 1px solid #ccc;
+                        border: 1px solid $mt-color;
                         box-sizing: border-box;
                         border-radius: 1px;
                     }
@@ -312,7 +332,7 @@
                         cursor: pointer;
                         border-radius: 5px;
                         font-weight: 600;
-                        
+
                         &:hover {
                             opacity: 70%;
                         }
