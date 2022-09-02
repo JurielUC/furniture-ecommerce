@@ -140,7 +140,6 @@
 
         .prof-cont {
             overflow-y: scroll;
-            scrollbar-color: red green;
             width: 80%;
             height: 80vh;
             margin-top: 60px;
@@ -223,7 +222,104 @@
     .contact-form {
         width: 50%;
         height: 100vh;
-        //background-color: aquamarine;
+        @include flexBox();
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        .contact-cont {
+            overflow-y: scroll;
+            width: 80%;
+            height: 80vh;
+            margin-top: 60px;
+            background-color: $loginbg-color-op;
+            border-radius: 20px;
+            @include flexBox();
+            flex-direction: column;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+            &::-webkit-scrollbar {
+                display: block;
+                width: 5px;
+            }
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+                
+            &::-webkit-scrollbar-thumb {
+                background-color: $header-color;
+                border-right: none;
+                border-left: none;
+            }
+            
+            &::-webkit-scrollbar-track-piece:end {
+                background: transparent;
+                margin-bottom: 10px; 
+            }
+            
+            &::-webkit-scrollbar-track-piece:start {
+                background: transparent;
+                margin-top: 10px;
+            }
+
+            h1 {
+                margin-top: 40px;
+                font-size: $header-size;
+                color: $header-color;
+                font-weight: 800;
+            }
+
+            p {
+                text-align: center;
+                margin: 0 70px;
+                color: $header-color;
+                border-top: 1px solid $mt-color;
+                padding-top: 20px;
+                margin-top: 20px;
+            }
+
+            form {
+                width: 100%;
+                @include flexBox();
+                justify-content: center;
+            }
+
+            .form-inputs {
+                width: 80%;
+
+                .input, .button {
+                    display: flex;
+                    flex-direction: column;
+
+                    input[type=text], input[type=email], textarea {
+                        padding: 15px 8px;
+                        margin: 3px 0;
+                        display: inline-block;
+                        border: 1px solid #ccc;
+                        box-sizing: border-box;
+                        border-radius: 1px;
+                    }
+
+                    label {
+                        color: $header-color;
+                    }
+
+                    .submit {
+                        background-color: $header-color;
+                        color: white;
+                        padding: 15px 0;
+                        margin: 10px 0 50px 0;
+                        border: none;
+                        cursor: pointer;
+                        border-radius: 5px;
+                        font-weight: 600;
+                        
+                        &:hover {
+                            opacity: 70%;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
