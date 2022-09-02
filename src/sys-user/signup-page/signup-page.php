@@ -34,6 +34,10 @@
         <section>
             <h1>Create Account</h1>
             <form action="">
+                <div class="profile-photo">
+                    <label for="upload">Profile Picture</label>
+                    <input type="file" id="upload">
+                </div>
                 <div class="container">
                     <label for="fname">First Name</label>
                     <input type="text" placeholder="First Name" name="fname" required>

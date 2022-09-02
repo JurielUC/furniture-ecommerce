@@ -24,11 +24,28 @@ main {
         @include scroll;
 
         h1 {
-            margin-top: 200px;
+            margin-top: 290px;
         }
 
         p {
             margin-bottom: 50px;
+        }
+
+        .profile-photo {
+            @include flexBox;
+            flex-direction: column;
+            margin-top: 15px;
+
+            input[type=file] {
+                width: 180px;
+                padding: 10px 8px;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background-color: $header-color;
+                color: $white-color;
+            }
+
         }
 
         .container {
