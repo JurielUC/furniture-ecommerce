@@ -16,7 +16,7 @@
         <div class="app-name">
             <a href="">
                 <img src="./image/logo.jpg" alt="">
-                <h1>Furniture eCommerce</h1>
+                <h1>Gil's Furniture Shop</h1>
             </a>
         </div>
         <!--Put your navigation here below-->

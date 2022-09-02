@@ -14,7 +14,7 @@
     <!--Header and divider-->
     <header>
         <div class="app-name">
-            <a href="">
+            <a href="../../../index.php">
                 <img src="../../../image/logo.jpg" alt="">
                 <h1>Gil's Furniture Shop</h1>
             </a>
