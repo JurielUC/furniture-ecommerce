@@ -1,3 +1,5 @@
+@use '../variables/colors' as c;
+
 //mixin for flexbox
 @mixin flexBox {
     display: flex;
@@ -21,4 +23,30 @@
 
 @mixin half-width {
     width: 50%;
+}
+
+@mixin scroll {
+    &::-webkit-scrollbar {
+        display: block;
+        width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+        
+    &::-webkit-scrollbar-thumb {
+        background-color: c.$header-color;
+        border-right: none;
+        border-left: none;
+    }
+    
+    &::-webkit-scrollbar-track-piece:end {
+        background: transparent;
+        margin-bottom: 10px; 
+    }
+    
+    &::-webkit-scrollbar-track-piece:start {
+        background: transparent;
+        margin-top: 10px;
+    }
 }

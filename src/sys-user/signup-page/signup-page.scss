@@ -1,2 +1,78 @@
 @use '../../style/header/header';
 @use '../../style/globals' as *;
+
+main {
+    width: 100%;
+    height: 90vh;
+    @include flexBox;
+    justify-content: center;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1009%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M 0%2c45 C 57.6%2c84.4 172.8%2c247.8 288%2c242 C 403.2%2c236.2 460.8%2c31.8 576%2c16 C 691.2%2c0.2 748.8%2c150.6 864%2c163 C 979.2%2c175.4 1036.8%2c76.8 1152%2c78 C 1267.2%2c79.2 1382.4%2c150.8 1440%2c169L1440 560L0 560z' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c365 C 96%2c383 288%2c456.8 480%2c455 C 672%2c453.2 768%2c352.4 960%2c356 C 1152%2c359.6 1344%2c449.6 1440%2c473L1440 560L0 560z' fill='rgba(219%2c 176%2c 123%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1009'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-attachment: fixed;
+    background-size: cover;
+
+    section {
+        overflow-y: scroll;
+        width: 300px;
+        height: 400px;
+        background-color: $loginbg-color;
+        border-radius: 30px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        @include flexBox;
+        justify-content: center;
+        flex-direction: column;
+        color: $header-color;
+        @include scroll;
+
+        h1 {
+            margin-top: 200px;
+        }
+
+        p {
+            margin-bottom: 50px;
+        }
+
+        .container {
+            padding: 16px 0;
+            @include flexBox;
+            justify-content: center;
+            flex-direction: column;
+
+            input[type=email], input[type=text], input[type=password] {
+                width: 130%;
+                padding: 10px 8px;
+                margin: 3px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+    
+            button {
+                background-color: $header-color;
+                color: white;
+                padding: 10px 0;
+                margin: 10px 0;
+                border: none;
+                cursor: pointer;
+                width: 130%;
+                &:hover {
+                    opacity: 70%;
+                }
+            }
+        }
+
+        p {
+            font-size: .8rem;
+            border-top: 1px solid $header-color;
+            padding: 10px 30px 0 30px;
+            
+            a {
+                text-decoration: none;
+                color: $header-color;
+
+                &:hover {
+                    opacity: 80%;
+                }
+            }
+        }
+    }
+}

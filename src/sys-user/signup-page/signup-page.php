@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="userlogin.css">
+    <link rel="stylesheet" href="signup-page.css">
 </head>
 <body>
     <!--Header and divider-->
@@ -21,8 +21,8 @@
         </div>
         <!--Put your navigation here below-->
         <nav>
-            <a href="" style="border-bottom: 3px solid white; padding-bottom: 5px;">Login</a>
-            <a href="../signup-page/signup-page.php">Signup</a>
+            <a href="../login-page/userlogin.php">Login</a>
+            <a href="" style="border-bottom: 3px solid white; padding-bottom: 5px;">Signup</a>
         </nav>
     </header>
     <div class="divider">
@@ -32,20 +32,28 @@
 
     <main>
         <section>
-            <img src="../../../image/icon/account.png" alt="">
-            <h1>Login Here</h1>
+            <h1>Create Account</h1>
             <form action="">
                 <div class="container">
+                    <label for="fname">First Name</label>
+                    <input type="text" placeholder="First Name" name="fname" required>
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" placeholder="Last Name" name="lname" required>
+
+                    <label for="cnumber">Contact No.</label>
+                    <input type="text" placeholder="Contact Number" name="cnumber" required>
+
                     <label for="email">Email</label>
                     <input type="email" placeholder="Email" name="email" required>
 
                     <label for="psw">Password</label>
                     <input type="password" placeholder="Password" name="psw" required>
 
-                    <button type="submit">Login</button>
+                    <button type="submit">Submit</button>
                 </div>
             </form>
-            <p>Need an account? <a href="../signup-page/signup-page.php"><b>SIGN UP</b></a></p>
+            <p>Already have Account? <a href="../login-page/userlogin.php"><b>LOGIN</b></a></p>
         </section>
     </main>
 </body>

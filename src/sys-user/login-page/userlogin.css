@@ -102,7 +102,7 @@ main section .container {
   justify-content: center;
   flex-direction: column;
 }
-main section .container input[type=text], main section .container input[type=password] {
+main section .container input[type=email], main section .container input[type=password] {
   width: 130%;
   padding: 10px 8px;
   margin: 3px 0;
