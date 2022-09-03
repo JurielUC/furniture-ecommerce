@@ -34,3 +34,7 @@
 
 </body>
 </html>
+
+DB Password in 000webhost = u)r@soJHB85agAZ*
+                Username = Gil_Furniture
+                DB name = db_ecommerce
