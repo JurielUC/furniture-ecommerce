@@ -34,10 +34,10 @@
         <section>
             <h1>Create Account</h1>
             <form action="signup-create.php" method="POST">
-                <!--<div class="profile-photo">
+                <div class="profile-photo">
                     <label for="upload">Profile Picture</label>
-                    <input type="file" id="upload">
-                </div>-->
+                    <input type="file" id="myfile" name="myfile" accept="image/*">
+                </div>
                 <div class="container">
                     <label for="fname">First Name</label>
                     <input type="text" placeholder="First Name" name="first_name" required>
@@ -55,7 +55,7 @@
                     <input type="email" placeholder="Email" name="email" required>
 
                     <label for="psw">Password</label>
-                    <input type="password" placeholder="Password" name="u_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                    <input type="password" placeholder="Password" name="u_password"  required>
 
                     <button type="submit" name='submit'>Submit</button>
                 </div>
