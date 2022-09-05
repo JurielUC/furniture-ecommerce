@@ -33,28 +33,31 @@
     <main>
         <section>
             <h1>Create Account</h1>
-            <form action="">
-                <div class="profile-photo">
+            <form action="signup-create.php" method="POST">
+                <!--<div class="profile-photo">
                     <label for="upload">Profile Picture</label>
                     <input type="file" id="upload">
-                </div>
+                </div>-->
                 <div class="container">
                     <label for="fname">First Name</label>
-                    <input type="text" placeholder="First Name" name="fname" required>
+                    <input type="text" placeholder="First Name" name="first_name" required>
 
                     <label for="lname">Last Name</label>
-                    <input type="text" placeholder="Last Name" name="lname" required>
+                    <input type="text" placeholder="Last Name" name="last_name" required>
+
+                    <label for="address">Address</label>
+                    <input type="text" placeholder="Address" name="u_address" required>
 
                     <label for="cnumber">Contact No.</label>
-                    <input type="text" placeholder="Contact Number" name="cnumber" required>
+                    <input type="text" placeholder="Contact Number" name="contact_no" required>
 
                     <label for="email">Email</label>
                     <input type="email" placeholder="Email" name="email" required>
 
                     <label for="psw">Password</label>
-                    <input type="password" placeholder="Password" name="psw" required>
+                    <input type="password" placeholder="Password" name="u_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
 
-                    <button type="submit">Submit</button>
+                    <button type="submit" name='submit'>Submit</button>
                 </div>
             </form>
             <p>Already have Account? <a href="../login-page/userlogin.php"><b>LOGIN</b></a></p>

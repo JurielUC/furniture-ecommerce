@@ -38,3 +38,48 @@
 DB Password in 000webhost = u)r@soJHB85agAZ*
                 Username = Gil_Furniture
                 DB name = db_ecommerce
+
+
+<!--Full Code of php file for mySql database connection with html form-->
+    <?php
+        $server_name="localhost";
+        $username="root";
+        $password="";
+        $database_name="db_ecommerce";
+
+        $conn=mysqli_connect($server_name,$username,$password,$database_name);
+        //now check the connection
+        if(!$conn)
+        {
+            die("Connection Failed:" . mysqli_connect_error());
+
+        }
+
+        if(isset($_POST['save']))
+        {	
+            $first_name=$_POST['first_name'];
+            $last_name=$_POST['last_name'];
+            $address=$_POST['address'];
+            $email=$_POST['email'];
+            $contact_no=$_POST['contact_no'];
+            //$profile_pic=$_POST['profile_pic'];
+            $password=$_POST['password'];
+
+            $trim_first = trim($first_name);
+            $trim_last = trim($last_name);
+            $trim_email = trim($email);
+
+            $sql_query = "INSERT INTO tb_user 
+                          VALUES('$trim_first','$trim_last', $address, '$trim_email','$contact_no','$password')";
+
+            if (mysqli_query($conn, $sql_query)) 
+            {
+                echo "New Details Entry inserted successfully !";
+            } 
+            else
+            {
+                echo "Error: " . $sql . "" . mysqli_error($conn);
+            }
+            mysqli_close($conn);
+        }
+    ?>
