@@ -31,6 +31,10 @@
     <!------------------------------------------------>
 
     <main>
+        <h1 class="create-message"><?php if(!empty($_GET['message'])) {
+            $message = $_GET['message'];
+            // rest of your code 
+            echo $message; }?></h1>
         <section>
             <img src="../../../image/icon/account.png" alt="">
             <h1>Login Here</h1>

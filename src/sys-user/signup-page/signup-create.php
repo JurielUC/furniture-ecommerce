@@ -28,7 +28,8 @@
     $sql = "INSERT INTO tb_user(first_name, last_name, u_address, email, contact_no, u_password, myfile) VALUES('$trim_first','$trim_last', '$address', '$trim_email', '$contact_no', '$password', '$dst_db')";
 
     if (mysqli_query($conn, $sql)) {
-        header("location: signup-page.php");
+        $alert = "Account Created Successfully. YOU MAY LOGIN NOW!";
+        header("location: ../login-page/userlogin.php?message=$alert");
             exit;
       } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
