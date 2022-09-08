@@ -13,5 +13,5 @@
     if (!$conn) {
         trigger_error(mysqli_connect_error());
         echo 'not connected';
-        } else echo 'successfully connected';
+        } //else echo 'Successfully Connected';
 ?>

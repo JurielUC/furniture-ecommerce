@@ -1,3 +1,6 @@
+<!--session link-->
+<?php include '../../php-database/user-session.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +14,28 @@
     <link rel="stylesheet" href="userhome.css">
 </head>
 <body>
+    <!--Header and divider-->
+    <header>
+        <div class="app-name">
+            <a href="">
+                <img src="../../../image/logo.jpg" alt="">
+                <h1>Gil's Furniture Shop</h1>
+            </a>
+        </div>
+        <!--Put your navigation here below-->
+        <nav>
+            <a href="" style="border-bottom: 3px solid white; padding-bottom: 5px;">Your Feed</a>
+            <a href="">Message</a>
+            <a href="">Profile</a>
+            <a href="../../php-database/user-logout.php">Logout</a>
+        </nav>
+    </header>
+    <div class="divider">
+        <p>Wood Furniture Design Customization and Ordering System</p>
+    </div>
+    <!------------------------------------------------>
+
+    <img src="../signup-page/<?php echo $loggedin_mf; ?>" alt="">
 
 </body>
 </html>

@@ -33,9 +33,9 @@
     <main>
         <section>
             <h1>Create Account</h1>
-            <form action="signup-create.php" method="POST">
+            <form action="signup-create.php" method="POST" enctype="multipart/form-data">
                 <div class="profile-photo">
-                    <label for="upload">Profile Picture</label>
+                    <label for="myfile">Profile Picture</label>
                     <input type="file" id="myfile" name="myfile" accept="image/*">
                 </div>
                 <div class="container">

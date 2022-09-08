@@ -83,3 +83,6 @@ DB Password in 000webhost = u)r@soJHB85agAZ*
             mysqli_close($conn);
         }
     ?>
+
+
+    <img src="../signup-page/<?php echo $loggedin_mf; ?>" alt="" width="25px" height="25px">
