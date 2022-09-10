@@ -7,7 +7,7 @@
     // Create connection
     $conn = mysqli_connect($servername, $username, $password);
 
-    mysqli_select_db($conn, "db_ecommerce");
+    mysqli_select_db($conn, $database);
 
     // Check connection
     if (!$conn) {
