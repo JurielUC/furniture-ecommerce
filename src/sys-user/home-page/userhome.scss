@@ -1,1 +1,112 @@
 @use '../../style/header/header';
+@use '../../style/globals' as *;
+
+main {
+    width: 100%;
+    height: 90vh;
+    @include flexBox();
+    justify-content: center;
+
+    .container {
+        width: 1120px;
+        height: 90vh;
+        @include flexBox();
+
+        .product-cont {
+            width: 740px;
+            height: 90vh;
+
+            .category {
+
+                button {
+                    font-family: $font-family;
+                    border: 2px solid $header-color;
+                    background-color: $white-color;
+                    width: 100px;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                    color: $header-color;
+
+                    &:hover {
+                        color: $white-color;
+                        background-color: $header-color;
+                    }
+                }
+
+                .active {
+                    color: $white-color;
+                    background-color: $header-color;
+                }
+            }
+
+            .product {
+                overflow-y: scroll;
+                width: 710px;
+                height: 82vh;
+                margin-top: 12px;
+                display: flex;
+                flex-wrap: wrap;
+
+                .prod-display {
+                    width: 165px;
+                    height: 180px;
+                    margin-left: 6px;
+                    margin-top: 10px;
+                    border-radius: 10px;
+                    text-align: center;
+                    @include flexBox();
+                    justify-content: center;
+                    flex-direction: column;
+                    cursor: pointer;
+                    color: $header-color;
+                    background-color: $divider-color;
+                    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+                    .prod-img {
+                        width: 150px;
+                        height: 100px;
+                        background-color: $white-color;
+                    }
+                }
+            }
+        }
+
+        .shopinfo-cont {
+            width: 380px;
+            height: 90vh;
+
+            .search-bar {
+                input[type=text] {
+                    width: 75%;
+                    padding: 5px 8px;
+                    margin: 10px 0;
+                    display: inline-block;
+                    border: 1px solid $header-color;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                }
+
+                button {
+                    width: 22%;
+                    padding: 4px 0;
+                    border-radius: 5px;
+                    border: 1px solid $header-color;
+                    color: $white-color;
+                    background-color: $header-color;
+
+                    &:hover {
+                        opacity: 70%;
+                    }
+                }
+            }
+
+            .shopinfo {
+                width: 380px;
+                height: 83vh;
+                background-color: $divider-color;
+            }
+        }
+    }
+}

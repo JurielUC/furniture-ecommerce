@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once '../../php-database/dbconnect.php';
+    require '../../php-database/dbconnect.php';
     // Check connection
     if($_SERVER["REQUEST_METHOD"] == "POST") {
         $email=mysqli_real_escape_string($conn,$_POST['email']);

@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    include 'dbconnect.php';
+    require 'dbconnect.php';
     
     $user_check=$_SESSION['login_user'];
     $ses_sql=mysqli_query($conn,"select * from tb_user where email='$user_check'");
@@ -14,8 +14,8 @@
     $loggedin_psw=$row['u_password'];
     $loggedin_mf=$row['myfile'];
 
-    if(!isset($loggedin_session) || $loggedin_session==NULL) {
-        echo "Go back";
-        header("Location: ../sys-user/login-page/userlogin.php");
-    }
+    if(!$_SESSION['login_user'])  
+    {  
+        header("Location: ../sys-user/login-page/userlogin.php"); //redirect to the login page to secure the welcome page without login access.  
+    }  
 ?>

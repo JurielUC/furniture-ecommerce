@@ -1,5 +1,5 @@
 <!--session link-->
-<?php include '../../php-database/user-session.php'; ?>
+<!--<?php include '../../php-database/user-session.php'; ?>-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +35,41 @@
     </div>
     <!------------------------------------------------>
 
-    <img src="../signup-page/<?php echo $loggedin_mf; ?>" alt="">
+    <main>
+        <div class="container">
+            <section class="product-cont">
+                <div class="category">
+                    <button class="active">All</button>
+                    <button>Table</button>
+                    <button>Bed</button>
+                    <button>Chair</button>
+                    <button>Door</button>
+                    <button>Others</button>
+                </div>
+                <div class="product">
+                    <!--Put php codes for product display here-->
+                    <div class="prod-display">
+                        <div class="prod-img">
+
+                        </div>
+                        <h3>Name</h3>
+                        <p>PHP 10000</p>
+                    </div>
+                </div>
+            </section>
+            <section class="shopinfo-cont">
+                <div class="search-bar">
+                    <form action="">
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit">Search</button>
+                    </form>
+                </div>  
+                <div class="shopinfo">
+                    
+                </div>              
+            </section>
+        </div>
+    </main>
 
 </body>
 </html>
