@@ -106,15 +106,18 @@ main .container .product-cont .category .active {
 }
 main .container .product-cont .product {
   overflow-y: scroll;
-  width: 710px;
   height: 82vh;
+  width: 710px;
   margin-top: 12px;
+}
+main .container .product-cont .product .display-div {
+  width: 690px;
   display: flex;
   flex-wrap: wrap;
 }
-main .container .product-cont .product .prod-display {
+main .container .product-cont .product .display-div .prod-display {
   width: 165px;
-  height: 180px;
+  height: 200px;
   margin-left: 6px;
   margin-top: 10px;
   border-radius: 10px;
@@ -128,7 +131,7 @@ main .container .product-cont .product .prod-display {
   background-color: #f2e5db;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
-main .container .product-cont .product .prod-display .prod-img {
+main .container .product-cont .product .display-div .prod-display .prod-img {
   width: 150px;
   height: 100px;
   background-color: #ffffff;
@@ -138,7 +141,7 @@ main .container .shopinfo-cont {
   height: 90vh;
 }
 main .container .shopinfo-cont .search-bar input[type=text] {
-  width: 75%;
+  width: 76%;
   padding: 5px 8px;
   margin: 10px 0;
   display: inline-block;
