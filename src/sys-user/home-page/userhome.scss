@@ -105,7 +105,21 @@ main {
             .shopinfo {
                 width: 380px;
                 height: 83vh;
+                color: $header-color;
                 background-color: $divider-color;
+                
+                h1 {
+                    text-align: center;
+                    padding-top: 10px;
+                }
+
+                h3 {
+                    margin: 10px 0 0 10px;
+                }
+
+                p {
+                    margin-left: 30px;
+                }
             }
         }
     }

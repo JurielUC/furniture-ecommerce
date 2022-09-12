@@ -1,5 +1,5 @@
 <!--session link-->
-<!--<?php include '../../php-database/user-session.php'; ?>-->
+<?php include '../../php-database/user-session.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -65,7 +65,15 @@
                     </form>
                 </div>  
                 <div class="shopinfo">
-                    
+                    <h1><u>Business Information</u></h1>
+                    <h3><img src="../../../image/icon/placeholder.png" alt="" width="15" height="15">&nbsp&nbspLocation</h3>
+                    <p>Barangay, Philippines</p>
+                    <h3><img src="../../../image/icon/gmail.png" alt="" width="15" height="15">&nbsp&nbspEmail</h3>
+                    <p>furniture@gmail.com</p>
+                    <h3><img src="../../../image/icon/phone (1).png" alt="" width="15" height="15">&nbsp&nbspContact Number</h3>
+                    <p>+63 905 581 1152</p>
+                    <h3><img src="../../../image/icon/owner.png" alt="" width="15" height="15">&nbsp&nbspBusiness Owner</h3>
+                    <p>Gil Reyes</p>
                 </div>              
             </section>
         </div>
