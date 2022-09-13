@@ -24,9 +24,9 @@
         </div>
         <!--Put your navigation here below-->
         <nav>
-            <a href="" style="border-bottom: 3px solid white; padding-bottom: 5px;">Your Feed</a>
+            <a href="" style="border-bottom: 3px solid white; padding-bottom: 5px;">Product</a>
             <a href="">Message</a>
-            <a href="">Profile</a>
+            <a href="">Shop Feed</a>
             <a href="../../php-database/admin-logout.php">Logout</a>
         </nav>
     </header>
@@ -38,6 +38,28 @@
     <main>
         <div class="container">
             <section class="product-cont">
+                <div class="addItem-cont">
+                    <form action="" method="post">
+                        <div class="pps">
+                            <div class="prod-input first">
+                                <label for="product">Product</label>
+                                <input type="text" name="product" id="product">
+                            </div>
+                            <div class="price-input first">
+                                <label for="price">Price</label>
+                                <input type="text" name="price" id="price">
+                            </div>
+                            <div class="size first">
+                                <label for="size">Product</label>
+                                <input type="text" name="size" id="size">
+                            </div>
+                        </div>
+                        <div class="description">
+                            <label for="description">Description</label>
+                            <textarea name="description" id="description" cols="30" rows="4"></textarea>
+                        </div>
+                    </form>
+                </div>
                 <div class="category">
                     <button class="active">All</button>
                     <button>Table</button>
@@ -59,23 +81,15 @@
                     </div>
                 </div>
             </section>
-            <section class="shopinfo-cont">
+            <section class="inbox-cont">
                 <div class="search-bar">
                     <form action="">
                         <input type="text" placeholder="Search.." name="search">
                         <button type="submit">Search</button>
                     </form>
                 </div>  
-                <div class="shopinfo">
-                    <h1><u>Business Information</u></h1>
-                    <h3><img src="../../../image/icon/placeholder.png" alt="" width="15" height="15">&nbsp&nbspLocation</h3>
-                    <p>Barangay, Philippines</p>
-                    <h3><img src="../../../image/icon/gmail.png" alt="" width="15" height="15">&nbsp&nbspEmail</h3>
-                    <p>furniture@gmail.com</p>
-                    <h3><img src="../../../image/icon/phone (1).png" alt="" width="15" height="15">&nbsp&nbspContact Number</h3>
-                    <p>+63 905 581 1152</p>
-                    <h3><img src="../../../image/icon/owner.png" alt="" width="15" height="15">&nbsp&nbspBusiness Owner</h3>
-                    <p>Gil Reyes</p>
+                <div class="inbox">
+                    
                 </div>              
             </section>
         </div>

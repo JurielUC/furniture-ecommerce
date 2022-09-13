@@ -1,3 +1,206 @@
 @use '../../style/header/header';
 @use '../../style/globals' as *;
 
+main {
+    width: 100%;
+    height: 90vh;
+    @include flexBox();
+    justify-content: center;
+
+    .container {
+        width: 1120px;
+        height: 90vh;
+        @include flexBox();
+
+        .product-cont {
+            width: 740px;
+            height: 90vh;
+
+            .addItem-cont {
+                margin-top: 10px;
+                width: 710px;
+                height: 200px;
+                background-color: $divider-color;
+                border-radius: 10px;
+                box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            
+                .pps {
+                    @include flexBox();
+                    margin-top: 10px;
+                    width: 710px;
+                    justify-content: center;
+
+                    .first {
+                        display: flex;
+                        flex-direction: column;
+                        text-align: left;
+                        margin: 10px 10px 0 10px;
+
+                        #product {
+                            width: 250px;
+                        }
+
+                        input {
+                            padding: 5px 8px;
+                            display: inline-block;
+                            border: 1px solid $header-color;
+                            border-radius: 5px;
+                            box-sizing: border-box;
+                            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                        
+                            &:focus {
+                                outline: none;
+                                border: 1px solid $mt-color;
+                            }
+                        }
+                    }
+                }
+
+                .description {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 22px;
+
+                    textarea {
+                        width: 665px;
+                        display: inline-block;
+                        border: 1px solid $header-color;
+                        border-radius: 5px;
+                        box-sizing: border-box;
+                        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                    
+                        &:focus {
+                            outline: none;
+                            border: 1px solid $mt-color;
+                        }
+                    }
+                }
+            }
+
+            .category {
+                margin-top: 10px;
+
+                button {
+                    font-family: $font-family;
+                    border: 2px solid $header-color;
+                    background-color: $white-color;
+                    width: 100px;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                    color: $header-color;
+                    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+
+                    &:hover {
+                        color: $white-color;
+                        background-color: $header-color;
+                    }
+                }
+
+                .active {
+                    color: $white-color;
+                    background-color: $header-color;
+                }
+            }
+
+            .product {
+                overflow-y: scroll;
+                height: 52vh;
+                width: 710px;
+                margin-top: 12px;
+                
+
+                .display-div {
+                    width: 690px;
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .prod-display {
+                        width: 165px;
+                        height: 200px;
+                        margin-left: 6px;
+                        margin-top: 10px;
+                        border-radius: 10px;
+                        text-align: center;
+                        @include flexBox();
+                        justify-content: center;
+                        flex-direction: column;
+                        cursor: pointer;
+                        color: $header-color;
+                        background-color: $divider-color;
+                        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    
+                        &:hover {
+                            opacity: 75%;
+                        }
+                        
+                        .prod-img {
+                            width: 150px;
+                            height: 100px;
+                            background-color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .inbox-cont {
+            width: 380px;
+            height: 90vh;
+
+            .search-bar {
+                input[type=text] {
+                    width: 76%;
+                    padding: 5px 8px;
+                    margin: 10px 0;
+                    display: inline-block;
+                    border: 1px solid $header-color;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                    
+                    &:focus {
+                        outline: none;
+                        border: 1px solid $mt-color;
+                    }
+                }
+
+                button {
+                    width: 22%;
+                    padding: 4px 0;
+                    border-radius: 5px;
+                    border: 1px solid $header-color;
+                    color: $white-color;
+                    background-color: $header-color;
+                    cursor: pointer;
+                    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+                    &:hover {
+                        opacity: 70%;
+                    }
+                }
+            }
+
+            .inbox {
+                width: 380px;
+                height: 83vh;
+                color: $header-color;
+                background-color: $divider-color;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+                
+                h1 {
+                    text-align: center;
+                    padding-top: 10px;
+                }
+
+                h3 {
+                    margin: 10px 0 0 10px;
+                }
+
+                p {
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+}

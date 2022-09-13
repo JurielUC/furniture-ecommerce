@@ -21,10 +21,6 @@
             </a>
         </div>
         <!--Put your navigation here below-->
-        <nav>
-            <a href="" style="border-bottom: 3px solid white; padding-bottom: 5px;">Login</a>
-            <a href="">Signup</a>
-        </nav>
     </header>
     <div class="divider">
         <p>Wood Furniture Design Customization and Ordering System</p>
