@@ -95,6 +95,7 @@ main .container .product-cont .category button {
   margin-top: 10px;
   cursor: pointer;
   color: #a8896c;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
 main .container .product-cont .category button:hover {
   color: #ffffff;
@@ -131,6 +132,9 @@ main .container .product-cont .product .display-div .prod-display {
   background-color: #f2e5db;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
+main .container .product-cont .product .display-div .prod-display:hover {
+  opacity: 75%;
+}
 main .container .product-cont .product .display-div .prod-display .prod-img {
   width: 150px;
   height: 100px;
@@ -148,7 +152,11 @@ main .container .shopinfo-cont .search-bar input[type=text] {
   border: 1px solid #a8896c;
   border-radius: 5px;
   box-sizing: border-box;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+main .container .shopinfo-cont .search-bar input[type=text]:focus {
+  outline: none;
+  border: 1px solid #dbb07b;
 }
 main .container .shopinfo-cont .search-bar button {
   width: 22%;
@@ -157,6 +165,8 @@ main .container .shopinfo-cont .search-bar button {
   border: 1px solid #a8896c;
   color: #ffffff;
   background-color: #a8896c;
+  cursor: pointer;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 main .container .shopinfo-cont .search-bar button:hover {
   opacity: 70%;
@@ -166,6 +176,7 @@ main .container .shopinfo-cont .shopinfo {
   height: 83vh;
   color: #a8896c;
   background-color: #f2e5db;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
 main .container .shopinfo-cont .shopinfo h1 {
   text-align: center;

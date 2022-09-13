@@ -27,6 +27,7 @@ main {
                     margin-top: 10px;
                     cursor: pointer;
                     color: $header-color;
+                    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 
                     &:hover {
                         color: $white-color;
@@ -67,6 +68,10 @@ main {
                         background-color: $divider-color;
                         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     
+                        &:hover {
+                            opacity: 75%;
+                        }
+                        
                         .prod-img {
                             width: 150px;
                             height: 100px;
@@ -90,7 +95,12 @@ main {
                     border: 1px solid $header-color;
                     border-radius: 5px;
                     box-sizing: border-box;
-                    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                    
+                    &:focus {
+                        outline: none;
+                        border: 1px solid $mt-color;
+                    }
                 }
 
                 button {
@@ -100,6 +110,8 @@ main {
                     border: 1px solid $header-color;
                     color: $white-color;
                     background-color: $header-color;
+                    cursor: pointer;
+                    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 
                     &:hover {
                         opacity: 70%;
@@ -112,6 +124,7 @@ main {
                 height: 83vh;
                 color: $header-color;
                 background-color: $divider-color;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
                 
                 h1 {
                     text-align: center;
