@@ -55,10 +55,9 @@ main {
 
                     .prod-display {
                         width: 165px;
-                        height: 200px;
+                        height: 250px;
                         margin-left: 6px;
                         margin-top: 10px;
-                        border-radius: 10px;
                         text-align: center;
                         @include flexBox();
                         justify-content: center;
@@ -69,13 +68,19 @@ main {
                         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     
                         &:hover {
-                            opacity: 75%;
+                            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                         }
                         
                         .prod-img {
                             width: 150px;
-                            height: 100px;
+                            height: 150px;
                             background-color: $white-color;
+                            @include flexBox();
+                            justify-content: center;
+                        }
+
+                        h3, p {
+                            margin-top: 10px;
                         }
                     }
                 }

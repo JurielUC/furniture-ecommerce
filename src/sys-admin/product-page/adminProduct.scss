@@ -16,12 +16,20 @@ main {
             width: 740px;
             height: 90vh;
 
+            .create-message {
+                font-size: 20px;
+                color: $header-color;
+                margin: 10px;
+                text-align: center;
+            }
+
             .addItem-cont {
                 margin-top: 10px;
                 width: 710px;
-                height: 200px;
+                height: 250px;
                 background-color: $divider-color;
-                border-radius: 10px;
+                color: $header-color;
+                border-radius: 10px 0 10px 0;
                 box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
             
                 .pps {
@@ -57,6 +65,17 @@ main {
                 }
 
                 .description {
+                    label {
+                        margin-top: 10px;
+                    }
+
+                    textarea {
+                        padding: 10px;
+                        font-family: $font-family;
+                    }
+                }
+
+                .description {
                     display: flex;
                     flex-direction: column;
                     margin: 0 22px;
@@ -74,6 +93,57 @@ main {
                             border: 1px solid $mt-color;
                         }
                     }
+                }
+
+                .sib {
+                    @include flexBox();
+                    margin-top: 10px;
+                    width: 710px;
+                    justify-content: center;
+
+                    .sel-img {
+                        width: 400px;
+
+                        select {
+                            margin-left: 22px;
+                            padding: 5px 8px;
+                            display: inline-block;
+                            border: 1px solid $header-color;
+                            border-radius: 5px;
+                            box-sizing: border-box;
+                            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                        }
+
+                        input[type=file] {
+                            cursor: pointer;
+                            padding: 3px 4px;
+                            width: 220px;
+                            display: inline-block;
+                            border: 1px solid $header-color;
+                            border-radius: 5px;
+                            box-sizing: border-box;
+                            background-color: $white-color;
+                            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                        }
+
+                    }
+
+                    .submit {
+                        width: 310px;
+                        text-align: end;
+
+                        button {
+                            width: 100px;
+                            background-color: $header-color;
+                            border-color: $header-color;
+                            border-radius: 5px;
+                            margin-right: 22px;
+                            padding: 3px 4px;
+                            color: $white-color;
+                            cursor: pointer;
+                        }
+                    }
+
                 }
             }
 
@@ -105,11 +175,10 @@ main {
 
             .product {
                 overflow-y: scroll;
-                height: 52vh;
+                height: 50vh;
                 width: 710px;
                 margin-top: 12px;
                 
-
                 .display-div {
                     width: 690px;
                     display: flex;
@@ -117,10 +186,9 @@ main {
 
                     .prod-display {
                         width: 165px;
-                        height: 200px;
+                        height: 250px;
                         margin-left: 6px;
                         margin-top: 10px;
-                        border-radius: 10px;
                         text-align: center;
                         @include flexBox();
                         justify-content: center;
@@ -131,13 +199,19 @@ main {
                         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     
                         &:hover {
-                            opacity: 75%;
+                            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                         }
                         
                         .prod-img {
                             width: 150px;
-                            height: 100px;
+                            height: 150px;
                             background-color: $white-color;
+                            @include flexBox();
+                            justify-content: center;
+                        }
+
+                        h3, p {
+                            margin-top: 10px;
                         }
                     }
                 }
@@ -188,17 +262,52 @@ main {
                 background-color: $divider-color;
                 box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
                 
-                h1 {
-                    text-align: center;
-                    padding-top: 10px;
+                .inbox-header {
+                    width: 380px;
+                    @include flexBox();
+                    justify-content: space-between;
+                    border-bottom: 2px solid $header-color;
+
+                    h2, p {
+                        margin: 10px;
+                    }
                 }
 
-                h3 {
-                    margin: 10px 0 0 10px;
-                }
+                .inbox-message-cont {
+                    overflow-y: scroll;
+                    width: 380px;
+                    height: 75vh;
+                    @include flexBox();
+                    flex-direction: column;
+                    cursor: pointer;
+                    
+                    .inbox-message {
+                        width: 350px;
+                        height: 55px;
+                        @include flexBox();
+                        margin-top: 10px;
+                        background-color: $white-color;
+                        justify-content: start;
+                        border: 1px solid $header-color;
+                        border-radius: 5px;
 
-                p {
-                    margin-left: 30px;
+                        &:hover {
+                            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                        }
+
+                        img {
+                            border-radius: 50%;
+                            border: 1px solid $header-color;
+                            margin: 10px;
+                        }
+
+                        .name-addr {
+                            
+                            p {
+                                font-size: .7rem;
+                            }
+                        }
+                    }
                 }
             }
         }

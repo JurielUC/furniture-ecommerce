@@ -49,7 +49,7 @@ header nav a {
   text-decoration: none;
   color: #ffffff;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 header nav a:hover {
   border-bottom: 3px solid #ffffff;
@@ -86,12 +86,19 @@ main .container .product-cont {
   width: 740px;
   height: 90vh;
 }
+main .container .product-cont .create-message {
+  font-size: 20px;
+  color: #a8896c;
+  margin: 10px;
+  text-align: center;
+}
 main .container .product-cont .addItem-cont {
   margin-top: 10px;
   width: 710px;
-  height: 200px;
+  height: 250px;
   background-color: #f2e5db;
-  border-radius: 10px;
+  color: #a8896c;
+  border-radius: 10px 0 10px 0;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 main .container .product-cont .addItem-cont .pps {
@@ -122,6 +129,13 @@ main .container .product-cont .addItem-cont .pps .first input:focus {
   outline: none;
   border: 1px solid #dbb07b;
 }
+main .container .product-cont .addItem-cont .description label {
+  margin-top: 10px;
+}
+main .container .product-cont .addItem-cont .description textarea {
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+}
 main .container .product-cont .addItem-cont .description {
   display: flex;
   flex-direction: column;
@@ -138,6 +152,50 @@ main .container .product-cont .addItem-cont .description textarea {
 main .container .product-cont .addItem-cont .description textarea:focus {
   outline: none;
   border: 1px solid #dbb07b;
+}
+main .container .product-cont .addItem-cont .sib {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  width: 710px;
+  justify-content: center;
+}
+main .container .product-cont .addItem-cont .sib .sel-img {
+  width: 400px;
+}
+main .container .product-cont .addItem-cont .sib .sel-img select {
+  margin-left: 22px;
+  padding: 5px 8px;
+  display: inline-block;
+  border: 1px solid #a8896c;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+main .container .product-cont .addItem-cont .sib .sel-img input[type=file] {
+  cursor: pointer;
+  padding: 3px 4px;
+  width: 220px;
+  display: inline-block;
+  border: 1px solid #a8896c;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+main .container .product-cont .addItem-cont .sib .submit {
+  width: 310px;
+  text-align: end;
+}
+main .container .product-cont .addItem-cont .sib .submit button {
+  width: 100px;
+  background-color: #a8896c;
+  border-color: #a8896c;
+  border-radius: 5px;
+  margin-right: 22px;
+  padding: 3px 4px;
+  color: #ffffff;
+  cursor: pointer;
 }
 main .container .product-cont .category {
   margin-top: 10px;
@@ -163,7 +221,7 @@ main .container .product-cont .category .active {
 }
 main .container .product-cont .product {
   overflow-y: scroll;
-  height: 52vh;
+  height: 50vh;
   width: 710px;
   margin-top: 12px;
 }
@@ -174,10 +232,9 @@ main .container .product-cont .product .display-div {
 }
 main .container .product-cont .product .display-div .prod-display {
   width: 165px;
-  height: 200px;
+  height: 250px;
   margin-left: 6px;
   margin-top: 10px;
-  border-radius: 10px;
   text-align: center;
   display: flex;
   align-items: center;
@@ -189,12 +246,18 @@ main .container .product-cont .product .display-div .prod-display {
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 main .container .product-cont .product .display-div .prod-display:hover {
-  opacity: 75%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 main .container .product-cont .product .display-div .prod-display .prod-img {
   width: 150px;
-  height: 100px;
+  height: 150px;
   background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .container .product-cont .product .display-div .prod-display h3, main .container .product-cont .product .display-div .prod-display p {
+  margin-top: 10px;
 }
 main .container .inbox-cont {
   width: 380px;
@@ -234,13 +297,44 @@ main .container .inbox-cont .inbox {
   background-color: #f2e5db;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
-main .container .inbox-cont .inbox h1 {
-  text-align: center;
-  padding-top: 10px;
+main .container .inbox-cont .inbox .inbox-header {
+  width: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #a8896c;
 }
-main .container .inbox-cont .inbox h3 {
-  margin: 10px 0 0 10px;
+main .container .inbox-cont .inbox .inbox-header h2, main .container .inbox-cont .inbox .inbox-header p {
+  margin: 10px;
 }
-main .container .inbox-cont .inbox p {
-  margin-left: 30px;
+main .container .inbox-cont .inbox .inbox-message-cont {
+  overflow-y: scroll;
+  width: 380px;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+main .container .inbox-cont .inbox .inbox-message-cont .inbox-message {
+  width: 350px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  background-color: #ffffff;
+  justify-content: start;
+  border: 1px solid #a8896c;
+  border-radius: 5px;
+}
+main .container .inbox-cont .inbox .inbox-message-cont .inbox-message:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+main .container .inbox-cont .inbox .inbox-message-cont .inbox-message img {
+  border-radius: 50%;
+  border: 1px solid #a8896c;
+  margin: 10px;
+}
+main .container .inbox-cont .inbox .inbox-message-cont .inbox-message .name-addr p {
+  font-size: 0.7rem;
 }/*# sourceMappingURL=adminProduct.css.map */

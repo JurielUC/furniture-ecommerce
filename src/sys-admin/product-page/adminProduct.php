@@ -38,25 +38,45 @@
     <main>
         <div class="container">
             <section class="product-cont">
+                <h1 class="create-message"><?php if(!empty($_GET['message'])) {
+                    $message = $_GET['message'];
+                    echo $message; }?>
+                </h1>
                 <div class="addItem-cont">
-                    <form action="" method="post">
+                    <form action="admin-addProduct.php" method="POST" enctype="multipart/form-data">
                         <div class="pps">
                             <div class="prod-input first">
                                 <label for="product">Product</label>
-                                <input type="text" name="product" id="product">
+                                <input type="text" name="product_name" id="product" required>
                             </div>
                             <div class="price-input first">
                                 <label for="price">Price</label>
-                                <input type="text" name="price" id="price">
+                                <input type="text" name="price" id="price" required>
                             </div>
                             <div class="size first">
-                                <label for="size">Product</label>
-                                <input type="text" name="size" id="size">
+                                <label for="size">Size</label>
+                                <input type="text" name="size" id="size" required>
                             </div>
                         </div>
                         <div class="description">
                             <label for="description">Description</label>
-                            <textarea name="description" id="description" cols="30" rows="4"></textarea>
+                            <textarea name="p_description" id="description" cols="30" rows="4"></textarea>
+                        </div>
+                        <div class="sib">
+                            <div class="sel-img"> <!--select, image input-->
+                                <select name="category" class="select" required>
+                                    <option value="" selected>Category...</option>
+                                    <option value="Table">Table</option>
+                                    <option value="Bed">Bed</option>
+                                    <option value="Chair">Chair</option>
+                                    <option value="Door">Door</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                                <input type="file" id="myfile" name="product_img" accept="image/*" style="color: #000000;" required>
+                            </div>
+                            <div class="submit">
+                                <button type="submit">Post</button>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -71,13 +91,23 @@
                 <div class="product">
                     <div class="display-div">
                         <!--Put php codes for product display here-->
-                        <div class="prod-display">
-                            <div class="prod-img">
+                        <?php 
+                            include '../../php-database/product-display.php';
 
-                            </div>
-                            <h3>Name</h3>
-                            <p>PHP 10000</p>
-                        </div>
+                            while ($row = mysqli_fetch_assoc($result))
+                            {
+                            ?>
+                                <div class="prod-display">
+                                    <div class="prod-img">
+                                        <!--put image here-->
+                                        <img src="<?php echo $row['product_img']; ?>" alt="" width="100px">
+                                    </div>
+                                    <h3><?php echo $row['product_name']; ?></h3>
+                                    <p>PHP <?php echo $row['price']; ?>.00</p>
+                                </div>
+                        <?php
+                            }
+                        ?>
                     </div>
                 </div>
             </section>
@@ -89,7 +119,20 @@
                     </form>
                 </div>  
                 <div class="inbox">
-                    
+                    <div class="inbox-header">
+                        <h2>Inbox</h2>
+                        <p>(2 message/s)</p>
+                    </div>
+                    <div class="inbox-message-cont">
+                        <!--put php for message display here-->
+                        <div class="inbox-message">
+                            <img src="../../../image/logo.jpg" alt="" width="40px" height="40px">
+                            <div class="name-addr">
+                                <h4>Juriel Comia</h4>
+                                <p>Lemery, Batangas</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>              
             </section>
         </div>

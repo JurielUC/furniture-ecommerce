@@ -49,13 +49,23 @@
                 <div class="product">
                     <div class="display-div">
                         <!--Put php codes for product display here-->
-                        <div class="prod-display">
-                            <div class="prod-img">
+                        <?php 
+                            include '../../php-database/product-display.php';
 
-                            </div>
-                            <h3>Name</h3>
-                            <p>PHP 10000</p>
-                        </div>
+                            while ($row = mysqli_fetch_assoc($result))
+                            {
+                            ?>
+                                <div class="prod-display">
+                                    <div class="prod-img">
+                                        <!--put image here-->
+                                        <img src="../../sys-admin/product-page/<?php echo $row['product_img']; ?>" alt="" width="100px">
+                                    </div>
+                                    <h3><?php echo $row['product_name']; ?></h3>
+                                    <p>PHP <?php echo $row['price']; ?>.00</p>
+                                </div>
+                        <?php
+                            }
+                        ?>
                     </div>
                 </div>
             </section>
