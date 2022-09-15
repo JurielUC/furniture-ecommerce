@@ -94,6 +94,13 @@
                         <?php 
                             include '../../php-database/product-display.php';
 
+                            if (mysqli_num_rows($result) == 0) {
+                                echo "<div class='nodata' style='margin: auto; text-align: center; opacity: 25%;'>
+                                        <img src='../../../image/icon/file.png' width='120px' height='120px'>
+                                        <p>No Post</p>
+                                      </div>";
+                            }
+
                             while ($row = mysqli_fetch_assoc($result))
                             {
                             ?>
