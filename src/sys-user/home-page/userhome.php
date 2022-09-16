@@ -47,21 +47,22 @@
                     <button>Others</button>
                 </div>
                 <div class="product">
+                    <?php 
+                        include '../../php-database/product-display.php';
+
+                        if (mysqli_num_rows($result) == 0) {
+                            echo "<div class='nodata' style='width: 690px; height: 80vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
+                                <img src='../../../image/icon/file.png' width='120px' height='120px'>
+                                <p>No Post</p>
+                                </div>";
+                            }
+                    ?>
                     <div class="display-div">
                         <!--Put php codes for product display here-->
-                        <?php 
-                            include '../../php-database/product-display.php';
-
-                            if (mysqli_num_rows($result) == 0) {
-                                echo "<div class='nodata' style='margin: auto; text-align: center; opacity: 25%;'>
-                                        <img src='../../../image/icon/file.png' width='120px' height='120px'>
-                                        <p>No Post</p>
-                                      </div>";
-                            }
-
+                        <?php
                             while ($row = mysqli_fetch_assoc($result))
                             {
-                            ?>
+                        ?>
                                 <div class="prod-display">
                                     <div class="prod-img">
                                         <!--put image here-->

@@ -8,8 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="userlogin.css">
-    <script src="userlogin.js"></script>
+    <link rel="stylesheet" href="userlogin.css?v=<?php echo time(); ?>">
 </head>
 <body>
     <!--Header and divider-->
@@ -53,7 +52,12 @@
                     <input type="email" placeholder="Email" name="email" required>
 
                     <label for="psw">Password</label>
-                    <input type="password" placeholder="Password" name="u_password" required>
+                    <input type="password" placeholder="Password" id="psw" name="u_password" required>
+
+                    <div class="check-box" style="width: 170px;">
+                        <input type="checkbox" style="margin-left: -36px;" id="showpass" onclick="showPass()">
+                        <label class="checkbox" for="showpass" style="font-size: .9rem;">Show Password</label><br>
+                    </div>
 
                     <button type="submit">Login</button>
                 </div>
@@ -61,5 +65,7 @@
             <p>Need an account? <a href="../signup-page/signup-page.php"><b>SIGN UP</b></a></p>
         </section>
     </main>
+    <!--Java Script Import-->
+    <script src="userlogin.js"></script>
 </body>
 </html>

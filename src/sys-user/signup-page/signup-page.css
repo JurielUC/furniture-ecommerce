@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*header and button color*/
 /*divider color*/
 /*login container color*/
@@ -79,6 +80,40 @@ main {
   background-attachment: fixed;
   background-size: cover;
 }
+main #message {
+  display: none;
+  position: absolute;
+  bottom: 80px;
+  width: 300px;
+  height: 150px;
+  background-color: #f5ece3;
+  /* Add a green text color and a checkmark when the requirements are right */
+  /* Add a red text color and an "x" when the requirements are wrong */
+}
+main #message h5 {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+main #message p {
+  font-size: 0.8rem;
+  margin-left: 50px;
+}
+main #message .valid {
+  color: green;
+}
+main #message .valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+main #message .invalid {
+  color: red;
+}
+main #message .invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
 main section {
   overflow-y: scroll;
   width: 300px;
@@ -113,7 +148,7 @@ main section::-webkit-scrollbar-track-piece:start {
   margin-top: 10px;
 }
 main section h1 {
-  margin-top: 350px;
+  margin-top: 420px;
 }
 main section p {
   margin-bottom: 50px;

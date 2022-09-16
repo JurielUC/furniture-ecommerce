@@ -95,7 +95,7 @@ main .container .product-cont .create-message {
 main .container .product-cont .addItem-cont {
   margin-top: 10px;
   width: 710px;
-  height: 250px;
+  height: 230px;
   background-color: #f2e5db;
   color: #a8896c;
   border-radius: 10px 0 10px 0;
@@ -115,9 +115,10 @@ main .container .product-cont .addItem-cont .pps .first {
   margin: 10px 10px 0 10px;
 }
 main .container .product-cont .addItem-cont .pps .first #product {
-  width: 250px;
+  width: 260px;
 }
 main .container .product-cont .addItem-cont .pps .first input {
+  font-family: "Poppins", sans-serif;
   padding: 5px 8px;
   display: inline-block;
   border: 1px solid #a8896c;
@@ -164,8 +165,9 @@ main .container .product-cont .addItem-cont .sib .sel-img {
   width: 400px;
 }
 main .container .product-cont .addItem-cont .sib .sel-img select {
+  font-family: "Poppins", sans-serif;
   margin-left: 22px;
-  padding: 5px 8px;
+  padding: 2px 8px;
   display: inline-block;
   border: 1px solid #a8896c;
   border-radius: 5px;
@@ -173,6 +175,7 @@ main .container .product-cont .addItem-cont .sib .sel-img select {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 main .container .product-cont .addItem-cont .sib .sel-img input[type=file] {
+  font-family: "Poppins", sans-serif;
   cursor: pointer;
   padding: 3px 4px;
   width: 220px;
@@ -188,6 +191,7 @@ main .container .product-cont .addItem-cont .sib .submit {
   text-align: end;
 }
 main .container .product-cont .addItem-cont .sib .submit button {
+  font-family: "Poppins", sans-serif;
   width: 100px;
   background-color: #a8896c;
   border-color: #a8896c;
@@ -279,12 +283,13 @@ main .container .inbox-cont .search-bar input[type=text]:focus {
 }
 main .container .inbox-cont .search-bar button {
   width: 22%;
-  padding: 4px 0;
+  padding: 2px 0;
   border-radius: 5px;
   border: 1px solid #a8896c;
   color: #ffffff;
   background-color: #a8896c;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 main .container .inbox-cont .search-bar button:hover {
@@ -302,10 +307,12 @@ main .container .inbox-cont .inbox .inbox-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid #a8896c;
+  border-bottom: 2px solid #ffffff;
+  background-color: #a8896c;
 }
 main .container .inbox-cont .inbox .inbox-header h2, main .container .inbox-cont .inbox .inbox-header p {
   margin: 10px;
+  color: #ffffff;
 }
 main .container .inbox-cont .inbox .inbox-message-cont {
   overflow-y: scroll;

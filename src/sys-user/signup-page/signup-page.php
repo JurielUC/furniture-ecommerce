@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="signup-page.css">
+    <link rel="stylesheet" href="signup-page.css?v=<?php echo time(); ?>">
 </head>
 <body>
     <!--Header and divider-->
@@ -31,6 +31,13 @@
     <!------------------------------------------------>
 
     <main>
+        <div id="message">
+            <h5>Password must contain the following:</h5>
+            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+            <p id="number" class="invalid">A <b>number</b></p>
+            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+        </div>
         <section>
             <h1>Create Account</h1>
             <form action="signup-create.php" method="POST" enctype="multipart/form-data">
@@ -55,13 +62,22 @@
                     <input type="email" placeholder="Email" name="email" required>
 
                     <label for="psw">Password</label>
-                    <input type="password" placeholder="Password" name="u_password"  required>
+                    <input type="password" placeholder="Password" name="u_password" id="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                    
+                    <div class="check-box" style="width: 170px; text-align: left;">
+                        <input type="checkbox" id="showpass" onclick="myFunction()">
+                        <label class="checkbox" for="showpass" style="font-size: .9rem;">Show Password</label><br>
 
-                    <button type="submit" name='submit'>Submit</button>
+                        <input type="checkbox" id="checkme"/>
+                        <label class="checkbox" for="checkme" style="font-size: .9rem;">I hereby certify that all information above are true.</label><br>
+                    </div>
+                    
+                    <button type="submit" name='submit' disabled="disabled" id="sendNewSms">Submit</button>
                 </div>
             </form>
             <p>Already have Account? <a href="../login-page/userlogin.php"><b>LOGIN</b></a></p>
         </section>
     </main>
+    <script src="signup-page.js"></script>
 </body>
 </html>

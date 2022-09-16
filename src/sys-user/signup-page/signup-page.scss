@@ -10,6 +10,47 @@ main {
     background-attachment: fixed;
     background-size: cover;
 
+    #message {
+        display:none;
+        position: absolute;
+        bottom: 80px;
+        width: 300px;
+        height: 150px;
+        background-color: $loginbg-color;
+
+        h5 {
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+
+        p {
+            font-size: .8rem;
+            margin-left: 50px;
+        }
+
+        /* Add a green text color and a checkmark when the requirements are right */
+        .valid {
+            color: green;
+        }
+        
+        .valid:before {
+            position: relative;
+            left: -35px;
+            content: "✔";
+        }
+
+        /* Add a red text color and an "x" when the requirements are wrong */
+        .invalid {
+            color: red;
+        }
+        
+        .invalid:before {
+            position: relative;
+            left: -35px;
+            content: "✖";
+        }
+    }
+
     section {
         overflow-y: scroll;
         width: 300px;
@@ -24,7 +65,7 @@ main {
         @include scroll;
 
         h1 {
-            margin-top: 350px;
+            margin-top: 420px;
         }
 
         p {

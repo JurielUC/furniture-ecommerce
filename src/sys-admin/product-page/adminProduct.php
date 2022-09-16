@@ -60,7 +60,7 @@
                         </div>
                         <div class="description">
                             <label for="description">Description</label>
-                            <textarea name="p_description" id="description" cols="30" rows="4"></textarea>
+                            <textarea name="p_description" id="description" cols="30" rows="3"></textarea>
                         </div>
                         <div class="sib">
                             <div class="sel-img"> <!--select, image input-->
@@ -89,18 +89,19 @@
                     <button>Others</button>
                 </div>
                 <div class="product">
+                    <?php 
+                        include '../../php-database/product-display.php';
+
+                        if (mysqli_num_rows($result) == 0) {
+                            echo "<div class='nodata' style='width: 690px; height: 50vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
+                                <img src='../../../image/icon/file.png' width='120px' height='120px'>
+                                <p>No Post</p>
+                                </div>";
+                            }
+                    ?>
                     <div class="display-div">
                         <!--Put php codes for product display here-->
                         <?php 
-                            include '../../php-database/product-display.php';
-
-                            if (mysqli_num_rows($result) == 0) {
-                                echo "<div class='nodata' style='margin: auto; text-align: center; opacity: 25%;'>
-                                        <img src='../../../image/icon/file.png' width='120px' height='120px'>
-                                        <p>No Post</p>
-                                      </div>";
-                            }
-
                             while ($row = mysqli_fetch_assoc($result))
                             {
                             ?>
