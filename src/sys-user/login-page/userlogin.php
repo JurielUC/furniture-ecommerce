@@ -54,8 +54,8 @@
                     <label for="psw">Password</label>
                     <input type="password" placeholder="Password" id="psw" name="u_password" required>
 
-                    <div class="check-box" style="width: 170px;">
-                        <input type="checkbox" style="margin-left: -36px;" id="showpass" onclick="showPass()">
+                    <div class="check-box">
+                        <input type="checkbox" style="margin-left: -115px;" id="showpass" onclick="showPass()">
                         <label class="checkbox" for="showpass" style="font-size: .9rem;">Show Password</label><br>
                     </div>
 

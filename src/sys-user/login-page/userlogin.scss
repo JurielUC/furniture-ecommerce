@@ -40,7 +40,16 @@ main {
             justify-content: center;
             flex-direction: column;
 
-            input[type=email], input[type=password] {
+            input[type=email] {
+                width: 130%;
+                padding: 10px 8px;
+                margin: 3px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+
+            #psw {
                 width: 130%;
                 padding: 10px 8px;
                 margin: 3px 0;

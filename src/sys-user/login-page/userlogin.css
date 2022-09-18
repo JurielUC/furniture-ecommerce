@@ -109,7 +109,15 @@ main section .container {
   justify-content: center;
   flex-direction: column;
 }
-main section .container input[type=email], main section .container input[type=password] {
+main section .container input[type=email] {
+  width: 130%;
+  padding: 10px 8px;
+  margin: 3px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+main section .container #psw {
   width: 130%;
   padding: 10px 8px;
   margin: 3px 0;

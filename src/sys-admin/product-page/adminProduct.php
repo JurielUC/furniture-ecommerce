@@ -25,8 +25,8 @@
         <!--Put your navigation here below-->
         <nav>
             <a href="" style="border-bottom: 3px solid white; padding-bottom: 5px;">Product</a>
-            <a href="">Message</a>
-            <a href="">Shop Feed</a>
+            <a href="../message-page/adminMessage.php">Message</a>
+            <a href="../feed-profile-page/adminProfile.php">Shop Feed</a>
             <a href="../../php-database/admin-logout.php">Logout</a>
         </nav>
     </header>
