@@ -82,6 +82,7 @@ main {
                     margin: 0 22px;
 
                     textarea {
+                        resize: none;
                         width: 665px;
                         display: inline-block;
                         border: 1px solid $header-color;

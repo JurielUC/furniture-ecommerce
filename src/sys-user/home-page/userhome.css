@@ -116,6 +116,52 @@ main .container .product-cont .product .display-div {
   display: flex;
   flex-wrap: wrap;
 }
+main .container .product-cont .product .display-div .product-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.575);
+}
+main .container .product-cont .product .display-div .product-popup .product-popup-form {
+  height: 100vh;
+  width: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: #f2e5db;
+}
+main .container .product-cont .product .display-div .product-popup .product-popup-form .popup-header {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 2px solid #a8896c;
+  flex-direction: column;
+}
+main .container .product-cont .product .display-div .product-popup .product-popup-form .popup-header .exit-button {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: #a8896c;
+  color: #ffffff;
+  width: 400px;
+  justify-content: baseline;
+  border: 2px solid #a8896c;
+}
+main .container .product-cont .product .display-div .product-popup .product-popup-form .popup-header .exit-button button {
+  cursor: pointer;
+  margin: 0 10px 0 10px;
+  background-color: #a8896c;
+  border: none;
+}
+main .container .product-cont .product .display-div .product-popup .product-popup-form .popup-header .product-content {
+  width: 400px;
+  height: 400px;
+  border: 20px solid #f2e5db;
+  background-color: #ffffff;
+}
 main .container .product-cont .product .display-div .prod-display {
   width: 165px;
   height: 250px;
@@ -182,6 +228,15 @@ main .container .shopinfo-cont .shopinfo {
   color: #a8896c;
   background-color: #f2e5db;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+main .container .shopinfo-cont .shopinfo .profile-pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .container .shopinfo-cont .shopinfo .profile-pic img {
+  margin: 10px 0;
+  border-radius: 50%;
 }
 main .container .shopinfo-cont .shopinfo h1 {
   text-align: center;

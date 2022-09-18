@@ -143,6 +143,7 @@ main .container .product-cont .addItem-cont .description {
   margin: 0 22px;
 }
 main .container .product-cont .addItem-cont .description textarea {
+  resize: none;
   width: 665px;
   display: inline-block;
   border: 1px solid #a8896c;

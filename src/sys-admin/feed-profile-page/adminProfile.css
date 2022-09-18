@@ -222,6 +222,15 @@ main .container .shopinfo-cont .shopinfo {
   background-color: #f2e5db;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
+main .container .shopinfo-cont .shopinfo .profile-pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .container .shopinfo-cont .shopinfo .profile-pic img {
+  margin: 10px 0;
+  border-radius: 50%;
+}
 main .container .shopinfo-cont .shopinfo h1 {
   text-align: center;
   padding-top: 10px;

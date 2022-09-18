@@ -62,8 +62,10 @@
                         <?php
                             while ($row = mysqli_fetch_assoc($result))
                             {
+
+                                
                         ?>
-                                <div class="prod-display">
+                                <div class="prod-display" onclick="openProduct()">
                                     <div class="prod-img">
                                         <!--put image here-->
                                         <img src="../../sys-admin/product-page/<?php echo $row['product_img']; ?>" alt="" width="100px">
@@ -74,6 +76,20 @@
                         <?php
                             }
                         ?>
+                                <!--Display Specific Item when clicked-->
+                                <div class="product-popup" id="myProductForm">
+                                    <div class="product-popup-form">
+                                        <div class="popup-header">
+                                            <div class="exit-button">
+                                                <button class="update-popup-close" onclick="closeProduct()" title="Close"><img src="../../../image/icon/arrow.png" alt="" width="17px" height="17px"></button>
+                                                <h2>Product Information</h2>
+                                            </div>
+                                            <div class="product-content">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                     </div>
                 </div>
             </section>
@@ -85,18 +101,26 @@
                     </form>
                 </div>  
                 <div class="shopinfo">
+                    <?php include '../../php-database/shopinfo.php'; 
+                        while($row = mysqli_fetch_assoc($result)) {
+                    ?>
                     <h1><u>Business Information</u></h1>
+                    <div class="profile-pic">
+                        <img src="../../sys-admin/product-page/<?php echo $row["profile_pic"]; ?>" alt="" width="100px" height="100px">
+                    </div>
                     <h3><img src="../../../image/icon/placeholder.png" alt="" width="15" height="15">&nbsp&nbspLocation</h3>
-                    <p>Barangay, Philippines</p>
+                    <p><?php echo $row["address"]; ?></p>
                     <h3><img src="../../../image/icon/gmail.png" alt="" width="15" height="15">&nbsp&nbspEmail</h3>
-                    <p>furniture@gmail.com</p>
+                    <p><?php echo $row["email"]; ?></p>
                     <h3><img src="../../../image/icon/phone (1).png" alt="" width="15" height="15">&nbsp&nbspContact Number</h3>
-                    <p>+63 905 581 1152</p>
+                    <p><?php echo $row["contact_no"]; ?></p>
                     <h3><img src="../../../image/icon/owner.png" alt="" width="15" height="15">&nbsp&nbspBusiness Owner</h3>
-                    <p>Gil Reyes</p>
-                </div>              
+                    <p><?php echo $row["name"]; ?></p>
+                    <?php } ?>
+                </div>             
             </section>
         </div>
+        <script src="userhome.js"></script>
     </main>
 </body>
 </html>
