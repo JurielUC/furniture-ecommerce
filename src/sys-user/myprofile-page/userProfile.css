@@ -67,4 +67,274 @@ header nav a:hover {
   margin: 0 0 0 70px;
   font-size: 0.5rem;
   color: #a8896c;
+}
+
+main {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .container {
+  width: 1120px;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+main .container .post-cont {
+  width: 740px;
+  height: 90vh;
+}
+main .container .post-cont .form-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 710px;
+  height: 150px;
+  background-color: #f2e5db;
+  color: #a8896c;
+  border-radius: 10px 0 10px 0;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+main .container .post-cont .form-cont textarea {
+  font-family: "Poppins", sans-serif;
+  border-radius: 10px;
+  resize: none;
+  padding: 10px;
+  border: 1px solid #a8896c;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+main .container .post-cont .form-cont textarea:focus:focus {
+  outline: none;
+  border: 1px solid #dbb07b;
+}
+main .container .post-cont .form-cont .attach-submit {
+  text-align: right;
+}
+main .container .post-cont .form-cont .attach-submit input[type=submit] {
+  cursor: pointer;
+  border-radius: 5px;
+  color: #ffffff;
+  width: 100px;
+  padding: 4px 0;
+  background-color: #a8896c;
+  border: none;
+}
+main .container .post-cont .form-cont .attach-submit input[type=submit]:hover {
+  opacity: 80%;
+}
+main .container .post-cont .user-post-cont {
+  overflow-y: scroll;
+  height: 65vh;
+  width: 710px;
+  margin-top: 12px;
+}
+main .container .post-cont .user-post-cont .user-post {
+  width: 690px;
+  background-color: #f2e5db;
+  border-radius: 10px;
+}
+main .container .post-cont .user-post-cont .user-post .pp-name-date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #a8896c;
+}
+main .container .post-cont .user-post-cont .user-post .pp-name-date .pp-name {
+  margin: 10px 0 15px 20px;
+  display: flex;
+  align-items: center;
+}
+main .container .post-cont .user-post-cont .user-post .pp-name-date .pp-name h2 {
+  margin-left: 10px;
+}
+main .container .post-cont .user-post-cont .user-post .pp-name-date p {
+  font-size: 0.6rem;
+  margin: 10px 20px 15px 0;
+}
+main .container .post-cont .user-post-cont .user-post .caption-attachment {
+  margin: 0 40px 15px 40px;
+  font-size: 0.9rem;
+}
+main .container .post-cont .user-post-cont .user-post .comment-send form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .container .post-cont .user-post-cont .user-post .comment-send textarea {
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 10px;
+  resize: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+main .container .post-cont .user-post-cont .user-post .comment-send textarea:focus {
+  outline: none;
+}
+main .container .post-cont .user-post-cont .user-post .comment-send button {
+  cursor: pointer;
+  margin: 10px 0 10px 10px;
+  border: none;
+  background-color: #f2e5db;
+}
+main .container .post-cont .user-post-cont .user-post .comment-send button:hover {
+  opacity: 80%;
+}
+main .container .shopinfo-cont {
+  width: 380px;
+  height: 90vh;
+}
+main .container .shopinfo-cont .search-bar input[type=text] {
+  width: 76%;
+  padding: 5px 8px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #a8896c;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+main .container .shopinfo-cont .search-bar input[type=text]:focus {
+  outline: none;
+  border: 1px solid #dbb07b;
+}
+main .container .shopinfo-cont .search-bar button {
+  width: 22%;
+  padding: 4px 0;
+  border-radius: 5px;
+  border: 1px solid #a8896c;
+  color: #ffffff;
+  background-color: #a8896c;
+  cursor: pointer;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+main .container .shopinfo-cont .search-bar button:hover {
+  opacity: 70%;
+}
+main .container .shopinfo-cont .shopinfo {
+  width: 380px;
+  height: 83vh;
+  color: #a8896c;
+  background-color: #f2e5db;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+main .container .shopinfo-cont .shopinfo .profile-pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .container .shopinfo-cont .shopinfo .profile-pic img {
+  margin: 10px 0;
+  border-radius: 50%;
+}
+main .container .shopinfo-cont .shopinfo h1 {
+  text-align: center;
+  padding-top: 10px;
+}
+main .container .shopinfo-cont .shopinfo h3 {
+  margin: 10px 0 0 10px;
+}
+main .container .shopinfo-cont .shopinfo p {
+  margin-left: 30px;
+}
+main .container .shopinfo-cont .shopinfo button {
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+  color: #ffffff;
+  background-color: #a8896c;
+  border: none;
+  border-radius: 10px;
+}
+main .container .shopinfo-cont .shopinfo button:hover {
+  opacity: 80%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+main .container .profile-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.575);
+}
+main .container .profile-popup .profile-popup-form {
+  height: 100vh;
+  width: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: #f2e5db;
+}
+main .container .profile-popup .profile-popup-form .popup-header {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 2px solid #a8896c;
+  flex-direction: column;
+}
+main .container .profile-popup .profile-popup-form .popup-header .exit-button {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: #a8896c;
+  color: #ffffff;
+  width: 400px;
+  justify-content: baseline;
+  border: 2px solid #a8896c;
+}
+main .container .profile-popup .profile-popup-form .popup-header .exit-button button {
+  cursor: pointer;
+  margin: 0 10px 0 10px;
+  background-color: #a8896c;
+  border: none;
+}
+main .container .profile-popup .profile-popup-form .popup-header .exit-button h2 {
+  font-weight: 400;
+}
+main .container .profile-popup .profile-popup-form .popup-header .profile-content {
+  width: 400px;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .container .profile-popup .profile-popup-form .popup-header .profile-content img {
+  border-radius: 50%;
+}
+main .container .profile-popup .profile-popup-form .popup-header .profile-content div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  color: #a8896c;
+  width: 210%;
+}
+main .container .profile-popup .profile-popup-form .popup-header .profile-content div input {
+  padding: 10px 8px;
+  margin-left: -100px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+main .container .profile-popup .profile-popup-form .popup-header .profile-content div input:focus {
+  outline: none;
+}
+main .container .profile-popup .profile-popup-form .popup-header .profile-content div .submit {
+  background-color: #a8896c;
+  color: #ffffff;
+  cursor: pointer;
+}
+main .container .profile-popup .profile-popup-form .popup-header .profile-content div .submit:hover {
+  opacity: 80%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }/*# sourceMappingURL=userProfile.css.map */

@@ -22,50 +22,17 @@ main {
                 flex-direction: column;
                 margin-top: 10px;
                 width: 710px;
-                height: 150px;
-                background-color: $divider-color;
-                color: $header-color;
+                height: 50px;
+                background-color: $header-color;
+                color: $white-color;
                 border-radius: 10px 0 10px 0;
                 box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-            
-                textarea {
-                    font-family: $font-family;
-                    border-radius: 10px;
-                    resize: none;
-                    padding: 10px;
-                    border: 1px solid $header-color;
-                    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 
-                    &:focus {
-                        &:focus {
-                            outline: none;
-                            border: 1px solid $mt-color;
-                        }
-                    }
-                }
-
-                .attach-submit {
-                    text-align: right;
-
-                    input[type=submit] {
-                        cursor: pointer;
-                        border-radius: 5px;
-                        color: $white-color;
-                        width: 100px;
-                        padding: 4px 0;
-                        background-color: $header-color;
-                        border: none;
-
-                        &:hover {
-                            opacity: 80%;
-                        }
-                    }
-                }
             }
 
             .user-post-cont {
                 overflow-y: scroll;
-                height: 65vh;
+                height: 88vh;
                 width: 710px;
                 margin-top: 12px;
 
@@ -199,6 +166,23 @@ main {
 
                 p {
                     margin-left: 30px;
+                }
+
+                button {
+                    font-family: $font-family;
+                    cursor: pointer;
+                    width: 100%;
+                    height: 30px;
+                    margin-top: 10px;
+                    color: $white-color;
+                    background-color: $header-color;
+                    border: none;
+                    border-radius: 10px;
+
+                    &:hover {
+                        opacity: 80%;
+                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    }
                 }
             }
         }

@@ -1,1 +1,318 @@
 @use '../../style/header/header';
+@use '../../style/globals' as *;
+
+main {
+    width: 100%;
+    height: 90vh;
+    @include flexBox();
+    justify-content: center;
+
+    .container {
+        width: 1120px;
+        height: 90vh;
+        @include flexBox();
+
+        .post-cont {
+            width: 740px;
+            height: 90vh;
+
+            .form-cont {
+                @include flexBox();
+                justify-content: center;
+                flex-direction: column;
+                margin-top: 10px;
+                width: 710px;
+                height: 150px;
+                background-color: $divider-color;
+                color: $header-color;
+                border-radius: 10px 0 10px 0;
+                box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            
+                textarea {
+                    font-family: $font-family;
+                    border-radius: 10px;
+                    resize: none;
+                    padding: 10px;
+                    border: 1px solid $header-color;
+                    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+
+                    &:focus {
+                        &:focus {
+                            outline: none;
+                            border: 1px solid $mt-color;
+                        }
+                    }
+                }
+
+                .attach-submit {
+                    text-align: right;
+
+                    input[type=submit] {
+                        cursor: pointer;
+                        border-radius: 5px;
+                        color: $white-color;
+                        width: 100px;
+                        padding: 4px 0;
+                        background-color: $header-color;
+                        border: none;
+
+                        &:hover {
+                            opacity: 80%;
+                        }
+                    }
+                }
+            }
+
+            .user-post-cont {
+                overflow-y: scroll;
+                height: 65vh;
+                width: 710px;
+                margin-top: 12px;
+
+                .user-post {
+                    width: 690px;
+                    background-color: $divider-color;
+                    border-radius: 10px;
+
+                    .pp-name-date {
+                        @include flexBox();
+                        justify-content: space-between;
+                        color: $header-color;
+
+                        .pp-name {
+                            margin: 10px 0 15px 20px;
+                            @include flexBox();
+
+                            h2 {
+                                margin-left: 10px;
+                            }
+                        }
+
+                        p {
+                            font-size: .6rem;
+                            margin: 10px 20px 15px 0;
+                        }
+                    }
+
+                    .caption-attachment {
+                        margin: 0 40px 15px 40px;
+                        font-size: .9rem;
+                    }
+
+                    .comment-send {
+                        form {
+                            @include flexBox();
+                            justify-content: center;
+                        }
+
+                        textarea {
+                            margin-bottom: 10px;
+                            font-family: $font-family;
+                            margin-top: 10px;
+                            resize: none;
+                            border-radius: 5px;
+                            padding: 5px;
+
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+
+                        button {
+                            cursor: pointer;
+                            margin: 10px 0 10px 10px;
+                            border: none;
+                            background-color: $divider-color;
+    
+                            &:hover {
+                                opacity: 80%;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .shopinfo-cont {
+            width: 380px;
+            height: 90vh;
+
+            .search-bar {
+                input[type=text] {
+                    width: 76%;
+                    padding: 5px 8px;
+                    margin: 10px 0;
+                    display: inline-block;
+                    border: 1px solid $header-color;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                    
+                    &:focus {
+                        outline: none;
+                        border: 1px solid $mt-color;
+                    }
+                }
+
+                button {
+                    width: 22%;
+                    padding: 4px 0;
+                    border-radius: 5px;
+                    border: 1px solid $header-color;
+                    color: $white-color;
+                    background-color: $header-color;
+                    cursor: pointer;
+                    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+                    &:hover {
+                        opacity: 70%;
+                    }
+                }
+            }
+
+            .shopinfo {
+                width: 380px;
+                height: 83vh;
+                color: $header-color;
+                background-color: $divider-color;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+
+                .profile-pic {
+                    @include flexBox();
+                    justify-content: center;
+
+                    img {
+                        margin: 10px 0;
+                        border-radius: 50%;
+                    }
+                }
+                
+                h1 {
+                    text-align: center;
+                    padding-top: 10px;
+                }
+
+                h3 {
+                    margin: 10px 0 0 10px;
+                }
+
+                p {
+                    margin-left: 30px;
+                }
+
+                button {
+                    font-family: $font-family;
+                    cursor: pointer;
+                    width: 100%;
+                    height: 30px;
+                    margin-top: 10px;
+                    color: $white-color;
+                    background-color: $header-color;
+                    border: none;
+                    border-radius: 10px;
+
+                    &:hover {
+                        opacity: 80%;
+                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    }
+                }
+            }
+        }
+
+        .profile-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 99999;
+            background-color: rgba(0, 0, 0, 0.575);
+
+            .profile-popup-form {
+                height: 100vh;
+                width: 400px;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                background-color: $divider-color;
+
+                .popup-header {
+                    display: flex;
+                    align-items:flex-start;
+                    border-bottom: 2px solid $header-color;
+                    flex-direction: column;
+                    
+                    .exit-button {
+                        @include flexBox();
+                        height: 50px;
+                        background-color: $header-color;
+                        color: $white-color;
+                        width: 400px;
+                        justify-content: baseline;
+                        border: 2px solid $header-color;
+
+                        button {
+                            cursor: pointer;
+                            margin: 0 10px 0 10px;
+                            background-color: $header-color;
+                            border: none;
+                        }
+
+                        h2 {
+                            font-weight: 400;
+                        }
+                    }
+
+                    .profile-content {
+                        width: 400px;
+                        height: 700px;
+                        @include flexBox();
+                        justify-content: center;
+                        flex-direction: column;
+
+                        img {
+                            border-radius: 50%;
+                        }
+
+                        div {
+                            display: flex;
+                            flex-direction: column;
+                            margin-bottom: 10px;
+                            color: $header-color;
+                            width: 210%;
+
+                            input {
+                                padding: 10px 8px;
+                                
+                                margin-left: -100px;
+                                display: inline-block;
+                                border: 1px solid #ccc;
+                                box-sizing: border-box;
+                                background-color: $white-color;
+                                font-family: $font-family;
+
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+
+                            .submit {
+                                background-color: $header-color;
+                                color: $white-color;
+                                cursor: pointer;
+
+                                &:hover {
+                                    opacity: 80%;
+                                    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

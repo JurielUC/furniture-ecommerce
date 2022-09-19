@@ -93,42 +93,15 @@ main .container .post-cont .form-cont {
   flex-direction: column;
   margin-top: 10px;
   width: 710px;
-  height: 150px;
-  background-color: #f2e5db;
-  color: #a8896c;
+  height: 50px;
+  background-color: #a8896c;
+  color: #ffffff;
   border-radius: 10px 0 10px 0;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
-main .container .post-cont .form-cont textarea {
-  font-family: "Poppins", sans-serif;
-  border-radius: 10px;
-  resize: none;
-  padding: 10px;
-  border: 1px solid #a8896c;
-  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-}
-main .container .post-cont .form-cont textarea:focus:focus {
-  outline: none;
-  border: 1px solid #dbb07b;
-}
-main .container .post-cont .form-cont .attach-submit {
-  text-align: right;
-}
-main .container .post-cont .form-cont .attach-submit input[type=submit] {
-  cursor: pointer;
-  border-radius: 5px;
-  color: #ffffff;
-  width: 100px;
-  padding: 4px 0;
-  background-color: #a8896c;
-  border: none;
-}
-main .container .post-cont .form-cont .attach-submit input[type=submit]:hover {
-  opacity: 80%;
-}
 main .container .post-cont .user-post-cont {
   overflow-y: scroll;
-  height: 65vh;
+  height: 88vh;
   width: 710px;
   margin-top: 12px;
 }
@@ -240,4 +213,19 @@ main .container .shopinfo-cont .shopinfo h3 {
 }
 main .container .shopinfo-cont .shopinfo p {
   margin-left: 30px;
+}
+main .container .shopinfo-cont .shopinfo button {
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+  color: #ffffff;
+  background-color: #a8896c;
+  border: none;
+  border-radius: 10px;
+}
+main .container .shopinfo-cont .shopinfo button:hover {
+  opacity: 80%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }/*# sourceMappingURL=adminProfile.css.map */

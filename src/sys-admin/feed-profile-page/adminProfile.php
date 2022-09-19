@@ -39,12 +39,7 @@
         <div class="container">
             <section class="post-cont">
                 <div class="form-cont">
-                    <form action="" method="post">
-                        <textarea name="post" id="" cols="95" rows="3" placeholder="Write something..."></textarea>
-                        <div class="attach-submit">
-                            <input type="submit" value="Post">
-                        </div>
-                    </form>
+                    <h1>User Post</h1>
                 </div>
                 <div class="user-post-cont">
                     <div class="user-post">
@@ -91,6 +86,8 @@
                     <h3><img src="../../../image/icon/owner.png" alt="" width="15" height="15">&nbsp&nbspBusiness Owner</h3>
                     <p><?php echo $row["name"]; ?></p>
                     <?php } ?>
+                    <button>Update Info</button>
+                    <button>Terms and Conditions</button>
                 </div>              
             </section>
         </div>
