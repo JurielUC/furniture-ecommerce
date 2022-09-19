@@ -40,11 +40,11 @@
             <section class="product-cont">
                 <div class="category">
                     <button class="active" onclick="window.location.href='userhome.php';">All</button>
-                    <button onclick="window.location.href='userhome.php';">Table</button>
-                    <button>Bed</button>
-                    <button>Chair</button>
-                    <button>Door</button>
-                    <button>Others</button>
+                    <button onclick="window.location.href='product-category/table.php';">Table</button>
+                    <button onclick="window.location.href='product-category/bed.php';">Bed</button>
+                    <button onclick="window.location.href='product-category/chair.php';">Chair</button>
+                    <button onclick="window.location.href='product-category/door.php';">Door</button>
+                    <button onclick="window.location.href='product-category/others.php';">Others</button>
                 </div>
                 <div class="product">
                     <?php 
@@ -95,9 +95,9 @@
             </section>
             <section class="shopinfo-cont">
                 <div class="search-bar">
-                    <form action="">
-                        <input type="text" placeholder="Search.." name="search">
-                        <button type="submit">Search</button>
+                    <form action="../product-search/product-search.php" method=POST>
+                        <input type="text" placeholder="Search.." name="product_name" required>
+                        <button type="submit" name="search">Search</button>
                     </form>
                 </div>  
                 <div class="shopinfo">

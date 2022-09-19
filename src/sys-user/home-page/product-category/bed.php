@@ -1,5 +1,5 @@
 <!--session link-->
-<?php include '../../php-database/user-session.php'; ?>
+<?php include '../../../php-database/user-session.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="userhome.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../userhome.css?v=<?php echo time(); ?>">
 </head>
 <body>
     <!--Header and divider-->
@@ -39,12 +39,12 @@
         <div class="container">
             <section class="product-cont">
                 <div class="category">
-                    <button class="active" >All</button>
-                    <button>Table</button>
-                    <button>Bed</button>
-                    <button>Chair</button>
-                    <button>Door</button>
-                    <button>Others</button>
+                    <button onclick="window.location.href='../userhome.php';">All</button>
+                    <button onclick="window.location.href='table.php';">Table</button>
+                    <button class="active" onclick="window.location.href='bed.php';">Bed</button>
+                    <button onclick="window.location.href='chair.php';">Chair</button>
+                    <button onclick="window.location.href='door.php';">Door</button>
+                    <button onclick="window.location.href='others.php';">Others</button>
                 </div>
                 <div class="product">
                     <?php 
@@ -95,9 +95,9 @@
             </section>
             <section class="shopinfo-cont">
                 <div class="search-bar">
-                    <form action="">
-                        <input type="text" placeholder="Search.." name="search">
-                        <button type="submit">Search</button>
+                    <form action="../../product-search/product-search.php" method=POST>
+                        <input type="text" placeholder="Search.." name="product_name" required>
+                        <button type="submit" name="search">Search</button>
                     </form>
                 </div>  
                 <div class="shopinfo">

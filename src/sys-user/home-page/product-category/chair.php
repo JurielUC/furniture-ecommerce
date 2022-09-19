@@ -1,5 +1,5 @@
 <!--session link-->
-<?php include '../../../php-database/admin-session.php'; ?>
+<?php include '../../../php-database/user-session.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../adminProduct.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../userhome.css?v=<?php echo time(); ?>">
 </head>
 <body>
     <!--Header and divider-->
@@ -24,10 +24,10 @@
         </div>
         <!--Put your navigation here below-->
         <nav>
-            <a href="" style="border-bottom: 3px solid white; padding-bottom: 5px;">Product</a>
-            <a href="../../message-page/adminMessage.php">Message</a>
-            <a href="../../feed-profile-page/adminProfile.php">Shop Feed</a>
-            <a href="../../../php-database/admin-logout.php">Logout</a>
+            <a href="" style="border-bottom: 3px solid white; padding-bottom: 5px;">Your Feed</a>
+            <a href="">Message</a>
+            <a href="">Profile</a>
+            <a href="../../../php-database/user-logout.php">Logout</a>
         </nav>
     </header>
     <div class="divider">
@@ -38,50 +38,8 @@
     <main>
         <div class="container">
             <section class="product-cont">
-                <h1 class="create-message"><?php if(!empty($_GET['message'])) {
-                    $message = $_GET['message'];
-                    echo $message; }?>
-                </h1>
-                <div class="addItem-cont">
-                    <form action="../admin-addProduct.php" method="POST" enctype="multipart/form-data">
-                        <div class="pps">
-                            <div class="prod-input first">
-                                <label for="product">Product</label>
-                                <input type="text" name="product_name" id="product" required>
-                            </div>
-                            <div class="price-input first">
-                                <label for="price">Price</label>
-                                <input type="text" name="price" id="price" required>
-                            </div>
-                            <div class="size first">
-                                <label for="size">Size</label>
-                                <input type="text" name="size" id="size" required>
-                            </div>
-                        </div>
-                        <div class="description">
-                            <label for="description">Description</label>
-                            <textarea name="p_description" id="description" cols="30" rows="3"></textarea>
-                        </div>
-                        <div class="sib">
-                            <div class="sel-img"> <!--select, image input-->
-                                <select name="category" class="select" required>
-                                    <option value="" selected>Category...</option>
-                                    <option value="Table">Table</option>
-                                    <option value="Bed">Bed</option>
-                                    <option value="Chair">Chair</option>
-                                    <option value="Door">Door</option>
-                                    <option value="Others">Others</option>
-                                </select>
-                                <input type="file" id="myfile" name="product_img" accept="image/*" style="color: #000000;" required>
-                            </div>
-                            <div class="submit">
-                                <button type="submit">Post</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
                 <div class="category">
-                    <button onclick="window.location.href='../adminProduct.php';">All</button>
+                    <button onclick="window.location.href='../userhome.php';">All</button>
                     <button onclick="window.location.href='table.php';">Table</button>
                     <button onclick="window.location.href='bed.php';">Bed</button>
                     <button class="active" onclick="window.location.href='chair.php';">Chair</button>
@@ -93,7 +51,7 @@
                         include '../../../php-database/select-chair.php';
 
                         if (mysqli_num_rows($result) == 0) {
-                            echo "<div class='nodata' style='width: 690px; height: 50vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
+                            echo "<div class='nodata' style='width: 690px; height: 80vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
                                 <img src='../../../../image/icon/file.png' width='120px' height='120px'>
                                 <p>No Post</p>
                                 </div>";
@@ -101,14 +59,16 @@
                     ?>
                     <div class="display-div">
                         <!--Put php codes for product display here-->
-                        <?php 
+                        <?php
                             while ($row = mysqli_fetch_assoc($result))
                             {
-                            ?>
-                                <div class="prod-display">
+
+                                
+                        ?>
+                                <div class="prod-display" onclick="openProduct()">
                                     <div class="prod-img">
                                         <!--put image here-->
-                                        <img src="../<?php echo $row['product_img']; ?>" alt="" width="100px">
+                                        <img src="../../../sys-admin/product-page/<?php echo $row['product_img']; ?>" alt="" width="100px">
                                     </div>
                                     <h3><?php echo $row['product_name']; ?></h3>
                                     <p>PHP <?php echo $row['price']; ?>.00</p>
@@ -116,34 +76,51 @@
                         <?php
                             }
                         ?>
+                                <!--Display Specific Item when clicked-->
+                                <div class="product-popup" id="myProductForm">
+                                    <div class="product-popup-form">
+                                        <div class="popup-header">
+                                            <div class="exit-button">
+                                                <button class="update-popup-close" onclick="closeProduct()" title="Close"><img src="../../../../image/icon/arrow.png" alt="" width="17px" height="17px"></button>
+                                                <h2>Product Information</h2>
+                                            </div>
+                                            <div class="product-content">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                     </div>
                 </div>
             </section>
-            <section class="inbox-cont">
+            <section class="shopinfo-cont">
                 <div class="search-bar">
-                    <form action="">
-                        <input type="text" placeholder="Search.." name="search">
-                        <button type="submit">Search</button>
+                    <form action="../../product-search/product-search.php" method=POST>
+                        <input type="text" placeholder="Search.." name="product_name" required>
+                        <button type="submit" name="search">Search</button>
                     </form>
                 </div>  
-                <div class="inbox">
-                    <div class="inbox-header">
-                        <h2>Inbox</h2>
-                        <p>(2 message/s)</p>
+                <div class="shopinfo">
+                    <?php include '../../../php-database/shopinfo.php'; 
+                        while($row = mysqli_fetch_assoc($result)) {
+                    ?>
+                    <h1><u>Business Information</u></h1>
+                    <div class="profile-pic">
+                        <img src="../../../sys-admin/product-page/<?php echo $row["profile_pic"]; ?>" alt="" width="100px" height="100px">
                     </div>
-                    <div class="inbox-message-cont">
-                        <!--put php for message display here-->
-                        <div class="inbox-message">
-                            <img src="../../../../image/logo.jpg" alt="" width="40px" height="40px">
-                            <div class="name-addr">
-                                <h4>Juriel Comia</h4>
-                                <p>Lemery, Batangas</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>              
+                    <h3><img src="../../../../image/icon/placeholder.png" alt="" width="15" height="15">&nbsp&nbspLocation</h3>
+                    <p><?php echo $row["address"]; ?></p>
+                    <h3><img src="../../../../image/icon/gmail.png" alt="" width="15" height="15">&nbsp&nbspEmail</h3>
+                    <p><?php echo $row["email"]; ?></p>
+                    <h3><img src="../../../../image/icon/phone (1).png" alt="" width="15" height="15">&nbsp&nbspContact Number</h3>
+                    <p><?php echo $row["contact_no"]; ?></p>
+                    <h3><img src="../../../../image/icon/owner.png" alt="" width="15" height="15">&nbsp&nbspBusiness Owner</h3>
+                    <p><?php echo $row["name"]; ?></p>
+                    <?php } ?>
+                </div>             
             </section>
         </div>
+        <script src="../userhome.js"></script>
     </main>
 </body>
 </html>

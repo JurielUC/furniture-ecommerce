@@ -121,9 +121,9 @@
             </section>
             <section class="inbox-cont">
                 <div class="search-bar">
-                    <form action="">
-                        <input type="text" placeholder="Search.." name="search">
-                        <button type="submit">Search</button>
+                    <form action="../../product-search/product-search.php" method=POST>
+                        <input type="text" placeholder="Search.." name="product_name" required>
+                        <button type="submit" name="search">Search</button>
                     </form>
                 </div>  
                 <div class="inbox">
