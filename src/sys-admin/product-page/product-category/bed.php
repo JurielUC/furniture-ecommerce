@@ -1,5 +1,5 @@
 <!--session link-->
-<?php include '../../php-database/admin-session.php'; ?>
+<?php include '../../../php-database/admin-session.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,23 +11,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="adminProduct.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../adminProduct.css?v=<?php echo time(); ?>">
 </head>
 <body>
     <!--Header and divider-->
     <header>
         <div class="app-name">
             <a href="">
-                <img src="../../../image/logo.jpg" alt="">
+                <img src="../../../../image/logo.jpg" alt="">
                 <h1>Gil's Furniture Shop</h1>
             </a>
         </div>
         <!--Put your navigation here below-->
         <nav>
             <a href="" style="border-bottom: 3px solid white; padding-bottom: 5px;">Product</a>
-            <a href="../message-page/adminMessage.php">Message</a>
-            <a href="../feed-profile-page/adminProfile.php">Shop Feed</a>
-            <a href="../../php-database/admin-logout.php">Logout</a>
+            <a href="../../message-page/adminMessage.php">Message</a>
+            <a href="../../feed-profile-page/adminProfile.php">Shop Feed</a>
+            <a href="../../../php-database/admin-logout.php">Logout</a>
         </nav>
     </header>
     <div class="divider">
@@ -43,7 +43,7 @@
                     echo $message; }?>
                 </h1>
                 <div class="addItem-cont">
-                    <form action="admin-addProduct.php" method="POST" enctype="multipart/form-data">
+                    <form action="../admin-addProduct.php" method="POST" enctype="multipart/form-data">
                         <div class="pps">
                             <div class="prod-input first">
                                 <label for="product">Product</label>
@@ -81,20 +81,20 @@
                     </form>
                 </div>
                 <div class="category">
-                    <button class="active">All</button>
-                    <button onclick="window.location.href='product-category/table.php';">Table</button>
-                    <button onclick="window.location.href='product-category/bed.php';">Bed</button>
-                    <button onclick="window.location.href='product-category/chair.php';">Chair</button>
-                    <button onclick="window.location.href='product-category/door.php';">Door</button>
-                    <button onclick="window.location.href='product-category/others.php';">Others</button>
+                    <button onclick="window.location.href='../adminProduct.php';">All</button>
+                    <button onclick="window.location.href='table.php';">Table</button>
+                    <button class="active" onclick="window.location.href='bed.php';">Bed</button>
+                    <button onclick="window.location.href='chair.php';">Chair</button>
+                    <button onclick="window.location.href='door.php';">Door</button>
+                    <button onclick="window.location.href='others.php';">Others</button>
                 </div>
                 <div class="product">
                     <?php 
-                        include '../../php-database/product-display.php';
+                        include '../../../php-database/select-bed.php';
 
                         if (mysqli_num_rows($result) == 0) {
                             echo "<div class='nodata' style='width: 690px; height: 50vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
-                                <img src='../../../image/icon/file.png' width='120px' height='120px'>
+                                <img src='../../../../image/icon/file.png' width='120px' height='120px'>
                                 <p>No Post</p>
                                 </div>";
                             }
@@ -108,7 +108,7 @@
                                 <div class="prod-display">
                                     <div class="prod-img">
                                         <!--put image here-->
-                                        <img src="<?php echo $row['product_img']; ?>" alt="" width="100px">
+                                        <img src="../<?php echo $row['product_img']; ?>" alt="" width="100px">
                                     </div>
                                     <h3><?php echo $row['product_name']; ?></h3>
                                     <p>PHP <?php echo $row['price']; ?>.00</p>
@@ -134,7 +134,7 @@
                     <div class="inbox-message-cont">
                         <!--put php for message display here-->
                         <div class="inbox-message">
-                            <img src="../../../image/logo.jpg" alt="" width="40px" height="40px">
+                            <img src="../../../../image/logo.jpg" alt="" width="40px" height="40px">
                             <div class="name-addr">
                                 <h4>Juriel Comia</h4>
                                 <p>Lemery, Batangas</p>

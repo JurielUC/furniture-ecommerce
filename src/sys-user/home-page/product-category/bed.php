@@ -18,7 +18,7 @@
     <header>
         <div class="app-name">
             <a href="">
-                <img src="../../../image/logo.jpg" alt="">
+                <img src="../../../../image/logo.jpg" alt="">
                 <h1>Gil's Furniture Shop</h1>
             </a>
         </div>
@@ -27,7 +27,7 @@
             <a href="" style="border-bottom: 3px solid white; padding-bottom: 5px;">Your Feed</a>
             <a href="">Message</a>
             <a href="">Profile</a>
-            <a href="../../php-database/user-logout.php">Logout</a>
+            <a href="../../../php-database/user-logout.php">Logout</a>
         </nav>
     </header>
     <div class="divider">
@@ -39,8 +39,8 @@
         <div class="container">
             <section class="product-cont">
                 <div class="category">
-                    <button class="active" onclick="window.location.href='userhome.php';">All</button>
-                    <button onclick="window.location.href='userhome.php';">Table</button>
+                    <button class="active" >All</button>
+                    <button>Table</button>
                     <button>Bed</button>
                     <button>Chair</button>
                     <button>Door</button>
@@ -48,11 +48,11 @@
                 </div>
                 <div class="product">
                     <?php 
-                        include '../../php-database/product-display.php';
+                        include '../../../php-database/select-bed.php';
 
                         if (mysqli_num_rows($result) == 0) {
                             echo "<div class='nodata' style='width: 690px; height: 80vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
-                                <img src='../../../image/icon/file.png' width='120px' height='120px'>
+                                <img src='../../../../image/icon/file.png' width='120px' height='120px'>
                                 <p>No Post</p>
                                 </div>";
                             }
@@ -68,7 +68,7 @@
                                 <div class="prod-display" onclick="openProduct()">
                                     <div class="prod-img">
                                         <!--put image here-->
-                                        <img src="../../sys-admin/product-page/<?php echo $row['product_img']; ?>" alt="" width="100px">
+                                        <img src="../../../sys-admin/product-page/<?php echo $row['product_img']; ?>" alt="" width="100px">
                                     </div>
                                     <h3><?php echo $row['product_name']; ?></h3>
                                     <p>PHP <?php echo $row['price']; ?>.00</p>
@@ -81,7 +81,7 @@
                                     <div class="product-popup-form">
                                         <div class="popup-header">
                                             <div class="exit-button">
-                                                <button class="update-popup-close" onclick="closeProduct()" title="Close"><img src="../../../image/icon/arrow.png" alt="" width="17px" height="17px"></button>
+                                                <button class="update-popup-close" onclick="closeProduct()" title="Close"><img src="../../../../image/icon/arrow.png" alt="" width="17px" height="17px"></button>
                                                 <h2>Product Information</h2>
                                             </div>
                                             <div class="product-content">
@@ -101,26 +101,26 @@
                     </form>
                 </div>  
                 <div class="shopinfo">
-                    <?php include '../../php-database/shopinfo.php'; 
+                    <?php include '../../../php-database/shopinfo.php'; 
                         while($row = mysqli_fetch_assoc($result)) {
                     ?>
                     <h1><u>Business Information</u></h1>
                     <div class="profile-pic">
-                        <img src="../../sys-admin/product-page/<?php echo $row["profile_pic"]; ?>" alt="" width="100px" height="100px">
+                        <img src="../../../sys-admin/product-page/<?php echo $row["profile_pic"]; ?>" alt="" width="100px" height="100px">
                     </div>
-                    <h3><img src="../../../image/icon/placeholder.png" alt="" width="15" height="15">&nbsp&nbspLocation</h3>
+                    <h3><img src="../../../../image/icon/placeholder.png" alt="" width="15" height="15">&nbsp&nbspLocation</h3>
                     <p><?php echo $row["address"]; ?></p>
-                    <h3><img src="../../../image/icon/gmail.png" alt="" width="15" height="15">&nbsp&nbspEmail</h3>
+                    <h3><img src="../../../../image/icon/gmail.png" alt="" width="15" height="15">&nbsp&nbspEmail</h3>
                     <p><?php echo $row["email"]; ?></p>
-                    <h3><img src="../../../image/icon/phone (1).png" alt="" width="15" height="15">&nbsp&nbspContact Number</h3>
+                    <h3><img src="../../../../image/icon/phone (1).png" alt="" width="15" height="15">&nbsp&nbspContact Number</h3>
                     <p><?php echo $row["contact_no"]; ?></p>
-                    <h3><img src="../../../image/icon/owner.png" alt="" width="15" height="15">&nbsp&nbspBusiness Owner</h3>
+                    <h3><img src="../../../../image/icon/owner.png" alt="" width="15" height="15">&nbsp&nbspBusiness Owner</h3>
                     <p><?php echo $row["name"]; ?></p>
                     <?php } ?>
                 </div>             
             </section>
         </div>
-        <script src="userhome.js"></script>
+        <script src="../userhome.js"></script>
     </main>
 </body>
 </html>
