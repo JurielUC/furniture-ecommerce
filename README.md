@@ -23,7 +23,7 @@ Pagkatapos maglogin sa GitHub Desktop, piliin ang **'FILE'** sa Menu
 
 Hanapin at pindutin ang **'Clone Repository'**.
 
-Sa **'Clone a repository'** ay hanapin at piliin ang **URL**, pagkatapos ay ilagay ang link/repo na ito ( https://github.com/JurielUC/BatStateU-Library-Book-Finder.git )
+Sa **'Clone a repository'** ay hanapin at piliin ang **URL**, pagkatapos ay ilagay ang link/repo na ito ( https://github.com/JurielUC/furniture-ecommerce.git )
 
 Tapos iclick ang **'Clone'**.
 ##
