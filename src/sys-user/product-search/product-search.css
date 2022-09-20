@@ -142,6 +142,16 @@ main .container .product-cont .product .display-div .prod-display .prod-img {
   align-items: center;
   justify-content: center;
 }
-main .container .product-cont .product .display-div .prod-display h3, main .container .product-cont .product .display-div .prod-display p {
+main .container .product-cont .product .display-div .prod-display .pname {
+  width: 140px;
+  padding: 5px;
+  overflow: hidden;
+}
+main .container .product-cont .product .display-div .prod-display .pname h4 {
+  white-space: nowrap;
+}
+main .container .product-cont .product .display-div .prod-display p {
   margin-top: 10px;
+  white-space: nowrap;
+  font-size: 0.8rem;
 }/*# sourceMappingURL=product-search.css.map */

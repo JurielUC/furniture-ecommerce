@@ -54,6 +54,7 @@ main {
                     flex-wrap: wrap;
 
                     .prod-display {
+                        overflow: hidden;
                         width: 165px;
                         height: 250px;
                         margin-left: 6px;
@@ -79,8 +80,20 @@ main {
                             justify-content: center;
                         }
 
-                        h3, p {
+                        .pname {
+                            width: 140px;
+                            padding: 5px;
+                            overflow: hidden;
+
+                            h4 {
+                                white-space: nowrap;
+                            }
+                        }
+
+                        p {
                             margin-top: 10px;
+                            white-space: nowrap;
+                            font-size: .8rem;
                         }
                     }
                 }

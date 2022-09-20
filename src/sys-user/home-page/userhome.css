@@ -117,6 +117,7 @@ main .container .product-cont .product .display-div {
   flex-wrap: wrap;
 }
 main .container .product-cont .product .display-div .prod-display {
+  overflow: hidden;
   width: 165px;
   height: 250px;
   margin-left: 6px;
@@ -142,8 +143,18 @@ main .container .product-cont .product .display-div .prod-display .prod-img {
   align-items: center;
   justify-content: center;
 }
-main .container .product-cont .product .display-div .prod-display h3, main .container .product-cont .product .display-div .prod-display p {
+main .container .product-cont .product .display-div .prod-display .pname {
+  width: 140px;
+  padding: 5px;
+  overflow: hidden;
+}
+main .container .product-cont .product .display-div .prod-display .pname h4 {
+  white-space: nowrap;
+}
+main .container .product-cont .product .display-div .prod-display p {
   margin-top: 10px;
+  white-space: nowrap;
+  font-size: 0.8rem;
 }
 main .container .shopinfo-cont {
   width: 380px;

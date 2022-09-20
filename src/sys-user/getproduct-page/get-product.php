@@ -38,13 +38,56 @@
     <main>
         <div class="container">
             <section class="product-cont">
-                <div class="search-back">
+                <div class="prod-back">
                     <a href="../home-page/userhome.php"><img src="../../../image/icon/arrow.png" alt="" width="15px" height="15px"></a>
                     <p>Product Information</p>
                 </div>
                 <div class="product">
-                    
+                    <?php 
+                        require_once '../../php-database/dbconnect.php';
 
+                        $id=$_GET['id'];
+                        $product_name=$_GET['product_name'];
+                        $price=$_GET['price'];
+                        $size=$_GET['size'];
+                        $p_description=$_GET['p_description'];
+                        $category=$_GET['category'];
+                        $product_img=$_GET['product_img'];
+                        
+                        $query = "SELECT * FROM tb_product WHERE id=$id";
+                        $result = mysqli_query($conn, $query);
+                    ?>
+
+                    <div class="prod-img">
+                        <img src="../../sys-admin/product-page/<?php echo $product_img; ?>" alt="" width="350px">
+                    </div>
+                    <div class="p-name-price">
+                        <div class="pn">
+                            <h3><?php echo $product_name; ?></h3>
+                        </div>
+                        <div class="p">
+                            <p>PHP <?php echo $price;?>.00</p>
+                        </div>
+                    </div>
+                    <div class="des-size">
+                        <div class="descrip">
+                            <h5>Description</h5>
+                            <p><?php echo $p_description; ?></p>
+                        </div>
+                        <div class="size">
+                            <h5>Size</h5>
+                            <p><?php echo $size; ?></p>
+                        </div>
+                        <div class="category">
+                            <h5>Category</h5>
+                            <p><?php echo $category; ?></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="checkout">
+                    <button>Message Now</button>
+                    <button>Order Now</button>
                 </div>
             </section>
         </div>

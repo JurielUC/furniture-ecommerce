@@ -70,7 +70,9 @@
                                         <!--put image here-->
                                         <img src="../../sys-admin/product-page/<?php echo $row['product_img']; ?>" alt="" width="100px">
                                     </div>
-                                    <h3><?php echo $row['product_name']; ?></h3>
+                                    <div class="pname">
+                                        <h4><?php echo $row['product_name']; ?></h3>
+                                    </div>
                                     <p>PHP <?php echo $row['price']; ?>.00</p>
                                 </div>
                         <?php
