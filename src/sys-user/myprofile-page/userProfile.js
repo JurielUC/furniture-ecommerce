@@ -1,4 +1,4 @@
-// thses codes are for product display display
+// thses codes are for profile display display
 function openProfile() {
     document.getElementById("myProfileForm").style.display = "block";
     }

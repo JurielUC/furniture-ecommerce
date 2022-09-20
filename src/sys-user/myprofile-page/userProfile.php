@@ -95,7 +95,7 @@
                     <button>Terms and Conditions</button>
                 </div>              
             </section>
-                                <!--Display Specific Item when clicked-->
+                                <!--Display Popup Profile when clicked-->
                                 <div class="profile-popup" id="myProfileForm">
                                     <div class="profile-popup-form">
                                         <div class="popup-header">

@@ -281,12 +281,11 @@ main {
                             flex-direction: column;
                             margin-bottom: 10px;
                             color: $header-color;
-                            width: 210%;
-
+                            margin-left: -100px;
+                            
                             input {
-                                padding: 10px 8px;
-                                
-                                margin-left: -100px;
+                                padding: 5px 8px;
+                                width: 155%;
                                 display: inline-block;
                                 border: 1px solid #ccc;
                                 box-sizing: border-box;

@@ -315,11 +315,11 @@ main .container .profile-popup .profile-popup-form .popup-header .profile-conten
   flex-direction: column;
   margin-bottom: 10px;
   color: #a8896c;
-  width: 210%;
+  margin-left: -100px;
 }
 main .container .profile-popup .profile-popup-form .popup-header .profile-content div input {
-  padding: 10px 8px;
-  margin-left: -100px;
+  padding: 5px 8px;
+  width: 155%;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;

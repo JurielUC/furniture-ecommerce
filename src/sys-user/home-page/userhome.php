@@ -65,7 +65,7 @@
 
                                 
                         ?>
-                                <div class="prod-display" onclick="openProduct()">
+                                <div class="prod-display" onclick="window.location.href='../getproduct-page/get-product.php?id=<?php echo $row['id']; ?> & product_name=<?php echo $row['product_name']; ?> & price=<?php echo $row['price']; ?> & size=<?php echo $row['size']; ?> & p_description=<?php echo $row['p_description']; ?> & category=<?php echo $row['category']; ?> & product_img=<?php echo $row['product_img']; ?>';">
                                     <div class="prod-img">
                                         <!--put image here-->
                                         <img src="../../sys-admin/product-page/<?php echo $row['product_img']; ?>" alt="" width="100px">
@@ -76,20 +76,6 @@
                         <?php
                             }
                         ?>
-                                <!--Display Specific Item when clicked-->
-                                <div class="product-popup" id="myProductForm">
-                                    <div class="product-popup-form">
-                                        <div class="popup-header">
-                                            <div class="exit-button">
-                                                <button class="update-popup-close" onclick="closeProduct()" title="Close"><img src="../../../image/icon/arrow.png" alt="" width="17px" height="17px"></button>
-                                                <h2>Product Information</h2>
-                                            </div>
-                                            <div class="product-content">
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                     </div>
                 </div>
             </section>

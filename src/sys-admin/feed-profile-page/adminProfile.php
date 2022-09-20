@@ -75,7 +75,7 @@
                     ?>
                     <h1><u>Business Information</u></h1>
                     <div class="profile-pic">
-                        <img src="../product-page/<?php echo $row["profile_pic"]; ?>" alt="" width="100px" height="100px">
+                        <img src="../../../image/logo.jpg" alt="" width="100px" height="100px">
                     </div>
                     <h3><img src="../../../image/icon/placeholder.png" alt="" width="15" height="15">&nbsp&nbspLocation</h3>
                     <p><?php echo $row["address"]; ?></p>
@@ -85,12 +85,108 @@
                     <p><?php echo $row["contact_no"]; ?></p>
                     <h3><img src="../../../image/icon/owner.png" alt="" width="15" height="15">&nbsp&nbspBusiness Owner</h3>
                     <p><?php echo $row["name"]; ?></p>
-                    <?php } ?>
-                    <button>Update Info</button>
+                    <h3 class="create-message" style="text-align: center;"><?php if(!empty($_GET['message'])) {
+                        $message = $_GET['message'];
+                        echo $message; }?>
+                    </h3>
+                    
+                    <button onclick="openBusinessInfo()">Update Info</button>
+                    <button onclick="openAccountInfo()">Update Account</button>
                     <button>Terms and Conditions</button>
-                </div>              
+                </div>           
             </section>
+                                <!--Display Popup Business Information when clicked-->
+                                <div class="busi-info-popup" id="myBInfoForm">
+                                    <div class="busi-info-popup-form">
+                                        <div class="popup-header">
+                                            <div class="exit-button">
+                                                <button class="update-busi-info-close" onclick="closeBusinessInfo()" title="Close"><img src="../../../image/icon/arrow.png" alt="" width="17px" height="17px"></button>
+                                                <h2>Update Information</h2>
+                                            </div>
+                                            <div class="busi-info-content">
+                                                <img src="../product-page/<?php echo $row["profile_pic"]; ?>" alt="" width="80px" height="80px">
+                                                <form action="../../php-database/businessinfo-update.php" method="post">
+                                                    <div>
+                                                        <label for="">ID</label>
+                                                        <input type="text" name="id" value="<?php echo $row["id"]; ?>" readonly>
+                                                    </div>
+                                                    <div>
+                                                        <label for="">Name</label>
+                                                        <input type="text" name="name" value="<?php echo $row["name"]; ?>">
+                                                    </div>
+                                                    <div>
+                                                        <label for="">Address</label>
+                                                        <input type="text" name="address" value="<?php echo $row["address"]; ?>">
+                                                    </div>
+                                                    <div>
+                                                        <label for="">Contact No</label>
+                                                        <input type="text" name="contact_no" value="<?php echo $row["contact_no"]; ?>">
+                                                    </div>
+                                                    <div>
+                                                        <label for="">Email</label>
+                                                        <input type="email" name="email" value="<?php echo $row["email"]; ?>">
+                                                    </div>
+                                                    <div>
+                                                        <input type="submit" class="submit" value="Update">
+                                                    </div>
+                                                    
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php } ?>
+
+                                <!--Display Popup Business Information when clicked-->
+                                <div class="account-popup" id="myAccountForm">
+                                    <div class="account-popup-form">
+                                        <div class="popup-header">
+                                            <div class="exit-button">
+                                                <button class="update-busi-info-close" onclick="closeAccountInfo()" title="Close"><img src="../../../image/icon/arrow.png" alt="" width="17px" height="17px"></button>
+                                                <h2>Update Information</h2>
+                                            </div>
+                                            <div class="account-content">
+                                                <img src="<?php echo $loggedin_mf; ?>" alt="" width="80px" height="80px">
+                                                <form action="../../php-database/admin-account-update.php" method="post">
+                                                    <div>
+                                                        <label for="">Account ID</label>
+                                                        <input type="text" name="id" value="<?php echo $loggedin_id; ?>" readonly>
+                                                    </div>
+                                                    <div>
+                                                        <label for="">First Name</label>
+                                                        <input type="text" name="first_name" value="<?php echo $loggedin_fname; ?>">
+                                                    </div>
+                                                    <div>
+                                                        <label for="">Last Name</label>
+                                                        <input type="text" name="last_name" value="<?php echo $loggedin_lname; ?>">
+                                                    </div>
+                                                    <div>
+                                                        <label for="">Contact No</label>
+                                                        <input type="text" name="contact_no" value="<?php echo $loggedin_cno; ?>">
+                                                    </div>
+                                                    <div>
+                                                        <label for="">Email</label>
+                                                        <input type="email" name="email" value="<?php echo $loggedin_session; ?>" readonly>
+                                                    </div>
+                                                    <div>
+                                                        <label for="">Position</label>
+                                                        <input type="text" name="position" value="<?php echo $loggedin_position; ?>" readonly>
+                                                    </div>
+                                                    <div>
+                                                        <label for="">Password</label>
+                                                        <input type="text" name="a_password" value="<?php echo $loggedin_psw; ?>">
+                                                    </div>
+                                                    <div>
+                                                        <input type="submit" class="submit" value="Update">
+                                                    </div>
+                                                    
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
         </div>
     </main>
+    <script src="adminProfile.js"></script>
 </body>
 </html>
