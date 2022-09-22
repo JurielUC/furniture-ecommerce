@@ -128,12 +128,13 @@ main .container .post-cont .form-cont .attach-submit input[type=submit]:hover {
 }
 main .container .post-cont .user-post-cont {
   overflow-y: scroll;
-  height: 65vh;
+  height: 63vh;
   width: 710px;
   margin-top: 12px;
 }
 main .container .post-cont .user-post-cont .user-post {
   width: 690px;
+  margin-bottom: 10px;
   background-color: #f2e5db;
   border-radius: 10px;
 }
@@ -147,6 +148,10 @@ main .container .post-cont .user-post-cont .user-post .pp-name-date .pp-name {
   margin: 10px 0 15px 20px;
   display: flex;
   align-items: center;
+}
+main .container .post-cont .user-post-cont .user-post .pp-name-date .pp-name img {
+  border-radius: 50%;
+  border: 2px solid #a8896c;
 }
 main .container .post-cont .user-post-cont .user-post .pp-name-date .pp-name h2 {
   margin-left: 10px;
@@ -217,7 +222,7 @@ main .container .shopinfo-cont .search-bar button:hover {
 }
 main .container .shopinfo-cont .shopinfo {
   width: 380px;
-  height: 83vh;
+  height: 78vh;
   color: #a8896c;
   background-color: #f2e5db;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
@@ -240,6 +245,7 @@ main .container .shopinfo-cont .shopinfo h3 {
 }
 main .container .shopinfo-cont .shopinfo p {
   margin-left: 30px;
+  font-size: 0.8rem;
 }
 main .container .shopinfo-cont .shopinfo button {
   font-family: "Poppins", sans-serif;

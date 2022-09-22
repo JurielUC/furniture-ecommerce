@@ -25,7 +25,7 @@
         <!--Put your navigation here below-->
         <nav>
             <a href="" style="border-bottom: 3px solid white; padding-bottom: 5px;">Your Feed</a>
-            <a href="">Message</a>
+            <a href="../message-page/userMessage.php">Message</a>
             <a href="../myprofile-page/userProfile.php">Profile</a>
             <a href="../../php-database/user-logout.php">Logout</a>
         </nav>

@@ -1,1 +1,137 @@
 @use '../../style/header/header';
+@use '../../style/globals' as *;
+
+main {
+    width: 100%;
+    height: 90vh;
+    @include flexBox();
+    justify-content: center;
+
+    .container {
+        width: 1120px;
+        height: 90vh;
+        @include flexBox();
+
+        .message-cont {
+            width: 740px;
+            height: 90vh;
+
+            .message-head {
+                margin-top: 12px;
+                width: 710px;
+                height: 50px;
+                border-radius: 10px 10px 0 0;
+                background-color: $divider-color;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+                @include flexBox();
+
+                img {
+                    margin-left: 20px;
+                    border-radius: 50%;
+                }
+
+                a {
+                    color: $header-color;
+                    margin-left: 10px;
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .message-box {
+                overflow-y: scroll;
+                height: 67vh;
+                width: 710px;
+                border-left: 3px solid $divider-color;  
+                border-right: 3px solid $divider-color; 
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px; 
+            }
+
+            .message-input {
+                margin-bottom: 12px;
+                width: 710px;
+                height: 70px;
+                border-radius: 0 0 10px 10px;
+                background-color: $divider-color;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+            
+                form {
+                    @include flexBox();
+
+                    .file {
+                        margin: 10px 20px 0 20px;
+                        label {
+                            cursor: pointer;
+                        }
+
+                        input[type=file] {
+                            opacity: 0;
+                            position: absolute;
+                            z-index: -1;
+                        }
+                    }
+
+                    textarea {
+                        font-family: $font-family;
+                        margin-top: 10px;
+                        resize: none;
+                        border-radius: 10px;
+                        padding: 10px;
+                    }
+
+                    button {
+                        cursor: pointer;
+                        margin: 10px 20px 0 20px;
+                        border: none;
+                        background-color: $divider-color;
+
+                        &:hover {
+                            opacity: 80%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .progress-cont {
+            width: 380px;
+            height: 90vh;
+
+            .progress {
+                margin-top: 10px;
+                width: 380px;
+                height: 83vh;
+                color: $header-color;
+                background-color: $divider-color;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+                
+                .progress-header {
+                    width: 380px;
+                    @include flexBox();
+                    justify-content: space-between;
+                    border-bottom: 2px solid $white-color;
+                    background-color: $header-color;
+
+                    h2, p {
+                        margin: 10px;
+                        color: $white-color;
+                    }
+                }
+
+                .progress-bar-cont {
+                    width: 380px;
+                    height: 73vh;
+                    @include flexBox();
+                    flex-direction: column;
+                    cursor: pointer;
+                    
+                }
+            }
+        }
+    }
+}

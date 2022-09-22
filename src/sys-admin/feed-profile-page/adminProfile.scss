@@ -40,6 +40,7 @@ main {
                     width: 690px;
                     background-color: $divider-color;
                     border-radius: 10px;
+                    margin-bottom: 10px;
 
                     .pp-name-date {
                         @include flexBox();
@@ -49,6 +50,11 @@ main {
                         .pp-name {
                             margin: 10px 0 15px 20px;
                             @include flexBox();
+
+                            img {
+                                border-radius: 50%;
+                                border: 2px solid $header-color;
+                            }
 
                             h2 {
                                 margin-left: 10px;

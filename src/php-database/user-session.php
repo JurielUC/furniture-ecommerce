@@ -14,7 +14,7 @@
     $loggedin_psw=$row['u_password'];
     $loggedin_mf=$row['myfile'];
 
-    if(!$_SESSION['login_user'])  
+    if(!$_SESSION['login_user'])
     {  
         header("Location: ../sys-user/login-page/userlogin.php"); //redirect to the login page to secure the welcome page without login access.  
     }  

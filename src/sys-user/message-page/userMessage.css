@@ -67,4 +67,125 @@ header nav a:hover {
   margin: 0 0 0 70px;
   font-size: 0.5rem;
   color: #a8896c;
+}
+
+main {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .container {
+  width: 1120px;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+main .container .message-cont {
+  width: 740px;
+  height: 90vh;
+}
+main .container .message-cont .message-head {
+  margin-top: 12px;
+  width: 710px;
+  height: 50px;
+  border-radius: 10px 10px 0 0;
+  background-color: #f2e5db;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  display: flex;
+  align-items: center;
+}
+main .container .message-cont .message-head img {
+  margin-left: 20px;
+  border-radius: 50%;
+}
+main .container .message-cont .message-head a {
+  color: #a8896c;
+  margin-left: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+main .container .message-cont .message-head a:hover {
+  text-decoration: underline;
+}
+main .container .message-cont .message-box {
+  overflow-y: scroll;
+  height: 67vh;
+  width: 710px;
+  border-left: 3px solid #f2e5db;
+  border-right: 3px solid #f2e5db;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+main .container .message-cont .message-input {
+  margin-bottom: 12px;
+  width: 710px;
+  height: 70px;
+  border-radius: 0 0 10px 10px;
+  background-color: #f2e5db;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+main .container .message-cont .message-input form {
+  display: flex;
+  align-items: center;
+}
+main .container .message-cont .message-input form .file {
+  margin: 10px 20px 0 20px;
+}
+main .container .message-cont .message-input form .file label {
+  cursor: pointer;
+}
+main .container .message-cont .message-input form .file input[type=file] {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+main .container .message-cont .message-input form textarea {
+  font-family: "Poppins", sans-serif;
+  margin-top: 10px;
+  resize: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+main .container .message-cont .message-input form button {
+  cursor: pointer;
+  margin: 10px 20px 0 20px;
+  border: none;
+  background-color: #f2e5db;
+}
+main .container .message-cont .message-input form button:hover {
+  opacity: 80%;
+}
+main .container .progress-cont {
+  width: 380px;
+  height: 90vh;
+}
+main .container .progress-cont .progress {
+  margin-top: 10px;
+  width: 380px;
+  height: 83vh;
+  color: #a8896c;
+  background-color: #f2e5db;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+main .container .progress-cont .progress .progress-header {
+  width: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #ffffff;
+  background-color: #a8896c;
+}
+main .container .progress-cont .progress .progress-header h2, main .container .progress-cont .progress .progress-header p {
+  margin: 10px;
+  color: #ffffff;
+}
+main .container .progress-cont .progress .progress-bar-cont {
+  width: 380px;
+  height: 73vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
 }/*# sourceMappingURL=userMessage.css.map */

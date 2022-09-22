@@ -107,7 +107,7 @@ main .container .product-cont .search-back a {
 }
 main .container .product-cont .product {
   overflow-y: scroll;
-  height: 80vh;
+  height: 77vh;
   width: 710px;
   margin-top: 12px;
 }

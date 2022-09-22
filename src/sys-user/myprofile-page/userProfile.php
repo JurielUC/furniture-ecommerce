@@ -25,7 +25,7 @@
         <!--Put your navigation here below-->
         <nav>
             <a href="../home-page/userhome.php">Your Feed</a>
-            <a href="">Message</a>
+            <a href="../message-page/userMessage.php">Message</a>
             <a href="../myprofile-page/userProfile.php" style="border-bottom: 3px solid white; padding-bottom: 5px;">Profile</a>
             <a href="../../php-database/user-logout.php">Logout</a>
         </nav>
@@ -38,33 +38,58 @@
     <main>
         <div class="container">
             <section class="post-cont">
+                <h1 style="text-align: center; color: #a8896c;" class="create-message"><?php if(!empty($_GET['message'])) {
+                    $message = $_GET['message'];
+                    echo $message; }?>
+                </h1>
                 <div class="form-cont">
-                    <form action="" method="post">
-                        <textarea name="post" id="" cols="95" rows="3" placeholder="Write something..."></textarea>
+                    <form action="userPost.php" method="post">
+                        <textarea name="long_desc" id="" cols="95" rows="3" placeholder="Write something..."></textarea>
                         <div class="attach-submit">
                             <input type="submit" value="Post">
                         </div>
                     </form>
                 </div>
                 <div class="user-post-cont">
+                        <?php 
+                            include '../../php-database/post-display.php';
+
+                            if (mysqli_num_rows($result) == 0) {
+                                echo "<div class='nodata' style='width: 690px; height: 80vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
+                                    <img src='../../../image/icon/file.png' width='120px' height='120px'>
+                                    <p>No Post</p>
+                                    </div>";
+                                }
+                        ?>
+                        <?php
+                                while ($row = mysqli_fetch_assoc($result))
+                                {   
+                            ?>
                     <div class="user-post">
                         <div class="pp-name-date">
+                            <!--Put php codes for product display here-->
                             <div class="pp-name">
-                                <img src="../../../image/icon/account.png" alt="" width="35px" height="35px">
-                                <h2>Juriel Comia</h2>
+                                <img src="../signup-page/<?php echo $row['myfile']; ?>" alt="" width="35px" height="35px">
+                                <h2><?php echo $row['fname']; ?> <?php echo $row['lname']; ?></h2>
                             </div>
-                            <p>02:05:00 - 10/10/22</p>
+                            <p><?php echo $row['date_time']; ?></p>
                         </div>
                         <div class="caption-attachment">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, sequi dolores! Debitis recusandae omnis repellat quas impedit officia, beatae pariatur! Autem voluptates at eveniet minus cumque similique facilis ullam id?</p>
+                            <p><?php echo $row['long_desc']; ?></p>
                         </div>
+
+                        
                         <div class="comment-send">
                             <form action="" method="post">
                                 <textarea name="comment" id="" cols="85" rows="2" placeholder="Comment..."></textarea>
                                 <button type="submit"><img src="../../../image/icon/send.png" alt="" width="40px" height="40px"></button>
                             </form>
                         </div>
+                        
                     </div>
+                        <?php 
+                                }
+                        ?>
                 </div>
             </section>
             <section class="shopinfo-cont">

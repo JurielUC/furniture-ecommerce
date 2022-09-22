@@ -42,16 +42,30 @@
                     <h1>User Post</h1>
                 </div>
                 <div class="user-post-cont">
+                        <?php 
+                            include '../../php-database/admin-userpost-display.php';
+
+                            if (mysqli_num_rows($result) == 0) {
+                                echo "<div class='nodata' style='width: 690px; height: 80vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
+                                    <img src='../../../image/icon/file.png' width='120px' height='120px'>
+                                    <p>No Post</p>
+                                    </div>";
+                                }
+                        ?>
+                        <?php
+                                while ($row = mysqli_fetch_assoc($result))
+                                {   
+                            ?>
                     <div class="user-post">
                         <div class="pp-name-date">
                             <div class="pp-name">
-                                <img src="../../../image/icon/account.png" alt="" width="35px" height="35px">
-                                <h2>Juriel Comia</h2>
+                                <img src="../../sys-user/signup-page/<?php echo $row['myfile']; ?>" alt="" width="35px" height="35px">
+                                <h2><?php echo $row['fname']; ?> <?php echo $row['lname']; ?></h2>
                             </div>
-                            <p>02:05:00 - 10/10/22</p>
+                            <p><?php echo $row['date_time']; ?></p>
                         </div>
                         <div class="caption-attachment">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, sequi dolores! Debitis recusandae omnis repellat quas impedit officia, beatae pariatur! Autem voluptates at eveniet minus cumque similique facilis ullam id?</p>
+                            <p><?php echo $row['long_desc']; ?></p>
                         </div>
                         <div class="comment-send">
                             <form action="" method="post">
@@ -60,6 +74,9 @@
                             </form>
                         </div>
                     </div>
+                    <?php 
+                        }
+                    ?>
                 </div>
             </section>
             <section class="shopinfo-cont">
@@ -146,7 +163,7 @@
                                                 <h2>Update Information</h2>
                                             </div>
                                             <div class="account-content">
-                                                <img src="<?php echo $loggedin_mf; ?>" alt="" width="80px" height="80px">
+                                                <img src="../../sys-user/signup-page/<?php echo $loggedin_mf; ?>" alt="" width="80px" height="80px">
                                                 <form action="../../php-database/admin-account-update.php" method="post">
                                                     <div>
                                                         <label for="">Account ID</label>
