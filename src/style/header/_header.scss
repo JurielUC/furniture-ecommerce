@@ -38,6 +38,10 @@ header {
                 border-radius: 50%;
                 margin-right: 10px;
             }
+
+            h1 {
+                font-size: 1.7rem;
+            }
         }
     }
 
@@ -52,6 +56,7 @@ header {
             color: $white-color;
             font-size: $nav-size;
             font-weight: 400;
+            font-size: .8rem;
 
             &:hover {
                 border-bottom: 3px solid $white-color;

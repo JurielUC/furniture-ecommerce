@@ -44,17 +44,19 @@
 
                 </div>
                 <div class="message-box">
-                    
+                    <div class="message-me">
+
+                    </div>
                 </div>
                 <div class="message-input">
-                    <form action="" method="post">
+                    <form action="userSend.php" method="post" enctype="multipart/form-data">
                         <div class="file">
                             <label for="file_upload" title="Attach File"><img src="../../../image/icon/attach-paperclip-symbol.png" alt="" width="28px" height="28px"></label>
-                            <input type="file" name="file_upload" id="file_upload">
+                            <input type="file" name="file" id="file_upload">
                         </div>
 
                         <textarea name="message_content" id="" cols="82" rows="1" placeholder="Write someting..."></textarea>
-                        <button title="Send"><img src="../../../image/icon/send.png" alt="" width="30px" height="30px"></button>
+                        <button title="Send" name="submit"><img src="../../../image/icon/send.png" alt="" width="30px" height="30px"></button>
                     </form>
                 </div>
             </section>

@@ -41,6 +41,9 @@ header .app-name a img {
   border-radius: 50%;
   margin-right: 10px;
 }
+header .app-name a h1 {
+  font-size: 1.7rem;
+}
 header nav {
   width: 50%;
   text-align: right;
@@ -51,6 +54,7 @@ header nav a {
   color: #ffffff;
   font-size: 1rem;
   font-weight: 400;
+  font-size: 0.8rem;
 }
 header nav a:hover {
   border-bottom: 3px solid #ffffff;
