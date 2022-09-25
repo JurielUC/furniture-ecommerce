@@ -133,15 +133,15 @@ main .container .message-cont .message-box .message-me {
   align-items: center;
   justify-content: start;
   margin-top: 5px;
+  margin-bottom: 5px;
 }
 main .container .message-cont .message-box .message-me .message-one {
-  border-radius: 15px;
+  border-radius: 5px 5px 5px 0;
   width: 70%;
   background-color: #a8896c;
-  margin: 5px;
-}
-main .container .message-cont .message-box .message-me .message-one p {
-  margin: 10px;
+  margin: 0 5px 0 5px;
+  padding: 0 20px 0 20px;
+  word-wrap: break-word;
 }
 main .container .message-cont .message-box .message-admin {
   width: 100%;
@@ -149,15 +149,15 @@ main .container .message-cont .message-box .message-admin {
   align-items: center;
   justify-content: end;
   margin-top: 5px;
+  margin-bottom: 5px;
 }
 main .container .message-cont .message-box .message-admin .message-two {
-  border-radius: 15px;
+  border-radius: 5px 5px 0 5px;
   width: 70%;
   background-color: #f2e5db;
-  margin: 5px;
-}
-main .container .message-cont .message-box .message-admin .message-two p {
-  margin: 10px;
+  margin: 0 5px 0 5px;
+  padding: 0 20px 0 20px;
+  word-wrap: break-word;
 }
 main .container .message-cont .message-input {
   margin-bottom: 12px;

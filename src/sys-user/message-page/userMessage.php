@@ -43,26 +43,23 @@
                     <a href="../home-page/userhome.php">Shop Admin</a>
 
                 </div>
-                <div class="message-box">
+                <div class="message-box" id="your_div">
                     <?php 
-                        require_once '../../php-database/dbconnect.php';
+                        require_once '../../php-database/user-session.php';
                         
-                        $query = "SELECT * FROM tb_pointmessage INNER JOIN tb_adminmessage ON tb_pointmessage.message_from = tb_adminmessage.admessage_to ORDER BY tb_pointmessage.msg_timestamp & tb_adminmessage.admsg_timestamp DESC";
+                        $query = "SELECT * FROM tb_pointmessage WHERE message_to = 'ADMIN' AND message_from = '$loggedin_session' OR message_to = '$loggedin_session' AND message_from = 'ADMIN' ORDER BY msg_timestamp ASC";
                         $result = mysqli_query($conn, $query);
 
                         while ($row = mysqli_fetch_assoc($result))
                             {
-
                     ?>
-                    <p class="time-s"><?php echo $row['admsg_timestamp']; ?></p>
-                    <div class="message-me">
+                    <div class="message-me message">
                         <div class="message-one">
-                            <p><?php echo $row['admessage_content']; ?></p>
+                            <p><?php echo $row['message_reply']; ?></p>
                         </div>
                     </div>
-                    <p class="time-s"><?php echo $row['msg_timestamp']; ?></p>
                     <div class="message-admin">
-                        <div class="message-two">
+                        <div class="message-two message">
                             <p><?php echo $row['message_content']; ?></p>
                         </div>
                     </div>
@@ -93,6 +90,7 @@
                     </div>
                 </div>              
             </section>
+            <script src="userMessage.js"></script>
         </div>
     </main>
 </body>
