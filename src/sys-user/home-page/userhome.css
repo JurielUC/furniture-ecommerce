@@ -202,18 +202,33 @@ main .container .shopinfo-cont .shopinfo .profile-pic {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 2px solid #ffffff;
+  background-color: #a8896c;
 }
 main .container .shopinfo-cont .shopinfo .profile-pic img {
   margin: 10px 0;
+  border: 5px solid #a8896c;
   border-radius: 50%;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 main .container .shopinfo-cont .shopinfo h1 {
   text-align: center;
   padding-top: 10px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #a8896c;
 }
 main .container .shopinfo-cont .shopinfo h3 {
   margin: 10px 0 0 10px;
+  font-weight: 600;
+}
+main .container .shopinfo-cont .shopinfo a {
+  color: #a8896c;
+}
+main .container .shopinfo-cont .shopinfo a:hover {
+  opacity: 80%;
 }
 main .container .shopinfo-cont .shopinfo p {
   margin-left: 30px;
+  font-size: 0.8rem;
 }/*# sourceMappingURL=userhome.css.map */

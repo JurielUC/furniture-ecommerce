@@ -147,24 +147,41 @@ main {
                 .profile-pic {
                     @include flexBox();
                     justify-content: center;
+                    border-bottom: 2px solid $white-color;
+                    background-color: $header-color;
 
                     img {
                         margin: 10px 0;
+                        border: 5px solid $header-color;
                         border-radius: 50%;
+                        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
                     }
                 }
                 
                 h1 {
                     text-align: center;
                     padding-top: 10px;
+                    font-weight: 700;
+                    color: $white-color;
+                    background-color: $header-color;
                 }
 
                 h3 {
                     margin: 10px 0 0 10px;
+                    font-weight: 600;
+                }
+
+                a {
+                    color: $header-color;
+
+                    &:hover {
+                        opacity: 80%;
+                    }
                 }
 
                 p {
                     margin-left: 30px;
+                    font-size: .8rem;
                 }
             }
         }

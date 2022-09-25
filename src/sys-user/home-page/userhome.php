@@ -92,14 +92,14 @@
                     <?php include '../../php-database/shopinfo.php'; 
                         while($row = mysqli_fetch_assoc($result)) {
                     ?>
-                    <h1><u>Business Information</u></h1>
+                    <h1><u>BUSINESS INFORMATION</u></h1>
                     <div class="profile-pic">
                         <img src="../../sys-admin/product-page/<?php echo $row["profile_pic"]; ?>" alt="" width="100px" height="100px">
                     </div>
                     <h3><img src="../../../image/icon/placeholder.png" alt="" width="15" height="15">&nbsp&nbspLocation</h3>
                     <p><?php echo $row["address"]; ?></p>
                     <h3><img src="../../../image/icon/gmail.png" alt="" width="15" height="15">&nbsp&nbspEmail</h3>
-                    <p><?php echo $row["email"]; ?></p>
+                    <a href="mailto:<?php echo $row['email']; ?>"><p><?php echo $row["email"]; ?></p></a>
                     <h3><img src="../../../image/icon/phone (1).png" alt="" width="15" height="15">&nbsp&nbspContact Number</h3>
                     <p><?php echo $row["contact_no"]; ?></p>
                     <h3><img src="../../../image/icon/owner.png" alt="" width="15" height="15">&nbsp&nbspBusiness Owner</h3>

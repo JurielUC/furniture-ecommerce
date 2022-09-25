@@ -52,7 +52,7 @@
                     <input type="email" placeholder="Email" name="email" required>
 
                     <label for="psw">Password</label>
-                    <input type="password" placeholder="Password" id="psw" name="u_password" required>
+                    <input type="password" placeholder="Password" id="psw" name="u_password" required autocomplete="off">
 
                     <div class="check-box">
                         <input type="checkbox" style="margin-left: -115px;" id="showpass" onclick="showPass()">

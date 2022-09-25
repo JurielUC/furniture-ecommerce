@@ -122,6 +122,43 @@ main .container .message-cont .message-box {
   border-right: 3px solid #f2e5db;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
+main .container .message-cont .message-box .time-s {
+  text-align: center;
+  font-size: 0.6rem;
+  color: #a8896c;
+}
+main .container .message-cont .message-box .message-me {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-top: 5px;
+}
+main .container .message-cont .message-box .message-me .message-one {
+  border-radius: 15px;
+  width: 70%;
+  background-color: #a8896c;
+  margin: 5px;
+}
+main .container .message-cont .message-box .message-me .message-one p {
+  margin: 10px;
+}
+main .container .message-cont .message-box .message-admin {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 5px;
+}
+main .container .message-cont .message-box .message-admin .message-two {
+  border-radius: 15px;
+  width: 70%;
+  background-color: #f2e5db;
+  margin: 5px;
+}
+main .container .message-cont .message-box .message-admin .message-two p {
+  margin: 10px;
+}
 main .container .message-cont .message-input {
   margin-bottom: 12px;
   width: 710px;

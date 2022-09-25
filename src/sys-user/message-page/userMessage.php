@@ -44,9 +44,31 @@
 
                 </div>
                 <div class="message-box">
-                    <div class="message-me">
+                    <?php 
+                        require_once '../../php-database/dbconnect.php';
+                        
+                        $query = "SELECT * FROM tb_pointmessage INNER JOIN tb_adminmessage ON tb_pointmessage.message_from = tb_adminmessage.admessage_to ORDER BY tb_pointmessage.msg_timestamp & tb_adminmessage.admsg_timestamp DESC";
+                        $result = mysqli_query($conn, $query);
 
+                        while ($row = mysqli_fetch_assoc($result))
+                            {
+
+                    ?>
+                    <p class="time-s"><?php echo $row['admsg_timestamp']; ?></p>
+                    <div class="message-me">
+                        <div class="message-one">
+                            <p><?php echo $row['admessage_content']; ?></p>
+                        </div>
                     </div>
+                    <p class="time-s"><?php echo $row['msg_timestamp']; ?></p>
+                    <div class="message-admin">
+                        <div class="message-two">
+                            <p><?php echo $row['message_content']; ?></p>
+                        </div>
+                    </div>
+                    <?php
+                        }
+                    ?>
                 </div>
                 <div class="message-input">
                     <form action="userSend.php" method="post" enctype="multipart/form-data">
