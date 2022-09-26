@@ -7,6 +7,8 @@
     $row=mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
     $loggedin_session=$row['email'];
     $loggedin_id=$row['id'];
+    $loggedin_status=$row['status'];
+    $loggedin_uid=$row['unique_id'];
     $loggedin_fname=$row['first_name'];
     $loggedin_lname=$row['last_name'];
     $loggedin_address=$row['u_address'];

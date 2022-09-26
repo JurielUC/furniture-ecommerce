@@ -112,8 +112,8 @@
                     <p><?php echo $loggedin_session; ?></p>
                     <h3><img src="../../../image/icon/phone (1).png" alt="" width="15" height="15">&nbsp&nbspContact Number</h3>
                     <p><?php echo $loggedin_cno; ?></p>
-                    <h3 class="create-message" style="text-align: center;"><?php if(!empty($_GET['message'])) {
-                        $message = $_GET['message'];
+                    <h3 class="create-message" style="text-align: center;"><?php if(!empty($_GET['alert'])) {
+                        $message = $_GET['alert'];
                         echo $message; }?>
                     </h3>
                     <button onclick="openProfile()">Update Info</button>
@@ -133,7 +133,7 @@
                                                 <form action="../../php-database/user-account-update.php" method="post">
                                                     <div>
                                                         <label for="">Account ID</label>
-                                                        <input type="text" name="id" value="<?php echo $loggedin_id; ?>" readonly>
+                                                        <input type="text" name="unique_id" value="<?php echo $loggedin_uid; ?>" readonly>
                                                     </div>
                                                     <div>
                                                         <label for="">First Name</label>

@@ -47,7 +47,7 @@
                     <?php 
                         require_once '../../php-database/user-session.php';
                         
-                        $query = "SELECT * FROM tb_pointmessage WHERE message_to = 'ADMIN' AND message_from = '$loggedin_session' OR message_to = '$loggedin_session' AND message_from = 'ADMIN' ORDER BY msg_timestamp ASC";
+                        $query = "SELECT * FROM tb_pointmessage WHERE message_to = '1135622190' AND message_from = '$loggedin_uid' OR message_to = '$loggedin_uid' AND message_from = '1135622190' ORDER BY msg_timestamp ASC";
                         $result = mysqli_query($conn, $query);
 
                         while ($row = mysqli_fetch_assoc($result))

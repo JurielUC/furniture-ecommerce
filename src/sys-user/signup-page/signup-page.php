@@ -31,6 +31,10 @@
     <!------------------------------------------------>
 
     <main>
+        <h1 class="create-message"><?php if(!empty($_GET['message'])) {
+            $message = $_GET['message'];
+            echo $message; }?>
+        </h1>
         <div id="message">
             <h5>Password must contain the following:</h5>
             <p id="letter" class="invalid">A <b>lowercase</b> letter</p>

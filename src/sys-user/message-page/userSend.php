@@ -17,7 +17,7 @@
     move_uploaded_file($_FILES["file"]["tmp_name"],$dst);  // move image into the {all_images} folder with 32 characters hex number and image name
 
 
-    $sql = "INSERT INTO tb_pointmessage(message_to,	message_from, message_content, sender_name, msg_timestamp, msg_file) VALUES('ADMIN', '$loggedin_session', '$mc', '$loggedin_fname', '$timestamp', '$dst_db')";
+    $sql = "INSERT INTO tb_pointmessage(message_to,	message_from, message_content, sender_name, msg_timestamp, msg_file) VALUES('1135622190', '$loggedin_uid', '$mc', '$loggedin_fname $loggedin_lname', '$timestamp', '$dst_db')";
                 
     if (mysqli_query($conn, $sql)) {
         header("location: userMessage.php");
