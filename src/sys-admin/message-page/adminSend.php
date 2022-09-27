@@ -1,9 +1,11 @@
 <?php 
     include '../../php-database/admin-session.php';
                 
-    $mc=$_REQUEST['admessage_content'];
+    $mc=$_REQUEST['message_content'];
+    $uid=$_REQUEST['user_id'];
+    date_default_timezone_set('Asia/Manila');
     $timestamp = date("Y-m-d H:i:s");
-    $Myfile=$_FILES['file']['name'];
+    $Myfile=$_FILES['msg_file']['name'];
 
     $var1 = rand(1111,9999);  // generate random number in $var1 variable
     $var2 = rand(1111,9999);  // generate random number in $var2 variable
@@ -14,13 +16,23 @@
     $dst = "./image/".$var3.$Myfile;  // storing image path into the {all_images} folder with 32 characters hex number and file name
     $dst_db = "image/".$var3.$Myfile; // storing image path into the database with 32 characters hex number and file name
 
-    move_uploaded_file($_FILES["file"]["tmp_name"],$dst);  // move image into the {all_images} folder with 32 characters hex number and image name
+    move_uploaded_file($_FILES["msg_file"]["tmp_name"],$dst);  // move image into the {all_images} folder with 32 characters hex number and image name
 
 
-    $sql = "INSERT INTO tb_adminmessage(admessage_to, admessage_from, admessage_content, adsender_name, admsg_timestamp, admsg_file) VALUES('ADMIN', '$loggedin_session', '$mc', '$loggedin_fname', '$timestamp', '$dst_db')";
+    $sql = "INSERT INTO tb_pointmessage(message_to,	message_from, message_content, sender_name, msg_timestamp, msg_file) VALUES('$uid', '$loggedin_uid', '$mc', '$loggedin_fname $loggedin_lname', '$timestamp', '$dst_db')";
                 
     if (mysqli_query($conn, $sql)) {
-        header("location: userMessage.php");
+
+        $sql2 = mysqli_query($conn, "SELECT * FROM tb_user WHERE unique_id = $uid" );
+        while ($row = mysqli_fetch_assoc($sql2))
+                            {
+                              $unique=$row['unique_id'];
+                              $status=$row['status'];
+                              $fname=$row['first_name'];
+                              $lname=$row['last_name'];
+                              $myfile=$row['myfile'];
+        header("location: adminMessage.php?unique_id=$unique & status=$status & first_name=$fname & last_name=$lname & myfile=$myfile");
+                            }
             exit;
       } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);

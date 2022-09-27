@@ -58,7 +58,7 @@
                     
 
                 </div>
-                <div class="message-box">
+                <div class="message-box" id="your_div">
                 <?php 
                         require_once '../../php-database/admin-session.php';
                         
@@ -82,18 +82,13 @@
                                 }
                                 elseif($row['message_to'] === $uid) {
                                     echo  ' <p class="time-s">'. $row['msg_timestamp'] .'</p>
-                                            <img src="../../sys-user/signup-page/'. $ppic .'" alt="" width="50px" height="50px">
                                             <div class="message-admin">
-                                                
                                                 <div class="message-two message">
                                                     <p>'. $row['message_content'] .'</p>
                                                 </div>
                                             </div>';
                                 }
                             }
-                            ?>
-                                
-                                <?php
                                     }else
                                         {
                                             echo '<p class="nm">No Message</p>';
@@ -102,13 +97,14 @@
                     
                 </div>
                 <div class="message-input">
-                    <form action="" method="post">
+                    <form action="adminSend.php" method="post" enctype="multipart/form-data">
                         <div class="file">
                             <label for="file_upload" title="Attach File"><img src="../../../image/icon/attach-paperclip-symbol.png" alt="" width="30px" height="30px"></label>
-                            <input type="file" name="file_upload" id="file_upload">
+                            <input type="file" name="msg_file" id="file_upload">
+                            <input type="text" name="user_id" value="<?php echo $uid; ?>" hidden>
                         </div>
 
-                        <textarea name="" id="" cols="82" rows="1" placeholder="Write someting..."></textarea>
+                        <textarea name="message_content" id="" cols="82" rows="1" placeholder="Write someting..."></textarea>
                         <button title="Send"><img src="../../../image/icon/send.png" alt="" width="30px" height="30px"></button>
                     </form>
                 </div>
@@ -126,5 +122,6 @@
             </section>
         </div>
     </main>
+    <script src="adminMessage.js"></script>
 </body>
 </html>
