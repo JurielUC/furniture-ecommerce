@@ -46,26 +46,44 @@
                 <div class="message-box" id="your_div">
                     <?php 
                         require_once '../../php-database/user-session.php';
-                        
-                        $query = "SELECT * FROM tb_pointmessage WHERE message_to = '1135622190' AND message_from = '$loggedin_uid' OR message_to = '$loggedin_uid' AND message_from = '1135622190' ORDER BY msg_timestamp ASC";
-                        $result = mysqli_query($conn, $query);
 
-                        while ($row = mysqli_fetch_assoc($result))
-                            {
-                    ?>
-                    <div class="message-me message">
-                        <div class="message-one">
-                            <p><?php echo $row['message_reply']; ?></p>
-                        </div>
-                    </div>
-                    <div class="message-admin">
-                        <div class="message-two message">
-                            <p><?php echo $row['message_content']; ?></p>
-                        </div>
-                    </div>
-                    <?php
-                        }
-                    ?>
+                        $shopid = '1135622190';
+                        
+                        $query = "SELECT * FROM tb_pointmessage WHERE message_to = $shopid 
+                        AND message_from = $loggedin_uid OR message_to = $loggedin_uid 
+                        AND message_from = $shopid ORDER BY msg_timestamp ASC";
+
+                        $result = mysqli_query($conn, $query);
+                        if(mysqli_num_rows($result) > 0){
+                            while ($row = mysqli_fetch_assoc($result))
+                                {
+                        ?>
+                            <?php 
+                                if($row['message_from'] === $shopid){
+                                    echo '  <p class="time-s">'. $row['msg_timestamp'] .'</p>
+                                            <div class="message-me message">
+                                                <div class="message-one">
+                                                    <p>'. $row['message_content'] .'</p>
+                                                </div>
+                                            </div>';
+                                }
+                                elseif($row['message_from'] === $loggedin_uid) {
+                                    echo  ' <p class="time-s">'. $row['msg_timestamp'] .'</p>
+                                            <div class="message-admin">
+                                                <div class="message-two message">
+                                                    <p>'. $row['message_content'] .'</p>
+                                                </div>
+                                            </div>';
+                                }
+                            }
+                            ?>
+                                
+                                <?php
+                                    }else
+                                        {
+                                            echo '<p class="nm">No Message</p>';
+                                        }
+                                ?>
                 </div>
                 <div class="message-input">
                     <form action="userSend.php" method="post" enctype="multipart/form-data">

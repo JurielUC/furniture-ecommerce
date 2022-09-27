@@ -265,8 +265,18 @@ main .container .product-cont .product .display-div .prod-display .prod-img {
   align-items: center;
   justify-content: center;
 }
-main .container .product-cont .product .display-div .prod-display h3, main .container .product-cont .product .display-div .prod-display p {
+main .container .product-cont .product .display-div .prod-display .pname {
+  width: 140px;
+  padding: 5px;
+  overflow: hidden;
+}
+main .container .product-cont .product .display-div .prod-display .pname h4 {
+  white-space: nowrap;
+}
+main .container .product-cont .product .display-div .prod-display p {
   margin-top: 10px;
+  white-space: nowrap;
+  font-size: 0.8rem;
 }
 main .container .inbox-cont {
   width: 380px;
@@ -347,6 +357,12 @@ main .container .inbox-cont .inbox .inbox-message-cont .inbox-message img {
   border: 1px solid #a8896c;
   margin: 10px;
 }
+main .container .inbox-cont .inbox .inbox-message-cont .inbox-message .name-addr {
+  width: 190px;
+}
 main .container .inbox-cont .inbox .inbox-message-cont .inbox-message .name-addr p {
+  font-size: 0.7rem;
+}
+main .container .inbox-cont .inbox .inbox-message-cont .inbox-message .msg-num {
   font-size: 0.7rem;
 }/*# sourceMappingURL=adminProduct.css.map */

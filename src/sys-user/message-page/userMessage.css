@@ -126,6 +126,13 @@ main .container .message-cont .message-box .time-s {
   text-align: center;
   font-size: 0.6rem;
   color: #a8896c;
+  opacity: 40%;
+}
+main .container .message-cont .message-box .nm {
+  text-align: center;
+  margin-top: 40%;
+  color: #a8896c;
+  opacity: 60%;
 }
 main .container .message-cont .message-box .message-me {
   width: 100%;
@@ -136,11 +143,11 @@ main .container .message-cont .message-box .message-me {
   margin-bottom: 5px;
 }
 main .container .message-cont .message-box .message-me .message-one {
-  border-radius: 5px 5px 5px 0;
-  width: 70%;
+  border-radius: 0 10px 10px 10px;
+  width: 60%;
   background-color: #a8896c;
   margin: 0 5px 0 5px;
-  padding: 0 20px 0 20px;
+  padding: 10px 20px 10px 20px;
   word-wrap: break-word;
   color: #ffffff;
 }
@@ -153,11 +160,11 @@ main .container .message-cont .message-box .message-admin {
   margin-bottom: 5px;
 }
 main .container .message-cont .message-box .message-admin .message-two {
-  border-radius: 5px 5px 0 5px;
-  width: 70%;
+  border-radius: 10px 10px 0 10px;
+  width: 60%;
   background-color: #f2e5db;
   margin: 0 5px 0 5px;
-  padding: 0 20px 0 20px;
+  padding: 10px 20px 10px 20px;
   word-wrap: break-word;
   color: #a8896c;
 }
@@ -190,6 +197,7 @@ main .container .message-cont .message-input form textarea {
   resize: none;
   border-radius: 10px;
   padding: 10px;
+  outline: none;
 }
 main .container .message-cont .message-input form button {
   cursor: pointer;

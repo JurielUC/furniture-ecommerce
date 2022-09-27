@@ -55,6 +55,14 @@ main {
                     text-align: center;
                     font-size: .6rem;
                     color: $header-color;
+                    opacity: 40%;
+                }
+
+                .nm {
+                    text-align: center;
+                    margin-top: 40%;
+                    color: $header-color;
+                    opacity: 60%;
                 }
 
                 .message-me {
@@ -65,11 +73,11 @@ main {
                     margin-bottom: 5px;
 
                     .message-one {
-                        border-radius: 5px 5px 5px 0;
-                        width: 70%;
+                        border-radius: 0 10px 10px 10px;
+                        width: 60%;
                         background-color: $header-color;
                         margin: 0 5px 0 5px;
-                        padding: 0 20px 0 20px;
+                        padding: 10px 20px 10px 20px;
                         word-wrap: break-word;
                         color: $white-color;
                     }
@@ -83,11 +91,11 @@ main {
                     margin-bottom: 5px;
 
                     .message-two {
-                        border-radius: 5px 5px 0 5px;
-                        width: 70%;
+                        border-radius: 10px 10px 0 10px;
+                        width: 60%;
                         background-color: $divider-color;
                         margin: 0 5px 0 5px;
-                        padding: 0 20px 0 20px;
+                        padding: 10px 20px 10px 20px;
                         word-wrap: break-word;
                         color: $header-color;
                     }
@@ -124,6 +132,7 @@ main {
                         resize: none;
                         border-radius: 10px;
                         padding: 10px;
+                        outline: none;
                     }
 
                     button {

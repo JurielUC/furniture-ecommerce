@@ -215,8 +215,20 @@ main {
                             justify-content: center;
                         }
 
-                        h3, p {
+                        .pname {
+                            width: 140px;
+                            padding: 5px;
+                            overflow: hidden;
+
+                            h4 {
+                                white-space: nowrap;
+                            }
+                        }
+
+                        p {
                             margin-top: 10px;
+                            white-space: nowrap;
+                            font-size: .8rem;
                         }
                     }
                 }
@@ -310,10 +322,14 @@ main {
                         }
 
                         .name-addr {
-                            
+                            width: 190px;
                             p {
                                 font-size: .7rem;
                             }
+                        }
+
+                        .msg-num {
+                            font-size: .7rem;
                         }
                     }
                 }

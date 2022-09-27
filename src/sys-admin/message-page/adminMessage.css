@@ -93,7 +93,7 @@ main .container .message-cont {
 main .container .message-cont .message-head {
   margin-top: 12px;
   width: 710px;
-  height: 50px;
+  height: 70px;
   border-radius: 10px 10px 0 0;
   background-color: #f2e5db;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
@@ -104,23 +104,74 @@ main .container .message-cont .message-head img {
   margin-left: 20px;
   border-radius: 50%;
 }
-main .container .message-cont .message-head a {
+main .container .message-cont .message-head .status a {
   color: #a8896c;
   margin-left: 10px;
   font-size: 1.3rem;
   font-weight: 600;
   text-decoration: none;
 }
-main .container .message-cont .message-head a:hover {
+main .container .message-cont .message-head .status a:hover {
   text-decoration: underline;
+}
+main .container .message-cont .message-head .status p {
+  margin-left: 10px;
+  color: #a8896c;
+  font-size: 0.8rem;
 }
 main .container .message-cont .message-box {
   overflow-y: scroll;
-  height: 72vh;
+  height: 68vh;
   width: 710px;
   border-left: 3px solid #f2e5db;
   border-right: 3px solid #f2e5db;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+main .container .message-cont .message-box .time-s {
+  text-align: center;
+  font-size: 0.6rem;
+  color: #a8896c;
+  opacity: 40%;
+}
+main .container .message-cont .message-box .nm {
+  text-align: center;
+  margin-top: 40%;
+  color: #a8896c;
+  opacity: 60%;
+}
+main .container .message-cont .message-box .message-me {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+main .container .message-cont .message-box .message-me .message-one {
+  border-radius: 0 10px 10px 10px;
+  width: 60%;
+  background-color: #a8896c;
+  margin: 0 5px 0 5px;
+  padding: 10px 20px 10px 20px;
+  word-wrap: break-word;
+  color: #ffffff;
+}
+main .container .message-cont .message-box .message-admin {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+main .container .message-cont .message-box .message-admin .message-two {
+  border-radius: 10px 10px 0 10px;
+  width: 60%;
+  background-color: #f2e5db;
+  margin: 0 5px 0 5px;
+  padding: 10px 20px 10px 20px;
+  word-wrap: break-word;
+  color: #a8896c;
 }
 main .container .message-cont .message-input {
   margin-bottom: 12px;
@@ -161,46 +212,19 @@ main .container .message-cont .message-input form button {
 main .container .message-cont .message-input form button:hover {
   opacity: 80%;
 }
-main .container .inbox-cont {
+main .container .progress-cont {
   width: 380px;
   height: 90vh;
 }
-main .container .inbox-cont .search-bar input[type=text] {
-  width: 76%;
-  padding: 5px 8px;
-  margin: 10px 0;
-  display: inline-block;
-  border: 1px solid #a8896c;
-  border-radius: 5px;
-  box-sizing: border-box;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-}
-main .container .inbox-cont .search-bar input[type=text]:focus {
-  outline: none;
-  border: 1px solid #dbb07b;
-}
-main .container .inbox-cont .search-bar button {
-  width: 22%;
-  padding: 2px 0;
-  border-radius: 5px;
-  border: 1px solid #a8896c;
-  color: #ffffff;
-  background-color: #a8896c;
-  cursor: pointer;
-  font-family: "Poppins", sans-serif;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-}
-main .container .inbox-cont .search-bar button:hover {
-  opacity: 70%;
-}
-main .container .inbox-cont .inbox {
+main .container .progress-cont .progress {
+  margin-top: 10px;
   width: 380px;
   height: 83vh;
   color: #a8896c;
   background-color: #f2e5db;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
-main .container .inbox-cont .inbox .inbox-header {
+main .container .progress-cont .progress .progress-header {
   width: 380px;
   display: flex;
   align-items: center;
@@ -208,38 +232,15 @@ main .container .inbox-cont .inbox .inbox-header {
   border-bottom: 2px solid #ffffff;
   background-color: #a8896c;
 }
-main .container .inbox-cont .inbox .inbox-header h2, main .container .inbox-cont .inbox .inbox-header p {
+main .container .progress-cont .progress .progress-header h2, main .container .progress-cont .progress .progress-header p {
   margin: 10px;
   color: #ffffff;
 }
-main .container .inbox-cont .inbox .inbox-message-cont {
-  overflow-y: scroll;
+main .container .progress-cont .progress .progress-bar-cont {
   width: 380px;
-  height: 75vh;
+  height: 73vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   cursor: pointer;
-}
-main .container .inbox-cont .inbox .inbox-message-cont .inbox-message {
-  width: 350px;
-  height: 55px;
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  background-color: #ffffff;
-  justify-content: start;
-  border: 1px solid #a8896c;
-  border-radius: 5px;
-}
-main .container .inbox-cont .inbox .inbox-message-cont .inbox-message:hover {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-main .container .inbox-cont .inbox .inbox-message-cont .inbox-message img {
-  border-radius: 50%;
-  border: 1px solid #a8896c;
-  margin: 10px;
-}
-main .container .inbox-cont .inbox .inbox-message-cont .inbox-message .name-addr p {
-  font-size: 0.7rem;
 }/*# sourceMappingURL=adminMessage.css.map */

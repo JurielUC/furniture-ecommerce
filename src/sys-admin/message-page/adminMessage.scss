@@ -19,7 +19,7 @@ main {
             .message-head {
                 margin-top: 12px;
                 width: 710px;
-                height: 50px;
+                height: 70px;
                 border-radius: 10px 10px 0 0;
                 background-color: $divider-color;
                 box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
@@ -30,26 +30,85 @@ main {
                     border-radius: 50%;
                 }
 
-                a {
-                    color: $header-color;
-                    margin-left: 10px;
-                    font-size: 1.3rem;
-                    font-weight: 600;
-                    text-decoration: none;
+                .status {
+                    a {
+                        color: $header-color;
+                        margin-left: 10px;
+                        font-size: 1.3rem;
+                        font-weight: 600;
+                        text-decoration: none;
+    
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
 
-                    &:hover {
-                        text-decoration: underline;
+                    p {
+                        margin-left: 10px;
+                        color: $header-color;
+                        font-size: .8rem;
                     }
                 }
+                
             }
 
             .message-box {
                 overflow-y: scroll;
-                height: 72vh;
+                height: 68vh;
                 width: 710px;
                 border-left: 3px solid $divider-color;  
                 border-right: 3px solid $divider-color; 
                 box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px; 
+
+                .time-s {
+                    text-align: center;
+                    font-size: .6rem;
+                    color: $header-color;
+                    opacity: 40%;
+                }
+
+                .nm {
+                    text-align: center;
+                    margin-top: 40%;
+                    color: $header-color;
+                    opacity: 60%;
+                }
+
+                .message-me {
+                    width: 100%;
+                    @include flexBox();
+                    justify-content: start;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+
+                    .message-one {
+                        border-radius: 0 10px 10px 10px;
+                        width: 60%;
+                        background-color: $header-color;
+                        margin: 0 5px 0 5px;
+                        padding: 10px 20px 10px 20px;
+                        word-wrap: break-word;
+                        color: $white-color;
+                    }
+                }
+
+                .message-admin {
+                    width: 100%;
+                    @include flexBox();
+                    justify-content: end;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+
+                    .message-two {
+                        border-radius: 10px 10px 0 10px;
+                        width: 60%;
+                        background-color: $divider-color;
+                        margin: 0 5px 0 5px;
+                        padding: 10px 20px 10px 20px;
+                        word-wrap: break-word;
+                        color: $header-color;
+                    }
+                }
             }
 
             .message-input {
@@ -98,52 +157,19 @@ main {
             }
         }
 
-        .inbox-cont {
+        .progress-cont {
             width: 380px;
             height: 90vh;
 
-            .search-bar {
-                input[type=text] {
-                    width: 76%;
-                    padding: 5px 8px;
-                    margin: 10px 0;
-                    display: inline-block;
-                    border: 1px solid $header-color;
-                    border-radius: 5px;
-                    box-sizing: border-box;
-                    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-                    
-                    &:focus {
-                        outline: none;
-                        border: 1px solid $mt-color;
-                    }
-                }
-
-                button {
-                    width: 22%;
-                    padding: 2px 0;
-                    border-radius: 5px;
-                    border: 1px solid $header-color;
-                    color: $white-color;
-                    background-color: $header-color;
-                    cursor: pointer;
-                    font-family: $font-family;
-                    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-
-                    &:hover {
-                        opacity: 70%;
-                    }
-                }
-            }
-
-            .inbox {
+            .progress {
+                margin-top: 10px;
                 width: 380px;
                 height: 83vh;
                 color: $header-color;
                 background-color: $divider-color;
                 box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
                 
-                .inbox-header {
+                .progress-header {
                     width: 380px;
                     @include flexBox();
                     justify-content: space-between;
@@ -156,41 +182,13 @@ main {
                     }
                 }
 
-                .inbox-message-cont {
-                    overflow-y: scroll;
+                .progress-bar-cont {
                     width: 380px;
-                    height: 75vh;
+                    height: 73vh;
                     @include flexBox();
                     flex-direction: column;
                     cursor: pointer;
                     
-                    .inbox-message {
-                        width: 350px;
-                        height: 55px;
-                        @include flexBox();
-                        margin-top: 10px;
-                        background-color: $white-color;
-                        justify-content: start;
-                        border: 1px solid $header-color;
-                        border-radius: 5px;
-
-                        &:hover {
-                            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                        }
-
-                        img {
-                            border-radius: 50%;
-                            border: 1px solid $header-color;
-                            margin: 10px;
-                        }
-
-                        .name-addr {
-                            
-                            p {
-                                font-size: .7rem;
-                            }
-                        }
-                    }
                 }
             }
         }

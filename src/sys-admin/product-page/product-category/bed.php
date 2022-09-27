@@ -110,7 +110,9 @@
                                         <!--put image here-->
                                         <img src="../<?php echo $row['product_img']; ?>" alt="" width="100px">
                                     </div>
-                                    <h3><?php echo $row['product_name']; ?></h3>
+                                    <div class="pname">
+                                        <h4><?php echo $row['product_name']; ?></h3>
+                                    </div>
                                     <p>PHP <?php echo $row['price']; ?>.00</p>
                                 </div>
                         <?php
@@ -133,13 +135,25 @@
                     </div>
                     <div class="inbox-message-cont">
                         <!--put php for message display here-->
+                        <?php require_once '../../../php-database/dbconnect.php'; 
+                            
+                            $query = "SELECT * FROM tb_user WHERE all_msg > 0 ORDER BY unread_msg DESC";
+                            $result = mysqli_query($conn, $query);
+
+                            while ($row = mysqli_fetch_assoc($result))
+                            {
+                        ?>
                         <div class="inbox-message">
-                            <img src="../../../../image/logo.jpg" alt="" width="40px" height="40px">
+                            <img src="../../../sys-user/signup-page/<?php echo $row['myfile']; ?>" alt="" width="40px" height="40px">
                             <div class="name-addr">
-                                <h4>Juriel Comia</h4>
-                                <p>Lemery, Batangas</p>
+                                <h4><?php echo $row['first_name']; ?> <?php echo $row['last_name']; ?></h4>
+                                <p><?php echo $row['status']; ?></p>
                             </div>
+                            <p class="msg-num"><?php echo $row['unread_msg']; ?> message/s</p>
                         </div>
+                        <?php 
+                            }
+                        ?>
                     </div>
                 </div>              
             </section>

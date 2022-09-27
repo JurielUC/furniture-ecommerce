@@ -2,6 +2,7 @@
     include '../../php-database/user-session.php';
                 
     $mc=$_REQUEST['message_content'];
+    date_default_timezone_set('Asia/Manila');
     $timestamp = date("Y-m-d H:i:s");
     $Myfile=$_FILES['file']['name'];
 
@@ -20,6 +21,9 @@
     $sql = "INSERT INTO tb_pointmessage(message_to,	message_from, message_content, sender_name, msg_timestamp, msg_file) VALUES('1135622190', '$loggedin_uid', '$mc', '$loggedin_fname $loggedin_lname', '$timestamp', '$dst_db')";
                 
     if (mysqli_query($conn, $sql)) {
+
+        $sql2 = mysqli_query($conn, "UPDATE tb_user SET unread_msg = unread_msg + 1 WHERE unique_id = '$loggedin_uid'");
+        $sql3 = mysqli_query($conn, "UPDATE tb_user SET all_msg = all_msg + 1 WHERE unique_id = '$loggedin_uid'");
         header("location: userMessage.php");
             exit;
       } else {

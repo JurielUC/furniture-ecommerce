@@ -25,7 +25,6 @@
         <!--Put your navigation here below-->
         <nav>
             <a href="../product-page/adminProduct.php">Product</a>
-            <a href="" style="border-bottom: 3px solid white; padding-bottom: 5px;">Message</a>
             <a href="../feed-profile-page/adminProfile.php">Shop Feed</a>
             <a href="../../php-database/admin-logout.php">Logout</a>
         </nav>
@@ -39,11 +38,67 @@
         <div class="container">
             <section class="message-cont">
                 <div class="message-head">
-                    <img src="../../../image/icon/account.png" alt="" width="30px" height="30px">
-                    <a href="">Juriel Comia</a>
+                    <?php 
+                        require_once '../../php-database/dbconnect.php';
+
+                        $uid=$_GET['unique_id'];
+                        $status=$_GET['status'];
+                        $fname=$_GET['first_name'];
+                        $lname=$_GET['last_name'];
+                        $ppic=$_GET['myfile'];
+                        
+                        $query = "SELECT * FROM tb_user WHERE unique_id=$uid";
+                        $result = mysqli_query($conn, $query);
+                    ?>
+                    <img src="../../sys-user/signup-page/<?php echo $ppic; ?>" alt="" width="50px" height="50px">
+                    <div class="status">
+                        <a href=""><?php echo $fname; ?> <?php echo $lname; ?></a>
+                        <p><?php echo $status; ?></p>
+                    </div>
+                    
 
                 </div>
                 <div class="message-box">
+                <?php 
+                        require_once '../../php-database/admin-session.php';
+                        
+                        $query = "SELECT * FROM tb_pointmessage WHERE message_to = $uid
+                        AND message_from = $loggedin_uid OR message_to = $loggedin_uid
+                        AND message_from = $uid ORDER BY msg_timestamp ASC";
+
+                        $result = mysqli_query($conn, $query);
+                        if(mysqli_num_rows($result) > 0){
+                            while ($row = mysqli_fetch_assoc($result))
+                                {
+                        ?>
+                            <?php 
+                                if($row['message_to'] === $loggedin_uid){
+                                    echo '  <p class="time-s">'. $row['msg_timestamp'] .'</p>
+                                            <div class="message-me message">
+                                                <div class="message-one">
+                                                    <p>'. $row['message_content'] .'</p>
+                                                </div>
+                                            </div>';
+                                }
+                                elseif($row['message_to'] === $uid) {
+                                    echo  ' <p class="time-s">'. $row['msg_timestamp'] .'</p>
+                                            <img src="../../sys-user/signup-page/'. $ppic .'" alt="" width="50px" height="50px">
+                                            <div class="message-admin">
+                                                
+                                                <div class="message-two message">
+                                                    <p>'. $row['message_content'] .'</p>
+                                                </div>
+                                            </div>';
+                                }
+                            }
+                            ?>
+                                
+                                <?php
+                                    }else
+                                        {
+                                            echo '<p class="nm">No Message</p>';
+                                        }
+                                ?>
                     
                 </div>
                 <div class="message-input">
@@ -58,27 +113,14 @@
                     </form>
                 </div>
             </section>
-            <section class="inbox-cont">
-                <div class="search-bar">
-                    <form action="">
-                        <input type="text" placeholder="Search.." name="search">
-                        <button type="submit">Search</button>
-                    </form>
-                </div>  
-                <div class="inbox">
-                    <div class="inbox-header">
-                        <h2>Inbox</h2>
-                        <p>(2 message/s)</p>
+            <section class="progress-cont"> 
+                <div class="progress">
+                    <div class="progress-header">
+                        <h2>Project Progress</h2>
                     </div>
-                    <div class="inbox-message-cont">
+                    <div class="progress-bar-cont">
                         <!--put php for message display here-->
-                        <div class="inbox-message">
-                            <img src="../../../image/logo.jpg" alt="" width="40px" height="40px">
-                            <div class="name-addr">
-                                <h4>Juriel Comia</h4>
-                                <p>Lemery, Batangas</p>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>              
             </section>
