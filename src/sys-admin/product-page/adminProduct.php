@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="adminProduct.css?v=<?php echo time(); ?>">
+    
 </head>
 <body>
     <!--Header and divider-->
@@ -132,31 +133,22 @@
                         <h2>Inbox</h2>
                         <p></p>
                     </div>
+                    <!--Auto reload script-->
+                    <script>
+                        function ajaxCall() {
+                            $.ajax({
+                                url: "inbox-reload.php",
+                                success: (function (result) {
+                                    $("#inbox-message-cont").html(result);
+                                })
+                            })
+                        };
+
+                        ajaxCall(); // To output when the page loads
+                        setInterval(ajaxCall, (2 * 1000)); // x * 1000 to get it in seconds
+                    </script>
                     <div class="inbox-message-cont">
-                        <!--put php for message display here-->
-                        <?php require_once '../../php-database/dbconnect.php'; 
-                            
-                            $query = "SELECT * FROM tb_user WHERE all_msg > 0 ORDER BY unread_msg DESC";
-                            $result = mysqli_query($conn, $query);
-                            
-
-
-                            while ($row = mysqli_fetch_assoc($result))
-                            {
-                                $uid=$row['unique_id'];
-                                $sql2 = mysqli_query($conn, "UPDATE tb_user SET unread_msg = unread_msg - unread_msg WHERE unique_id = '$uid'");
-                        ?>
-                        <div class="inbox-message" onclick="window.location.href='../message-page/adminMessage.php?unique_id=<?php echo $row['unique_id']; ?> & status=<?php echo $row['status']; ?> & first_name=<?php echo $row['first_name']; ?> & last_name=<?php echo $row['last_name']; ?> & myfile=<?php echo $row['myfile']; ?> & <?php echo $sql2; ?>';">
-                            <img src="../../sys-user/signup-page/<?php echo $row['myfile']; ?>" alt="" width="40px" height="40px">
-                            <div class="name-addr">
-                                <h4><?php echo $row['first_name']; ?> <?php echo $row['last_name']; ?></h4>
-                                <p><?php echo $row['status']; ?></p>
-                            </div>
-                            <p class="msg-num"><?php echo $row['unread_msg']; ?> message/s</p>
-                        </div>
-                        <?php 
-                            }
-                        ?>
+                        
                     </div>
                 </div>              
             </section>

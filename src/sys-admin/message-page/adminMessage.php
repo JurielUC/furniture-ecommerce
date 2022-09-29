@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="adminMessage.css?v=<?php echo time(); ?>">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
     <!--Header and divider-->
@@ -50,6 +51,20 @@
                         $query = "SELECT * FROM tb_user WHERE unique_id=$uid";
                         $result = mysqli_query($conn, $query);
                     ?>
+                    <!--Auto reload script-->
+                    <script>
+                        function ajaxCall() {
+                            $.ajax({
+                                url: "message.php?unique_id=<?php echo $uid; ?>",
+                                success: (function (result) {
+                                    $("#your_div").html(result);
+                                })
+                            })
+                        };
+
+                        ajaxCall(); // To output when the page loads
+                        setInterval(ajaxCall, (2 * 1000)); // x * 1000 to get it in seconds
+                    </script>
                     <img src="../../sys-user/signup-page/<?php echo $ppic; ?>" alt="" width="50px" height="50px">
                     <div class="status">
                         <a href=""><?php echo $fname; ?> <?php echo $lname; ?></a>
@@ -59,41 +74,6 @@
 
                 </div>
                 <div class="message-box" id="your_div">
-                <?php 
-                        require_once '../../php-database/admin-session.php';
-                        
-                        $query = "SELECT * FROM tb_pointmessage WHERE message_to = $uid
-                        AND message_from = $loggedin_uid OR message_to = $loggedin_uid
-                        AND message_from = $uid ORDER BY msg_timestamp ASC";
-
-                        $result = mysqli_query($conn, $query);
-                        if(mysqli_num_rows($result) > 0){
-                            while ($row = mysqli_fetch_assoc($result))
-                                {
-                        ?>
-                            <?php 
-                                if($row['message_to'] === $loggedin_uid){
-                                    echo '  <p class="time-s">'. $row['msg_timestamp'] .'</p>
-                                            <div class="message-me message">
-                                                <div class="message-one">
-                                                    <p>'. $row['message_content'] .'</p>
-                                                </div>
-                                            </div>';
-                                }
-                                elseif($row['message_to'] === $uid) {
-                                    echo  ' <p class="time-s">'. $row['msg_timestamp'] .'</p>
-                                            <div class="message-admin">
-                                                <div class="message-two message">
-                                                    <p>'. $row['message_content'] .'</p>
-                                                </div>
-                                            </div>';
-                                }
-                            }
-                                    }else
-                                        {
-                                            echo '<p class="nm">No Message</p>';
-                                        }
-                                ?>
                     
                 </div>
                 <div class="message-input">
