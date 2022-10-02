@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="get-product.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="userOrder.css?v=<?php echo time(); ?>">
 </head>
 <body>
     <!--Header and divider-->
@@ -38,11 +38,6 @@
     <main>
         <div class="container">
             <section class="product-cont">
-                <div class="prod-back">
-                    <a href="../home-page/userhome.php"><img src="../../../image/icon/arrow.png" alt="" width="15px" height="15px"></a>
-                    <p>Product Information</p>
-                </div>
-                <div class="product">
                     <?php 
                         require_once '../../php-database/dbconnect.php';
 
@@ -54,38 +49,18 @@
                         while($row = mysqli_fetch_assoc($result))
                         {
                     ?>
+                <div class="prod-back">
+                    <a href="../getproduct-page/get-product.php?id=<?php echo $row['id']; ?>"><img src="../../../image/icon/arrow.png" alt="" width="15px" height="15px"></a>
+                    <p>Checkout</p>
+                </div>
+                <div class="product">
+                    <form action="" method="post">
 
-                    <div class="prod-img">
-                        <img src="../../sys-admin/product-page/<?php echo $row['product_img']; ?>" alt="" width="350px">
-                    </div>
-                    <div class="p-name-price">
-                        <div class="pn">
-                            <h3><?php echo $row['product_name']; ?></h3>
-                        </div>
-                        <div class="p">
-                            <p>PHP <?php echo $row['price'];?>.00</p>
-                        </div>
-                    </div>
-                    <div class="des-size">
-                        <div class="descrip">
-                            <h5>Description</h5>
-                            <p><?php echo $row['p_description']; ?></p>
-                        </div>
-                        <div class="size">
-                            <h5>Size</h5>
-                            <p><?php echo $row['size']; ?></p>
-                        </div>
-                        <div class="category">
-                            <h5>Category</h5>
-                            <p><?php echo $row['category']; ?></p>
-                        </div>
-                    </div>
                     
-
                 </div>
                 <div class="checkout">
-                    <button>Message Now</button>
-                    <button onclick="window.location.href='../order-page/userOrder.php?id=<?php echo $row['id']; ?>'">Order Now</button>
+                    <button>Place Order</button>
+                    </form>
                 </div>
                 <?php } ?>
             </section>
