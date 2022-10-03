@@ -18,10 +18,20 @@ main {
         height: 90vh;
         @include flexBox();
         justify-content: center;
+        flex-direction: column;
 
         .product-cont {
             width: 430px;
             height: 90vh;
+
+            .pop-alert {
+                margin-top: 10px;
+
+                h3 {
+                    text-align: center;
+                    color: $header-color;
+                }
+            }
 
             .prod-back {
                 margin-top: 10px;
@@ -36,6 +46,22 @@ main {
                 a {
                     margin: 5px 20px 0 20px;
                 
+                }
+
+                .button-margin {
+                    margin-left: 125px;
+                }
+
+                button {
+                    padding: 1px 5px;
+                    border-radius: 10px;
+                    border: none;
+                    background-color: $header-color;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 80%;
+                    }
                 }
             }
 

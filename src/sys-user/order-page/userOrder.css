@@ -117,6 +117,27 @@ main .container .product-cont .product {
   overflow-y: scroll;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
+main .container .product-cont .product #buyer-info {
+  width: 420px;
+  background-color: aqua;
+}
+main .container .product-cont .product #buyer-info .buyer-info-inputs {
+  margin-left: 10px;
+  margin-top: 3px;
+}
+main .container .product-cont .product #buyer-info .buyer-info-inputs input[type=text], main .container .product-cont .product #buyer-info .buyer-info-inputs select {
+  padding: 3px;
+  font-family: "Poppins", sans-serif;
+}
+main .container .product-cont .product #buyer-info .buyer-info-inputs .big {
+  width: 60%;
+}
+main .container .product-cont .product #buyer-info .buyer-info-inputs .sm {
+  width: 30%;
+}
+main .container .product-cont .product #buyer-info .buyer-info-inputs .full {
+  width: 90%;
+}
 main .container .product-cont .checkout {
   margin-top: 5px;
   width: 420px;

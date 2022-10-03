@@ -90,10 +90,18 @@ main .container {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 main .container .product-cont {
   width: 430px;
   height: 90vh;
+}
+main .container .product-cont .pop-alert {
+  margin-top: 10px;
+}
+main .container .product-cont .pop-alert h3 {
+  text-align: center;
+  color: #a8896c;
 }
 main .container .product-cont .prod-back {
   margin-top: 10px;
@@ -108,6 +116,19 @@ main .container .product-cont .prod-back {
 }
 main .container .product-cont .prod-back a {
   margin: 5px 20px 0 20px;
+}
+main .container .product-cont .prod-back .button-margin {
+  margin-left: 125px;
+}
+main .container .product-cont .prod-back button {
+  padding: 1px 5px;
+  border-radius: 10px;
+  border: none;
+  background-color: #a8896c;
+  cursor: pointer;
+}
+main .container .product-cont .prod-back button:hover {
+  opacity: 80%;
 }
 main .container .product-cont .product {
   height: 70vh;

@@ -47,7 +47,32 @@ main {
                 overflow-y: scroll;
                 box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
                 
-                
+                #buyer-info {
+                    width: 420px;
+                    background-color: aqua;
+
+                    .buyer-info-inputs {
+                        margin-left: 10px;
+                        margin-top: 3px;
+
+                        input[type=text], select {
+                            padding: 3px;
+                            font-family: $font-family;
+                        }
+
+                        .big {
+                            width: 60%;
+                        }
+
+                        .sm {
+                            width: 30%;
+                        }
+
+                        .full {
+                            width: 90%;
+                        }
+                    }
+                }
             }
 
             .checkout {

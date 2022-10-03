@@ -55,7 +55,25 @@
                 </div>
                 <div class="product">
                     <form action="" method="post">
-
+                        <div id="buyer-info">
+                            <div class="buyer-info-inputs">
+                                <input class="big" type="text" name="fullname" id="fullname" value="<?php echo $loggedin_fname; ?> <?php echo $loggedin_lname; ?>" readonly>
+                                <input class="sm" type="text" name="phone_no" id="phone_no" value="<?php echo $loggedin_cno; ?>" readonly>
+                            </div>
+                            <div class="buyer-info-inputs">
+                                <input class="big" type="text" name="address" id="address" placeholder="Barangay/Municipal" value="<?php echo $loggedin_address; ?>" title="We are available in Batangas area only.">
+                                <input class="sm" type="text" name="postal" id="postal" placeholder="Postal Code">
+                            </div>
+                            <div class="buyer-info-inputs">
+                                <input class="big" type="text" name="house_no" id="house_no" placeholder="Street name/Building/House No.">
+                                <select class="sm" name="settings" id="settings">
+                                    <option value="Home">Home</option>
+                                    <option value="Work">Work</option>
+                                    <option value="Office">Office</option>
+                                </select>
+                            </div>
+                        </div>
+                        
                     
                 </div>
                 <div class="checkout">

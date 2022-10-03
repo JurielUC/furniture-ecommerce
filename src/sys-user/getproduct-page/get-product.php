@@ -38,11 +38,13 @@
     <main>
         <div class="container">
             <section class="product-cont">
-                <div class="prod-back">
-                    <a href="../home-page/userhome.php"><img src="../../../image/icon/arrow.png" alt="" width="15px" height="15px"></a>
-                    <p>Product Information</p>
+                <div class="pop-alert">
+                    <h3 class="create-message"><?php if(!empty($_GET['message'])) {
+                        $message = $_GET['message'];
+                        echo $message; }?>
+                    </h3>
                 </div>
-                <div class="product">
+                
                     <?php 
                         require_once '../../php-database/dbconnect.php';
 
@@ -54,7 +56,14 @@
                         while($row = mysqli_fetch_assoc($result))
                         {
                     ?>
-
+                <div class="prod-back">
+                    <a href="../home-page/userhome.php"><img src="../../../image/icon/arrow.png" alt="" width="15px" height="15px"></a>
+                    <p>Product Information</p>
+                    <button class="button-margin" title="Add to cart" onclick="window.location.href='../../php-database/cart-add.php?id=<?php echo $id; ?>'"><img src="../../../image/icon/shopping-cart.png" alt="" width="22px" height="22px"></button>
+                    <button title="View your cart" onclick="window.location.href='../../php-database/cart-add.php?id=<?php echo $id; ?>'"><img src="../../../image/icon/view-cart.png" alt="" width="22px" height="22px"></button>
+                    <!--Alert box when the item is already available-->
+                </div>
+                <div class="product">
                     <div class="prod-img">
                         <img src="../../sys-admin/product-page/<?php echo $row['product_img']; ?>" alt="" width="350px">
                     </div>
