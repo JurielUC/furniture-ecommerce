@@ -56,22 +56,49 @@
                 <div class="product">
                     <form action="" method="post">
                         <div id="buyer-info">
+                            <h3><u>Delivery Address</u></h3>
                             <div class="buyer-info-inputs">
-                                <input class="big" type="text" name="fullname" id="fullname" value="<?php echo $loggedin_fname; ?> <?php echo $loggedin_lname; ?>" readonly>
-                                <input class="sm" type="text" name="phone_no" id="phone_no" value="<?php echo $loggedin_cno; ?>" readonly>
+                                <input class="big fullname" type="text" name="fullname" id="fullname" value="<?php echo $loggedin_fname; ?> <?php echo $loggedin_lname; ?>" readonly required>
+                                <input class="sm" type="text" name="phone_no" id="phone_no" value="<?php echo $loggedin_cno; ?>" readonly required>
                             </div>
                             <div class="buyer-info-inputs">
-                                <input class="big" type="text" name="address" id="address" placeholder="Barangay/Municipal" value="<?php echo $loggedin_address; ?>" title="We are available in Batangas area only.">
-                                <input class="sm" type="text" name="postal" id="postal" placeholder="Postal Code">
+                                <input class="big" type="text" name="address" id="address" placeholder="Barangay/Municipal" value="<?php echo $loggedin_address; ?>" title="We are available in Batangas area only." required>
+                                <input class="sm" type="text" name="postal" id="postal" placeholder="Postal Code" required>
                             </div>
                             <div class="buyer-info-inputs">
-                                <input class="big" type="text" name="house_no" id="house_no" placeholder="Street name/Building/House No.">
-                                <select class="sm" name="settings" id="settings">
+                                <input class="big" type="text" name="house_no" id="house_no" placeholder="Street name/Building/House No." required>
+                                <select class="select" name="settings" id="settings">
                                     <option value="Home">Home</option>
                                     <option value="Work">Work</option>
                                     <option value="Office">Office</option>
                                 </select>
                             </div>
+                        </div>
+                        <div id="selected-product">
+                            <h3><u>Selected Product</u></h3>
+                            <div class="spe-product">
+                                <div class="img-name">
+                                    <div class="image">
+                                        <img src="../../sys-admin/product-page/<?php echo $row['product_img']; ?>" alt="" width="60px">
+                                    </div>
+                                    <div class="name-product">
+                                        <h4><?php echo $row['product_name']; ?></h4>
+                                        <p>PHP <?php echo $row['price'];?>.00</p>
+                                    </div>
+                                </div>
+                                <div class="quantity">
+                                    <input type="text" value="<?php echo $row['id'];?>" hidden>
+                                    <input type="number" name="quantity" id="quantity" value="1">
+                                    <p>pc/s</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="payment">
+                            <label for="payment-method">Payment Method</label>
+                            <select name="payment" id="payment-method">
+                                <option value="">Select...</option>
+                                <option value="COD">Cash On Delivery</option>
+                            </select>
                         </div>
                         
                     

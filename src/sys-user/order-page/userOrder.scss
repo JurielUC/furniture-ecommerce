@@ -48,31 +48,170 @@ main {
                 box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
                 
                 #buyer-info {
-                    width: 420px;
-                    background-color: aqua;
+                    width: 400px;
+                    padding-bottom: 5px;
+                    border-bottom: 2px solid $white-color;
+
+                    h3 {
+                        margin-left: 10px;
+                        color: $header-color;
+                        font-weight: 600;
+                    }
 
                     .buyer-info-inputs {
                         margin-left: 10px;
                         margin-top: 3px;
+                        
 
                         input[type=text], select {
                             padding: 3px;
                             font-family: $font-family;
+                            outline: none;
+                            color: $header-color;
+                        }
+
+                        .fullname {
+                            font-weight: 600;
+                            background-color: $divider-color;
+                            outline: none;
+                            border: none;
+                            font-size: .9rem;
+                            color: $header-color;
                         }
 
                         .big {
-                            width: 60%;
+                            width: 65%;
+                            -webkit-appearance: none;
+                            border: 0;
+                            padding: 0;
+                            background: none;
+                            border-radius: 0;
+                            border-bottom: 2px solid $loginbg-color;
+                            
+                            &:focus {
+                                outline: none;
+                                border-bottom: 2px solid $header-color;
+                            }
                         }
 
                         .sm {
                             width: 30%;
+                            -webkit-appearance: none;
+                            border: 0;
+                            padding: 0;
+                            background: none;
+                            border-radius: 0;
+                            border-bottom: 2px solid $loginbg-color;
+                            
+                            &:focus {
+                                outline: none;
+                                border-bottom: 2px solid $header-color;
+                            }
                         }
 
-                        .full {
-                            width: 90%;
+                        .select {
+                            width: 30%;
                         }
                     }
                 }
+
+                #selected-product {
+                    width: 400px;
+                    padding-bottom: 5px;
+                    border-bottom: 2px solid $white-color;
+                    background-color: $loginbg-color;
+
+                    h3 {
+                        margin-left: 10px;
+                        color: $header-color;
+                        font-weight: 600;
+                        font-size: .9rem;
+                    }
+
+                    .spe-product {
+                        margin: 10px;
+                        @include flexBox();
+                        justify-content: space-between;
+                        cursor: pointer;
+                        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+                        &:hover {
+                            opacity: 80%;
+                            background-color: rgba(128, 128, 128, 0.185);
+                        }
+
+                        .img-name {
+                            @include flexBox();
+
+                            .image {
+                                width: 70px;
+                                height: 70px;
+                                @include flexBox;
+                                justify-content: center;
+                                background-color: $white-color;
+                                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                            }
+    
+                            .name-product {
+                                color: $header-color;
+                                margin-left: 10px;
+    
+                                p {
+                                    font-size: .8rem;
+                                }
+                            }
+                        }
+
+                        .quantity {
+                            @include flexBox();
+
+                            input[type=number] {
+                                width: 50px;
+                                padding: 0 0 0 10px;
+                                font-family: $font-family;
+                                margin-right: 5px;
+
+                                &:focus {
+                                    outline: none;
+                                    border-bottom: 2px solid $header-color;
+                                }
+                            }
+
+                            p {
+                                font-size: .8rem;
+
+                            }
+                        }
+                    }
+                }
+
+                #payment {
+                    width: 400px;
+                    padding-bottom: 5px;
+                    border-bottom: 2px solid $white-color;
+                    @include flexBox();
+                    justify-content: space-between;
+                    margin-top: 10px;
+                    color: $header-color;
+
+                    label {
+                        margin-left: 10px;
+                        font-weight: 600;
+                    }
+
+                    select {
+                        margin-right: 10px;
+                        color: $header-color;
+                        width: 40%;
+                        font-family: $font-family;
+                        padding: 3px;
+                            
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+
             }
 
             .checkout {
