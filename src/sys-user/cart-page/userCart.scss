@@ -46,74 +46,6 @@ main {
                 background-color: $divider-color;
                 overflow-y: scroll;
                 box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-                
-                #buyer-info {
-                    width: 400px;
-                    padding-bottom: 5px;
-                    border-bottom: 2px solid $white-color;
-
-                    h3 {
-                        margin-left: 10px;
-                        color: $header-color;
-                        font-weight: 600;
-                    }
-
-                    .buyer-info-inputs {
-                        margin-left: 10px;
-                        margin-top: 3px;
-                        
-
-                        input[type=text], select {
-                            padding: 3px;
-                            font-family: $font-family;
-                            outline: none;
-                            color: $header-color;
-                        }
-
-                        .fullname {
-                            font-weight: 600;
-                            background-color: $divider-color;
-                            outline: none;
-                            border: none;
-                            font-size: .9rem;
-                            color: $header-color;
-                        }
-
-                        .big {
-                            width: 65%;
-                            -webkit-appearance: none;
-                            border: 0;
-                            padding: 0;
-                            background: none;
-                            border-radius: 0;
-                            border-bottom: 2px solid $loginbg-color;
-                            
-                            &:focus {
-                                outline: none;
-                                border-bottom: 2px solid $header-color;
-                            }
-                        }
-
-                        .sm {
-                            width: 30%;
-                            -webkit-appearance: none;
-                            border: 0;
-                            padding: 0;
-                            background: none;
-                            border-radius: 0;
-                            border-bottom: 2px solid $loginbg-color;
-                            
-                            &:focus {
-                                outline: none;
-                                border-bottom: 2px solid $header-color;
-                            }
-                        }
-
-                        .select {
-                            width: 30%;
-                        }
-                    }
-                }
 
                 #selected-product {
                     width: 400px;
@@ -167,12 +99,13 @@ main {
                             color: $header-color;
 
                             input[type=number] {
-                                width: 38px;
+                                width: 50px;
                                 padding: 0 0 0 10px;
                                 font-family: $font-family;
                                 border: none;
                                 background-color: $loginbg-color;
                                 color: $header-color;
+
                             }
 
                             p {
@@ -182,34 +115,6 @@ main {
                         }
                     }
                 }
-
-                #payment {
-                    width: 400px;
-                    padding-bottom: 5px;
-                    border-bottom: 2px solid $white-color;
-                    @include flexBox();
-                    justify-content: space-between;
-                    margin-top: 10px;
-                    color: $header-color;
-
-                    label {
-                        margin-left: 10px;
-                        font-weight: 600;
-                    }
-
-                    select {
-                        margin-right: 10px;
-                        color: $header-color;
-                        width: 40%;
-                        font-family: $font-family;
-                        padding: 3px;
-                            
-                        &:focus {
-                            outline: none;
-                        }
-                    }
-                }
-
             }
 
             .checkout {

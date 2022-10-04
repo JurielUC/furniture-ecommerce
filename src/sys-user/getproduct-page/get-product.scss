@@ -49,7 +49,7 @@ main {
                 }
 
                 .button-margin {
-                    margin-left: 125px;
+                    margin-left: 150px;
                 }
 
                 button {
@@ -120,6 +120,31 @@ main {
                 box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
                 @include flexBox();
                 justify-content: space-evenly;
+
+                .qty {
+                    width: 200px;
+                    text-align: end;
+                    
+                    label {
+                        color: $white-color;
+                    }
+
+                    input[type=number]::-webkit-inner-spin-button {
+                        opacity: 1;
+                    }
+
+                    input[type=number] {
+                        width: 50px;
+                        padding: 0 0 0 10px;
+                        font-family: $font-family;
+                        margin-right: 5px;
+
+                        &:focus {
+                            outline: none;
+                            border-bottom: 2px solid $header-color;
+                        }
+                    }
+                }
                 
                 button {
                     font-family: $font-family;

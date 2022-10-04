@@ -43,7 +43,7 @@
 
                         $id=$_GET['id'];
                         
-                        $query = "SELECT * FROM tb_product WHERE id=$id";
+                        $query = "SELECT * FROM tb_product INNER JOIN tb_cart ON tb_product.id = tb_cart.product_id WHERE id=$id";
                         $result = mysqli_query($conn, $query);
 
                         while($row = mysqli_fetch_assoc($result))
@@ -88,7 +88,7 @@
                                 </div>
                                 <div class="quantity">
                                     <input type="text" value="<?php echo $row['id'];?>" hidden>
-                                    <input type="number" name="quantity" id="quantity" value="1">
+                                    <input type="number" name="quantity" id="quantity" value="<?php echo $row['quantity'];?>" readonly>
                                     <p>pc/s</p>
                                 </div>
                             </div>

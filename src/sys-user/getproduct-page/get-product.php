@@ -59,8 +59,7 @@
                 <div class="prod-back">
                     <a href="../home-page/userhome.php"><img src="../../../image/icon/arrow.png" alt="" width="15px" height="15px"></a>
                     <p>Product Information</p>
-                    <button class="button-margin" title="Add to cart" onclick="window.location.href='../../php-database/cart-add.php?id=<?php echo $id; ?>'"><img src="../../../image/icon/shopping-cart.png" alt="" width="22px" height="22px"></button>
-                    <button title="View your cart" onclick="window.location.href='../../php-database/cart-add.php?id=<?php echo $id; ?>'"><img src="../../../image/icon/view-cart.png" alt="" width="22px" height="22px"></button>
+                    <!--<button class="button-margin" title="View your cart" onclick="window.location.href='../cart-page/userCart.php'"><img src="../../../image/icon/view-cart.png" alt="" width="22px" height="22px"></button>-->
                     <!--Alert box when the item is already available-->
                 </div>
                 <div class="product">
@@ -92,10 +91,17 @@
                     
 
                 </div>
+                <form action="../../php-database/cart-add.php" method="get">
                 <div class="checkout">
-                    <button>Message Now</button>
-                    <button onclick="window.location.href='../order-page/userOrder.php?id=<?php echo $row['id']; ?>'">Order Now</button>
+                    <div class="qty">
+                        <label for="quantity">Quantity:</label>
+                        <input type="text" name="id" value="<?php echo $id; ?>" hidden>
+                        <input type="text" name="price" value="<?php echo $row['price']; ?>" hidden>
+                        <input type="number" name="quantity" id="quantity" value="1" min="1" max="10">
+                    </div>
+                    <button type="submit">Order Now</button>
                 </div>
+                </form>
                 <?php } ?>
             </section>
         </div>

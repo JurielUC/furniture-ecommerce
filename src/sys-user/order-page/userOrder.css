@@ -221,19 +221,19 @@ main .container .product-cont .product #selected-product .spe-product .img-name 
 main .container .product-cont .product #selected-product .spe-product .quantity {
   display: flex;
   align-items: center;
+  color: #a8896c;
 }
 main .container .product-cont .product #selected-product .spe-product .quantity input[type=number] {
-  width: 50px;
+  width: 38px;
   padding: 0 0 0 10px;
   font-family: "Poppins", sans-serif;
-  margin-right: 5px;
-}
-main .container .product-cont .product #selected-product .spe-product .quantity input[type=number]:focus {
-  outline: none;
-  border-bottom: 2px solid #a8896c;
+  border: none;
+  background-color: #f5ece3;
+  color: #a8896c;
 }
 main .container .product-cont .product #selected-product .spe-product .quantity p {
   font-size: 0.8rem;
+  margin-right: 10px;
 }
 main .container .product-cont .product #payment {
   width: 400px;
