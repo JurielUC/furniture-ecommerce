@@ -35,8 +35,8 @@ header .app-name a {
   margin: 0 0 0 70px;
 }
 header .app-name a img {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   margin-right: 10px;
 }
@@ -258,6 +258,24 @@ main .container .product-cont .product #payment select {
 }
 main .container .product-cont .product #payment select:focus {
   outline: none;
+}
+main .container .product-cont .product #total-price {
+  width: 400px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #a8896c;
+}
+main .container .product-cont .product #total-price h4 {
+  margin-left: 10px;
+  font-weight: 600;
+}
+main .container .product-cont .product #total-price p {
+  margin-right: 10px;
+  color: #a8896c;
 }
 main .container .product-cont .checkout {
   margin-top: 5px;

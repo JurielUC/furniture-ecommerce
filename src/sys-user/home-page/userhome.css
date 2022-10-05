@@ -35,8 +35,8 @@ header .app-name a {
   margin: 0 0 0 70px;
 }
 header .app-name a img {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   margin-right: 10px;
 }
@@ -208,8 +208,7 @@ main .container .shopinfo-cont .shopinfo .profile-pic {
 main .container .shopinfo-cont .shopinfo .profile-pic img {
   margin: 10px 0;
   border: 5px solid #a8896c;
-  border-radius: 50%;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 main .container .shopinfo-cont .shopinfo h1 {
   text-align: center;

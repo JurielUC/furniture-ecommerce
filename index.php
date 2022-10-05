@@ -8,14 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/style/style.css">
+    <link rel="stylesheet" href="src/style/style.css?v=<?php echo time(); ?>">
 </head>
 <body>
     <!--Header and divider-->
     <header>
         <div class="app-name">
             <a href="">
-                <img src="./image/logo.jpg" alt="">
+                <img src="./image/logo.png" alt="">
                 <h1>Gil's Furniture Shop</h1>
             </a>
         </div>
@@ -45,7 +45,7 @@
                 <img src="./image/bg-img.jpg" alt="">
             </div>
         </section>
-        <section id="product-list">
+        <!--<section id="product-list">
             <div class="product-cont">
                 <h1>PRODUCT</h1>
                 <br>
@@ -126,7 +126,7 @@
                     </form>
                 </div>
             </div>
-        </section>
+        </section>-->
     </main>
 </body>
 </html>

@@ -15,7 +15,7 @@
     <header>
         <div class="app-name">
             <a href="../../../index.php">
-                <img src="../../../image/logo.jpg" alt="">
+                <img src="../../../image/logo.png" alt="">
                 <h1>Gil's Furniture Shop</h1>
             </a>
         </div>

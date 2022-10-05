@@ -18,7 +18,7 @@
     <header>
         <div class="app-name">
             <a href="">
-                <img src="../../../image/logo.jpg" alt="">
+                <img src="../../../image/logo.png" alt="">
                 <h1>Gil's Furniture Shop</h1>
             </a>
         </div>
@@ -50,11 +50,11 @@
                         {
                     ?>
                 <div class="prod-back">
-                    <a href="../getproduct-page/get-product.php?id=<?php echo $row['id']; ?>"><img src="../../../image/icon/arrow.png" alt="" width="15px" height="15px"></a>
+                    <a href="../../php-database/delete-from-cart.php?id=<?php echo $row['id']; ?>"><img src="../../../image/icon/arrow.png" alt="" width="15px" height="15px"></a>
                     <p>Checkout</p>
                 </div>
                 <div class="product">
-                    <form action="" method="post">
+                    <form action="submit-order.php" method="post">
                         <div id="buyer-info">
                             <h3><u>Delivery Address</u></h3>
                             <div class="buyer-info-inputs">
@@ -87,7 +87,9 @@
                                     </div>
                                 </div>
                                 <div class="quantity">
-                                    <input type="text" value="<?php echo $row['id'];?>" hidden>
+                                    <input type="text" name="user_id" value="<?php echo $loggedin_uid;?>" hidden>
+                                    <input type="text" name="product_id" value="<?php echo $row['id'];?>" hidden>
+                                    <input type="text" name="total_price" value="<?php echo $row['total_price'];?>" hidden>
                                     <input type="number" name="quantity" id="quantity" value="<?php echo $row['quantity'];?>" readonly>
                                     <p>pc/s</p>
                                 </div>
@@ -95,16 +97,19 @@
                         </div>
                         <div id="payment">
                             <label for="payment-method">Payment Method</label>
-                            <select name="payment" id="payment-method">
+                            <select name="payment" id="payment-method" required>
                                 <option value="">Select...</option>
                                 <option value="COD">Cash On Delivery</option>
                             </select>
                         </div>
-                        
+                        <div id="total-price">
+                            <h4>Total Price</h4>
+                            <p>PHP <?php echo $row['total_price'];?></p>
+                        </div>
                     
                 </div>
                 <div class="checkout">
-                    <button>Place Order</button>
+                    <button type="submit">Place Order</button>
                     </form>
                 </div>
                 <?php } ?>

@@ -210,6 +210,25 @@ main {
                     }
                 }
 
+                #total-price {
+                    width: 400px;
+                    padding-bottom: 5px;
+                    border-bottom: 2px solid $white-color;
+                    @include flexBox();
+                    justify-content: space-between;
+                    margin-top: 10px;
+                    color: $header-color;
+
+                    h4 {
+                        margin-left: 10px;
+                        font-weight: 600;
+                    }
+
+                    p {
+                        margin-right: 10px;
+                        color: $header-color;
+                    }
+                }
             }
 
             .checkout {

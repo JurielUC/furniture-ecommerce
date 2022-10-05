@@ -19,7 +19,7 @@
     <header>
         <div class="app-name">
             <a href="">
-                <img src="../../../image/logo.jpg" alt="">
+                <img src="../../../image/logo.png" alt="">
                 <h1>Gil's Furniture Shop</h1>
             </a>
         </div>
@@ -54,7 +54,7 @@
                         ajaxCall(); // To output when the page loads
                         setInterval(ajaxCall, (2 * 1000)); // x * 1000 to get it in seconds
                     </script>
-                    <img src="../../../image/icon/account.png" alt="" width="30px" height="30px">
+                    <img src="../../../image/logo2.png" alt="" width="30px" height="30px">
                     <a href="../home-page/userhome.php">Shop Admin</a>
 
                 </div>
@@ -76,7 +76,7 @@
             <section class="progress-cont"> 
                 <div class="progress">
                     <div class="progress-header">
-                        <h2>Project Progress</h2>
+                        <h2>Order Progress</h2>
                     </div>
                     <div class="progress-bar-cont">
                         <!--put php for message display here-->

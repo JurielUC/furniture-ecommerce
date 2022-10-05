@@ -18,7 +18,7 @@
     <header>
         <div class="app-name">
             <a href="">
-                <img src="../../../image/logo.jpg" alt="">
+                <img src="../../../image/logo.png" alt="">
                 <h1>Gil's Furniture Shop</h1>
             </a>
         </div>
@@ -94,7 +94,7 @@
                     ?>
                     <h1><u>BUSINESS INFORMATION</u></h1>
                     <div class="profile-pic">
-                        <img src="../../sys-admin/product-page/<?php echo $row["profile_pic"]; ?>" alt="" width="100px" height="100px">
+                        <img src="../../../image/logo.png" alt="" width="100px" height="100px">
                     </div>
                     <h3><img src="../../../image/icon/placeholder.png" alt="" width="15" height="15">&nbsp&nbspLocation</h3>
                     <p><?php echo $row["address"]; ?></p>

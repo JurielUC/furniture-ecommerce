@@ -15,8 +15,9 @@
         date_default_timezone_set('Asia/Manila');
         $timestamp = date("Y-m-d H:i:s");
         $status = "processing";
+        $total_price = $price * $qty;
                             
-        $sql2 = "INSERT INTO tb_cart(user_id, product_id, quantity, price, datetime) VALUES('$loggedin_uid', '$id', '$qty', '$price', '$timestamp')";
+        $sql2 = "INSERT INTO tb_cart(user_id, product_id, quantity, total_price, datetime) VALUES('$loggedin_uid', '$id', '$qty', '$total_price', '$timestamp')";
 
         if (mysqli_query($conn, $sql2)) {
 
