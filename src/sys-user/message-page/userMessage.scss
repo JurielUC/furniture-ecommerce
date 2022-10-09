@@ -180,7 +180,92 @@ main {
                     @include flexBox();
                     flex-direction: column;
                     cursor: pointer;
+
+                    .canvas {
+                        height: 65vh;
+                        width: 360px;
+                        margin-top: 10px;
+                        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
                     
+                        .tran-cont {
+                            display: flex;
+                            justify-content: center;
+                            margin: 10px;
+                            flex-direction: column;
+
+                            .p-s, .d-t {
+                                @include flexBox();
+
+                                p {
+                                    font-size: .8rem;
+                                }
+                                
+                                .title {
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+
+                        .order {
+                            display: flex;
+                            justify-content: center;
+                            margin: 10px;
+                            flex-direction: column;
+
+                            p {
+                                font-size: .8rem;
+                            }
+
+                            .spe-order {
+                                display: flex;
+                                width: 340px;
+                                height: 50px;
+                                box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                            
+                                img {
+                                    margin-left: 5px;
+                                    margin-right: 5px;
+                                    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                                }
+                            }
+                        }
+
+                        .progress-timeline {
+                            display: flex;
+                            justify-content: center;
+                            margin: 10px;
+                            flex-direction: column;
+
+                            p {
+                                font-size: .8rem;
+                            }
+
+                            .percentage {
+                                width: 340px;
+                                height: 30px;
+                                margin-top: 10px;
+                                border-left: 5px solid $header-color;
+                                @include flexBox();
+
+                                .prog-status {
+                                    width: 85px;
+
+                                    p {
+                                        margin-left: 5px;
+                                        color: $red;
+                                    }
+                                }
+
+                                .percent {
+                                    width: 60px;
+                                }
+
+                                .prog-desc {
+                                    width: 195px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
