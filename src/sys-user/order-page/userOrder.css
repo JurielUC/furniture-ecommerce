@@ -194,10 +194,6 @@ main .container .product-cont .product #selected-product .spe-product {
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
-main .container .product-cont .product #selected-product .spe-product:hover {
-  opacity: 80%;
-  background-color: rgba(128, 128, 128, 0.185);
-}
 main .container .product-cont .product #selected-product .spe-product .img-name {
   display: flex;
   align-items: center;
