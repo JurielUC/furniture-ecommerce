@@ -38,47 +38,34 @@
     <main>
         <div class="container">
             <section class="post-cont">
-                <h1 style="text-align: center; color: #a8896c;" class="create-message"><?php if(!empty($_GET['message'])) {
-                    $message = $_GET['message'];
-                    echo $message; }?>
-                </h1>
+
+                <?php
+
+                    $update_id=$_GET['id'];
+
+                    $sql="SELECT * FROM tb_userpost WHERE id = '$update_id'";
+                    $result = mysqli_query($conn, $sql);
+
+                        while ($row = mysqli_fetch_assoc($result))
+                            {  
+                ?>
                 <div class="form-cont">
-                    <form action="userPost.php" method="post">
-                        <textarea name="long_desc" id="" cols="95" rows="3" placeholder="Write something..."></textarea>
+                    <form action="../../php-database/updatePost.php" method="post">
+                        <input type="text" name="id" id="" value="<?php echo $row['id'];?>" hidden>
+                        <textarea name="long_desc" id="" cols="95" rows="3"><?php echo $row['long_desc'];?></textarea>
                         <div class="attach-submit">
-                            <input type="submit" value="Post">
+                            <input type="submit" value="Update">
                         </div>
                     </form>
                 </div>
-                <div class="category">
-                    <button class="active" onclick="window.location.href='userProfile.php';">My Post</button>
-                    <button onclick="window.location.href='all-post.php';">All Post</button>
-                </div>
                 <div class="user-post-cont">
-                        <?php 
-                            include '../../php-database/dbconnect.php';
-
-                            $query = "SELECT * FROM tb_userpost WHERE user_email = '$loggedin_session' ORDER BY date_time DESC";
-                            $result = mysqli_query($conn, $query);
-
-                            if (mysqli_num_rows($result) == 0) {
-                                echo "<div class='nodata' style='width: 690px; height: 80vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
-                                    <img src='../../../image/icon/file.png' width='120px' height='120px'>
-                                    <p>No Post</p>
-                                    </div>";
-                                }
-                        ?>
-                        <?php
-                                while ($row = mysqli_fetch_assoc($result))
-                                {   
-                            ?>
                     <div class="user-post">
                         <div class="pp-name-date">
                             <!--Put php codes for product display here-->
                             <div class="pp-name">
                                 <img class="profile-pic" src="../signup-page/<?php echo $row['myfile']; ?>" alt="" width="35px" height="35px">
                                 <h2><?php echo $row['fname']; ?> <?php echo $row['lname']; ?></h2>
-                                <a href="userPost-update.php?id=<?php echo $row['id']; ?>"><img title="Update and Delete" src="../../../image/icon/ellipsis.png" alt="" width="30px" height="30px"></a>
+                                <a onclick="openAlert()">Delete</a>
                             </div>
                             
                             <p><?php echo $row['date_time']; ?></p>
@@ -93,6 +80,20 @@
                                 <textarea name="comment" id="" cols="85" rows="2" placeholder="Comment..."></textarea>
                                 <button type="submit"><img src="../../../image/icon/send.png" alt="" width="40px" height="40px"></button>
                             </form>
+                        </div>
+                        <!--Alert-->
+                        <div class="alert" id="alert">
+                            <div class="alert-cont">
+                                <div class="alert-content">
+                                    <img src="../../../image/icon/remove.png" alt="" width="70px" height="70px">
+                                    <h1>Are you sure?</h1>
+                                    <p>Do you really want to delete this post? This process cannot be undone.</p>
+                                    <div class="alert-btn">
+                                        <button class="btn-secondary" onclick="closeAlert()">Cancel</button>
+                                        <button class="btn-danger" onclick="window.location.href='../../php-database/delete-post.php?id=<?php echo $row['id']; ?>';">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                         <?php 
@@ -178,6 +179,7 @@
                                 </div>
         </div>
         <script src="userProfile.js"></script>
+        <script src="../../js/alert.js"></script>
     </main>
 </body>
 </html>

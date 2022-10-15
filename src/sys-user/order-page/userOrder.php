@@ -108,13 +108,28 @@
                         </div>
                     
                 </div>
+                        <!--Alert-->
+                        <div class="alert" id="alert">
+                            <div class="alert-cont">
+                                <div class="alert-content">
+                                    <img src="../../../image/icon/check.png" alt="" width="70px" height="70px">
+                                    <h1>Are you sure?</h1>
+                                    <p>Do you really want to place this order? You can't cancel your order once the shop accepts it.</p>
+                                    <div class="alert-btn">
+                                        <button class="btn-green" type="submit">Yes</button>
+                                        </form>
+                                        <button class="btn-secondary" onclick="closeAlert()">No</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 <div class="checkout">
-                    <button type="submit">Place Order</button>
-                    </form>
+                    <button onclick="openAlert()">Place Order</button>
                 </div>
                 <?php } ?>
             </section>
         </div>
+        <script src="../../js/alert.js"></script>
     </main>
 </body>
 </html>

@@ -16,6 +16,31 @@ main {
             width: 740px;
             height: 90vh;
 
+            .category {
+
+                button {
+                    font-family: $font-family;
+                    border: 2px solid $header-color;
+                    background-color: $white-color;
+                    width: 100px;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                    color: $header-color;
+                    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+
+                    &:hover {
+                        color: $white-color;
+                        background-color: $header-color;
+                    }
+                }
+
+                .active {
+                    color: $white-color;
+                    background-color: $header-color;
+                }
+            }
+
             .form-cont {
                 @include flexBox();
                 justify-content: center;
@@ -84,13 +109,26 @@ main {
                             margin: 10px 0 15px 20px;
                             @include flexBox();
 
-                            img {
+                            .profile-pic {
                                 border-radius: 50%;
                                 border: 2px solid $header-color;
                             }
 
                             h2 {
                                 margin-left: 10px;
+                            }
+
+                            a {
+                                color: $header-color;
+                                font-size: .8rem;
+                                margin-left: 20px;
+                                text-decoration: underline;
+                                cursor: pointer;
+                                @include flexBox();
+
+                                &:hover {
+                                    opacity: 80%;
+                                }
                             }
                         }
 

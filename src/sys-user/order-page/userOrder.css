@@ -3,6 +3,77 @@
 /*login container color*/
 /*white color*/
 /*mountain background color*/
+.alert {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.575);
+}
+.alert .alert-cont {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alert .alert-cont .alert-content {
+  width: 400px;
+  height: 300px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.alert .alert-cont .alert-content img {
+  margin-top: 20px;
+}
+.alert .alert-cont .alert-content h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+.alert .alert-cont .alert-content p {
+  text-align: center;
+  margin: 10px 20px 10px 10px;
+}
+.alert .alert-cont .alert-content .alert-btn .btn-secondary {
+  background: #c1c1c1;
+}
+.alert .alert-cont .alert-content .alert-btn .btn-secondary:hover {
+  opacity: 75%;
+}
+.alert .alert-cont .alert-content .alert-btn .btn-danger {
+  background: #ee3535;
+}
+.alert .alert-cont .alert-content .alert-btn .btn-danger:hover {
+  opacity: 75%;
+}
+.alert .alert-cont .alert-content .alert-btn .btn-green {
+  background-color: #3bb54a;
+}
+.alert .alert-cont .alert-content .alert-btn .btn-green:hover {
+  opacity: 75%;
+}
+.alert .alert-cont .alert-content .alert-btn button {
+  cursor: pointer;
+  color: #fff;
+  border-radius: 4px;
+  background: #60c7c1;
+  text-decoration: none;
+  transition: all 0.4s;
+  line-height: normal;
+  min-width: 120px;
+  border: none;
+  min-height: 40px;
+  border-radius: 3px;
+  margin: 0 5px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -17,7 +88,7 @@ header {
   display: flex;
   align-items: center;
   background-color: #a8896c;
-  height: 8vh;
+  height: 75px;
   width: 100%;
   position: -webkit-sticky;
   position: sticky;

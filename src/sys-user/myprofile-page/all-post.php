@@ -51,15 +51,12 @@
                     </form>
                 </div>
                 <div class="category">
-                    <button class="active" onclick="window.location.href='userProfile.php';">My Post</button>
-                    <button onclick="window.location.href='all-post.php';">All Post</button>
+                    <button onclick="window.location.href='userProfile.php';">My Post</button>
+                    <button class="active" onclick="window.location.href='all-post.php';">All Post</button>
                 </div>
                 <div class="user-post-cont">
                         <?php 
-                            include '../../php-database/dbconnect.php';
-
-                            $query = "SELECT * FROM tb_userpost WHERE user_email = '$loggedin_session' ORDER BY date_time DESC";
-                            $result = mysqli_query($conn, $query);
+                            include '../../php-database/post-display.php';
 
                             if (mysqli_num_rows($result) == 0) {
                                 echo "<div class='nodata' style='width: 690px; height: 80vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
@@ -78,7 +75,6 @@
                             <div class="pp-name">
                                 <img class="profile-pic" src="../signup-page/<?php echo $row['myfile']; ?>" alt="" width="35px" height="35px">
                                 <h2><?php echo $row['fname']; ?> <?php echo $row['lname']; ?></h2>
-                                <a href="userPost-update.php?id=<?php echo $row['id']; ?>"><img title="Update and Delete" src="../../../image/icon/ellipsis.png" alt="" width="30px" height="30px"></a>
                             </div>
                             
                             <p><?php echo $row['date_time']; ?></p>

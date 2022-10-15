@@ -182,11 +182,27 @@ main {
                     cursor: pointer;
 
                     .canvas {
+                        overflow: scroll;
+                        @include scroll();
                         height: 65vh;
                         width: 360px;
                         margin-top: 10px;
                         box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-                    
+                        
+                        .cancel-order {
+                            padding: 3px 116px 3px 116px;
+                            color: $white-color;
+                            margin-left: 10px;
+                            text-decoration: none;
+                            cursor: pointer;
+                            font-family: $font-family;
+                            background-color: $header-color;
+
+                            &:hover {
+                                opacity: 75%;
+                            }
+                        }
+                        
                         .tran-cont {
                             display: flex;
                             justify-content: center;
@@ -235,6 +251,7 @@ main {
                             justify-content: center;
                             margin: 10px;
                             flex-direction: column;
+                            
 
                             p {
                                 font-size: .8rem;
@@ -263,6 +280,11 @@ main {
                                 .prog-desc {
                                     width: 195px;
                                 }
+                            }
+
+                            .line {
+                                border: 2px dotted $white-color;
+                                margin-top: 10px;
                             }
                         }
                     }

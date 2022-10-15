@@ -61,6 +61,7 @@
                                 <img src="../../sys-user/signup-page/<?php echo $row['myfile']; ?>" alt="" width="35px" height="35px">
                                 <h2><?php echo $row['fname']; ?> <?php echo $row['lname']; ?></h2>
                             </div>
+                            
                             <p><?php echo $row['date_time']; ?></p>
                         </div>
                         <div class="caption-attachment">

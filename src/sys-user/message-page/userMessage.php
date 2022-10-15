@@ -76,7 +76,7 @@
             <section class="progress-cont"> 
                 <div class="progress">
                     <div class="progress-header">
-                        <h2>Order Progress</h2>
+                        <h2>Your Order</h2>
                     </div>
                     <div class="progress-bar-cont">
                         <!--put php for message display here-->
@@ -85,20 +85,18 @@
 
                             $query = "SELECT * FROM tb_orderprocess INNER JOIN tb_product ON tb_orderprocess.product_id = tb_product.id WHERE user_id = '$loggedin_uid'";
                             $result = mysqli_query($conn, $query);
-
-                            if (mysqli_num_rows($result) == 0) {
-                                echo "<div class='nodata' style='width: 690px; height: 80vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
-                                    <img src='../../../image/icon/file.png' width='120px' height='120px'>
-                                    <p>No Post</p>
-                                    </div>";
-                                }
                         ?>
                         <div class="canvas">
                             <?php
-                                while ($row = mysqli_fetch_assoc($result))
-                                {
+                                if (mysqli_num_rows($result) == 0) {
+                                    echo "<div class='nodata' style='height: 50vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
+                                        <img src='../../../image/icon/file.png' width='120px' height='120px'>
+                                        <p>No Order</p>
+                                        </div>";
+                                    }
 
-                                    
+                                while ($row = mysqli_fetch_assoc($result))
+                                {      
                             ?>
                             <div class="tran-cont">
                                 <div class="p-s">
@@ -132,8 +130,13 @@
                             <!--Put your sql select for progress here-->
                             <?php 
                                 $trans_id2=$row['trans_id'];
-                                $sql2 = "SELECT * FROM tb_progresss WHERE trans_id = '$trans_id2'";
+                                $sql2 = "SELECT * FROM tb_progress WHERE trans_id = '$trans_id2'";
                                 $result2 = mysqli_query($conn, $sql2);
+
+
+                                if (mysqli_num_rows($result2) == 0) {
+                                    echo "<a class='cancel-order' href='../../php-database/delete-order.php?trans_id=$trans_id2'>Cancel Order</a>";
+                                    }
 
                                 while ($data = mysqli_fetch_assoc($result2))
                                 { 
@@ -195,6 +198,7 @@
                                         <p>Lorem Ipsum</p>   
                                     </div>
                                 </div>
+                                <div class="line"></div>
                             </div>
                             <?php }} ?>
                         </div>
