@@ -16,6 +16,22 @@ main {
             width: 740px;
             height: 90vh;
 
+            .prod-back {
+                margin-top: 10px;
+                width: 710px;
+                height: 40px;
+                background-color: $header-color;
+                @include flexBox();
+                justify-content: baseline;
+                color: $white-color;
+                box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            
+                a {
+                    margin: 5px 20px 0 20px;
+                
+                }
+            }
+
             .category {
 
                 button {
@@ -329,16 +345,34 @@ main {
                             border-radius: 50%;
                         }
 
+                        form {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                        }
+
                         div {
                             display: flex;
                             flex-direction: column;
                             margin-bottom: 10px;
                             color: $header-color;
-                            margin-left: -100px;
+                            width: 100%;
+                            margin: auto;
+
+                            label, input, .takenote {
+                                margin: auto;
+                            }
+
+                            .takenote {
+                                p {
+                                    text-align: center;
+                                    font-size: .6rem;
+                                }
+                            }
                             
                             input {
                                 padding: 5px 8px;
-                                width: 155%;
+                                width: 70%;
                                 display: inline-block;
                                 border: 1px solid #ccc;
                                 box-sizing: border-box;
@@ -354,6 +388,7 @@ main {
                                 background-color: $header-color;
                                 color: $white-color;
                                 cursor: pointer;
+                                margin-top: 10px;
 
                                 &:hover {
                                     opacity: 80%;

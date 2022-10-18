@@ -92,11 +92,132 @@
             <section class="progress-cont"> 
                 <div class="progress">
                     <div class="progress-header">
-                        <h2>Project Progress</h2>
+                        <h2>Order Progress</h2>
                     </div>
                     <div class="progress-bar-cont">
                         <!--put php for message display here-->
-                        
+                        <?php 
+                            include '../../php-database/dbconnect.php';
+
+                            $query = "SELECT * FROM tb_orderprocess INNER JOIN tb_product ON tb_orderprocess.product_id = tb_product.id WHERE user_id = '$uid' ORDER BY tb_orderprocess.id DESC";
+                            $result = mysqli_query($conn, $query);
+                        ?>
+                        <div class="canvas">
+                            <?php
+                                if (mysqli_num_rows($result) == 0) {
+                                    echo "<div class='nodata' style='height: 50vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
+                                        <img src='../../../image/icon/file.png' width='120px' height='120px'>
+                                        <p>No Order</p>
+                                        </div>";
+                                    }
+
+                                while ($row = mysqli_fetch_assoc($result))
+                                {      
+                            ?>
+                            <div class="tran-cont">
+                                <div class="p-s">
+                                    <p class="title">Transaction ID:</p>
+                                    <p>&nbsp<?php echo $row['trans_id']; ?></p>
+                                </div>
+                                <div class="d-t">
+                                    <p class="title">Order Date:</p>
+                                    <p>&nbsp<?php echo $row['datetime']; ?></p>
+                                </div>
+                                <div class="d-t">
+                                    <p class="title">Quantity:</p>
+                                    <p>&nbsp<?php echo $row['order_qty']; ?> pc/s</p>
+                                </div>
+                                <div class="d-t">
+                                    <p class="title">Total Price:</p>
+                                    <p>&nbspPhp <?php echo $row['total_price']; ?>.00</p>
+                                </div>
+                            </div>
+                            <div class="order">
+                                <p>Your Order:</p>
+                                <div class="spe-order">
+                                    <img src="../../sys-admin/product-page/<?php echo $row['product_img']; ?>" alt="" height="50px">
+                                    <div>
+                                        <h4><?php echo $row['product_name']; ?></h4>
+                                        <p>Php <?php echo $row['price']; ?>.00</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Put your sql select for progress here-->
+                            <?php 
+                                $trans_id2=$row['trans_id'];
+                                $sql2 = "SELECT * FROM tb_progress WHERE trans_id = '$trans_id2'";
+                                $result2 = mysqli_query($conn, $sql2);
+
+
+                                if (mysqli_num_rows($result2) == 0) {
+                                    echo "<a class='accept-order' href='../../php-database/accept-order.php?trans_id=$trans_id2 & unique_id=$uid & status=$status & first_name=$fname & last_name=$lname & myfile=$ppic'>Accept Order</a>";
+                                    }
+
+                                while ($data = mysqli_fetch_assoc($result2))
+                                { 
+                            ?>
+                            <div class="progress-timeline">
+                                <p>Progress Timeline</p>
+                                <div class="percentage">
+                                    <div class="prog-status">
+                                        <p><?php echo $data['zero']; ?></p>
+                                    </div>
+                                    <div class="percent">
+                                        <p>0</p>
+                                    </div>
+                                    <div class="prog-desc">
+                                        <p>Lorem Ipsum</p>
+                                    </div>
+                                </div>
+                                <div class="percentage">
+                                    <div class="prog-status">
+                                        <p><?php echo $data['two_five']; ?></p>
+                                    </div>
+                                    <div class="percent">
+                                        <p>25%</p>
+                                    </div>
+                                    <div class="prog-desc">
+                                        <p>Lorem Ipsum</p>
+                                    </div>
+                                </div>
+                                <div class="percentage">
+                                <div class="prog-status">
+                                        <p><?php echo $data['fifty']; ?></p>
+                                    </div>
+                                    <div class="percent">
+                                        <p>50%</p>
+                                    </div>
+                                    <div class="prog-desc">
+                                        <p>Lorem Ipsum</p>
+                                    </div>
+                                </div>
+                                <div class="percentage">
+                                <div class="prog-status">
+                                        <p><?php echo $data['seven_five']; ?></p>
+                                    </div>
+                                    <div class="percent">
+                                        <p>75%</p>
+                                    </div>
+                                    <div class="prog-desc">
+                                        <p>Lorem Ipsum</p>
+                                    </div>
+                                </div>
+                                <div class="percentage">
+                                <div class="prog-status">
+                                        <p><?php echo $data['hundred']; ?></p>
+                                    </div>
+                                    <div class="percent">
+                                        <p>100%</p>
+                                    </div>
+                                    <div class="prog-desc">
+                                        <p>Lorem Ipsum</p>   
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <?php }} ?>
+                        </div>
                     </div>
                 </div>              
             </section>

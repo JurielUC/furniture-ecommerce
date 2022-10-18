@@ -161,6 +161,20 @@ main .container .post-cont {
   width: 740px;
   height: 90vh;
 }
+main .container .post-cont .prod-back {
+  margin-top: 10px;
+  width: 710px;
+  height: 40px;
+  background-color: #a8896c;
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+main .container .post-cont .prod-back a {
+  margin: 5px 20px 0 20px;
+}
 main .container .post-cont .category button {
   font-family: "Poppins", sans-serif;
   border: 2px solid #a8896c;
@@ -430,16 +444,29 @@ main .container .profile-popup .profile-popup-form .popup-header .profile-conten
 main .container .profile-popup .profile-popup-form .popup-header .profile-content img {
   border-radius: 50%;
 }
+main .container .profile-popup .profile-popup-form .popup-header .profile-content form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 main .container .profile-popup .profile-popup-form .popup-header .profile-content div {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
   color: #a8896c;
-  margin-left: -100px;
+  width: 100%;
+  margin: auto;
+}
+main .container .profile-popup .profile-popup-form .popup-header .profile-content div label, main .container .profile-popup .profile-popup-form .popup-header .profile-content div input, main .container .profile-popup .profile-popup-form .popup-header .profile-content div .takenote {
+  margin: auto;
+}
+main .container .profile-popup .profile-popup-form .popup-header .profile-content div .takenote p {
+  text-align: center;
+  font-size: 0.6rem;
 }
 main .container .profile-popup .profile-popup-form .popup-header .profile-content div input {
   padding: 5px 8px;
-  width: 155%;
+  width: 70%;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
@@ -453,6 +480,7 @@ main .container .profile-popup .profile-popup-form .popup-header .profile-conten
   background-color: #a8896c;
   color: #ffffff;
   cursor: pointer;
+  margin-top: 10px;
 }
 main .container .profile-popup .profile-popup-form .popup-header .profile-content div .submit:hover {
   opacity: 80%;

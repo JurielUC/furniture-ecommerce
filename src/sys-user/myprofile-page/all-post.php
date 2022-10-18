@@ -59,7 +59,7 @@
                             include '../../php-database/post-display.php';
 
                             if (mysqli_num_rows($result) == 0) {
-                                echo "<div class='nodata' style='width: 690px; height: 80vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
+                                echo "<div class='nodata' style='width: 690px; height: 50vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
                                     <img src='../../../image/icon/file.png' width='120px' height='120px'>
                                     <p>No Post</p>
                                     </div>";
@@ -133,8 +133,12 @@
                                                 <h2>Update Information</h2>
                                             </div>
                                             <div class="profile-content">
-                                                <img src="../signup-page/<?php echo $loggedin_mf; ?>" alt="" width="80px" height="80px">
-                                                <form action="../../php-database/user-account-update.php" method="post">
+                                                <!--<img src="../signup-page/<?php //echo $loggedin_mf; ?>" alt="" width="80px" height="80px">-->
+                                                <form action="../../php-database/user-account-update.php" method="post" enctype="multipart/form-data">
+                                                    <!--<div>
+                                                        <label for="">Profile Photo</label>
+                                                        <input type="file" name="myfile" value="<?php //echo $loggedin_mf; ?>">
+                                                    </div>-->
                                                     <div>
                                                         <label for="">Account ID</label>
                                                         <input type="text" name="unique_id" value="<?php echo $loggedin_uid; ?>" readonly>
@@ -161,7 +165,10 @@
                                                     </div>
                                                     <div>
                                                         <label for="">Password</label>
-                                                        <input type="text" name="u_password" value="<?php echo $loggedin_psw; ?>">
+                                                        <input type="password" name="u_password" id="myText" placeholder="Enter Password" required>
+                                                        <div class="takenote">
+                                                            <p>You can change or use your old password.<br>Don't let this empty.</p>
+                                                        </div>
                                                     </div>
                                                     <div>
                                                         <input type="submit" class="submit" value="Update">

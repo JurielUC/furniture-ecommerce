@@ -4,6 +4,13 @@
     $query = "SELECT * FROM tb_user WHERE all_msg > 0 ORDER BY unread_msg DESC";
     $result = mysqli_query($conn, $query);
 
+    if (mysqli_num_rows($result) == 0) {
+        echo "<div class='nodata' style='height: 50vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
+            <img src='../../../image/icon/no-spam.png' width='120px' height='120px'>
+            <p>No Message</p>
+            </div>";
+        }
+
     while ($row = mysqli_fetch_assoc($result))
     {
         $uid=$row['unique_id'];

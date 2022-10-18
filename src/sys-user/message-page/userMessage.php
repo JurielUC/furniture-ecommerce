@@ -83,7 +83,7 @@
                         <?php 
                             include '../../php-database/dbconnect.php';
 
-                            $query = "SELECT * FROM tb_orderprocess INNER JOIN tb_product ON tb_orderprocess.product_id = tb_product.id WHERE user_id = '$loggedin_uid'";
+                            $query = "SELECT * FROM tb_orderprocess INNER JOIN tb_product ON tb_orderprocess.product_id = tb_product.id WHERE user_id = '$loggedin_uid' ORDER BY tb_orderprocess.id DESC";
                             $result = mysqli_query($conn, $query);
                         ?>
                         <div class="canvas">
