@@ -8,7 +8,7 @@
     $lname=$_GET['last_name'];
     $ppic=$_GET['myfile'];
     $process="Processing";
-    $empty="-";
+    $empty="----------";
 
     $query = "SELECT * FROM tb_user WHERE unique_id=$uid";
     $result = mysqli_query($conn, $query);

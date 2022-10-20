@@ -320,6 +320,7 @@ main .container .progress-cont .progress .progress-bar-cont .canvas {
   height: 65vh;
   width: 360px;
   margin-top: 10px;
+  background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 main .container .progress-cont .progress .progress-bar-cont .canvas::-webkit-scrollbar {
@@ -383,6 +384,7 @@ main .container .progress-cont .progress .progress-bar-cont .canvas .order .spe-
   display: flex;
   width: 340px;
   height: 50px;
+  background-color: #f2e5db;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 main .container .progress-cont .progress .progress-bar-cont .canvas .order .spe-order img {
@@ -410,9 +412,18 @@ main .container .progress-cont .progress .progress-bar-cont .canvas .progress-ti
 main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .percentage .prog-status {
   width: 85px;
 }
-main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .percentage .prog-status p {
+main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .percentage .prog-status input[type=submit] {
   margin-left: 5px;
   color: #FF0000;
+  font-family: "Poppins", sans-serif;
+  background-color: #f5ece3;
+  border: none;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .percentage .prog-status input[type=submit]:hover {
+  opacity: 70%;
 }
 main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .percentage .percent {
   width: 60px;

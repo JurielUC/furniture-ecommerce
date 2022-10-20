@@ -159,9 +159,16 @@
                             ?>
                             <div class="progress-timeline">
                                 <p>Progress Timeline</p>
+                                <form action="../../php-database/building-progress.php?unique_id=<?php echo $uid; ?> & status=<?php echo $status; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & myfile=<?php echo $ppic; ?>">
+                                    <input type="text" name="trans_id" id="" value="<?php echo $trans_id2; ?>" hidden>
+                                    <input type="text" name="unique_id" id="" value="<?php echo $uid; ?>" hidden>
+                                    <input type="text" name="status" id="" value="<?php echo $status; ?>" hidden>
+                                    <input type="text" name="first_name" id="" value="<?php echo $fname; ?>" hidden>
+                                    <input type="text" name="last_name" id="" value="<?php echo $lname; ?>" hidden>
+                                    <input type="text" name="myfile" id="" value="<?php echo $ppic; ?>" hidden>
                                 <div class="percentage">
                                     <div class="prog-status">
-                                        <p><?php echo $data['zero']; ?></p>
+                                        <input type="submit" name="zero" value="<?php echo $data['zero']; ?>">
                                     </div>
                                     <div class="percent">
                                         <p>0</p>
@@ -172,7 +179,7 @@
                                 </div>
                                 <div class="percentage">
                                     <div class="prog-status">
-                                        <p><?php echo $data['two_five']; ?></p>
+                                        <input type="submit" name="two_five" value="<?php echo $data['two_five']; ?>">
                                     </div>
                                     <div class="percent">
                                         <p>25%</p>
@@ -182,8 +189,8 @@
                                     </div>
                                 </div>
                                 <div class="percentage">
-                                <div class="prog-status">
-                                        <p><?php echo $data['fifty']; ?></p>
+                                    <div class="prog-status">
+                                        <input type="submit" name="fifty" value="<?php echo $data['fifty']; ?>">
                                     </div>
                                     <div class="percent">
                                         <p>50%</p>
@@ -193,8 +200,8 @@
                                     </div>
                                 </div>
                                 <div class="percentage">
-                                <div class="prog-status">
-                                        <p><?php echo $data['seven_five']; ?></p>
+                                    <div class="prog-status">
+                                        <input type="submit" name="seven_five" value="<?php echo $data['seven_five']; ?>">
                                     </div>
                                     <div class="percent">
                                         <p>75%</p>
@@ -204,8 +211,8 @@
                                     </div>
                                 </div>
                                 <div class="percentage">
-                                <div class="prog-status">
-                                        <p><?php echo $data['hundred']; ?></p>
+                                    <div class="prog-status">
+                                        <input type="submit" name="hundred" value="<?php echo $data['hundred']; ?>">
                                     </div>
                                     <div class="percent">
                                         <p>100%</p>
@@ -217,6 +224,7 @@
                                 <div class="line"></div>
                             </div>
                             <?php }} ?>
+                            </form>
                         </div>
                     </div>
                 </div>              
