@@ -195,7 +195,6 @@ main {
                         height: 65vh;
                         width: 360px;
                         margin-top: 10px;
-                        background-color: $white-color;
                         box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
                         
                         .accept-order {
@@ -277,19 +276,9 @@ main {
                                 .prog-status {
                                     width: 85px;
 
-                                    input[type=submit] {
+                                    p {
                                         margin-left: 5px;
                                         color: $red;
-                                        font-family: $font-family;
-                                        background-color: $loginbg-color;
-                                        border: none;
-                                        border-radius: 3px;
-                                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                                        cursor: pointer;
-
-                                        &:hover {
-                                            opacity: 70%;
-                                        }
                                     }
                                 }
 
@@ -302,9 +291,262 @@ main {
                                 }
                             }
 
+                            .btn-print {
+                                button {
+                                    font-family: $font-family;
+                                    background-color: $header-color;
+                                    border: 1px solid $loginbg-color;
+                                    color: $white-color;
+                                    margin-top: 10px;
+                                    padding: 5px 0;
+                                    width: 165px;
+                                    cursor: pointer;
+                                    transition: 0.3s;
+                                    border-radius: 5px;
+                                    
+                                    &:hover {
+                                        opacity: 70%;
+                                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                                    }
+                                }
+                            }
+
                             .line {
                                 border: 2px dotted $white-color;
                                 margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .sml-cont {
+            width: 500px;
+            height: 600px;
+            background-color: $divider-color;
+            margin: auto;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-radius: 10px;
+
+            .back-btn {
+                width: 500px;
+                height: 50px;
+                background-color: $header-color;
+                border-radius: 10px 10px 0 0;
+                @include flexBox();
+
+                button {
+                    background-color: $header-color;
+                    border: none;
+                    margin: 0 10px 0 10px;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 80%;
+                    }
+                }
+
+                .print-btn {
+                    margin-left: 250px;
+                    font-family: $font-family;
+                    font-size: .9rem;
+                    color: $white-color;
+                }
+
+                h4 {
+                    color: $white-color;
+                    font-weight: 600;
+                }
+            }
+
+            .content-cont {
+                width: 500px;
+                height: 550px;
+
+                .set-parent {
+                    @include flexBox();
+
+                    .set-one, .set-two {
+                        width: 250px;
+                        margin-top: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+
+                        h5, p {
+                            margin-left: 10px;
+                        }
+
+                        p {
+                            font-size: .8rem;
+                        }
+                    }
+                }
+
+                .product-parent {
+                    width: 500px;
+                    height: 100px;
+                    margin-top: 10px;
+                    @include flexBox();
+                    justify-content: center;
+                    color: $header-color;
+
+                    .prod-child {
+                        @include flexBox();
+                        height: 100px;
+                        width: 480px;
+                        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+                    
+                        img {
+                            margin: 0 15px;
+
+                        }
+                    }
+                }
+
+                .progress-parent {
+                    width: 500px;
+                    height: 220px;
+                    margin-top: 10px;
+                    @include flexBox();
+                    justify-content: center;
+
+                    .prog-child {
+                        height: 220px;
+                        width: 480px;
+                        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+                        
+                        h3 {
+                            margin: 5px 0 0 5px;
+                        }
+
+                        .progress-timeline {
+                            display: flex;
+                            justify-content: center;
+                            margin: 10px;
+                            flex-direction: column;
+                            
+
+                            p {
+                                font-size: .8rem;
+                            }
+
+                            .percentage {
+                                width: 480px;
+                                height: 30px;
+                                border-left: 5px solid $header-color;
+                                @include flexBox();
+                                color: $header-color;
+
+                                input[type=submit] {
+                                    width: 80px;
+                                    cursor: pointer;
+                                    background-color: $header-color;
+                                    border: none;
+                                    padding: 2px 0;
+                                    margin-left: 10px;
+                                    color: $white-color;
+                                    font-family: $font-family;
+                                    transition: 0.3s;
+                                    border-radius: 3px;
+
+                                    &:hover {
+                                        opacity: 80%;
+                                        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                                    }
+                                }
+
+                                .prog-status {
+                                    width: 100px;
+
+                                    p {
+                                        margin-left: 5px;
+                                        color: $red;
+                                    }
+                                }
+
+                                .percent {
+                                    width: 60px;
+                                }
+
+                                .prog-desc {
+                                    width: 195px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .print-canvas {
+                    width: 400px;
+                    height: 490px;
+                    background-color: $white-color;
+                    margin: auto;
+                    margin-top: 20px;
+                    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+                
+                    .shopname {
+                        width: 400px;
+                        text-align: center;
+
+                        p {
+                            font-size: .6rem;
+                        }
+                    }
+                    .details {
+                        width: 400px;
+                        margin-top: 10px;
+
+                        .details-set {
+                            display: flex;
+                            justify-content: space-between;
+
+                            .half {
+                                width: 200px;
+
+                                h5, p {
+                                    margin-left: 5px;
+                                }
+
+                                p {
+                                    font-size: .8rem;
+                                }
+                            }
+
+                            .whole {
+                                width: 400px;
+
+                                h5, p {
+                                    margin-left: 5px;
+                                }
+
+                                p {
+                                    font-size: .8rem;
+                                }
+                            }
+
+                            .prod-display {
+                                display: flex;
+                                width: 390px;
+                                margin-left: 5px;
+                                margin-top: 40px;
+                                border: 1px solid $header-color;
+                                color: $header-color;
+
+                                img {
+                                    margin-left: 10px;
+                                }
+
+                                div {
+                                    h2 {
+                                        font-size: 1rem;
+                                    }
+
+                                    p {
+                                        font-size: .8rem;
+                                    }
+                                }
                             }
                         }
                     }

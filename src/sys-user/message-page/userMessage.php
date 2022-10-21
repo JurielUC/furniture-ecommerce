@@ -198,6 +198,11 @@
                                         <p>Lorem Ipsum</p>   
                                     </div>
                                 </div>
+                                <?php
+                                    if($data['hundred'] == 'DONE') {
+                                        echo "<a class='rate-order' href=''>Rate Order</a>";
+                                            }
+                                ?>
                                 <div class="line"></div>
                             </div>
                             <?php }} ?>

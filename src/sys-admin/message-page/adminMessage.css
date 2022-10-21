@@ -125,6 +125,7 @@ header nav a {
   font-size: 1rem;
   font-weight: 400;
   font-size: 0.8rem;
+  transition: 0.5s;
 }
 header nav a:hover {
   border-bottom: 3px solid #ffffff;
@@ -320,7 +321,6 @@ main .container .progress-cont .progress .progress-bar-cont .canvas {
   height: 65vh;
   width: 360px;
   margin-top: 10px;
-  background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 main .container .progress-cont .progress .progress-bar-cont .canvas::-webkit-scrollbar {
@@ -412,18 +412,9 @@ main .container .progress-cont .progress .progress-bar-cont .canvas .progress-ti
 main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .percentage .prog-status {
   width: 85px;
 }
-main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .percentage .prog-status input[type=submit] {
+main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .percentage .prog-status p {
   margin-left: 5px;
   color: #FF0000;
-  font-family: "Poppins", sans-serif;
-  background-color: #f5ece3;
-  border: none;
-  border-radius: 3px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  cursor: pointer;
-}
-main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .percentage .prog-status input[type=submit]:hover {
-  opacity: 70%;
 }
 main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .percentage .percent {
   width: 60px;
@@ -431,7 +422,218 @@ main .container .progress-cont .progress .progress-bar-cont .canvas .progress-ti
 main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .percentage .prog-desc {
   width: 195px;
 }
+main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .btn-print button {
+  font-family: "Poppins", sans-serif;
+  background-color: #a8896c;
+  border: 1px solid #f5ece3;
+  color: #ffffff;
+  margin-top: 10px;
+  padding: 5px 0;
+  width: 165px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .btn-print button:hover {
+  opacity: 70%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .line {
   border: 2px dotted #ffffff;
   margin-top: 10px;
+}
+main .container .sml-cont {
+  width: 500px;
+  height: 600px;
+  background-color: #f2e5db;
+  margin: auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+}
+main .container .sml-cont .back-btn {
+  width: 500px;
+  height: 50px;
+  background-color: #a8896c;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+}
+main .container .sml-cont .back-btn button {
+  background-color: #a8896c;
+  border: none;
+  margin: 0 10px 0 10px;
+  cursor: pointer;
+}
+main .container .sml-cont .back-btn button:hover {
+  opacity: 80%;
+}
+main .container .sml-cont .back-btn .print-btn {
+  margin-left: 250px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+main .container .sml-cont .back-btn h4 {
+  color: #ffffff;
+  font-weight: 600;
+}
+main .container .sml-cont .content-cont {
+  width: 500px;
+  height: 550px;
+}
+main .container .sml-cont .content-cont .set-parent {
+  display: flex;
+  align-items: center;
+}
+main .container .sml-cont .content-cont .set-parent .set-one, main .container .sml-cont .content-cont .set-parent .set-two {
+  width: 250px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+main .container .sml-cont .content-cont .set-parent .set-one h5, main .container .sml-cont .content-cont .set-parent .set-one p, main .container .sml-cont .content-cont .set-parent .set-two h5, main .container .sml-cont .content-cont .set-parent .set-two p {
+  margin-left: 10px;
+}
+main .container .sml-cont .content-cont .set-parent .set-one p, main .container .sml-cont .content-cont .set-parent .set-two p {
+  font-size: 0.8rem;
+}
+main .container .sml-cont .content-cont .product-parent {
+  width: 500px;
+  height: 100px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a8896c;
+}
+main .container .sml-cont .content-cont .product-parent .prod-child {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 480px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+main .container .sml-cont .content-cont .product-parent .prod-child img {
+  margin: 0 15px;
+}
+main .container .sml-cont .content-cont .progress-parent {
+  width: 500px;
+  height: 220px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .container .sml-cont .content-cont .progress-parent .prog-child {
+  height: 220px;
+  width: 480px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+main .container .sml-cont .content-cont .progress-parent .prog-child h3 {
+  margin: 5px 0 0 5px;
+}
+main .container .sml-cont .content-cont .progress-parent .prog-child .progress-timeline {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  flex-direction: column;
+}
+main .container .sml-cont .content-cont .progress-parent .prog-child .progress-timeline p {
+  font-size: 0.8rem;
+}
+main .container .sml-cont .content-cont .progress-parent .prog-child .progress-timeline .percentage {
+  width: 480px;
+  height: 30px;
+  border-left: 5px solid #a8896c;
+  display: flex;
+  align-items: center;
+  color: #a8896c;
+}
+main .container .sml-cont .content-cont .progress-parent .prog-child .progress-timeline .percentage input[type=submit] {
+  width: 80px;
+  cursor: pointer;
+  background-color: #a8896c;
+  border: none;
+  padding: 2px 0;
+  margin-left: 10px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
+  border-radius: 3px;
+}
+main .container .sml-cont .content-cont .progress-parent .prog-child .progress-timeline .percentage input[type=submit]:hover {
+  opacity: 80%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+main .container .sml-cont .content-cont .progress-parent .prog-child .progress-timeline .percentage .prog-status {
+  width: 100px;
+}
+main .container .sml-cont .content-cont .progress-parent .prog-child .progress-timeline .percentage .prog-status p {
+  margin-left: 5px;
+  color: #FF0000;
+}
+main .container .sml-cont .content-cont .progress-parent .prog-child .progress-timeline .percentage .percent {
+  width: 60px;
+}
+main .container .sml-cont .content-cont .progress-parent .prog-child .progress-timeline .percentage .prog-desc {
+  width: 195px;
+}
+main .container .sml-cont .content-cont .print-canvas {
+  width: 400px;
+  height: 490px;
+  background-color: #ffffff;
+  margin: auto;
+  margin-top: 20px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+main .container .sml-cont .content-cont .print-canvas .shopname {
+  width: 400px;
+  text-align: center;
+}
+main .container .sml-cont .content-cont .print-canvas .shopname p {
+  font-size: 0.6rem;
+}
+main .container .sml-cont .content-cont .print-canvas .details {
+  width: 400px;
+  margin-top: 10px;
+}
+main .container .sml-cont .content-cont .print-canvas .details .details-set {
+  display: flex;
+  justify-content: space-between;
+}
+main .container .sml-cont .content-cont .print-canvas .details .details-set .half {
+  width: 200px;
+}
+main .container .sml-cont .content-cont .print-canvas .details .details-set .half h5, main .container .sml-cont .content-cont .print-canvas .details .details-set .half p {
+  margin-left: 5px;
+}
+main .container .sml-cont .content-cont .print-canvas .details .details-set .half p {
+  font-size: 0.8rem;
+}
+main .container .sml-cont .content-cont .print-canvas .details .details-set .whole {
+  width: 400px;
+}
+main .container .sml-cont .content-cont .print-canvas .details .details-set .whole h5, main .container .sml-cont .content-cont .print-canvas .details .details-set .whole p {
+  margin-left: 5px;
+}
+main .container .sml-cont .content-cont .print-canvas .details .details-set .whole p {
+  font-size: 0.8rem;
+}
+main .container .sml-cont .content-cont .print-canvas .details .details-set .prod-display {
+  display: flex;
+  width: 390px;
+  margin-left: 5px;
+  margin-top: 40px;
+  border: 1px solid #a8896c;
+  color: #a8896c;
+}
+main .container .sml-cont .content-cont .print-canvas .details .details-set .prod-display img {
+  margin-left: 10px;
+}
+main .container .sml-cont .content-cont .print-canvas .details .details-set .prod-display div h2 {
+  font-size: 1rem;
+}
+main .container .sml-cont .content-cont .print-canvas .details .details-set .prod-display div p {
+  font-size: 0.8rem;
 }/*# sourceMappingURL=adminMessage.css.map */

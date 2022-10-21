@@ -112,7 +112,8 @@
                                     }
 
                                 while ($row = mysqli_fetch_assoc($result))
-                                {      
+                                {     
+                                    
                             ?>
                             <div class="tran-cont">
                                 <div class="p-s">
@@ -146,6 +147,18 @@
                             <!--Put your sql select for progress here-->
                             <?php 
                                 $trans_id2=$row['trans_id'];
+                                $dt=$row['datetime'];
+                                $oq=$row['order_qty'];
+                                $tp=$row['total_price'];
+                                $pi=$row['product_img'];
+                                $pn=$row['product_name'];
+                                $pr=$row['price'];
+                                $cpn=$row['phone_no'];
+                                $addr=$row['address'];
+                                $pcode=$row['postal_code'];
+                                $hno=$row['house_no'];
+                                $sett=$row['settings'];
+                                $paym=$row['payment_method'];
                                 $sql2 = "SELECT * FROM tb_progress WHERE trans_id = '$trans_id2'";
                                 $result2 = mysqli_query($conn, $sql2);
 
@@ -159,16 +172,10 @@
                             ?>
                             <div class="progress-timeline">
                                 <p>Progress Timeline</p>
-                                <form action="../../php-database/building-progress.php?unique_id=<?php echo $uid; ?> & status=<?php echo $status; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & myfile=<?php echo $ppic; ?>">
-                                    <input type="text" name="trans_id" id="" value="<?php echo $trans_id2; ?>" hidden>
-                                    <input type="text" name="unique_id" id="" value="<?php echo $uid; ?>" hidden>
-                                    <input type="text" name="status" id="" value="<?php echo $status; ?>" hidden>
-                                    <input type="text" name="first_name" id="" value="<?php echo $fname; ?>" hidden>
-                                    <input type="text" name="last_name" id="" value="<?php echo $lname; ?>" hidden>
-                                    <input type="text" name="myfile" id="" value="<?php echo $ppic; ?>" hidden>
+                                
                                 <div class="percentage">
                                     <div class="prog-status">
-                                        <input type="submit" name="zero" value="<?php echo $data['zero']; ?>">
+                                        <p><?php echo $data['zero']; ?></p>
                                     </div>
                                     <div class="percent">
                                         <p>0</p>
@@ -179,7 +186,7 @@
                                 </div>
                                 <div class="percentage">
                                     <div class="prog-status">
-                                        <input type="submit" name="two_five" value="<?php echo $data['two_five']; ?>">
+                                        <p><?php echo $data['two_five']; ?></p>
                                     </div>
                                     <div class="percent">
                                         <p>25%</p>
@@ -190,7 +197,7 @@
                                 </div>
                                 <div class="percentage">
                                     <div class="prog-status">
-                                        <input type="submit" name="fifty" value="<?php echo $data['fifty']; ?>">
+                                        <p><?php echo $data['fifty']; ?></p>
                                     </div>
                                     <div class="percent">
                                         <p>50%</p>
@@ -201,7 +208,7 @@
                                 </div>
                                 <div class="percentage">
                                     <div class="prog-status">
-                                        <input type="submit" name="seven_five" value="<?php echo $data['seven_five']; ?>">
+                                        <p><?php echo $data['seven_five']; ?></p>
                                     </div>
                                     <div class="percent">
                                         <p>75%</p>
@@ -212,7 +219,7 @@
                                 </div>
                                 <div class="percentage">
                                     <div class="prog-status">
-                                        <input type="submit" name="hundred" value="<?php echo $data['hundred']; ?>">
+                                        <p><?php echo $data['hundred']; ?></p>
                                     </div>
                                     <div class="percent">
                                         <p>100%</p>
@@ -221,9 +228,16 @@
                                         <p>Lorem Ipsum</p>   
                                     </div>
                                 </div>
+                                <div class="btn-print">
+                                    <button onclick="window.location.href='progress.php?unique_id=<?php echo $uid; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & status=<?php echo $status; ?> & myfile=<?php echo $ppic; ?> & trans_id=<?php echo $trans_id2; ?> & datetime=<?php echo $dt; ?> & order_qty=<?php echo $oq; ?> & total_price=<?php echo $tp; ?> & product_img=<?php echo $pi; ?> & product_name=<?php echo $pn; ?> & price=<?php echo $pr; ?> & phone_no=<?php echo $cpn; ?> & address=<?php echo $addr; ?> & postal_code=<?php echo $pcode; ?> & house_no=<?php echo $hno; ?> & settings=<?php echo $sett; ?> & payment_method=<?php echo $paym; ?>'">Update Progress</button>
+                                    <button onclick="window.location.href='print.php?unique_id=<?php echo $uid; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & status=<?php echo $status; ?> & myfile=<?php echo $ppic; ?> & trans_id=<?php echo $trans_id2; ?> & datetime=<?php echo $dt; ?> & order_qty=<?php echo $oq; ?> & total_price=<?php echo $tp; ?> & product_img=<?php echo $pi; ?> & product_name=<?php echo $pn; ?> & price=<?php echo $pr; ?> & phone_no=<?php echo $cpn; ?> & address=<?php echo $addr; ?> & postal_code=<?php echo $pcode; ?> & house_no=<?php echo $hno; ?> & settings=<?php echo $sett; ?> & payment_method=<?php echo $paym; ?>'">Print</button>
+                                </div>
                                 <div class="line"></div>
                             </div>
-                            <?php }} ?>
+                            <?php 
+                                    }
+                                } 
+                            ?>
                             </form>
                         </div>
                     </div>

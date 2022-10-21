@@ -282,6 +282,21 @@ main {
                                 }
                             }
 
+                            .rate-order {
+                                padding: 3px 116px 3px 116px;
+                                color: $white-color;
+                                text-decoration: none;
+                                cursor: pointer;
+                                font-family: $font-family;
+                                background-color: $header-color;
+                                margin-top: 10px;
+                                transition: 0.3s;
+    
+                                &:hover {
+                                    opacity: 75%;
+                                }
+                            }
+
                             .line {
                                 border: 2px dotted $white-color;
                                 margin-top: 10px;

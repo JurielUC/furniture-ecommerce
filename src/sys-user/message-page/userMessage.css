@@ -125,6 +125,7 @@ header nav a {
   font-size: 1rem;
   font-weight: 400;
   font-size: 0.8rem;
+  transition: 0.5s;
 }
 header nav a:hover {
   border-bottom: 3px solid #ffffff;
@@ -415,6 +416,19 @@ main .container .progress-cont .progress .progress-bar-cont .canvas .progress-ti
 }
 main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .percentage .prog-desc {
   width: 195px;
+}
+main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .rate-order {
+  padding: 3px 116px 3px 116px;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  background-color: #a8896c;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .rate-order:hover {
+  opacity: 75%;
 }
 main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .line {
   border: 2px dotted #ffffff;
