@@ -105,7 +105,7 @@
                             while ($row = mysqli_fetch_assoc($result))
                             {
                             ?>
-                                <div class="prod-display">
+                                <div class="prod-display" onclick="window.location.href='edit-product.php?id=<?php echo $row['id']; ?>';">
                                     <div class="prod-img">
                                         <!--put image here-->
                                         <img src="<?php echo $row['product_img']; ?>" alt="" width="100px">

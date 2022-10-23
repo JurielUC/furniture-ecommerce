@@ -63,7 +63,7 @@
                     <!--Alert box when the item is already available-->
                 </div>
                 <div class="product">
-                    <div class="prod-img">
+                    <div class="prod-img" onclick="openImage()">
                         <img src="../../sys-admin/product-page/<?php echo $row['product_img']; ?>" alt="" width="350px">
                     </div>
                     <div class="p-name-price">
@@ -88,6 +88,18 @@
                             <p><?php echo $row['category']; ?></p>
                         </div>
                     </div>
+
+                    <!--Display Popup Profile when clicked-->
+                    <div class="image-popup" id="prodPic">
+                        <div class="image-popup-form">
+                            <div class="popup-header">
+                                <div class="exit-button">
+                                    <button class="update-popup-close" onclick="closeImage()" title="Close"><img src="../../../image/icon/close.png" alt="" width="50px" height="50px"></button>
+                                </div>
+                            </div>
+                            <img class="display-image" src="../../sys-admin/product-page/<?php echo $row['product_img']; ?>" alt="">
+                        </div>
+                    </div>
                     
 
                 </div>
@@ -106,5 +118,6 @@
             </section>
         </div>
     </main>
+    <script src="get-product.js"></script>
 </body>
 </html>

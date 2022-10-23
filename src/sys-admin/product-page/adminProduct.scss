@@ -335,5 +335,101 @@ main {
                 }
             }
         }
+
+        .sml-cont {
+            width: 500px;
+            height: 600px;
+            background-color: $divider-color;
+            margin: auto;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-radius: 10px;
+
+            .back-btn {
+                width: 500px;
+                height: 50px;
+                background-color: $header-color;
+                border-radius: 10px 10px 0 0;
+                @include flexBox();
+
+                .bck {
+                    background-color: $header-color;
+                    border: none;
+                    margin: 0 10px 0 10px;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 80%;
+                    }
+                }
+
+                h4 {
+                    color: $white-color;
+                    font-weight: 600;
+                }
+
+                .upd-del-btn {
+                    margin-left: 120px;
+
+                    .upd, .del {
+                        background-color: $divider-color;
+                        font-family: $font-family;
+                        font-size: .9rem;
+                        width: 80px;
+                        border: none;
+                        border-radius: 5px;
+                        color: $header-color;
+                        transition: 0.3s;
+                        cursor: pointer;
+
+                        &:hover {
+                            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                        }
+                    }
+                }
+            }
+
+            .content-cont {
+                width: 500px;
+                height: 550px;
+
+                .ed-prod {
+                    width: 500px;
+                    display: flex;
+
+                    .ep-image {
+                        width: 250px;
+                        height: 250px;
+                        @include flexBox();
+                        justify-content: center;
+                        cursor: pointer;
+
+                        img {
+                            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .ep-size-price {
+                        width: 250px;
+                        height: 250px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        
+                        div {
+                            margin: 10px 0 0 10px;
+                            color: $header-color;
+                        }
+                    }
+                }
+
+                .ep-name-desc {
+                    div {
+                        margin: 10px 0 0 10px;
+                        color: $header-color;
+                    }
+                }
+            }
+        }
     }
 }

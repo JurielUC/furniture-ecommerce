@@ -437,4 +437,85 @@ main .container .inbox-cont .inbox .inbox-message-cont .inbox-message .name-addr
 }
 main .container .inbox-cont .inbox .inbox-message-cont .inbox-message .msg-num {
   font-size: 0.7rem;
+}
+main .container .sml-cont {
+  width: 500px;
+  height: 600px;
+  background-color: #f2e5db;
+  margin: auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+}
+main .container .sml-cont .back-btn {
+  width: 500px;
+  height: 50px;
+  background-color: #a8896c;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+}
+main .container .sml-cont .back-btn .bck {
+  background-color: #a8896c;
+  border: none;
+  margin: 0 10px 0 10px;
+  cursor: pointer;
+}
+main .container .sml-cont .back-btn .bck:hover {
+  opacity: 80%;
+}
+main .container .sml-cont .back-btn h4 {
+  color: #ffffff;
+  font-weight: 600;
+}
+main .container .sml-cont .back-btn .upd-del-btn {
+  margin-left: 120px;
+}
+main .container .sml-cont .back-btn .upd-del-btn .upd, main .container .sml-cont .back-btn .upd-del-btn .del {
+  background-color: #f2e5db;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  width: 80px;
+  border: none;
+  border-radius: 5px;
+  color: #a8896c;
+  transition: 0.3s;
+  cursor: pointer;
+}
+main .container .sml-cont .back-btn .upd-del-btn .upd:hover, main .container .sml-cont .back-btn .upd-del-btn .del:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+main .container .sml-cont .content-cont {
+  width: 500px;
+  height: 550px;
+}
+main .container .sml-cont .content-cont .ed-prod {
+  width: 500px;
+  display: flex;
+}
+main .container .sml-cont .content-cont .ed-prod .ep-image {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+main .container .sml-cont .content-cont .ed-prod .ep-image img {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+}
+main .container .sml-cont .content-cont .ed-prod .ep-size-price {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .container .sml-cont .content-cont .ed-prod .ep-size-price div {
+  margin: 10px 0 0 10px;
+  color: #a8896c;
+}
+main .container .sml-cont .content-cont .ep-name-desc div {
+  margin: 10px 0 0 10px;
+  color: #a8896c;
 }/*# sourceMappingURL=adminProduct.css.map */

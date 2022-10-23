@@ -81,6 +81,7 @@ main {
                     @include flexBox();
                     justify-content: center;
                     overflow: hidden;
+                    cursor: pointer;
                 }
 
                 .p-name-price {
@@ -164,5 +165,44 @@ main {
                 }
             }
         }
+    }
+
+    .image-popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 99999;
+        background-color: rgba(0, 0, 0, 0.575);
+
+            .image-popup-form {
+                height: 100vh;
+                width: 400px;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                background-color: $divider-color;
+
+                .update-popup-close {
+                    border-radius: 100%;
+                    border: none;
+                    transition: 0.3s;
+                    cursor: pointer;
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+
+                    &:hover {
+                        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+                    }
+
+                .display-image {
+                    height: 80vh;
+                }
+            }
+        }
+
     }
 }
