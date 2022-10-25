@@ -1,1 +1,134 @@
 @use '../../style/header/header';
+@use '../../style/globals' as *;
+
+main {
+    width: 100%;
+    height: 90vh;
+    @include flexBox();
+    justify-content: center;
+
+    .container {
+        width: 1120px;
+        height: 90vh;
+        @include flexBox();
+
+        .custo-cont {
+            width: 740px;
+            height: 90vh;
+            }
+            
+            .custo-header {
+                margin-top: 10px;
+                height: 50px;
+                width: 740px;
+                
+
+                .custo-nav {
+                    height: 50px;
+                    width: 710px;
+                    background-color: $header-color;
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+                }
+            }
+
+            .custo-canvas {
+                height: 75vh;
+                width: 710px;
+                margin-top: 10px;
+                background-color: $white-color;
+                border: 1px solid #000000;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                
+            }
+        }
+
+        .progress-cont {
+            width: 380px;
+            height: 90vh;
+
+            .custo-picker {
+                overflow: scroll;
+                @include scroll();
+                margin-top: 10px;
+                width: 380px;
+                height: 80vh;
+                background-color: $divider-color;
+                color: $header-color;
+
+                .custo-title {
+                    width: 370px;
+                    text-align: center;
+                    height: 50px;
+                    border-bottom: 1px solid $header-color;
+
+                    h1 {
+                        padding-top: 6px;
+                    }
+                }
+
+                .custo-category {
+                    width: 370px;
+
+                    h5 {
+                        margin: 10px 0 10px 10px;
+                    }
+
+                    .choices-cont {
+                        @include flexBox();
+                        justify-content: space-evenly;
+
+                        .choices {
+                            width: 80px;
+                            height: 80px;
+                            border: 1px solid #000000;
+                            background-color: $white-color;
+                        }
+                    }
+                }
+
+                .custo-color {
+                    width: 370px;
+
+                    h5 {
+                        margin: 10px 0 10px 10px;
+                    }
+
+                    .choices-cont {
+                        @include flexBox();
+                        justify-content: space-evenly;
+                        flex-wrap: wrap;
+
+                        .choices {
+                            width: 80px;
+                            height: 80px;
+                            margin-bottom: 10px;
+                            border: 1px solid #000000;
+                            background-color: $white-color;
+                        }
+                    }
+                }
+
+                .custo-design {
+                    width: 370px;
+
+                    h5 {
+                        margin: 10px 0 10px 10px;
+                    }
+
+                    .choices-cont {
+                        @include flexBox();
+                        justify-content: space-evenly;
+                        flex-wrap: wrap;
+
+                        .choices {
+                            width: 80px;
+                            height: 80px;
+                            margin-bottom: 10px;
+                            border: 1px solid #000000;
+                            background-color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }

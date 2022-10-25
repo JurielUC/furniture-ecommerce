@@ -55,12 +55,13 @@
     <main>
         <div class="container">
             <div class="sml-cont">
+
                 <div class="back-btn">
                     <button class="bck" onclick="window.location.href='adminProduct.php'"><img src="../../../image/icon/arrow.png" alt="" width="15px" height="11px"></button>
                     <h4>Product Information</h4>
 
                     <div class="upd-del-btn">
-                        <button class="upd" onclick="window.location.href='edit.php?id=<?php echo $id; ?>'">Update</button>
+                        <button class="upd" onclick="window.location.href='edit-product.php?id=<?php echo $id; ?>'">Update</button>
                         <button class="del" onclick="openAlert()">Delete</button>
                     </div>
                         <!--Alert-->
@@ -91,40 +92,49 @@
                     </div>
                 <div class="content-cont">
                     <div class="ed-prod">
-                        <div class="ep-image" onclick="openImage()">
-                            <img src="<?php echo $pi; ?>" alt="" width="230px">
+                        <div class="ep-image">
+                            <img src="<?php echo $pi; ?>" alt="" width="230px"  onclick="openImage()">
+                            <button class="edit-btn" onclick="window.location.href='update-image.php?id=<?php echo $id; ?>'">Edit Image</button>
                         </div>
                         <div class="ep-size-price">
+
                             <div>
                                 <h5>Size:</h5>
-                                <p><?php echo $sz; ?></p>
+                                <p><?php echo $sz; ?> <button class="edit-btn" onclick="window.location.href='product-edit/size.php?id=<?php echo $id; ?>'">Edit</button></p>
                             </div>
+                                
+
                             <div>
                                 <h5>Category:</h5>
-                                <p><?php echo $ctgry; ?></p>
+                                <p><?php echo $ctgry; ?> <button class="edit-btn" onclick="window.location.href='product-edit/category.php?id=<?php echo $id; ?>'">Edit</button></p>
                             </div>
+                                
+                                
                             <div>
                                 <h5>Price:</h5>
-                                <p>PHP <?php echo $pr; ?>.00</p>
+                                <p>PHP <?php echo $pr; ?>.00 <button class="edit-btn" onclick="window.location.href='product-edit/price.php?id=<?php echo $id; ?>'">Edit</button></p>
                             </div>
+                                
                         </div>
                     </div>
                     <div class="ep-name-desc">
                         <div>
                             <h5>Product Name:</h5>
-                            <p><?php echo $pn; ?></p>
+                            <p><?php echo $pn; ?> <button onclick="window.location.href='product-edit/name.php?id=<?php echo $id; ?>'" class="edit-btn">Edit</button></p>
                         </div>
+                                
                         <div>
                             <h5>Description:</h5>
-                            <p><?php echo $pd; ?></p>
+                            <p><?php echo $pd; ?> <button onclick="window.location.href='product-edit/description.php?id=<?php echo $id; ?>'" class="edit-btn">Edit</button></p>
                         </div>
+                                
                     </div>
                 </div>
             </div>
         </div>
     </main>
     <?php } ?>
-    <script src="adminProduct.js"></script>
-    <script src="../../js/alert.js"></script>
+    <script type="text/javascript" src="adminProduct.js"></script>
+    <script type="text/javascript" src="../../js/alert.js"></script>
 </body>
 </html>

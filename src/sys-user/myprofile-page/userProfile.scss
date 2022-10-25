@@ -101,6 +101,21 @@ main {
                             opacity: 80%;
                         }
                     }
+
+                    .customize {
+                        margin-right: 410px;
+                        text-decoration: none;
+                        padding: 3px 10px;
+                        background-color: $header-color;
+                        color: $white-color;
+                        border-radius: 5px;
+                        transition: 0.3s;
+                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+                        &:hover {
+                            opacity: 80%;
+                        }
+                    }
                 }
             }
 

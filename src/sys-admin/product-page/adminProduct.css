@@ -438,6 +438,101 @@ main .container .inbox-cont .inbox .inbox-message-cont .inbox-message .name-addr
 main .container .inbox-cont .inbox .inbox-message-cont .inbox-message .msg-num {
   font-size: 0.7rem;
 }
+main .container .update-cont {
+  width: 500px;
+  height: 200px;
+  background-color: #f2e5db;
+  margin: auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+}
+main .container .update-cont .back-btn {
+  width: 500px;
+  height: 50px;
+  background-color: #a8896c;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+}
+main .container .update-cont .back-btn .bck {
+  background-color: #a8896c;
+  border: none;
+  margin: 0 10px 0 10px;
+  cursor: pointer;
+}
+main .container .update-cont .back-btn .bck:hover {
+  opacity: 80%;
+}
+main .container .update-cont .back-btn h4 {
+  color: #ffffff;
+  font-weight: 600;
+}
+main .container .update-cont .back-btn .upd-del-btn {
+  margin-left: 120px;
+}
+main .container .update-cont .back-btn .upd-del-btn .upd, main .container .update-cont .back-btn .upd-del-btn .del {
+  background-color: #f2e5db;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  width: 80px;
+  border: none;
+  border-radius: 5px;
+  color: #a8896c;
+  transition: 0.3s;
+  cursor: pointer;
+}
+main .container .update-cont .back-btn .upd-del-btn .upd:hover, main .container .update-cont .back-btn .upd-del-btn .del:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+main .container .update-cont .content-cont {
+  width: 500px;
+  height: 200px;
+}
+main .container .update-cont .content-cont .input {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 50px;
+}
+main .container .update-cont .content-cont .input label {
+  color: #a8896c;
+}
+main .container .update-cont .content-cont .input input[type=text], main .container .update-cont .content-cont .input input[type=file] {
+  padding: 5px 5px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+  border: 1px solid #a8896c;
+  border-radius: 5px;
+  outline: none;
+}
+main .container .update-cont .content-cont .input textarea {
+  padding: 5px 5px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+  border: 1px solid #a8896c;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+}
+main .container .update-cont .content-cont .input select {
+  padding: 5px 5px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+  border: 1px solid #a8896c;
+  border-radius: 5px;
+  outline: none;
+}
+main .container .update-cont .content-cont .input input[type=submit] {
+  padding: 5px 5px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  background-color: #a8896c;
+  border-radius: 5px;
+  border: none;
+}
+main .container .update-cont .content-cont .input input[type=submit]:hover {
+  opacity: 80%;
+}
 main .container .sml-cont {
   width: 500px;
   height: 600px;
@@ -445,6 +540,12 @@ main .container .sml-cont {
   margin: auto;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 10px;
+}
+main .container .sml-cont .create-message {
+  font-size: 20px;
+  color: #a8896c;
+  margin: 10px;
+  text-align: center;
 }
 main .container .sml-cont .back-btn {
   width: 500px;
@@ -484,6 +585,10 @@ main .container .sml-cont .back-btn .upd-del-btn .upd, main .container .sml-cont
 main .container .sml-cont .back-btn .upd-del-btn .upd:hover, main .container .sml-cont .back-btn .upd-del-btn .del:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+main .container .sml-cont .update-cont {
+  width: 500px;
+  height: 550px;
+}
 main .container .sml-cont .content-cont {
   width: 500px;
   height: 550px;
@@ -504,6 +609,22 @@ main .container .sml-cont .content-cont .ed-prod .ep-image img {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 10px;
 }
+main .container .sml-cont .content-cont .ed-prod .ep-image button {
+  position: absolute;
+  background-color: #a8896c;
+  padding: 1px 20px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+main .container .sml-cont .content-cont .ed-prod .ep-image button:hover {
+  opacity: 80%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
 main .container .sml-cont .content-cont .ed-prod .ep-size-price {
   width: 250px;
   height: 250px;
@@ -515,7 +636,70 @@ main .container .sml-cont .content-cont .ed-prod .ep-size-price div {
   margin: 10px 0 0 10px;
   color: #a8896c;
 }
+main .container .sml-cont .content-cont .ed-prod .ep-size-price div p .edit-btn {
+  background-color: #a8896c;
+  padding: 1px 20px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+main .container .sml-cont .content-cont .ed-prod .ep-size-price div p .edit-btn:hover {
+  opacity: 80%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
 main .container .sml-cont .content-cont .ep-name-desc div {
   margin: 10px 0 0 10px;
   color: #a8896c;
+}
+main .container .sml-cont .content-cont .ep-name-desc div p .edit-btn {
+  background-color: #a8896c;
+  padding: 1px 20px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+main .container .sml-cont .content-cont .ep-name-desc div p .edit-btn:hover {
+  opacity: 80%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+main .image-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.575);
+}
+main .image-popup .image-popup-form {
+  height: 100vh;
+  width: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: #f2e5db;
+}
+main .image-popup .image-popup-form .update-popup-close {
+  border-radius: 100%;
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+main .image-popup .image-popup-form .update-popup-close:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+main .image-popup .image-popup-form .update-popup-close .display-image {
+  height: 80vh;
 }/*# sourceMappingURL=adminProduct.css.map */

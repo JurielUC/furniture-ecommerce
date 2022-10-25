@@ -235,6 +235,19 @@ main .container .post-cont .form-cont .attach-submit input[type=submit] {
 main .container .post-cont .form-cont .attach-submit input[type=submit]:hover {
   opacity: 80%;
 }
+main .container .post-cont .form-cont .attach-submit .customize {
+  margin-right: 410px;
+  text-decoration: none;
+  padding: 3px 10px;
+  background-color: #a8896c;
+  color: #ffffff;
+  border-radius: 5px;
+  transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+main .container .post-cont .form-cont .attach-submit .customize:hover {
+  opacity: 80%;
+}
 main .container .post-cont .user-post-cont {
   overflow-y: scroll;
   height: 63vh;
