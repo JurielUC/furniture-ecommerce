@@ -286,7 +286,7 @@ main .container .post-cont .user-post-cont {
 }
 main .container .post-cont .user-post-cont .user-post {
   width: 690px;
-  margin-bottom: 10px;
+  margin-top: 10px;
   background-color: #f2e5db;
   border-radius: 10px;
 }
@@ -327,6 +327,17 @@ main .container .post-cont .user-post-cont .user-post .pp-name-date p {
 main .container .post-cont .user-post-cont .user-post .caption-attachment {
   margin: 0 40px 15px 40px;
   font-size: 0.9rem;
+}
+main .container .post-cont .user-post-cont .user-post .shop-response {
+  background-color: #f5ece3;
+  margin: 0 40px 15px 40px;
+  font-size: 0.9rem;
+}
+main .container .post-cont .user-post-cont .user-post .shop-response h3 {
+  color: #a8896c;
+}
+main .container .post-cont .user-post-cont .user-post .shop-response p {
+  margin-left: 20px;
 }
 main .container .post-cont .user-post-cont .user-post .comment-send form {
   display: flex;

@@ -13,7 +13,6 @@
     $loggedin_cno=$row['contact_no'];
     $loggedin_psw=$row['a_password'];
     $loggedin_position=$row['position'];
-    $loggedin_mf=$row['myfile'];
 
     if(!$_SESSION['login_admin'])
     {  

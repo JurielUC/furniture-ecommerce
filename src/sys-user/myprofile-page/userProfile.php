@@ -72,7 +72,7 @@
                         <?php
                                 while ($row = mysqli_fetch_assoc($result))
                                 {   
-                                    $postID=$row['id'];
+
                             ?>
                     <div class="user-post">
                         <div class="pp-name-date">
@@ -88,18 +88,12 @@
                         <div class="caption-attachment">
                             <p><?php echo $row['long_desc']; ?></p>
                         </div>
-
                         
-                        <div class="comment-send">
-                            <form action="../../php-database/comment.php" method="post">
-                                <input type="text" name="unique_id" id="" value="<?php echo $loggedin_uid ?>" hidden>
-                                <input type="text" name="post_id" id="" value="<?php echo $postID ?>" hidden>
-                                <textarea name="comment" id="" cols="85" rows="2" placeholder="Comment..."></textarea>
-                                <button type="submit"><img src="../../../image/icon/send.png" alt="" width="40px" height="40px"></button>
-                            </form>
+                        <div class="divider-lang" style="height: 10px;">
+
                         </div>
                     </div>
-                        <?php 
+                        <?php
                                 }
                         ?>
                 </div>

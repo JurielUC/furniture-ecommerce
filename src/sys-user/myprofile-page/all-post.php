@@ -85,17 +85,16 @@
                             <p><?php echo $row['long_desc']; ?></p>
                         </div>
 
+                        <div class="shop-response">
+                            <h3><?php echo $row['shopres']; ?></h3>
+                            <p><?php echo $row['comment']; ?></p>
+                        </div>
                         
-                        <div class="comment-send">
-                            <form action="../../php-database/comment-allpost.php" method="post">
-                                <input type="text" name="unique_id" id="" value="<?php echo $loggedin_uid ?>" hidden>
-                                <input type="text" name="post_id" id="" value="<?php echo $postID ?>" hidden>
-                                <textarea name="comment" id="" cols="85" rows="2" placeholder="Comment..."></textarea>
-                                <button type="submit"><img src="../../../image/icon/send.png" alt="" width="40px" height="40px"></button>
-                            </form>
+                        <div class="divider-lang" style="height: 10px;">
+
                         </div>
                     </div>
-                        <?php 
+                        <?php
                                 }
                         ?>
                 </div>

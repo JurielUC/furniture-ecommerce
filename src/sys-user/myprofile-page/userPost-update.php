@@ -79,7 +79,7 @@
                         </div>
                         <?php 
                                 }
-                        ?>>
+                        ?>
             </section>
             <section class="shopinfo-cont">
                 <div class="search-bar">

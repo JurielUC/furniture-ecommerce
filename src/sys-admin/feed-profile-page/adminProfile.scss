@@ -12,6 +12,13 @@ main {
         height: 90vh;
         @include flexBox();
 
+        .message-pop {
+            color: $header-color;
+            position: absolute;
+            margin: 0 0 580px 350px;
+            text-align: center;
+        }
+
         .post-cont {
             width: 740px;
             height: 90vh;
@@ -70,6 +77,21 @@ main {
                     .caption-attachment {
                         margin: 0 40px 15px 40px;
                         font-size: .9rem;
+                    }
+
+                    .shop-response {
+                        background-color: $loginbg-color;
+                        margin: 0 40px 15px 40px;
+                        font-size: .9rem;
+                        
+
+                        h3 {
+                            color: $header-color;
+                        }
+
+                        p {
+                            margin-left: 20px;
+                        }
                     }
 
                     .comment-send {
@@ -172,6 +194,7 @@ main {
 
                 p {
                     margin-left: 30px;
+                    font-size: .8rem;
                 }
 
                 button {
@@ -183,7 +206,7 @@ main {
                     color: $white-color;
                     background-color: $header-color;
                     border: none;
-                    border-radius: 10px;
+                    border-radius: 5px;
 
                     &:hover {
                         opacity: 80%;
@@ -231,6 +254,7 @@ main {
                             margin: 0 10px 0 10px;
                             background-color: $header-color;
                             border: none;
+                            transition: 0.3s;
                         }
 
                         h2 {
@@ -244,6 +268,21 @@ main {
                         @include flexBox();
                         justify-content: center;
                         flex-direction: column;
+
+                        .change-photo {
+                            padding: 5px 10px;
+                            background-color: $header-color;
+                            border: none;
+                            color: $white-color;
+                            transition: 0.3s;
+                            cursor: pointer;
+                            border-radius: 5px;
+                            font-family: $font-family;
+
+                            &:hover {
+                                opacity: 80%;
+                            }
+                        }
 
                         img {
                             border-radius: 50%;
@@ -275,6 +314,7 @@ main {
                                 background-color: $header-color;
                                 color: $white-color;
                                 cursor: pointer;
+                                transition: 0.3s;
 
                                 &:hover {
                                     opacity: 80%;
@@ -286,6 +326,116 @@ main {
                 }
             }
 
+        }
+
+        .update-cont {
+            width: 500px;
+            height: 550px;
+            background-color: $divider-color;
+            margin: auto;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-radius: 10px;
+
+            .back-btn {
+                width: 500px;
+                height: 50px;
+                background-color: $header-color;
+                border-radius: 10px 10px 0 0;
+                @include flexBox();
+
+                .bck {
+                    background-color: $header-color;
+                    border: none;
+                    margin: 0 10px 0 10px;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 80%;
+                    }
+                }
+
+                h4 {
+                    color: $white-color;
+                    font-weight: 600;
+                }
+
+                .upd-del-btn {
+                    margin-left: 120px;
+
+                    .upd, .del {
+                        background-color: $divider-color;
+                        font-family: $font-family;
+                        font-size: .9rem;
+                        width: 80px;
+                        border: none;
+                        border-radius: 5px;
+                        color: $header-color;
+                        transition: 0.3s;
+                        cursor: pointer;
+
+                        &:hover {
+                            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                        }
+                    }
+                }
+            }
+
+            .content-cont {
+                width: 500px;
+                height: 550px;
+
+                .input {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 10px 50px;
+
+                    label {
+                        color: $header-color;
+                    }
+
+                    input[type=text], input[type=file], input[type=password] {
+                        padding: 5px 5px;
+                        font-family: $font-family;
+                        margin-bottom: 10px;
+                        border: 1px solid $header-color;
+                        border-radius: 5px;
+                        outline: none;
+                    }
+
+                    textarea {
+                        padding: 5px 5px;
+                        font-family: $font-family;
+                        margin-bottom: 10px;
+                        border: 1px solid $header-color;
+                        border-radius: 5px;
+                        outline: none;
+                        resize: none;
+                    }
+
+                    select {
+                        padding: 5px 5px;
+                        font-family: $font-family;
+                        margin-bottom: 10px;
+                        border: 1px solid $header-color;
+                        border-radius: 5px;
+                        outline: none;
+                    }
+
+                    input[type=submit] {
+                        padding: 5px 5px;
+                        cursor: pointer;
+                        font-family: $font-family;
+                        color: $white-color;
+                        background-color: $header-color;
+                        border-radius: 5px;
+                        border: none;
+
+                        &:hover {
+                            opacity: 80%;
+                        }
+                    }
+                }
+            }
         }
     }
 }

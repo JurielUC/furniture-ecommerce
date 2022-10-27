@@ -68,10 +68,16 @@
                             <p><?php echo $row['long_desc']; ?></p>
                         </div>
                         <div class="comment-send">
-                            <form action="" method="post">
+                            <form action="../../php-database/comment.php" method="post">
+                                <input type="text" name="unique_id" value="<?php echo $loggedin_uid; ?>" hidden>
+                                <input type="text" name="post_id" value="<?php echo $row['id']; ?>" hidden>
                                 <textarea name="comment" id="" cols="85" rows="2" placeholder="Comment..."></textarea>
                                 <button type="submit"><img src="../../../image/icon/send.png" alt="" width="40px" height="40px"></button>
                             </form>
+                        </div>
+
+                        <div class="divider-lang" style="height: 10px;">
+
                         </div>
                     </div>
                     <?php 
@@ -109,6 +115,7 @@
                     
                     <button onclick="openBusinessInfo()">Update Info</button>
                     <button onclick="openAccountInfo()">Update Account</button>
+                    <button onclick="window.location.href='add-admin.php'">Create New Account</button>
                     <button>Terms and Conditions</button>
                 </div>           
             </section>
@@ -122,11 +129,9 @@
                                             </div>
                                             <div class="busi-info-content">
                                                 <img src="../../../image/logo.png" alt="" width="80px" height="80px">
+                                                <button class="change-photo">Change Photo</button>
                                                 <form action="../../php-database/businessinfo-update.php" method="post">
-                                                    <div>
-                                                        <label for="">ID</label>
-                                                        <input type="text" name="id" value="<?php echo $row["id"]; ?>" readonly>
-                                                    </div>
+                                                        <input type="text" name="id" value="<?php echo $row["id"]; ?>" hidden>
                                                     <div>
                                                         <label for="">Name</label>
                                                         <input type="text" name="name" value="<?php echo $row["name"]; ?>">
@@ -163,11 +168,10 @@
                                                 <h2>Update Information</h2>
                                             </div>
                                             <div class="account-content">
-                                                <img src="../../sys-user/signup-page/<?php echo $loggedin_mf; ?>" alt="" width="80px" height="80px">
                                                 <form action="../../php-database/admin-account-update.php" method="post">
                                                     <div>
                                                         <label for="">Account ID</label>
-                                                        <input type="text" name="id" value="<?php echo $loggedin_id; ?>" readonly>
+                                                        <input type="text" name="id" value="<?php echo $loggedin_uid; ?>" readonly>
                                                     </div>
                                                     <div>
                                                         <label for="">First Name</label>
@@ -191,7 +195,7 @@
                                                     </div>
                                                     <div>
                                                         <label for="">Password</label>
-                                                        <input type="text" name="a_password" value="<?php echo $loggedin_psw; ?>">
+                                                        <input type="password" name="a_password" value="<?php echo $loggedin_psw; ?>">
                                                     </div>
                                                     <div>
                                                         <input type="submit" class="submit" value="Update">

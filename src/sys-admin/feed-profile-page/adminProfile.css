@@ -171,6 +171,12 @@ main .container {
   display: flex;
   align-items: center;
 }
+main .container .message-pop {
+  color: #a8896c;
+  position: absolute;
+  margin: 0 0 580px 350px;
+  text-align: center;
+}
 main .container .post-cont {
   width: 740px;
   height: 90vh;
@@ -225,6 +231,17 @@ main .container .post-cont .user-post-cont .user-post .pp-name-date p {
 main .container .post-cont .user-post-cont .user-post .caption-attachment {
   margin: 0 40px 15px 40px;
   font-size: 0.9rem;
+}
+main .container .post-cont .user-post-cont .user-post .shop-response {
+  background-color: #f5ece3;
+  margin: 0 40px 15px 40px;
+  font-size: 0.9rem;
+}
+main .container .post-cont .user-post-cont .user-post .shop-response h3 {
+  color: #a8896c;
+}
+main .container .post-cont .user-post-cont .user-post .shop-response p {
+  margin-left: 20px;
 }
 main .container .post-cont .user-post-cont .user-post .comment-send form {
   display: flex;
@@ -307,6 +324,7 @@ main .container .shopinfo-cont .shopinfo h3 {
 }
 main .container .shopinfo-cont .shopinfo p {
   margin-left: 30px;
+  font-size: 0.8rem;
 }
 main .container .shopinfo-cont .shopinfo button {
   font-family: "Poppins", sans-serif;
@@ -317,7 +335,7 @@ main .container .shopinfo-cont .shopinfo button {
   color: #ffffff;
   background-color: #a8896c;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 main .container .shopinfo-cont .shopinfo button:hover {
   opacity: 80%;
@@ -362,6 +380,7 @@ main .container .busi-info-popup .busi-info-popup-form .popup-header .exit-butto
   margin: 0 10px 0 10px;
   background-color: #a8896c;
   border: none;
+  transition: 0.3s;
 }
 main .container .busi-info-popup .busi-info-popup-form .popup-header .exit-button h2, main .container .busi-info-popup .account-popup-form .popup-header .exit-button h2, main .container .account-popup .busi-info-popup-form .popup-header .exit-button h2, main .container .account-popup .account-popup-form .popup-header .exit-button h2 {
   font-weight: 400;
@@ -373,6 +392,19 @@ main .container .busi-info-popup .busi-info-popup-form .popup-header .busi-info-
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+main .container .busi-info-popup .busi-info-popup-form .popup-header .busi-info-content .change-photo, main .container .busi-info-popup .busi-info-popup-form .popup-header .account-content .change-photo, main .container .busi-info-popup .account-popup-form .popup-header .busi-info-content .change-photo, main .container .busi-info-popup .account-popup-form .popup-header .account-content .change-photo, main .container .account-popup .busi-info-popup-form .popup-header .busi-info-content .change-photo, main .container .account-popup .busi-info-popup-form .popup-header .account-content .change-photo, main .container .account-popup .account-popup-form .popup-header .busi-info-content .change-photo, main .container .account-popup .account-popup-form .popup-header .account-content .change-photo {
+  padding: 5px 10px;
+  background-color: #a8896c;
+  border: none;
+  color: #ffffff;
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+}
+main .container .busi-info-popup .busi-info-popup-form .popup-header .busi-info-content .change-photo:hover, main .container .busi-info-popup .busi-info-popup-form .popup-header .account-content .change-photo:hover, main .container .busi-info-popup .account-popup-form .popup-header .busi-info-content .change-photo:hover, main .container .busi-info-popup .account-popup-form .popup-header .account-content .change-photo:hover, main .container .account-popup .busi-info-popup-form .popup-header .busi-info-content .change-photo:hover, main .container .account-popup .busi-info-popup-form .popup-header .account-content .change-photo:hover, main .container .account-popup .account-popup-form .popup-header .busi-info-content .change-photo:hover, main .container .account-popup .account-popup-form .popup-header .account-content .change-photo:hover {
+  opacity: 80%;
 }
 main .container .busi-info-popup .busi-info-popup-form .popup-header .busi-info-content img, main .container .busi-info-popup .busi-info-popup-form .popup-header .account-content img, main .container .busi-info-popup .account-popup-form .popup-header .busi-info-content img, main .container .busi-info-popup .account-popup-form .popup-header .account-content img, main .container .account-popup .busi-info-popup-form .popup-header .busi-info-content img, main .container .account-popup .busi-info-popup-form .popup-header .account-content img, main .container .account-popup .account-popup-form .popup-header .busi-info-content img, main .container .account-popup .account-popup-form .popup-header .account-content img {
   border-radius: 50%;
@@ -400,8 +432,104 @@ main .container .busi-info-popup .busi-info-popup-form .popup-header .busi-info-
   background-color: #a8896c;
   color: #ffffff;
   cursor: pointer;
+  transition: 0.3s;
 }
 main .container .busi-info-popup .busi-info-popup-form .popup-header .busi-info-content div .submit:hover, main .container .busi-info-popup .busi-info-popup-form .popup-header .account-content div .submit:hover, main .container .busi-info-popup .account-popup-form .popup-header .busi-info-content div .submit:hover, main .container .busi-info-popup .account-popup-form .popup-header .account-content div .submit:hover, main .container .account-popup .busi-info-popup-form .popup-header .busi-info-content div .submit:hover, main .container .account-popup .busi-info-popup-form .popup-header .account-content div .submit:hover, main .container .account-popup .account-popup-form .popup-header .busi-info-content div .submit:hover, main .container .account-popup .account-popup-form .popup-header .account-content div .submit:hover {
   opacity: 80%;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+main .container .update-cont {
+  width: 500px;
+  height: 550px;
+  background-color: #f2e5db;
+  margin: auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+}
+main .container .update-cont .back-btn {
+  width: 500px;
+  height: 50px;
+  background-color: #a8896c;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+}
+main .container .update-cont .back-btn .bck {
+  background-color: #a8896c;
+  border: none;
+  margin: 0 10px 0 10px;
+  cursor: pointer;
+}
+main .container .update-cont .back-btn .bck:hover {
+  opacity: 80%;
+}
+main .container .update-cont .back-btn h4 {
+  color: #ffffff;
+  font-weight: 600;
+}
+main .container .update-cont .back-btn .upd-del-btn {
+  margin-left: 120px;
+}
+main .container .update-cont .back-btn .upd-del-btn .upd, main .container .update-cont .back-btn .upd-del-btn .del {
+  background-color: #f2e5db;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  width: 80px;
+  border: none;
+  border-radius: 5px;
+  color: #a8896c;
+  transition: 0.3s;
+  cursor: pointer;
+}
+main .container .update-cont .back-btn .upd-del-btn .upd:hover, main .container .update-cont .back-btn .upd-del-btn .del:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+main .container .update-cont .content-cont {
+  width: 500px;
+  height: 550px;
+}
+main .container .update-cont .content-cont .input {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 50px;
+}
+main .container .update-cont .content-cont .input label {
+  color: #a8896c;
+}
+main .container .update-cont .content-cont .input input[type=text], main .container .update-cont .content-cont .input input[type=file], main .container .update-cont .content-cont .input input[type=password] {
+  padding: 5px 5px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+  border: 1px solid #a8896c;
+  border-radius: 5px;
+  outline: none;
+}
+main .container .update-cont .content-cont .input textarea {
+  padding: 5px 5px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+  border: 1px solid #a8896c;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+}
+main .container .update-cont .content-cont .input select {
+  padding: 5px 5px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+  border: 1px solid #a8896c;
+  border-radius: 5px;
+  outline: none;
+}
+main .container .update-cont .content-cont .input input[type=submit] {
+  padding: 5px 5px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  background-color: #a8896c;
+  border-radius: 5px;
+  border: none;
+}
+main .container .update-cont .content-cont .input input[type=submit]:hover {
+  opacity: 80%;
 }/*# sourceMappingURL=adminProfile.css.map */
