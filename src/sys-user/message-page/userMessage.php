@@ -200,7 +200,7 @@
                                 </div>
                                 <?php
                                     if($data['hundred'] == 'DONE') {
-                                        echo "<a class='rate-order' href=''>Rate Order</a>";
+                                        echo "<a class='rate-order' href='feedback.php'>Rate Product</a>";
                                             }
                                 ?>
                                 <div class="line"></div>

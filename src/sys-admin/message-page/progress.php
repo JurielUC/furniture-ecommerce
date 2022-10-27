@@ -130,8 +130,8 @@
                     ?>
                     <div class="progress-parent">
                         <div class="prog-child">
-                            <h3>Progress Timeline</h3>
-                            <form action="../../php-database/building-progress.php">
+                            <h3>Progress Timeline <input type="submit" name="reset" value="Reset" form="form1"></h3>
+                            <form action="../../php-database/building-progress.php" id="form1">
                                 <input type="text" name="trans_id" id="" value="<?php echo $tid; ?>" hidden>
                                 <input type="text" name="unique_id" id="" value="<?php echo $uid; ?>" hidden>
                                 <input type="text" name="status" id="" value="<?php echo $status; ?>" hidden>

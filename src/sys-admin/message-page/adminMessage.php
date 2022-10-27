@@ -51,6 +51,17 @@
                         $query = "SELECT * FROM tb_user WHERE unique_id=$uid";
                         $result = mysqli_query($conn, $query);
                     ?>
+                    <img src="../../sys-user/signup-page/<?php echo $ppic; ?>" alt="" width="50px" height="50px">
+                    <div class="status">
+                        <a href=""><?php echo $fname; ?> <?php echo $lname; ?></a>
+                        <p><?php echo $status; ?></p>
+                    </div>
+                    
+
+                </div>
+                <div class="message-box" id="your_div">
+                    
+                </div>
                     <!--Auto reload script-->
                     <script>
                         function ajaxCall() {
@@ -65,17 +76,6 @@
                         ajaxCall(); // To output when the page loads
                         setInterval(ajaxCall, (2 * 1000)); // x * 1000 to get it in seconds
                     </script>
-                    <img src="../../sys-user/signup-page/<?php echo $ppic; ?>" alt="" width="50px" height="50px">
-                    <div class="status">
-                        <a href=""><?php echo $fname; ?> <?php echo $lname; ?></a>
-                        <p><?php echo $status; ?></p>
-                    </div>
-                    
-
-                </div>
-                <div class="message-box" id="your_div">
-                    
-                </div>
                 <div class="message-input">
                     <form action="adminSend.php" method="post" enctype="multipart/form-data">
                         <div class="file">

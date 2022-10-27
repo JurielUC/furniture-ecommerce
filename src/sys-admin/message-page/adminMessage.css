@@ -546,6 +546,22 @@ main .container .sml-cont .content-cont .progress-parent .prog-child {
 main .container .sml-cont .content-cont .progress-parent .prog-child h3 {
   margin: 5px 0 0 5px;
 }
+main .container .sml-cont .content-cont .progress-parent .prog-child h3 input[type=submit] {
+  width: 80px;
+  cursor: pointer;
+  background-color: #a8896c;
+  border: none;
+  padding: 2px 0;
+  margin-left: 10px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
+  border-radius: 3px;
+}
+main .container .sml-cont .content-cont .progress-parent .prog-child h3 input[type=submit]:hover {
+  opacity: 80%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
 main .container .sml-cont .content-cont .progress-parent .prog-child .progress-timeline {
   display: flex;
   justify-content: center;

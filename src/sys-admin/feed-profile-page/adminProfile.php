@@ -38,7 +38,7 @@
         <div class="container">
             <section class="post-cont">
                 <div class="form-cont">
-                    <h1>User Post</h1>
+                    <h1>User Post/Feedback</h1>
                 </div>
                 <div class="user-post-cont">
                         <?php 

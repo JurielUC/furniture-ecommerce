@@ -109,7 +109,7 @@
                     <h1><u>My Profile</u></h1>
                     <div class="profile-pic">
                         <img src="../signup-page/<?php echo $loggedin_mf; ?>" alt="" width="100px" height="100px">
-                        <button class="edit-btn" onclick="window.location.href='update/update-pic.php'">Edit</button>
+                        <button class="edit-btn" onclick="window.location.href='update/update-pic.php'">Change Photo</button>
                     </div>
                     <h3><img src="../../../image/icon/owner.png" alt="" width="15" height="15">&nbsp&nbspName</h3>
                     <p><?php echo $loggedin_fname; ?> <?php echo $loggedin_lname; ?> <button class="edit-btn" onclick="window.location.href='update/update-name.php'">Edit</button></p>

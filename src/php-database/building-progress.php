@@ -75,4 +75,17 @@
                 echo "Error: " . $query . "<br>" . mysqli_error($conn);
               }
         }
+
+    elseif(isset($_REQUEST["reset"]))
+        {
+            $query = "UPDATE tb_progress SET zero='$process', two_five='$empty', fifty='$empty', seven_five='$empty', hundred='$empty' WHERE trans_id='$trans_id'";
+            $result = mysqli_query($conn, $query);
+
+            if ($result) {
+                header("location: ../sys-admin/message-page/adminMessage.php?unique_id=$uid & status=$status & first_name=$fname & last_name=$lname & myfile=$ppic");
+                    exit;
+              } else {
+                echo "Error: " . $query . "<br>" . mysqli_error($conn);
+              }
+        }
 ?>

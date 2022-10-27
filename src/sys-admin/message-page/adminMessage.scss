@@ -419,6 +419,24 @@ main {
                         
                         h3 {
                             margin: 5px 0 0 5px;
+
+                            input[type=submit] {
+                                width: 80px;
+                                cursor: pointer;
+                                background-color: $header-color;
+                                border: none;
+                                padding: 2px 0;
+                                margin-left: 10px;
+                                color: $white-color;
+                                font-family: $font-family;
+                                transition: 0.3s;
+                                border-radius: 3px;
+
+                                &:hover {
+                                    opacity: 80%;
+                                    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                                }
+                            }
                         }
 
                         .progress-timeline {
