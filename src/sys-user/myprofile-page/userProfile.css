@@ -59,6 +59,19 @@
 .alert .alert-cont .alert-content .alert-btn .btn-green:hover {
   opacity: 75%;
 }
+.alert .alert-cont .alert-content .alert-btn input[type=button] {
+  cursor: pointer;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.4s;
+  line-height: normal;
+  min-width: 120px;
+  border: none;
+  min-height: 40px;
+  border-radius: 3px;
+  margin: 0 5px;
+}
 .alert .alert-cont .alert-content .alert-btn button {
   cursor: pointer;
   color: #fff;
@@ -223,6 +236,21 @@ main .container .post-cont .form-cont textarea:focus:focus {
 main .container .post-cont .form-cont .attach-submit {
   text-align: right;
 }
+main .container .post-cont .form-cont .attach-submit a {
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #ffffff;
+  width: 100px;
+  padding: 4px 30px;
+  background-color: #ee3535;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
+}
+main .container .post-cont .form-cont .attach-submit a:hover {
+  opacity: 80%;
+}
 main .container .post-cont .form-cont .attach-submit input[type=submit] {
   cursor: pointer;
   border-radius: 5px;
@@ -231,6 +259,8 @@ main .container .post-cont .form-cont .attach-submit input[type=submit] {
   padding: 4px 0;
   background-color: #a8896c;
   border: none;
+  transition: 0.3s;
+  font-family: "Poppins", sans-serif;
 }
 main .container .post-cont .form-cont .attach-submit input[type=submit]:hover {
   opacity: 80%;
@@ -374,6 +404,23 @@ main .container .shopinfo-cont .shopinfo .profile-pic img {
   border-radius: 50%;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
+main .container .shopinfo-cont .shopinfo .profile-pic .edit-btn {
+  position: absolute;
+  margin-top: 90px;
+  background-color: #f5ece3;
+  padding: 1px 20px;
+  color: #a8896c;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+main .container .shopinfo-cont .shopinfo .profile-pic .edit-btn:hover {
+  opacity: 80%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
 main .container .shopinfo-cont .shopinfo h1 {
   text-align: center;
   padding-top: 10px;
@@ -389,7 +436,22 @@ main .container .shopinfo-cont .shopinfo p {
   margin-left: 30px;
   font-size: 0.8rem;
 }
-main .container .shopinfo-cont .shopinfo button {
+main .container .shopinfo-cont .shopinfo p .edit-btn {
+  background-color: #a8896c;
+  padding: 1px 20px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+main .container .shopinfo-cont .shopinfo p .edit-btn:hover {
+  opacity: 80%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+main .container .shopinfo-cont .shopinfo .edt-pass {
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   width: 100%;
@@ -399,8 +461,9 @@ main .container .shopinfo-cont .shopinfo button {
   background-color: #a8896c;
   border: none;
   border-radius: 5px;
+  transition: 0.3s;
 }
-main .container .shopinfo-cont .shopinfo button:hover {
+main .container .shopinfo-cont .shopinfo .edt-pass:hover {
   opacity: 80%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -486,6 +549,7 @@ main .container .profile-popup .profile-popup-form .popup-header .profile-conten
   box-sizing: border-box;
   background-color: #ffffff;
   font-family: "Poppins", sans-serif;
+  transition: 0.3s;
 }
 main .container .profile-popup .profile-popup-form .popup-header .profile-content div input:focus {
   outline: none;
@@ -495,8 +559,99 @@ main .container .profile-popup .profile-popup-form .popup-header .profile-conten
   color: #ffffff;
   cursor: pointer;
   margin-top: 10px;
+  transition: 0.3s;
 }
 main .container .profile-popup .profile-popup-form .popup-header .profile-content div .submit:hover {
   opacity: 80%;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+main .container #for-edit {
+  width: 1120px;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .container #for-edit .update-cont {
+  width: 500px;
+  height: 550px;
+}
+main .container #for-edit .update-cont .back-btn {
+  color: #ffffff;
+  width: 500px;
+  height: 50px;
+  background-color: #a8896c;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+}
+main .container #for-edit .update-cont .back-btn .bck {
+  background-color: #a8896c;
+  border: none;
+  margin: 0 10px 0 10px;
+  cursor: pointer;
+}
+main .container #for-edit .update-cont .back-btn .bck:hover {
+  opacity: 80%;
+}
+main .container #for-edit .update-cont .content-cont {
+  width: 500px;
+  height: 200px;
+  background-color: #f2e5db;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .container #for-edit .update-cont .content-cont .input {
+  display: flex;
+  flex-direction: column;
+  width: 440px;
+}
+main .container #for-edit .update-cont .content-cont .input label {
+  color: #a8896c;
+}
+main .container #for-edit .update-cont .content-cont .input input[type=text], main .container #for-edit .update-cont .content-cont .input input[type=file] {
+  padding: 5px 5px;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #a8896c;
+  border-radius: 5px;
+  outline: none;
+}
+main .container #for-edit .update-cont .content-cont .input input[type=password] {
+  padding: 5px 5px;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #a8896c;
+  border-radius: 5px;
+  outline: none;
+}
+main .container #for-edit .update-cont .content-cont .input textarea {
+  padding: 5px 5px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+  border: 1px solid #a8896c;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+}
+main .container #for-edit .update-cont .content-cont .input select {
+  padding: 5px 5px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+  border: 1px solid #a8896c;
+  border-radius: 5px;
+  outline: none;
+}
+main .container #for-edit .update-cont .content-cont .input input[type=submit], main .container #for-edit .update-cont .content-cont .input input[type=button] {
+  margin-top: 10px;
+  padding: 5px 5px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  background-color: #a8896c;
+  border-radius: 5px;
+  border: none;
+}
+main .container #for-edit .update-cont .content-cont .input input[type=submit]:hover, main .container #for-edit .update-cont .content-cont .input input[type=button]:hover {
+  opacity: 80%;
 }/*# sourceMappingURL=userProfile.css.map */

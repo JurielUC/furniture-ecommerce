@@ -64,6 +64,20 @@
                     }
                 }
 
+                input[type=button] {
+                    cursor: pointer;
+                    color: #fff;
+                    border-radius: 4px;
+                    text-decoration: none;
+                    transition: all 0.4s;
+                    line-height: normal;
+                    min-width: 120px;
+                    border: none;
+                    min-height: 40px;
+                    border-radius: 3px;
+                    margin: 0 5px;
+                }
+
                 button {
                     cursor: pointer;
                     color: #fff;

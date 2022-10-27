@@ -60,6 +60,19 @@
 .alert .alert-cont .alert-content .alert-btn .btn-green:hover {
   opacity: 75%;
 }
+.alert .alert-cont .alert-content .alert-btn input[type=button] {
+  cursor: pointer;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.4s;
+  line-height: normal;
+  min-width: 120px;
+  border: none;
+  min-height: 40px;
+  border-radius: 3px;
+  margin: 0 5px;
+}
 .alert .alert-cont .alert-content .alert-btn button {
   cursor: pointer;
   color: #fff;
