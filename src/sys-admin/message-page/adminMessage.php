@@ -50,6 +50,10 @@
                         
                         $query = "SELECT * FROM tb_user WHERE unique_id=$uid";
                         $result = mysqli_query($conn, $query);
+                        while ($row = mysqli_fetch_assoc($result))
+                        {
+                            $user_id=$row['unique_id'];
+                        }
                     ?>
                     <img src="../../sys-user/signup-page/<?php echo $ppic; ?>" alt="" width="50px" height="50px">
                     <div class="status">
@@ -60,9 +64,39 @@
 
                 </div>
                 <div class="message-box" id="your_div">
-                    
+                    <?php
+                        $sql = "SELECT * FROM tb_pointmessage WHERE message_to = $user_id
+                        AND message_from = $loggedin_uid OR message_to = $loggedin_uid
+                        AND message_from = $user_id ORDER BY msg_timestamp ASC";
+
+                        $res = mysqli_query($conn, $sql);
+                            if(mysqli_num_rows($res) > 0){
+                                while ($row = mysqli_fetch_assoc($res))
+                                    {
+                                        if($row['message_from'] === $user_id){
+                                            echo '  <p class="time-s">'. $row['msg_timestamp'] .'</p>
+                                            <div class="message-me message">
+                                                <div class="message-one">
+                                                    <p>'. $row['message_content'] .'</p>
+                                                </div>
+                                            </div>';
+                                        }
+                                        elseif($row['message_from'] === $loggedin_uid) {
+                                            echo  ' <p class="time-s">'. $row['msg_timestamp'] .'</p>
+                                            <div class="message-admin">
+                                                <div class="message-two message">
+                                                    <p>'. $row['message_content'] .'</p>
+                                                </div>
+                                            </div>';
+                                        }
+                                    }
+                                }else
+                                    {
+                                        echo '<p class="nm">No Message</p>';
+                                    }
+                    ?>
                 </div>
-                    <!--Auto reload script-->
+                    <!--Auto reload script
                     <script>
                         function ajaxCall() {
                             $.ajax({
@@ -75,7 +109,7 @@
 
                         ajaxCall(); // To output when the page loads
                         setInterval(ajaxCall, (2 * 1000)); // x * 1000 to get it in seconds
-                    </script>
+                    </script>-->
                 <div class="message-input">
                     <form action="adminSend.php" method="post" enctype="multipart/form-data">
                         <div class="file">
