@@ -144,6 +144,16 @@ header nav a:hover {
   border-bottom: 3px solid #ffffff;
   padding-bottom: 5px;
 }
+header nav a span {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  margin-left: -15px;
+  background-color: #ee0000;
+  border-radius: 50%;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
 
 .divider {
   display: flex;
@@ -368,34 +378,8 @@ main .container .shopinfo-cont {
   width: 380px;
   height: 90vh;
 }
-main .container .shopinfo-cont .search-bar input[type=text] {
-  width: 76%;
-  padding: 5px 8px;
-  margin: 10px 0;
-  display: inline-block;
-  border: 1px solid #a8896c;
-  border-radius: 5px;
-  box-sizing: border-box;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-}
-main .container .shopinfo-cont .search-bar input[type=text]:focus {
-  outline: none;
-  border: 1px solid #dbb07b;
-}
-main .container .shopinfo-cont .search-bar button {
-  width: 22%;
-  padding: 4px 0;
-  border-radius: 5px;
-  border: 1px solid #a8896c;
-  color: #ffffff;
-  background-color: #a8896c;
-  cursor: pointer;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-}
-main .container .shopinfo-cont .search-bar button:hover {
-  opacity: 70%;
-}
 main .container .shopinfo-cont .shopinfo {
+  margin-top: 10px;
   width: 380px;
   height: 78vh;
   color: #a8896c;

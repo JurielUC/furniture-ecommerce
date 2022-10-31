@@ -83,6 +83,10 @@
                             <h5>Size</h5>
                             <p><?php echo $row['size']; ?></p>
                         </div>
+                        <div class="size">
+                            <h5>Quantity</h5>
+                            <p><?php echo $row['quantity']; ?></p>
+                        </div>
                         <div class="category">
                             <h5>Category</h5>
                             <p><?php echo $row['category']; ?></p>
@@ -109,7 +113,7 @@
                         <label for="quantity">Quantity:</label>
                         <input type="text" name="id" value="<?php echo $id; ?>" hidden>
                         <input type="text" name="price" value="<?php echo $row['price']; ?>" hidden>
-                        <input type="number" name="quantity" id="quantity" value="1" min="1" max="10">
+                        <input type="number" name="quantity" id="quantity" value="1" min="1" max="<?php echo $row['quantity'] ?>">
                     </div>
                     <button type="submit">Order Now</button>
                 </div>

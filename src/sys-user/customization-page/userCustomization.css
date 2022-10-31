@@ -144,6 +144,16 @@ header nav a:hover {
   border-bottom: 3px solid #ffffff;
   padding-bottom: 5px;
 }
+header nav a span {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  margin-left: -15px;
+  background-color: #ee0000;
+  border-radius: 50%;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
 
 .divider {
   display: flex;

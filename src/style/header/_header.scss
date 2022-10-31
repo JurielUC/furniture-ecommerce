@@ -63,6 +63,17 @@ header {
                 border-bottom: 3px solid $white-color;
                 padding-bottom: 5px;
             }
+
+            span {
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                margin-left: -15px;
+                background-color: #ee0000;
+                border-radius: 50%;
+                text-align: center;
+                font-family: $times;
+            }
         }
     }
 }

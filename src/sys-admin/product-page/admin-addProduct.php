@@ -6,6 +6,7 @@
     $size=$_REQUEST['size'];
     $description=$_REQUEST['p_description'];
     $category=$_REQUEST['category'];
+    $qty=$_REQUEST['quantity'];
     $prod_img=$_FILES['product_img']['name'];
 
     $var1 = rand(1111,9999);  // generate random number in $var1 variable
@@ -24,7 +25,7 @@
     $trim_size = trim($size);
 
     //insert data to tb_user table
-    $sql = "INSERT INTO tb_product(product_name, price, size, p_description, category, product_img) VALUES('$trim_pn','$trim_price', '$trim_size', '$description', '$category', '$dst_db')";
+    $sql = "INSERT INTO tb_product(product_name, price, size, p_description, category, product_img, quantity) VALUES('$trim_pn','$trim_price', '$trim_size', '$description', '$category', '$dst_db', '$qty')";
 
     if (mysqli_query($conn, $sql)) {
         $alert = "Product Posted!";

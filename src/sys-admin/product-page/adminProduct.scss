@@ -136,6 +136,16 @@ main {
                         width: 310px;
                         text-align: end;
 
+                        input[type=number] {
+                            font-family: $font-family;
+                            padding: 2px 8px;
+                            display: inline-block;
+                            border: 1px solid $header-color;
+                            border-radius: 5px;
+                            box-sizing: border-box;
+                            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                        }
+
                         button {
                             font-family: $font-family;
                             width: 100px;
@@ -226,7 +236,7 @@ main {
                         }
 
                         p {
-                            margin-top: 10px;
+                            margin-top: 3px;
                             white-space: nowrap;
                             font-size: .8rem;
                         }

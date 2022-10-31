@@ -30,7 +30,7 @@ main {
                     border-radius: 50%;
                 }
 
-                a {
+                .shop {
                     color: $header-color;
                     margin-left: 10px;
                     font-size: 1.3rem;
@@ -41,6 +41,34 @@ main {
                         text-decoration: underline;
                     }
                 }
+
+                .refresh-btn {
+                    margin-left: 340px;
+                    @include flexBox();
+                    background-color: $header-color;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    transition: 0.3s;
+                    color: $white-color;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 80%;
+                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: $white-color;
+                        font-size: .8rem;
+                    }
+
+                    .your_div {
+                        font-family: $times;
+                        font-size: .8rem;
+                    }
+                }
+
             }
 
             .message-box {

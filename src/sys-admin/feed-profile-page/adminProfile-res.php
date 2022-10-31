@@ -41,15 +41,15 @@
                     <h1>Customer's Post/Feedback</h1>
                 </div>
                 <div class="category">
-                    <button class="active" onclick="window.location.href='adminProfile.php';">Without Response</button>
-                    <button onclick="window.location.href='adminProfile-res.php';">With Response</button>
+                    <button onclick="window.location.href='adminProfile.php';">Without Response</button>
+                    <button class="active" onclick="window.location.href='adminProfile-res.php';">With Response</button>
                 </div>
                 <div class="user-post-cont">
                         <?php 
-                            include '../../php-database/admin-userpost-display.php';
+                            include '../../php-database/admin-userpost-display-responded.php';
 
                             if (mysqli_num_rows($result) == 0) {
-                                echo "<div class='nodata' style='width: 690px; height: 80vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
+                                echo "<div class='nodata' style='width: 690px; height: 50vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
                                     <img src='../../../image/icon/file.png' width='120px' height='120px'>
                                     <p>No Post</p>
                                     </div>";
@@ -58,9 +58,11 @@
                         <?php
                                 while ($row = mysqli_fetch_assoc($result))
                                 {   
+                                    $postID=$row['id'];
                             ?>
                     <div class="user-post">
                         <div class="pp-name-date">
+                            <!--Put php codes for product display here-->
                             <div class="pp-name">
                                 <img src="../../sys-user/signup-page/<?php echo $row['myfile']; ?>" alt="" width="35px" height="35px">
                                 <h2><?php echo $row['fname']; ?> <?php echo $row['lname']; ?></h2>
@@ -71,22 +73,19 @@
                         <div class="caption-attachment">
                             <p><?php echo $row['long_desc']; ?></p>
                         </div>
-                        <div class="comment-send">
-                            <form action="../../php-database/comment.php" method="post">
-                                <input type="text" name="unique_id" value="<?php echo $loggedin_uid; ?>" hidden>
-                                <input type="text" name="post_id" value="<?php echo $row['id']; ?>" hidden>
-                                <textarea name="comment" id="" cols="85" rows="2" placeholder="Response..."></textarea>
-                                <button type="submit"><img src="../../../image/icon/send.png" alt="" width="40px" height="40px"></button>
-                            </form>
-                        </div>
 
+                        <div class="shop-response">
+                            <h3><?php echo $row['shopres']; ?></h3>
+                            <p><?php echo $row['comment']; ?></p>
+                        </div>
+                        
                         <div class="divider-lang" style="height: 10px;">
 
                         </div>
                     </div>
-                    <?php 
-                        }
-                    ?>
+                        <?php
+                                }
+                        ?>
                 </div>
             </section>
             <section class="shopinfo-cont">

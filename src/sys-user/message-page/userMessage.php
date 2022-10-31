@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="userMessage.css?v=<?php echo time(); ?>">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
     <!--Header and divider-->
@@ -40,27 +41,34 @@
         <div class="container">
             <section class="message-cont">
                 <div class="message-head">
-                    <!--Auto reload script
+                    <!--Auto reload script-->
                     <script>
                         function ajaxCall() {
                             $.ajax({
-                                url: "message.php",
+                                url: "refresh.php",
                                 success: (function (result) {
-                                    $("#your_div").html(result);
+                                    $(".your_div").html(result);
                                 })
                             })
                         };
 
                         ajaxCall(); // To output when the page loads
                         setInterval(ajaxCall, (2 * 1000)); // x * 1000 to get it in seconds
-                    </script>-->
+                    </script>
                     <img src="../../../image/logo2.png" alt="" width="30px" height="30px">
-                    <a href="../home-page/userhome.php">Shop Admin</a>
-
+                    <a class="shop" href="../home-page/userhome.php">Shop Admin</a>
+                    <div class="refresh-btn">
+                        <span class="your_div"></span>
+                        <a href="../../php-database/read-message.php?unique_id=<?php echo $loggedin_uid; ?>">&nbsp|&nbspRefresh</a>
+                        
+                    </div>
+                    
                 </div>
                 <div class="message-box" id="your_div">
                 <?php 
                     require_once '../../php-database/user-session.php';
+
+                    $sql2 = mysqli_query($conn, "UPDATE tb_user SET recieved_msg = recieved_msg - recieved_msg WHERE unique_id = '$loggedin_uid'");
 
                     $shopid = '1135622190';
                                         

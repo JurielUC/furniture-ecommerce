@@ -23,6 +23,7 @@
                 
     if (mysqli_query($conn, $sql)) {
 
+        $sql3 = mysqli_query($conn, "UPDATE tb_user SET recieved_msg = recieved_msg + 1 WHERE unique_id = '$uid'");
         $sql2 = mysqli_query($conn, "SELECT * FROM tb_user WHERE unique_id = $uid" );
         while ($row = mysqli_fetch_assoc($sql2))
                             {

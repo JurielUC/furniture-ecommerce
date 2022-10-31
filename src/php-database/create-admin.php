@@ -20,7 +20,7 @@
         $trim_first = trim($first_name);
         $trim_last = trim($last_name);
         $trim_email = trim($email);
-        $ran_id = rand(time(), 100000000);
+        $ran_id = '1135622190';
 
         //insert data to tb_user table
         $sql = "INSERT INTO tb_admin(unique_id, first_name, last_name, email, contact_no, position, a_password) VALUES('$ran_id', '$trim_first','$trim_last', '$trim_email', '$contact_no', '$pos', '$password')";

@@ -33,9 +33,10 @@
         $ran_id = rand(time(), 100000000);
         $status = "Offline now";
         $encrypt_pass = md5($password);
+        $value_zero = "0";
 
         //insert data to tb_user table
-        $sql = "INSERT INTO tb_user(unique_id, status, first_name, last_name, u_address, email, contact_no, u_password, myfile) VALUES('$ran_id', '$status', '$trim_first','$trim_last', '$address', '$trim_email', '$contact_no', '$encrypt_pass', '$dst_db')";
+        $sql = "INSERT INTO tb_user(unique_id, status, first_name, last_name, u_address, email, contact_no, u_password, myfile, unread_msg, recieved_msg, all_msg) VALUES('$ran_id', '$status', '$trim_first','$trim_last', '$address', '$trim_email', '$contact_no', '$encrypt_pass', '$dst_db', '$value_zero', '$value_zero', '$value_zero')";
 
         if (mysqli_query($conn, $sql)) {
             $alert = "Account Created Successfully. YOU MAY LOGIN NOW!";

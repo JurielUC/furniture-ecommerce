@@ -144,6 +144,16 @@ header nav a:hover {
   border-bottom: 3px solid #ffffff;
   padding-bottom: 5px;
 }
+header nav a span {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  margin-left: -15px;
+  background-color: #ee0000;
+  border-radius: 50%;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
 
 .divider {
   display: flex;
@@ -280,6 +290,15 @@ main .container .product-cont .addItem-cont .sib .submit {
   width: 310px;
   text-align: end;
 }
+main .container .product-cont .addItem-cont .sib .submit input[type=number] {
+  font-family: "Poppins", sans-serif;
+  padding: 2px 8px;
+  display: inline-block;
+  border: 1px solid #a8896c;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
 main .container .product-cont .addItem-cont .sib .submit button {
   font-family: "Poppins", sans-serif;
   width: 100px;
@@ -359,7 +378,7 @@ main .container .product-cont .product .display-div .prod-display .pname h4 {
   white-space: nowrap;
 }
 main .container .product-cont .product .display-div .prod-display p {
-  margin-top: 10px;
+  margin-top: 3px;
   white-space: nowrap;
   font-size: 0.8rem;
 }

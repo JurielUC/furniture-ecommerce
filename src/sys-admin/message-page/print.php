@@ -65,15 +65,28 @@
     ?>
     <main>
         <div class="container">
+        <script type="text/javascript">
+            function PrintDiv() {
+                self.focus();
+                var divContents = document.getElementById("pdf").innerHTML;
+                var printWindow = window.open('', '', 'height=400,width=800');
+                printWindow.document.write('<html><head><title>Gil Reyes Wood Furniture and Repair Shop</title>');
+                printWindow.document.write('</head><body>');
+                printWindow.document.write(divContents);
+                printWindow.document.write('</body></html>');
+                printWindow.document.close();
+                printWindow.print();
+            }
+        </script>
             <div class="sml-cont">
                 <div class="back-btn">
                     <button onclick="window.location.href='adminMessage.php?unique_id=<?php echo $uid; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & status=<?php echo $status; ?> & myfile=<?php echo $ppic; ?>'"><img src="../../../image/icon/arrow.png" alt="" width="15px" height="11px"></button>
                     <h4>Order Information</h4>
 
-                    <button class="print-btn" title="Print"><img src="../../../image/icon/print.png" alt="" width="15px" height="15px"> Print</button>
+                    <button class="print-btn" download onclick="PrintDiv();" title="Print"><img src="../../../image/icon/print.png" alt="" width="15px" height="15px"> Print</button>
                 </div>
                 <div class="content-cont">
-                    <div class="print-canvas">
+                    <div class="print-canvas" id="pdf">
                         <div class="shopname">
                             <h3>Gil Furniture and Repair Shop</h3>
                             <p>Matingain 2, Lemery, Batangas</p>

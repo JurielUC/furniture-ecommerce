@@ -144,6 +144,16 @@ header nav a:hover {
   border-bottom: 3px solid #ffffff;
   padding-bottom: 5px;
 }
+header nav a span {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  margin-left: -15px;
+  background-color: #ee0000;
+  border-radius: 50%;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
 
 .divider {
   display: flex;
@@ -202,6 +212,30 @@ main .container .message-cont .message-head .status a:hover {
 main .container .message-cont .message-head .status p {
   margin-left: 10px;
   color: #a8896c;
+  font-size: 0.8rem;
+}
+main .container .message-cont .message-head .refresh-btn {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #a8896c;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+  color: #ffffff;
+  cursor: pointer;
+}
+main .container .message-cont .message-head .refresh-btn:hover {
+  opacity: 80%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+main .container .message-cont .message-head .refresh-btn a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+main .container .message-cont .message-head .refresh-btn .your_div {
+  font-family: "Times New Roman", Times, serif;
   font-size: 0.8rem;
 }
 main .container .message-cont .message-box {

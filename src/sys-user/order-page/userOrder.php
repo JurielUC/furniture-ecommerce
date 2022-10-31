@@ -48,6 +48,7 @@
 
                         while($row = mysqli_fetch_assoc($result))
                         {
+
                     ?>
                 <div class="prod-back">
                     <a href="../../php-database/delete-from-cart.php?id=<?php echo $row['id']; ?>"><img src="../../../image/icon/arrow.png" alt="" width="15px" height="15px"></a>

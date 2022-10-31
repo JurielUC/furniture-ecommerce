@@ -23,6 +23,32 @@ main {
             width: 740px;
             height: 90vh;
 
+            .category {
+
+                button {
+                    font-family: $font-family;
+                    border: 2px solid $header-color;
+                    background-color: $white-color;
+                    width: 352px;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                    color: $header-color;
+                    transition: 0.3s;
+                    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+
+                    &:hover {
+                        color: $white-color;
+                        background-color: $header-color;
+                    }
+                }
+
+                .active {
+                    color: $white-color;
+                    background-color: $header-color;
+                }
+            }
+
             .form-cont {
                 @include flexBox();
                 justify-content: center;

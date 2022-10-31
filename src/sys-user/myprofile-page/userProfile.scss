@@ -247,40 +247,8 @@ main {
             width: 380px;
             height: 90vh;
 
-            .search-bar {
-                input[type=text] {
-                    width: 76%;
-                    padding: 5px 8px;
-                    margin: 10px 0;
-                    display: inline-block;
-                    border: 1px solid $header-color;
-                    border-radius: 5px;
-                    box-sizing: border-box;
-                    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-                    
-                    &:focus {
-                        outline: none;
-                        border: 1px solid $mt-color;
-                    }
-                }
-
-                button {
-                    width: 22%;
-                    padding: 4px 0;
-                    border-radius: 5px;
-                    border: 1px solid $header-color;
-                    color: $white-color;
-                    background-color: $header-color;
-                    cursor: pointer;
-                    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-
-                    &:hover {
-                        opacity: 70%;
-                    }
-                }
-            }
-
             .shopinfo {
+                margin-top: 10px;
                 width: 380px;
                 height: 78vh;
                 color: $header-color;

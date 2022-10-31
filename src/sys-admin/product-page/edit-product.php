@@ -49,6 +49,7 @@
                 $pr=$row['price'];
                 $pi=$row['product_img'];
                 $ctgry=$row['category'];
+                $qty=$row['quantity'];
                 $pd=$row['p_description'];
 
     ?>
@@ -106,6 +107,10 @@
                             <div>
                                 <h5>Price:</h5>
                                 <p>PHP <?php echo $pr; ?>.00</p>
+                            </div>
+                            <div>
+                                <h5>Quantity:</h5>
+                                <p><?php echo $qty; ?></p>
                             </div>
                         </div>
                     </div>

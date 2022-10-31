@@ -49,6 +49,7 @@
                 $pr=$row['price'];
                 $pi=$row['product_img'];
                 $ctgry=$row['category'];
+                $qty=$row['quantity'];
                 $pd=$row['p_description'];
 
     ?>
@@ -113,6 +114,11 @@
                             <div>
                                 <h5>Price:</h5>
                                 <p>PHP <?php echo $pr; ?>.00 <button class="edit-btn" onclick="window.location.href='product-edit/price.php?id=<?php echo $id; ?>'">Edit</button></p>
+                            </div>
+
+                            <div>
+                                <h5>Quantity:</h5>
+                                <p><?php echo $qty; ?> <button class="edit-btn" onclick="window.location.href='product-edit/quantity.php?id=<?php echo $id; ?>'">Edit</button></p>
                             </div>
                                 
                         </div>

@@ -7,6 +7,7 @@
     $pn=$_REQUEST['product_name'];
     $pr=$_REQUEST['price'];
     $ctgry=$_REQUEST['category'];
+    $qty=$_REQUEST['quantity'];
     $pd=$_REQUEST['p_description'];
     $prod_img=$_FILES['product_img']['name'];
 
@@ -73,6 +74,20 @@
 
             if ($result) {
                 $alert = "Price Updated!";
+                header("location: ../sys-admin/product-page/edit.php?message=$alert & unique_id=$uid & id=$id");
+                    exit;
+              } else {
+                echo "Error: " . $query . "<br>" . mysqli_error($conn);
+              }
+        }
+
+    elseif(isset($_REQUEST["qty-btn"]))
+        {
+            $query = "UPDATE tb_product SET quantity='$qty' WHERE id='$id'";
+            $result = mysqli_query($conn, $query);
+
+            if ($result) {
+                $alert = "Quantity Updated!";
                 header("location: ../sys-admin/product-page/edit.php?message=$alert & unique_id=$uid & id=$id");
                     exit;
               } else {
