@@ -94,20 +94,39 @@
                                 while ($row = mysqli_fetch_assoc($res))
                                     {
                                         if($row['message_from'] === $user_id){
-                                            echo '  <p class="time-s">'. $row['msg_timestamp'] .'</p>
-                                            <div class="message-me message">
-                                                <div class="message-one">
-                                                    <p>'. $row['message_content'] .'</p>
-                                                </div>
-                                            </div>';
+                                            if($row['message_content'] == NULL) {
+                                                echo '  <p class="time-s">'. $row['msg_timestamp'] .'</p>
+                                                <div class="message-me message">
+                                                    <div class="message-one">
+                                                        <img src=../../sys-user/message-page/'. $row['msg_file'] .' width="360px">
+                                                    </div>
+                                                </div>';
+                                            } else {
+                                                echo '  <p class="time-s">'. $row['msg_timestamp'] .'</p>
+                                                <div class="message-me message">
+                                                    <div class="message-one">
+                                                        <p>'. $row['message_content'] .'</p>
+                                                    </div>
+                                                </div>';
+                                            }
+                                            
                                         }
                                         elseif($row['message_from'] === $loggedin_uid) {
-                                            echo  ' <p class="time-s">'. $row['msg_timestamp'] .'</p>
-                                            <div class="message-admin">
-                                                <div class="message-two message">
-                                                    <p>'. $row['message_content'] .'</p>
-                                                </div>
-                                            </div>';
+                                            if($row['message_content'] == NULL) {
+                                                echo  '<p class="time-s">'. $row['msg_timestamp'] .'</p>
+                                                    <div class="message-admin">
+                                                        <div class="message-two message">
+                                                            <img src='. $row['msg_file'] .' width="360px">
+                                                        </div>
+                                                    </div>';
+                                            } else {
+                                                echo  '<p class="time-s">'. $row['msg_timestamp'] .'</p>
+                                                    <div class="message-admin">
+                                                        <div class="message-two message">
+                                                            <p>'. $row['message_content'] .'</p>
+                                                        </div>
+                                                    </div>';
+                                            }
                                         }
                                     }
                                 }else

@@ -17,6 +17,7 @@
     $sql = "INSERT INTO tb_progress(trans_id, zero, two_five, fifty, seven_five, hundred) VALUES('$trans_id' ,'$process', '$empty', '$empty', '$empty', '$empty')";
 
     if (mysqli_query($conn, $sql)) {
+        $sql2 = mysqli_query($conn, "UPDATE tb_user SET recieved_msg = recieved_msg + 1 WHERE unique_id = '$uid'");
         header("location: ../sys-admin/message-page/adminMessage.php?unique_id=$uid & status=$status & first_name=$fname & last_name=$lname & myfile=$ppic");
             exit;
       } else {

@@ -34,14 +34,15 @@
                 <div class="update-cont">
                     <div class="back-btn">
                         <button class="bck" onclick="window.location.href='userMessage.php'"><img src="../../../image/icon/arrow.png" alt="" width="15px" height="11px"></button>
-                        <h4>Feedback to Shop/Product</h4>
+                        <h4>Feedback to Shop</h4>
                     </div>
+                    <?php $trans_id=$_GET['trans_id']; ?>
                     <div class="content-cont">
-                        <form action="../../php-database/update-user.php" method="post">
+                        <form action="userfeedback.php" method="post">
                             <div class="input">
                                 <label for="fname">Description</label>
-                                <textarea name="description" id="" cols="" rows="2" placeholder="Write something..."></textarea>
-                                <input type="file" name="file">
+                                <input type="text" name="trans_id" value="<?php echo $trans_id; ?>" hidden>
+                                <textarea name="long_desc" id="" cols="" rows="2" placeholder="Write something..."></textarea>
                             </div>
                             <div class="input">
                                 <input type="button" onclick="openAlert()" value="Submit">
@@ -52,9 +53,9 @@
                                     <div class="alert-content">
                                         <img src="../../../image/icon/check.png" alt="" width="70px" height="70px">
                                         <h1>Are you sure?</h1>
-                                        <p>Do you really want to update this name?</p>
+                                        <p>Do you really want to post this feedback?</p>
                                         <div class="alert-btn">
-                                            <button class="btn-green" name="name-btn" type="submit">Yes</button>
+                                            <button class="btn-green" type="submit">Yes</button>
                                             </form>
                                             <input type="button" class="btn-secondary" onclick="closeAlert()" value="No">
                                         </div>

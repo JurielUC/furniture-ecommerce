@@ -69,6 +69,7 @@
             $result = mysqli_query($conn, $query);
 
             if ($result) {
+                $sql4 = mysqli_query($conn, "UPDATE tb_user SET recieved_msg = recieved_msg + 1 WHERE unique_id = '$uid'");
                 header("location: ../sys-admin/message-page/adminMessage.php?unique_id=$uid & status=$status & first_name=$fname & last_name=$lname & myfile=$ppic");
                     exit;
               } else {

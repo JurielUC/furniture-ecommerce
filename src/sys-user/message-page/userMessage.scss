@@ -200,6 +200,23 @@ main {
                         margin: 10px;
                         color: $white-color;
                     }
+
+                    button {
+                        padding: 2px 0;
+                        width: 100px;
+                        margin-right: 10px;
+                        background-color: $divider-color;
+                        font-family: $font-family;
+                        border: none;
+                        border-radius: 3px;
+                        color: $header-color;
+                        cursor: pointer;
+
+                        &:hover {
+                            opacity: 80%;
+                        }
+
+                    }
                 }
 
                 .progress-bar-cont {

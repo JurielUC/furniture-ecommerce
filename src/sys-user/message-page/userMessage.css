@@ -351,6 +351,20 @@ main .container .progress-cont .progress .progress-header h2, main .container .p
   margin: 10px;
   color: #ffffff;
 }
+main .container .progress-cont .progress .progress-header button {
+  padding: 2px 0;
+  width: 100px;
+  margin-right: 10px;
+  background-color: #f2e5db;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-radius: 3px;
+  color: #a8896c;
+  cursor: pointer;
+}
+main .container .progress-cont .progress .progress-header button:hover {
+  opacity: 80%;
+}
 main .container .progress-cont .progress .progress-bar-cont {
   width: 380px;
   height: 73vh;

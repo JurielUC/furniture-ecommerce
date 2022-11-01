@@ -129,7 +129,7 @@
                             <input type="file" name="file" id="file_upload">
                         </div>
 
-                        <textarea id="mytextarea" name="message_content" cols="82" rows="1" placeholder="Write someting..."></textarea>
+                        <textarea name="message_content" id="" cols="82" rows="1" placeholder="Write someting..."></textarea>
                         <button title="Send" name="submit"><img src="../../../image/icon/send.png" alt="" width="30px" height="30px"></button>
                     </form>
                 </div>
@@ -137,15 +137,15 @@
             <section class="progress-cont"> 
                 <div class="progress">
                     <div class="progress-header">
-                        <h2>Your Order</h2>
-                        <button onclick="window.location.href='userMessage-completed.php';">Completed</button>
+                        <h2>Order History</h2>
+                        <button onclick="window.location.href='userMessage.php';">Process</button>
                     </div>
                     <div class="progress-bar-cont">
                         <!--put php for message display here-->
                         <?php 
                             include '../../php-database/dbconnect.php';
 
-                            $query = "SELECT * FROM tb_orderprocess INNER JOIN tb_product ON tb_orderprocess.product_id = tb_product.id WHERE user_id = '$loggedin_uid' ORDER BY tb_orderprocess.id DESC";
+                            $query = "SELECT * FROM tb_ordercompleted INNER JOIN tb_product ON tb_ordercompleted.product_id = tb_product.id WHERE user_id = '$loggedin_uid' ORDER BY tb_ordercompleted.id DESC";
                             $result = mysqli_query($conn, $query);
                         ?>
                         <div class="canvas">
@@ -153,7 +153,7 @@
                                 if (mysqli_num_rows($result) == 0) {
                                     echo "<div class='nodata' style='height: 50vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
                                         <img src='../../../image/icon/file.png' width='120px' height='120px'>
-                                        <p>No Order</p>
+                                        <p>No Order History</p>
                                         </div>";
                                     }
 
@@ -188,86 +188,8 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!--Put your sql select for progress here-->
-                            <?php 
-                                $trans_id2=$row['trans_id'];
-                                $sql2 = "SELECT * FROM tb_progress WHERE trans_id = '$trans_id2'";
-                                $result2 = mysqli_query($conn, $sql2);
-
-
-                                if (mysqli_num_rows($result2) == 0) {
-                                    echo "<a class='cancel-order' href='../../php-database/delete-order.php?trans_id=$trans_id2'>Cancel Order</a>";
-                                    }
-
-                                while ($data = mysqli_fetch_assoc($result2))
-                                { 
-                            ?>
-                            <div class="progress-timeline">
-                                <p>Progress Timeline</p>
-                                <div class="percentage">
-                                    <div class="prog-status">
-                                        <p><?php echo $data['zero']; ?></p>
-                                    </div>
-                                    <div class="percent">
-                                        <p>0</p>
-                                    </div>
-                                    <div class="prog-desc">
-                                        <p>Lorem Ipsum</p>
-                                    </div>
-                                </div>
-                                <div class="percentage">
-                                    <div class="prog-status">
-                                        <p><?php echo $data['two_five']; ?></p>
-                                    </div>
-                                    <div class="percent">
-                                        <p>25%</p>
-                                    </div>
-                                    <div class="prog-desc">
-                                        <p>Lorem Ipsum</p>
-                                    </div>
-                                </div>
-                                <div class="percentage">
-                                <div class="prog-status">
-                                        <p><?php echo $data['fifty']; ?></p>
-                                    </div>
-                                    <div class="percent">
-                                        <p>50%</p>
-                                    </div>
-                                    <div class="prog-desc">
-                                        <p>Lorem Ipsum</p>
-                                    </div>
-                                </div>
-                                <div class="percentage">
-                                <div class="prog-status">
-                                        <p><?php echo $data['seven_five']; ?></p>
-                                    </div>
-                                    <div class="percent">
-                                        <p>75%</p>
-                                    </div>
-                                    <div class="prog-desc">
-                                        <p>Lorem Ipsum</p>
-                                    </div>
-                                </div>
-                                <div class="percentage">
-                                <div class="prog-status">
-                                        <p><?php echo $data['hundred']; ?></p>
-                                    </div>
-                                    <div class="percent">
-                                        <p>100%</p>
-                                    </div>
-                                    <div class="prog-desc">
-                                        <p>Lorem Ipsum</p>   
-                                    </div>
-                                </div>
-                                <?php
-                                    if($data['hundred'] == 'DONE') {
-                                        echo "<a class='rate-order' style='text-align: center;' href='feedback.php?trans_id=$trans_id2'>Feedback</a>";
-                                            }
-                                ?>
                                 <div class="line"></div>
-                            </div>
-                            <?php }} ?>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>              
