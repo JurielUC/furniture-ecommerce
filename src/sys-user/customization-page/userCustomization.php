@@ -35,128 +35,28 @@
         <p>Wood Furniture Design Customization and Ordering System</p>
     </div>
     <!------------------------------------------------>
-
-    <main>
+    <main class="svg">
         <div class="container">
             <section class="custo-cont">
-                <div class="custo-header">
-                    <div class="custo-nav">
+                <h1>Choose Furniture to Customize</h1><br>
+                <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem<br>accusantium doloremque laudantium, totam rem aperiam,<br>eaque ipsa quae ab illo inventore veritatis et quasi.</p>
 
+                <div class="choices">
+                    <div class="choice-child" onclick="window.location.href='door-custom/designer.php';">
+                        <h1>Door</h1>
+                        <img src="../../../image/door.png" alt="Door" width="180px">
                     </div>
-                </div>
-                <div class="custo-canvas">
-                    <div class="custo-paper">
-
+                    <div class="choice-child">
+                        <h1>Chair</h1>
+                        <img src="../../../image/chair.png" alt="Chair" width="180px">
                     </div>
-                </div>
-            </section>
-            <section class="progress-cont">
-                <div class="custo-picker">
-                    <div class="custo-title">
-                        <h1>Create your own design</h1>
-                    </div>
-                    <div class="custo-category">
-                        <h5>Select category</h5>
-                        <div class="choices-cont">
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custo-color">
-                        <h5>Select color</h5>
-                        <div class="choices-cont">
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custo-design">
-                        <h5>Select Design</h5>
-                        <div class="choices-cont">
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                            <div class="choices">
-
-                            </div>
-                        </div>
+                    <div class="choice-child">
+                        <h1>Bed</h1>
+                        <img src="../../../image/bed.png" alt="Bed" width="180px">
                     </div>
                 </div>
             </section>
-            <script src="userMessage.js"></script>
+            <script src="userCustomization.js"></script>
         </div>
     </main>
 </body>
