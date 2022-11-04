@@ -53,7 +53,7 @@
 					?>
                 </div>
             </section>
-            <script src="userCustomization.js"></script>
+
         </div>
 	</main>
 </body>

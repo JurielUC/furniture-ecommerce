@@ -201,6 +201,12 @@ main .container .custo-cont {
 main .container .custo-cont h1 {
   font-size: 2rem;
 }
+main .container .custo-cont .choices-head {
+  width: 100%;
+  height: 100px;
+  background-color: #a8896c;
+  color: #ffffff;
+}
 main .container .custo-cont .choices {
   display: flex;
   align-items: center;

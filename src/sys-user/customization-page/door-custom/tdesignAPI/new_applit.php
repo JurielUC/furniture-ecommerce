@@ -77,21 +77,30 @@
 		<!--=============================================================-->
 		<div id='options'>
 			<div class="T_type">
-				<div id="radio1" ><img src="tdesignAPI/images/menu_icons/submenu/tee.jpg" width="100%" height="100%" />
+				<div id="radio1" ><img src="tdesignAPI/images/menu_icons/submenu/doorone.png" width="100%" height="100%" />
 				</div>
-				<div id="radio2" ><img src="tdesignAPI/images/menu_icons/submenu/collar.jpg" width="100%" height="100%" />
+				<!--<div id="radio2" ><img src="tdesignAPI/images/menu_icons/submenu/collar.jpg" width="100%" height="100%" />
 				</div>
 				<div id="radio3" ><img src="tdesignAPI/images/menu_icons/submenu/hoodie.jpg" width="100%" height="100%" />
-				</div>
+				</div>-->
 			</div>
 
 			<div class="color_pick">
-				<div class="color_radio_div" id="red"></div>
-				<div class="color_radio_div" id="black"></div>
-				<div class="color_radio_div" id="white"></div>
-				<div class="color_radio_div" id="navy"></div>
-				<div class="color_radio_div" id="green"></div>
-				<div class="color_radio_div" id="brownn"></div>
+				<div class="color_radio_div" id="colorone"></div>
+				<div class="color_radio_div" id="colortwo"></div>
+				<div class="color_radio_div" id="colorthree"></div>
+				<div class="color_radio_div" id="colorfour"></div>
+				<div class="color_radio_div" id="colorfive"></div>
+				<div class="color_radio_div" id="colorsix"></div>
+				<div class="color_radio_div" id="colorseven"></div>
+				<div class="color_radio_div" id="coloreight"></div>
+				<div class="color_radio_div" id="colornine"></div>
+				<div class="color_radio_div" id="colorten"></div>
+				<div class="color_radio_div" id="coloreleven"></div>
+				<div class="color_radio_div" id="colortwelve"></div>
+				<div class="color_radio_div" id="colorthirteen"></div>
+				<div class="color_radio_div" id="colorfifteen"></div>
+				<div class="color_radio_div" id="colorsixteen"></div>
 			</div>
 			<div class="default_samples">
 				<?php

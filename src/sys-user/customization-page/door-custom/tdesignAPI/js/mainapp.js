@@ -1,4 +1,4 @@
-var $type="tee",$color="black",$y_pos="front",$nos_icons=0,$nos_text=0,$custom_img=0;
+var $type="door-one",$color="color-one",$y_pos="front",$nos_icons=0,$nos_text=0,$custom_img=0;
 $(document).ready(function(){
 	
 	//ONLOAD
@@ -37,11 +37,11 @@ $(document).ready(function(){
 	/*=========================SWITCH MENU OVER=====================*/
 	/*==========================select type=====================*/
 	$("#radio1").click(function(){	//tee
-		$type="tee";
+		$type="door-one";
 		change_it();
 		
 	});
-	$("#radio2").click(function(){	//polo
+	/*$("#radio2").click(function(){	//polo
 		$type="polo";
 		change_it();
 		
@@ -72,30 +72,66 @@ $(document).ready(function(){
 	});
 /*==========================select back or front OVER=====================*/
 /*==========================select COLOR=====================*/
-	$('#red').click(function(){
-				$color="red";
+	$('#colorone').click(function(){
+				$color="color-one";
 				change_it();
 	});
-	$('#black').click(function(){
-				$color="black";
+	$('#colortwo').click(function(){
+				$color="color-two";
 				change_it();
 	});
-	$('#white').click(function(){
-				$color="white";
+	$('#colorthree').click(function(){
+				$color="color-three";
 				change_it();
 	});
-	$('#green').click(function(){
-				$color="green";
+	$('#colorfour').click(function(){
+				$color="color-four";
 				change_it();
 	});
-	$('#navy').click(function(){
-				$color="navy";
+	$('#colorfive').click(function(){
+				$color="color-five";
 				change_it();
 	});
-	$('#brownn').click(function(){
-				$color="brownn";
+	$('#colorsix').click(function(){
+				$color="color-six";
 				change_it();
-});
+	});
+	$('#colorseven').click(function(){
+				$color="color-seven";
+				change_it();
+	});
+	$('#coloreight').click(function(){
+				$color="color-eight";
+				change_it();
+	});
+	$('#colornine').click(function(){
+				$color="color-nine";
+				change_it();
+	});
+	$('#colorten ').click(function(){
+				$color="color-ten";
+				change_it();
+	});
+	$('#coloreleven').click(function(){
+				$color="color-eleven";
+				change_it();
+	});
+	$('#colortwelve').click(function(){
+				$color="color-twelve";
+				change_it();
+	});
+	$('#colorthirteen').click(function(){
+				$color="color-thirteen";
+				change_it();
+	});
+	$('#colorfifteen').click(function(){
+				$color="color-fifteen";
+				change_it();
+	});
+	$('#colorsixteen').click(function(){
+				$color="color-sixteen";
+				change_it();
+	});
 	function change_it(){
 				$("#preview_back").css('background-image', 'url(tdesignAPI/images/product/'+$type+'/'+$color+'/'+$color+'_back.png) ') ;
 				$("#preview_front").css('background-image', 'url(tdesignAPI/images/product/'+$type+'/'+$color+'/'+$color+'_front.png) ') ;
@@ -245,12 +281,12 @@ function capture() {
 			$("."+$y_pos+"_print").append("<div id=icon"+($nos_icons)+" class='new_icon' onmouseover='show_delete_btn(this);' onmouseout='hide_delete_btn(this);'><span class='delete_icon property_icon' onClick='delete_icons(this);'></span><img src='"+$srcimg+"' width='100%' height='100%' /></div>");
 			$( "#icon"+($nos_icons)+"" ).draggable({ containment: "parent" });
 			$( "#icon"+($nos_icons)+"" ).resizable({
-				maxHeight: 480,
+				maxHeight: 550,
 				maxWidth: 450,
-				minHeight: 60,
-				minWidth: 60
+				minHeight: 10,
+				minWidth: 10
 				});
-			$( "#icon"+($nos_icons)+"" ).css({'top':'100px','left':'150px'});
+			$( "#icon"+($nos_icons)+"" ).css({'top':'100px','left':'100px'});
 			++$nos_icons;
 	}
 

@@ -49,11 +49,11 @@ span.glyphicon {
 	opacity: 80%;
 }
 .sel_type{
-	background:url(../images/menu_icons/tee.png) no-repeat;
+	background:url(../images/menu_icons/doorone.png) no-repeat;
 	background-size:42px 42px;
 }
 .sel_type:hover{
-	background:url(../images/menu_icons/tee.png) #f5ece3 no-repeat;
+	background:url(../images/menu_icons/doorone.png) #f5ece3 no-repeat;
 	background-size:42px 42px;
 	opacity: 80%;
 }
@@ -119,34 +119,88 @@ span.glyphicon {
 	
 }
 
-#red{
-	background:red;
+#colorone {
+	background: #553538;
 	cursor:pointer;
 	border: 1px solid #000000;
 }
-#black{
-	background:black;
+#colortwo {
+	background:#544235;
 	cursor:pointer;
 	border: 1px solid #000000;
 }
-#white{
-	background:white;
+#colorthree {
+	background:#a74831;
 	cursor:pointer;
 	border: 1px solid #000000;
 }
-#green{
-	background:green;
+#colorfour {
+	background:#df9387;
 	cursor:pointer;
 	border: 1px solid #000000;
 }
-#navy{
-	background:navy;
+#colorfive {
+	background:#cc5a44;
 	cursor:pointer;
 	border: 1px solid #000000;
 }
 
-#brownn{
-	background:#a8896c;
+#colorsix {
+	background:#654735;
+	cursor:pointer;
+	border: 1px solid #000000;
+}
+
+#colorseven {
+	background:#a2574b;
+	cursor:pointer;
+	border: 1px solid #000000;
+}
+
+#coloreight {
+	background:#b66d61;
+	cursor:pointer;
+	border: 1px solid #000000;
+}
+
+#colornine {
+	background:#e8b982;
+	cursor:pointer;
+	border: 1px solid #000000;
+}
+
+#colorten {
+	background:#f2c694;
+	cursor:pointer;
+	border: 1px solid #000000;
+}
+
+#coloreleven {
+	background:#c5935a;
+	cursor:pointer;
+	border: 1px solid #000000;
+}
+
+#colortwelve {
+	background:#1f9ce0;
+	cursor:pointer;
+	border: 1px solid #000000;
+}
+
+#colorthirteen {
+	background:#166d9d;
+	cursor:pointer;
+	border: 1px solid #000000;
+}
+
+#colorfifteen {
+	background:#e587bc;
+	cursor:pointer;
+	border: 1px solid #000000;
+}
+
+#colorsixteen {
+	background:#76e25a;
 	cursor:pointer;
 	border: 1px solid #000000;
 }
@@ -229,7 +283,7 @@ div.upload input {
 	border:1px solid transparent;
 	height:60px; 
 	width:100px;
-	padding:5px 5px 0 0;
+	padding:0;
 }
 .new_icon .property_icon,.new_text .property_icon{
 	display:none;
@@ -317,7 +371,7 @@ input[type=color] {
 .front_print,.back_print{
 	width:470px;
 	height:500px;
-	position:absolute;
+	position: relative;
 	padding:5px;
 }
 .delete_icon,.delete_text,.drag_text{
@@ -387,9 +441,10 @@ input[type=color] {
 	
 }
 #preview_images{
-padding-top:5px;
+	padding-top:5px;
 	height:60px;
 }
+
 /*======================VIEW MODE Ends=============================*/
 /*======================Overview=============================*/
 
@@ -404,7 +459,6 @@ padding-top:5px;
 }
 
 /*======================Overview Ends=============================*/
-
 /*=======================detailing================================*/
 /*
 #image_reply{
@@ -422,7 +476,7 @@ padding-top:5px;
 }*/
 .layer{
 	width:100%;
-	height:100%;
+	height: 100vh;
 	background-color:rgba(140,140,140,0.5);
 	overflow:scroll;
 	position:fixed;
@@ -434,8 +488,9 @@ padding-top:5px;
 	width:1000px;
 	margin: 30px auto;
 }
+
 .bottom_img{
-	width:1000px;
+	width:968px;
 	height:60px;
 	margin:0px auto;
 	margin-top:-20px;
