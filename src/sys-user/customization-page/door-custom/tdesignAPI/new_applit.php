@@ -219,9 +219,9 @@
 		<!--======================view start=======================================-->
 
 		<div id='view_mode'>
-			<div  class="mode"><img id="o_front" src="tdesignAPI/images/product/tee/black/black_front.png" width="100%" height="80%" />FRONT
+			<div  class="mode"><img id="o_front" src="tdesignAPI/images/product/door-one/color-one/color-one_front.png" width="100%" height="80%" />FRONT
 			</div>
-			<div  class="mode"><img id="o_back" src="tdesignAPI/images/product/tee/black/black_back.png" width="100%" height="80%" />BACK
+			<div  class="mode"><img id="o_back" src="tdesignAPI/images/product/door-one/color-one/color-one_back.png" width="100%" height="80%" />BACK
 			</div>
 			<div class="mode">
 				<i class="fa fa-binoculars fa-4x preview_images" id="preview_images" data-toggle="modal" data-target=".bs-example-modal-lg"></i>Preview
@@ -267,6 +267,9 @@
 
 				<button type="button" class="btn btn-primary btn-block preview_images"  data-toggle="modal" data-target=".bs-example-modal-lg">
 					Proceed
+				</button>
+				<button type="button" class="btn btn-danger btn-block" onclick="window.location.href='../userCustomization.php';" >
+					Back
 				</button>
 			</div>
 		</div>

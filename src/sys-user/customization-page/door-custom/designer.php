@@ -30,22 +30,23 @@
 </head>
 
 <body>
-	<!--Header and divider
+	<!--Header and divider-->
     <header>
         <div class="app-name">
             <a href="">
                 <img src="../../../../image/logo.png" alt="">
+                <h1 style="font-size: 2.7rem; font-family: 'Poppins', sans-serif; font-weight: 700; margin-bottom: 20px;">Gil's Furniture Shop</h1>
             </a>
         </div>
     </header>
     <div class="divider">
-        <p>Wood Furniture Design Customization and Ordering System</p>
-    </div>-->
+        <p style="font-size: 0.8rem">Wood Furniture Design Customization and Ordering System</p>
+    </div>
 	<main>
 		<div class="container">
             <section class="custo-cont">
 				<div class="choices-head">
-					back
+					Customize your Furniture
 				</div>
                 <div class="choices">
 					<?php

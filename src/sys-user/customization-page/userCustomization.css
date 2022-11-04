@@ -198,12 +198,9 @@ main .container .custo-cont {
   text-align: center;
   color: #a8896c;
 }
-main .container .custo-cont h1 {
-  font-size: 2rem;
-}
 main .container .custo-cont .choices-head {
   width: 100%;
-  height: 100px;
+  height: 500px;
   background-color: #a8896c;
   color: #ffffff;
 }

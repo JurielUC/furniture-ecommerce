@@ -483,6 +483,7 @@ input[type=color] {
 	top:0;
 	left:0;
 	visibility:hidden;
+	z-index: 99;
 }
 .modal-content{
 	width:1000px;

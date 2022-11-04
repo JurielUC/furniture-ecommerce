@@ -28,14 +28,9 @@ main {
             text-align: center;
             color: $header-color;
 
-            //userCustomization.php
-            h1 {
-                font-size: 2rem;
-            }
-
             .choices-head {
                 width: 100%;
-                height: 100px;
+                height: 500px;
                 background-color: $header-color;
                 color: $white-color;
             }
