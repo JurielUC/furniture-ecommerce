@@ -268,6 +268,9 @@
 				<button type="button" class="btn btn-primary btn-block preview_images"  data-toggle="modal" data-target=".bs-example-modal-lg">
 					Proceed
 				</button>
+				<button type="button" class="btn btn-primary btn-block" onclick="window.location.href='../userCustomization.php';" >
+					Help
+				</button>
 				<button type="button" class="btn btn-danger btn-block" onclick="window.location.href='../userCustomization.php';" >
 					Back
 				</button>
