@@ -281,7 +281,7 @@ div.upload input {
 	position:absolute;
 	
 	border:1px solid transparent;
-	height:60px; 
+	height:100px; 
 	width:100px;
 	padding:0;
 }
@@ -369,10 +369,9 @@ input[type=color] {
     transition: all 0.5s ease;
 }
 .front_print,.back_print{
-	width:470px;
+	width:500px;
 	height:500px;
 	position: relative;
-	padding:5px;
 }
 .delete_icon,.delete_text,.drag_text{
 	background:green;

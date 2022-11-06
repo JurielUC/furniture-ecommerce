@@ -56,20 +56,20 @@
 	<div class='design_api'>
 		<!--=============================================================-->
 		<div id="menu">
-			<div class="menu_option sel_type">
+			<div class="menu_option sel_type" title="Choose Door">
 
 			</div>
-			<div class="menu_option sel_color">
+			<div class="menu_option sel_color" title="Choose Color">
 				<i class="fa fa-paint-brush fa-3x"></i>
 
 			</div>
-			<div class="menu_option sel_art">
+			<div class="menu_option sel_art" title="Choose Style">
 				<i class="fa fa-camera-retro fa-3x"></i>
 			</div>
-			<div class="menu_option sel_custom_icon">
+			<div class="menu_option sel_custom_icon" title="Upload Image">
 				<span class="glyphicon glyphicon-open"></span>
 			</div>
-			<div class="menu_option sel_text">
+			<div class="menu_option sel_text" title="Text">
 				<i class="fa fa-font fa-3x"></i>
 
 			</div>
@@ -268,7 +268,7 @@
 				<button type="button" class="btn btn-primary btn-block preview_images"  data-toggle="modal" data-target=".bs-example-modal-lg">
 					Proceed
 				</button>
-				<button type="button" class="btn btn-primary btn-block" onclick="window.location.href='../userCustomization.php';" >
+				<button type="button" class="btn btn-primary btn-block" onclick="window.location.href=''" >
 					Help
 				</button>
 				<button type="button" class="btn btn-danger btn-block" onclick="window.location.href='../userCustomization.php';" >
@@ -327,11 +327,11 @@
 										</tr>
 										<tr>
 											<td>
-											<input id="small2" onchange="changeval2()"  name="width" type="text"class="form-control small input-md"/>
+											<input id="small2" onchange="changeval2()"  name="width" type="text" class="form-control small input-md"/>
 											</td>
 
 											<td>
-											<input id="medium2" onchange="changeval2()"  name="lenght" type="text" class="form-control medium input-md"/>
+											<input id="medium2" onchange="changeval2()"  name="length" type="text" class="form-control medium input-md"/>
 											</td>
 
 											<td>
@@ -342,13 +342,17 @@
 											<input id="xlarge2" onchange="changeval2()"  name="qty" type="number" value="0" class="form-control xlarge input-md" min=0 max=20 />
 											</td>
 
-											<!--<td>
-											<input id="xxlarge2" onchange="changeval2()"  name="xxlarge" type="number" value="0" class="form-control xxlarge input-md" min=0 max=99999 />
-											</td>
-
+											
+											
+											<!--<
 											<td>
 											<input id="total2" name="total" type="number" value="1" class="form-control total input-md" disabled min=1 max=99999 />
 											</td>-->
+										</tr>
+										<tr>
+											<td colspan="4">
+												<input id="xxlarge2" onchange="changeval2()" placeholder="Write a note..."  name="note" type="text" class="form-control xxlarge mw-100" />
+											</td>
 										</tr>
 
 								</center>
@@ -358,7 +362,7 @@
 								<input type="hidden" name="img_front" id="img_front" value="" />
 								<input type="hidden" name="img_back" id="img_back" value="" />
 								<button type="submit" class="btn btn-primary">
-									Buy Now!
+									Order Now!
 								</button>
 							</div>
 						</form>

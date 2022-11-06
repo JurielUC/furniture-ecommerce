@@ -283,8 +283,8 @@ function capture() {
 			$( "#icon"+($nos_icons)+"" ).resizable({
 				maxHeight: 550,
 				maxWidth: 450,
-				minHeight: 10,
-				minWidth: 10
+				minHeight: 5,
+				minWidth: 5
 				});
 			$( "#icon"+($nos_icons)+"" ).css({'top':'100px','left':'100px'});
 			++$nos_icons;
@@ -321,8 +321,8 @@ function readURL(input) {
 				$( "#c_icon"+($custom_img)+"" ).resizable({
 					maxHeight: 480,
 					maxWidth: 450,
-					minHeight: 60,
-					minWidth: 60
+					minHeight: 5,
+					minWidth: 5
 				});		
 			
 			
