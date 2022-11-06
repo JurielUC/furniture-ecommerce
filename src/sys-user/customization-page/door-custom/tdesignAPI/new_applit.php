@@ -192,7 +192,7 @@
 						?>
 					</select>
 				</div>
-				<textarea id="custom_text" placeholder="Create Your Custom Text..."></textarea>
+				<textarea id="custom_text" placeholder="Put label..."></textarea>
 				<button type="button" class="btn btn-primary" id="apply_text">
 					Apply
 				</button>
@@ -304,7 +304,7 @@
 					<button type="submit" class="btn btn-primary">Proceed</button>
 					</form>-->
 					<div class="row">
-						<form method="POST" enctype="multipart/form-data" id="imageFileForm" action="checkout/checkout.php">
+						<form method="POST" enctype="multipart/form-data" id="imageFileForm" action="../door_placement.php">
 							<div class="col-md-1">
 								<button type="button" class="btn btn-default close_img" data-dismiss="modal">
 									Close
@@ -359,8 +359,8 @@
 								</table>
 							</div>
 							<div class="col-md-2">
-								<input type="hidden" name="img_front" id="img_front" value="" />
-								<input type="hidden" name="img_back" id="img_back" value="" />
+								<input type="text" name="img_front" id="img_front" value="" />
+								<input type="text" name="img_back" id="img_back" value="" />
 								<button type="submit" class="btn btn-primary">
 									Order Now!
 								</button>

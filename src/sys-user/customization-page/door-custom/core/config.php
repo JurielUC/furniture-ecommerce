@@ -19,7 +19,7 @@ define("DB_PASSWORD","");
 /**
  * DATABASE NAME of the System
  */
-define("DB_NAME","talkintee");
+define("DB_NAME","db_ecommerce");
 
 //header("Cache-Control: no-cache");
 //header("Pragma: no-cache");
