@@ -192,7 +192,7 @@
 						?>
 					</select>
 				</div>
-				<textarea id="custom_text" placeholder="Put label..."></textarea>
+				<textarea id="custom_text" style="color: #000000;" placeholder="Put label..."></textarea>
 				<button type="button" class="btn btn-primary" id="apply_text">
 					Apply
 				</button>
@@ -233,17 +233,17 @@
 
 				<table class="table">
 					<tr>
-						<td><b>Width</b></td>
+						<td><b>Size</b></td>
 						<td>
 						<input id="small"  onchange="changeval()" name="width" type="text" class="form-control small input-md" />
 						</td>
 					</tr>
-					<tr>
+					<!--<tr>
 						<td><b>Length</b></td>
 						<td>
 						<input id="medium"  onchange="changeval()" name="length" type="text" class="form-control medium input-md"/>
 						</td>
-					</tr>
+					</tr>-->
 					<tr>
 						<td><b>Type</b></td>
 						<td>
@@ -268,7 +268,7 @@
 				<button type="button" class="btn btn-primary btn-block preview_images"  data-toggle="modal" data-target=".bs-example-modal-lg">
 					Proceed
 				</button>
-				<button type="button" class="btn btn-primary btn-block" onclick="window.location.href=''" >
+				<button type="button" class="btn btn-primary btn-block" onclick="myHelp()" >
 					Help
 				</button>
 				<button type="button" class="btn btn-danger btn-block" onclick="window.location.href='../userCustomization.php';" >
@@ -304,7 +304,7 @@
 					<button type="submit" class="btn btn-primary">Proceed</button>
 					</form>-->
 					<div class="row">
-						<form method="POST" enctype="multipart/form-data" id="imageFileForm" action="../door_placement.php">
+						<form method="POST" enctype="multipart/form-data" id="imageFileForm" action="../customizePlacement.php">
 							<div class="col-md-1">
 								<button type="button" class="btn btn-default close_img" data-dismiss="modal">
 									Close
@@ -318,21 +318,21 @@
 									<table class="table">
 
 										<tr>
-											<td><b>Width</b></td>
-											<td><b>Length</b></td>
+											<td><b>Size</b></td>
+											<td><b></b></td>
 											<td><b>Type</b></td>
 											<td><b>Qty</b></td>
 											<!--<td><b>XXL</b></td>
 											<td><b>Total</b></td>-->
 										</tr>
 										<tr>
-											<td>
-											<input id="small2" onchange="changeval2()"  name="width" type="text" class="form-control small input-md"/>
+											<td colspan="2">
+											<input id="small2" onchange="changeval2()"  name="size" type="text" class="form-control small input-md"/>
 											</td>
 
-											<td>
+											<!--<td>
 											<input id="medium2" onchange="changeval2()"  name="length" type="text" class="form-control medium input-md"/>
-											</td>
+											</td>-->
 
 											<td>
 											<input id="large2" onchange="changeval2()"  name="type" type="text" class="form-control large input-md"/>
@@ -351,7 +351,7 @@
 										</tr>
 										<tr>
 											<td colspan="4">
-												<input id="xxlarge2" onchange="changeval2()" placeholder="Write a note..."  name="note" type="text" class="form-control xxlarge mw-100" />
+												<input id="xxlarge2" onchange="changeval2()" placeholder="Write a question/note..."  name="note" type="text" class="form-control xxlarge mw-100" />
 											</td>
 										</tr>
 
@@ -359,9 +359,9 @@
 								</table>
 							</div>
 							<div class="col-md-2">
-								<input type="text" name="img_front" id="img_front" value="" />
-								<input type="text" name="img_back" id="img_back" value="" />
-								<button type="submit" class="btn btn-primary">
+								<input type="hidden" name="img_front" id="img_front" value="" />
+								<input type="hidden" name="img_back" id="img_back" value="" />
+								<button type="submit" name="door" class="btn btn-primary">
 									Order Now!
 								</button>
 							</div>

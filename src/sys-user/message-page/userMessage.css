@@ -347,6 +347,41 @@ main .container .progress-cont .progress .progress-header {
   border-bottom: 2px solid #ffffff;
   background-color: #a8896c;
 }
+main .container .progress-cont .progress .progress-header .dropbtn {
+  background-color: #f5ece3;
+  color: #a8896c;
+  border: none;
+  cursor: pointer;
+}
+main .container .progress-cont .progress .progress-header .dropdown {
+  position: relative;
+  display: inline-block;
+}
+main .container .progress-cont .progress .progress-header .dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+main .container .progress-cont .progress .progress-header .dropdown-content a {
+  color: black;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: block;
+}
+main .container .progress-cont .progress .progress-header .dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+main .container .progress-cont .progress .progress-header .dropdown:hover .dropdown-content {
+  display: block;
+}
+main .container .progress-cont .progress .progress-header .dropdown:hover .dropbtn {
+  opacity: 80%;
+}
 main .container .progress-cont .progress .progress-header h2, main .container .progress-cont .progress .progress-header p {
   margin: 10px;
   color: #ffffff;
@@ -470,7 +505,7 @@ main .container .progress-cont .progress .progress-bar-cont .canvas .progress-ti
 }
 main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .percentage .prog-status p {
   margin-left: 5px;
-  color: #FF0000;
+  color: #d9534f;
 }
 main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .percentage .percent {
   width: 60px;

@@ -28,6 +28,7 @@
         <nav>
             <a href="../home-page/userhome.php">Your Feed</a>
             <a href="../message-page/userMessage.php" style="border-bottom: 3px solid white; padding-bottom: 5px;">Message</a>
+            <a href="../customization-page/userCustomization.php">Create Design</a>
             <a href="../myprofile-page/userProfile.php">Profile</a>
             <a href="../../php-database/user-logout.php">Logout</a>
         </nav>
@@ -138,7 +139,14 @@
                 <div class="progress">
                     <div class="progress-header">
                         <h2>Your Order</h2>
-                        <button onclick="window.location.href='userMessage-completed.php';">Completed</button>
+                        <div class="dropdown" style="float:right;">
+                            <button class="dropbtn">Menu</button>
+                            <div class="dropdown-content">
+                                <a href="#">Customized Order</a>
+                                <a href="userMessage-completed.php">Order History</a>
+                            </div>
+                        </div>
+                        <!--<button onclick="window.location.href='userMessage-completed.php';">Completed</button>-->
                     </div>
                     <div class="progress-bar-cont">
                         <!--put php for message display here-->

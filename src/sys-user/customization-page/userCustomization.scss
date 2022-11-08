@@ -71,6 +71,110 @@ main {
             .form {
                 height: 80vh;
             }
+
+            .customized-list {
+                overflow-y: scroll;
+                @include scroll;
+                width: 800px;
+                height: 80vh;
+                border-radius: 5px;
+                box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+
+                table {
+                    width: 100%;
+
+                    tr, th, td {
+                        text-align: center;
+                        border-bottom: 1px solid #808080;
+                        padding: 3px 0;
+                    }
+
+                    th {
+                        font-size: .9rem;
+                    }
+
+                    tr {
+                        &:hover {
+                            background-color: #e2e2e298;
+                        }
+                    }
+
+                    td {
+                        font-size: .8rem;
+
+                        button, a {
+                            width: 60px;
+                            padding: 2px;
+                            border: none;
+                            box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+                            border-radius: 3px;
+                            transition: 0.3s;
+                            cursor: pointer;
+
+                             &:hover {
+                                opacity: 80%;
+                                box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                             }
+                        }
+
+                        a {
+                            display: flex;
+                        }
+
+                        .view {
+                            background-color: $header-color;
+                        }
+
+                        .delete {
+                            background-color: $red;
+                        }
+
+                        .success {
+                            background-color: $green;
+                            padding: 3px 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.image-cont {
+    color: $white-color;
+    width: 100%;
+    height: 100vh;
+    background-color: $black;
+    @include flexBox();
+    justify-content: space-evenly;
+
+    button {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 20px;
+        @include flexBox();
+        justify-content: center;
+        top: 10px;
+        left: 10px;
+        background-color: $white-color;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 70%;
+        }
+    }
+
+    .front, .back {
+        height: 90vh;
+        width: 40%;
+        background-color: $white-color;
+        @include flexBox();
+        justify-content: center;
+
+        img {
+            height: 100%;
         }
     }
 }

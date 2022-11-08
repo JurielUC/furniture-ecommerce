@@ -42,6 +42,7 @@
         <nav>
             <a href="../home-page/userhome.php">Your Feed</a>
             <a href="../message-page/userMessage.php"><span class="your_div"></span>Message</a>
+            <a href="../customization-page/userCustomization.php">Create Design</a>
             <a href="../myprofile-page/userProfile.php" style="border-bottom: 3px solid white; padding-bottom: 5px;">Profile</a>
             <a href="../../php-database/user-logout.php">Logout</a>
         </nav>
@@ -132,6 +133,7 @@
                     
                     <!--<button onclick="openProfile()">Update Info</button>-->
                     <button class="edt-pass" onclick="window.location.href='update/update-password.php'">Change Password</button>
+                    <button class="edt-pass" onclick="window.location.href='../customization-page/customized-design.php'">Customized Design List</button>
                 </div>              
             </section>
         </div>

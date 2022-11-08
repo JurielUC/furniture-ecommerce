@@ -207,6 +207,23 @@ main {
                         margin: 10px;
                         color: $white-color;
                     }
+
+                    button {
+                        padding: 2px 0;
+                        width: 100px;
+                        margin-right: 10px;
+                        background-color: $divider-color;
+                        font-family: $font-family;
+                        border: none;
+                        border-radius: 3px;
+                        color: $header-color;
+                        cursor: pointer;
+
+                        &:hover {
+                            opacity: 80%;
+                        }
+
+                    }
                 }
 
                 .progress-bar-cont {
@@ -246,6 +263,32 @@ main {
 
                             .p-s, .d-t {
                                 @include flexBox();
+
+                                button {
+                                    width: 100%;
+                                    padding: 2px;
+                                    border: none;
+                                    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+                                    border-radius: 3px;
+                                    transition: 0.3s;
+                                    cursor: pointer;
+                                    margin-top: 10px;
+                                    color: $white-color;
+                                    font-family: $font-family;
+        
+                                     &:hover {
+                                        opacity: 80%;
+                                        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                                     }
+                                }
+
+                                .cancel {
+                                    background-color: $red;
+                                }
+
+                                .view {
+                                    background-color: $header-color;
+                                }
 
                                 p {
                                     font-size: .8rem;

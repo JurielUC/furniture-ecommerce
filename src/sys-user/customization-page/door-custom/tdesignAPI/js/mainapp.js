@@ -332,3 +332,7 @@ function readURL(input) {
             reader.readAsDataURL(input.files[0]);
         }
 }
+
+function myHelp() {
+	var myWindow = window.open("https://www.youtube.com/", "", "width=1000,height=1000");
+  }

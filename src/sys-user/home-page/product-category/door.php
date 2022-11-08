@@ -42,6 +42,7 @@
         <nav>
             <a href="" style="border-bottom: 3px solid white; padding-bottom: 5px;">Your Feed</a>
             <a href="../../message-page/userMessage.php"><span class="your_div"></span>Message</a>
+            <a href="../../customization-page/userCustomization.php">Create Design</a>
             <a href="../../myprofile-page/userProfile.php">Profile</a>
             <a href="../../../php-database/user-logout.php">Logout</a>
         </nav>
