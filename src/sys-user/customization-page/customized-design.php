@@ -75,6 +75,7 @@
                         
                             while ($row = mysqli_fetch_assoc($result))
                             {
+                                $custID = $row['cust_id'];
                         ?>
                         <tr>
                             <td><?php echo $row['qty']; ?></td>
@@ -84,15 +85,16 @@
                             <td><button title="View Image" class="view" onclick="window.location.href='view-image.php?id=<?php echo $row['id']; ?>'"><img src="../../../image/icon/image.png" width="15px" height="15px" alt=""></button></td>
                             <td><button title="Delete" class="delete" onclick="window.location.href='../../php-database/delete-customized.php?id=<?php echo $row['id']; ?>'"><img src="../../../image/icon/trash.png" width="15px" height="15px" alt=""></button></td>
                             <td>
-                                <?php 
+                            <a title='Send to Shop' class='success' href='userOrder.php?cust_id=<?php echo $custID ?>'><img src='../../../image/icon/send-message.png' width='15px' height='15px'></a>
+                                <!--<?php 
                                     $id=$row['id'];
                                     if($row['sent'] == "0") {
-                                        echo "<a title='Send to Shop' class='success' href='send.php?id=$id;'><img src='../../../image/icon/send-message.png' width='15px' height='15px'></a>";
+                                        echo "<a title='Send to Shop' class='success' href='userOrder.php?cust_id=$custID'><img src='../../../image/icon/send-message.png' width='15px' height='15px'></a>";
                                     }
                                     else {
                                         echo '<a title="Resend" class="success"><img src="../../../image/icon/delivery.png" width="15px" height="15px" alt=""></a>';
                                     }
-                                ?>
+                                ?>-->
                             </td>
                         </tr>
                         <?php } ?>

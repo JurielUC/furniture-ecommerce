@@ -5,7 +5,7 @@
     //direct message when cancel
     date_default_timezone_set('Asia/Manila');
     $timestamp = date("Y-m-d H:i:s");
-    $mc="$loggedin_fname $loggedin_lname sent you an inquiries.";
+    $mc="$loggedin_fname $loggedin_lname sent you an inquiry.";
                 
     $sql = "UPDATE tb_customize
                 SET sent = '1'

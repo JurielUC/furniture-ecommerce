@@ -15,7 +15,7 @@
                 
     $sql = "UPDATE tb_customize
                 SET sent = '0'
-                    WHERE id='$id'";
+                    WHERE cust_id='$id'";
                 
     if (mysqli_query($conn, $sql)) {
 

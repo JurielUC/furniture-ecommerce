@@ -306,7 +306,8 @@ main .container .custo-cont .customized-list table td .delete {
 }
 main .container .custo-cont .customized-list table td .success {
   background-color: #42ba96;
-  padding: 3px 22px;
+  padding: 4px 22px;
+  margin: auto;
 }
 
 .image-cont {

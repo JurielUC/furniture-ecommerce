@@ -138,14 +138,14 @@
             <section class="progress-cont"> 
                 <div class="progress">
                     <div class="progress-header">
-                        <h2>Order History</h2>
+                        <h2>Other History</h2>
                         <div class="dropdown" style="float:right;">
                             <button class="dropbtn">Menu</button>
                             <div class="dropdown-content">
                                 <a href="userMessage.php">Your Order</a>
                                 <a href="userMessage-customized.php">Customized Order</a>
-                                <a href="#" style="background-color: #d9e2ef;">Order History</a>
-                                <a href="other-history.php">Other History</a>
+                                <a href="userMessage-completed.php">Order History</a>
+                                <a href="#" style="background-color: #d9e2ef;">Other History</a>
                             </div>
                         </div>
                     </div>
@@ -154,7 +154,7 @@
                         <?php 
                             include '../../php-database/dbconnect.php';
 
-                            $query = "SELECT * FROM tb_ordercompleted INNER JOIN tb_product ON tb_ordercompleted.product_id = tb_product.id WHERE user_id = '$loggedin_uid' ORDER BY tb_ordercompleted.id DESC";
+                            $query = "SELECT * FROM tb_ordercompleted INNER JOIN tb_customize ON tb_ordercompleted.product_id = tb_customize.cust_id WHERE tb_ordercompleted.user_id = '$loggedin_uid' ORDER BY tb_ordercompleted.id DESC";
                             $result = mysqli_query($conn, $query);
                         ?>
                         <div class="canvas">
@@ -162,7 +162,7 @@
                                 if (mysqli_num_rows($result) == 0) {
                                     echo "<div class='nodata' style='height: 50vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
                                         <img src='../../../image/icon/file.png' width='120px' height='120px'>
-                                        <p>No Order History</p>
+                                        <p>No Other History</p>
                                         </div>";
                                     }
 
@@ -190,10 +190,11 @@
                             <div class="order">
                                 <p>Your Order:</p>
                                 <div class="spe-order">
-                                    <img src="../../sys-admin/product-page/<?php echo $row['product_img']; ?>" alt="" height="50px">
+                                    <img src="../customization-page/<?php echo $row['img_front']; ?>" alt="" height="50px">
+                                    <img src="../customization-page/<?php echo $row['img_back']; ?>" alt="" height="50px">
                                     <div>
-                                        <h4><?php echo $row['product_name']; ?></h4>
-                                        <p>Php <?php echo $row['price']; ?>.00</p>
+                                        <h4><?php echo $row['type']; ?></h4>
+                                        <p>Php <?php echo $row['category']; ?>.00</p>
                                     </div>
                                 </div>
                             </div>

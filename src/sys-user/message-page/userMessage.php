@@ -142,8 +142,10 @@
                         <div class="dropdown" style="float:right;">
                             <button class="dropbtn">Menu</button>
                             <div class="dropdown-content">
-                                <a href="#">Customized Order</a>
+                                <a href="#" style="background-color: #d9e2ef;">Your Order</a>
+                                <a href="userMessage-customized.php">Customized Order</a>
                                 <a href="userMessage-completed.php">Order History</a>
+                                <a href="other-history.php">Other History</a>
                             </div>
                         </div>
                         <!--<button onclick="window.location.href='userMessage-completed.php';">Completed</button>-->

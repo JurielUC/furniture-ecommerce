@@ -151,7 +151,7 @@
             <section class="progress-cont"> 
                 <div class="progress">
                     <div class="progress-header">
-                        <h2>Order Progress</h2>
+                        <h2>Customized Order</h2>
                         <button onclick="window.location.href='adminMessage.php?unique_id=<?php echo $uid; ?> & status=<?php echo $status; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & myfile=<?php echo $ppic; ?>';">Progress</button>
                     </div>
                     <div class="progress-bar-cont">
@@ -159,53 +159,151 @@
                         <?php 
                             include '../../php-database/dbconnect.php';
 
-                            $query = "SELECT * FROM tb_customize WHERE sent = '1' ORDER BY id ASC";
+                            $query = "SELECT * FROM tb_orderprocess INNER JOIN tb_customize ON tb_orderprocess.product_id = tb_customize.cust_id WHERE tb_orderprocess.user_id = '$uid' ORDER BY tb_orderprocess.id DESC";
                             $result = mysqli_query($conn, $query);
                         ?>
                         <div class="canvas">
-                            <div class="tran-cont">
                             <?php
                                 if (mysqli_num_rows($result) == 0) {
                                     echo "<div class='nodata' style='height: 50vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
                                         <img src='../../../image/icon/file.png' width='120px' height='120px'>
-                                        <p>Empty</p>
+                                        <p>No Order</p>
                                         </div>";
                                     }
 
                                 while ($row = mysqli_fetch_assoc($result))
                                 {     
-                                    $custoID=$row['id'];
                                     
                             ?>
+                            <div class="tran-cont">
                                 <div class="p-s">
-                                    <p class="title">QTY:</p>
-                                    <p>&nbsp<?php echo $row['qty']; ?></p>
+                                    <p class="title">Transaction ID:</p>
+                                    <p>&nbsp<?php echo $row['trans_id']; ?></p>
                                 </div>
                                 <div class="d-t">
-                                    <p class="title">TYPE:</p>
-                                    <p>&nbsp<?php echo $row['type']; ?></p>
+                                    <p class="title">Order Date:</p>
+                                    <p>&nbsp<?php echo $row['datetime']; ?></p>
                                 </div>
                                 <div class="d-t">
-                                    <p class="title">CATEGORY:</p>
-                                    <p>&nbsp<?php echo $row['category']; ?> pc/s</p>
+                                    <p class="title">Quantity:</p>
+                                    <p>&nbsp<?php echo $row['order_qty']; ?> pc/s</p>
                                 </div>
                                 <div class="d-t">
-                                    <p class="title">NOTE/QUESTION:</p>
-                                    <p>&nbsp<?php echo $row['note']; ?></p>
+                                    <p class="title">Total Price:</p>
+                                    <p>&nbspPhp <?php echo $row['total_price']; ?>.00</p>
                                 </div>
                                 <div class="d-t">
-                                    <button title="View Image" class="view" onclick="window.location.href='view-image.php?id=<?php echo $custoID; ?> & unique_id=<?php echo $uid; ?> & status=<?php echo $status; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & myfile=<?php echo $ppic; ?>'"><img src="../../../image/icon/image.png" width="15px" height="15px" alt=""></button>
+                                    <p><b>Note/Question:</b> <br><?php echo $row['note']; ?></p>
                                 </div>
-                                <div class="d-t">
-                                    <button title="Confirm" class="view" onclick="window.location.href='view-image.php?id=<?php echo $custoID; ?> & unique_id=<?php echo $uid; ?> & status=<?php echo $status; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & myfile=<?php echo $ppic; ?>'">Send Form</button>
+                            </div>
+                            <div class="order">
+                                <p>Your Order:</p>
+                                <div class="spe-order">
+                                    <img src="../../sys-user/customization-page/<?php echo $row['img_front']; ?>" alt="" height="50px">
+                                    <img src="../../sys-user/customization-page/<?php echo $row['img_back']; ?>" alt="" height="50px">
+                                    <div>
+                                        <h4><?php echo $row['type']; ?></h4>
+                                        <p><?php echo $row['category']; ?></p>
+                                    </div>
                                 </div>
-                                <div class="d-t">
-                                    <button title="Cancel" class="cancel" onclick="window.location.href='cancel.php?id=<?php echo $custoID; ?> & unique_id=<?php echo $uid; ?> & status=<?php echo $status; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & myfile=<?php echo $ppic; ?>'">Cancel</button>
-                                </div>
-                                    <div style="border: 1px dotted #ffffff; margin: 3px;"></div>
+                            </div>
+
+                            <!--Put your sql select for progress here-->
                             <?php 
+                                $trans_id2=$row['trans_id'];
+                                $dt=$row['datetime'];
+                                $oq=$row['order_qty'];
+                                $tp=$row['total_price'];
+                                $pi=$row['img_front'];
+                                $pn=$row['type'];
+                                $pr=$row['category'];
+                                $cpn=$row['phone_no'];
+                                $addr=$row['address'];
+                                $pcode=$row['postal_code'];
+                                $hno=$row['house_no'];
+                                $sett=$row['settings'];
+                                $paym=$row['payment_method'];
+
+                                $sql2 = "SELECT * FROM tb_progress WHERE trans_id = '$trans_id2'";
+                                $result2 = mysqli_query($conn, $sql2);
+
+
+                                if (mysqli_num_rows($result2) == 0) {
+                                    echo "<a class='accept-order' href='../../php-database/accept-order.php?trans_id=$trans_id2 & unique_id=$uid & status=$status & first_name=$fname & last_name=$lname & myfile=$ppic'>Accept Order</a>";
+                                    }
+
+                                while ($data = mysqli_fetch_assoc($result2))
+                                { 
+                            ?>
+                            <div class="progress-timeline">
+                                <p>Progress Timeline</p>
+                                
+                                <div class="percentage">
+                                    <div class="prog-status">
+                                        <p><?php echo $data['zero']; ?></p>
+                                    </div>
+                                    <div class="percent">
+                                        <p>0</p>
+                                    </div>
+                                    <div class="prog-desc">
+                                        <p>Lorem Ipsum</p>
+                                    </div>
+                                </div>
+                                <div class="percentage">
+                                    <div class="prog-status">
+                                        <p><?php echo $data['two_five']; ?></p>
+                                    </div>
+                                    <div class="percent">
+                                        <p>25%</p>
+                                    </div>
+                                    <div class="prog-desc">
+                                        <p>Lorem Ipsum</p>
+                                    </div>
+                                </div>
+                                <div class="percentage">
+                                    <div class="prog-status">
+                                        <p><?php echo $data['fifty']; ?></p>
+                                    </div>
+                                    <div class="percent">
+                                        <p>50%</p>
+                                    </div>
+                                    <div class="prog-desc">
+                                        <p>Lorem Ipsum</p>
+                                    </div>
+                                </div>
+                                <div class="percentage">
+                                    <div class="prog-status">
+                                        <p><?php echo $data['seven_five']; ?></p>
+                                    </div>
+                                    <div class="percent">
+                                        <p>75%</p>
+                                    </div>
+                                    <div class="prog-desc">
+                                        <p>Lorem Ipsum</p>
+                                    </div>
+                                </div>
+                                <div class="percentage">
+                                    <div class="prog-status">
+                                        <p><?php echo $data['hundred']; ?></p>
+                                    </div>
+                                    <div class="percent">
+                                        <p>100%</p>
+                                    </div>
+                                    <div class="prog-desc">
+                                        <p>Lorem Ipsum</p>   
+                                    </div>
+                                </div>
+                                <div class="btn-print">
+                                    <button onclick="window.location.href='customized-progress.php?unique_id=<?php echo $uid; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & status=<?php echo $status; ?> & myfile=<?php echo $ppic; ?> & trans_id=<?php echo $trans_id2; ?> & datetime=<?php echo $dt; ?> & order_qty=<?php echo $oq; ?> & total_price=<?php echo $tp; ?> & product_img=<?php echo $pi; ?> & product_name=<?php echo $pn; ?> & price=<?php echo $pr; ?> & phone_no=<?php echo $cpn; ?> & address=<?php echo $addr; ?> & postal_code=<?php echo $pcode; ?> & house_no=<?php echo $hno; ?> & settings=<?php echo $sett; ?> & payment_method=<?php echo $paym; ?>'">Update Progress</button>
+                                    <button onclick="window.location.href='print.php?unique_id=<?php echo $uid; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & status=<?php echo $status; ?> & myfile=<?php echo $ppic; ?> & trans_id=<?php echo $trans_id2; ?> & datetime=<?php echo $dt; ?> & order_qty=<?php echo $oq; ?> & total_price=<?php echo $tp; ?> & product_img=<?php echo $pi; ?> & product_name=<?php echo $pn; ?> & price=<?php echo $pr; ?> & phone_no=<?php echo $cpn; ?> & address=<?php echo $addr; ?> & postal_code=<?php echo $pcode; ?> & house_no=<?php echo $hno; ?> & settings=<?php echo $sett; ?> & payment_method=<?php echo $paym; ?>'">Print</button>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <?php 
+                                    }
                                 } 
                             ?>
+                            </form>
                         </div>
                     </div>
                 </div>              

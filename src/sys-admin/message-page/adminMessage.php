@@ -152,7 +152,7 @@
                 <div class="progress">
                     <div class="progress-header">
                         <h2>Order Progress</h2>
-                        <button onclick="window.location.href='adminMessage-inquiries.php?unique_id=<?php echo $uid; ?> & status=<?php echo $status; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & myfile=<?php echo $ppic; ?>';" >Inquiries</button>
+                        <button onclick="window.location.href='adminMessage-inquiries.php?unique_id=<?php echo $uid; ?> & status=<?php echo $status; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & myfile=<?php echo $ppic; ?>';" >Others</button>
                     </div>
                     <div class="progress-bar-cont">
                         <!--put php for message display here-->

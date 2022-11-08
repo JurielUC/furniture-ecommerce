@@ -25,7 +25,7 @@
         $lname=$_GET['last_name'];
         $ppic=$_GET['myfile'];
 
-        $query = "SELECT * FROM tb_customize WHERE id = '$id'";
+        $query = "SELECT * FROM tb_customize WHERE cust_id = '$id'";
         $result = mysqli_query($conn, $query);
 
         while ($row = mysqli_fetch_assoc($result))

@@ -245,6 +245,7 @@ main {
                         border-radius: 3px;
                         color: $header-color;
                         cursor: pointer;
+                        transition: 0.3s;
 
                         &:hover {
                             opacity: 80%;

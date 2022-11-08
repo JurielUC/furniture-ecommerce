@@ -30,9 +30,10 @@
 
           //category
           $ctgy = 'Door';
+          $ran_id = rand(time(), 100000000);
       
           //insert data to tb_user table
-          $sql = "INSERT INTO tb_customize(user_id, size, type, qty, category, note, img_front, img_back) VALUES('$loggedin_uid', '$size','$t', '$qty', '$ctgy', '$n', '$file1', '$file2')";
+          $sql = "INSERT INTO tb_customize(cust_id, user_id, size, type, qty, category, note, img_front, img_back) VALUES('$ran_id', '$loggedin_uid', '$size','$t', '$qty', '$ctgy', '$n', '$file1', '$file2')";
       
           if (mysqli_query($conn, $sql)) {
               $alert = "Product Posted!";

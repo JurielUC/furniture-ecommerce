@@ -396,6 +396,7 @@ main .container .progress-cont .progress .progress-header button {
   border-radius: 3px;
   color: #a8896c;
   cursor: pointer;
+  transition: 0.3s;
 }
 main .container .progress-cont .progress .progress-header button:hover {
   opacity: 80%;
