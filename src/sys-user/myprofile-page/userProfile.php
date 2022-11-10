@@ -40,11 +40,16 @@
         </script>
         <!--Put your navigation here below-->
         <nav>
-            <a href="../home-page/userhome.php">Your Feed</a>
-            <a href="../message-page/userMessage.php"><span class="your_div"></span>Message</a>
-            <a href="../customization-page/userCustomization.php">Create Design</a>
-            <a href="../myprofile-page/userProfile.php" style="border-bottom: 3px solid white; padding-bottom: 5px;">Profile</a>
-            <a href="../../php-database/user-logout.php">Logout</a>
+            <a href="../home-page/userhome.php" class="a">Your Feed</a>
+            <a href="../message-page/userMessage.php" class="a"><span class="your_div"></span>Message</a>
+            <div class="dropdown" style="float:right;">
+                <a class="dropbtn"><img src="../../../image/icon/down-chevron.png" alt="" width="13px" height="13px"> More</a>
+                <div class="dropdown-content">
+                    <a href="../customization-page/userCustomization.php">Create Design</a>
+                    <a href="../myprofile-page/userProfile.php" style="background-color: #d9e2ef; border-bottom: 3px solid white; padding-bottom: 5px;">My Profile</a>
+                    <a href="../../php-database/user-logout.php">Logout</a>
+                </div>
+            </div>
         </nav>
     </header>
     <div class="divider">

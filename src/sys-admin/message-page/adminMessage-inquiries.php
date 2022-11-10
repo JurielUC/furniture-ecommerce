@@ -26,9 +26,9 @@
         </div>
         <!--Put your navigation here below-->
         <nav>
-            <a href="../product-page/adminProduct.php">Product</a>
-            <a href="../feed-profile-page/adminProfile.php">Shop Feed</a>
-            <a href="../../php-database/admin-logout.php">Logout</a>
+            <a class="a" href="../product-page/adminProduct.php">Product</a>
+            <a class="a" href="../feed-profile-page/adminProfile.php">Shop Feed</a>
+            <a class="a" href="../../php-database/admin-logout.php">Logout</a>
         </nav>
     </header>
     <div class="divider">
@@ -189,16 +189,20 @@
                                     <p>&nbsp<?php echo $row['order_qty']; ?> pc/s</p>
                                 </div>
                                 <div class="d-t">
+                                    <p class="title">Size:</p>
+                                    <p>&nbsp<?php echo $row['size']; ?></p>
+                                </div>
+                                <div class="d-t">
                                     <p class="title">Total Price:</p>
                                     <p>&nbspPhp <?php echo $row['total_price']; ?>.00</p>
                                 </div>
                                 <div class="d-t">
-                                    <p><b>Note/Question:</b> <br><?php echo $row['note']; ?></p>
+                                    <p><b>Note:</b> <br><?php echo $row['note']; ?></p>
                                 </div>
                             </div>
                             <div class="order">
                                 <p>Your Order:</p>
-                                <div class="spe-order">
+                                <div class="spe-order" onclick="window.location.href='view-image.php?cust_id=<?php echo $row['cust_id']; ?> & unique_id=<?php echo $uid; ?> & status=<?php echo $status; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & myfile=<?php echo $ppic; ?>'">
                                     <img src="../../sys-user/customization-page/<?php echo $row['img_front']; ?>" alt="" height="50px">
                                     <img src="../../sys-user/customization-page/<?php echo $row['img_back']; ?>" alt="" height="50px">
                                     <div>
@@ -295,7 +299,7 @@
                                 </div>
                                 <div class="btn-print">
                                     <button onclick="window.location.href='customized-progress.php?unique_id=<?php echo $uid; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & status=<?php echo $status; ?> & myfile=<?php echo $ppic; ?> & trans_id=<?php echo $trans_id2; ?> & datetime=<?php echo $dt; ?> & order_qty=<?php echo $oq; ?> & total_price=<?php echo $tp; ?> & product_img=<?php echo $pi; ?> & product_name=<?php echo $pn; ?> & price=<?php echo $pr; ?> & phone_no=<?php echo $cpn; ?> & address=<?php echo $addr; ?> & postal_code=<?php echo $pcode; ?> & house_no=<?php echo $hno; ?> & settings=<?php echo $sett; ?> & payment_method=<?php echo $paym; ?>'">Update Progress</button>
-                                    <button onclick="window.location.href='print.php?unique_id=<?php echo $uid; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & status=<?php echo $status; ?> & myfile=<?php echo $ppic; ?> & trans_id=<?php echo $trans_id2; ?> & datetime=<?php echo $dt; ?> & order_qty=<?php echo $oq; ?> & total_price=<?php echo $tp; ?> & product_img=<?php echo $pi; ?> & product_name=<?php echo $pn; ?> & price=<?php echo $pr; ?> & phone_no=<?php echo $cpn; ?> & address=<?php echo $addr; ?> & postal_code=<?php echo $pcode; ?> & house_no=<?php echo $hno; ?> & settings=<?php echo $sett; ?> & payment_method=<?php echo $paym; ?>'">Print</button>
+                                    <button onclick="window.location.href='customized-print.php?unique_id=<?php echo $uid; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & status=<?php echo $status; ?> & myfile=<?php echo $ppic; ?> & trans_id=<?php echo $trans_id2; ?> & datetime=<?php echo $dt; ?> & order_qty=<?php echo $oq; ?> & total_price=<?php echo $tp; ?> & product_img=<?php echo $pi; ?> & product_name=<?php echo $pn; ?> & price=<?php echo $pr; ?> & phone_no=<?php echo $cpn; ?> & address=<?php echo $addr; ?> & postal_code=<?php echo $pcode; ?> & house_no=<?php echo $hno; ?> & settings=<?php echo $sett; ?> & payment_method=<?php echo $paym; ?>'">Print</button>
                                 </div>
                                 <div class="line"></div>
                             </div>

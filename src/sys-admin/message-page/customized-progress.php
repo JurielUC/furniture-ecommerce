@@ -25,9 +25,9 @@
         </div>
         <!--Put your navigation here below-->
         <nav>
-            <a href="../product-page/adminProduct.php">Product</a>
-            <a href="../feed-profile-page/adminProfile.php">Shop Feed</a>
-            <a href="../../php-database/admin-logout.php">Logout</a>
+            <a class="a" href="../product-page/adminProduct.php">Product</a>
+            <a class="a" href="../feed-profile-page/adminProfile.php">Shop Feed</a>
+            <a class="a" href="../../php-database/admin-logout.php">Logout</a>
         </nav>
     </header>
     <div class="divider">
@@ -68,7 +68,7 @@
         <div class="container">
             <div class="sml-cont">
                 <div class="back-btn">
-                    <button onclick="window.location.href='adminMessage.php?unique_id=<?php echo $uid; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & status=<?php echo $status; ?> & myfile=<?php echo $ppic; ?>'"><img src="../../../image/icon/arrow.png" alt="" width="15px" height="11px"></button>
+                    <button onclick="window.location.href='adminMessage-inquiries.php?unique_id=<?php echo $uid; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & status=<?php echo $status; ?> & myfile=<?php echo $ppic; ?>'"><img src="../../../image/icon/arrow.png" alt="" width="15px" height="11px"></button>
                     <h4>Update Progress</h4>
                 </div>
                 <div class="content-cont">

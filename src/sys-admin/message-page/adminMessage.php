@@ -26,9 +26,9 @@
         </div>
         <!--Put your navigation here below-->
         <nav>
-            <a href="../product-page/adminProduct.php">Product</a>
-            <a href="../feed-profile-page/adminProfile.php">Shop Feed</a>
-            <a href="../../php-database/admin-logout.php">Logout</a>
+            <a class="a" href="../product-page/adminProduct.php">Product</a>
+            <a class="a" class="a" href="../feed-profile-page/adminProfile.php">Shop Feed</a>
+            <a class="a" href="../../php-database/admin-logout.php">Logout</a>
         </nav>
     </header>
     <div class="divider">

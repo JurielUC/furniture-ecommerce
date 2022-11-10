@@ -24,9 +24,9 @@
         </div>
         <!--Put your navigation here below-->
         <nav>
-            <a href="../product-page/adminProduct.php">Product</a>
-            <a href="" style="border-bottom: 3px solid white; padding-bottom: 5px;">Shop Feed</a>
-            <a href="../../php-database/admin-logout.php">Logout</a>
+            <a class="a" href="../product-page/adminProduct.php">Product</a>
+            <a class="a" href="" style="border-bottom: 3px solid white; padding-bottom: 5px;">Shop Feed</a>
+            <a class="a"href="../../php-database/admin-logout.php">Logout</a>
         </nav>
     </header>
     <div class="divider">
@@ -75,7 +75,7 @@
                             <form action="../../php-database/comment.php" method="post">
                                 <input type="text" name="unique_id" value="<?php echo $loggedin_uid; ?>" hidden>
                                 <input type="text" name="post_id" value="<?php echo $row['id']; ?>" hidden>
-                                <textarea name="comment" id="" cols="85" rows="2" placeholder="Response..."></textarea>
+                                <textarea name="comment" cols="85" rows="2" placeholder="Response..."></textarea>
                                 <button type="submit"><img src="../../../image/icon/send.png" alt="" width="40px" height="40px"></button>
                             </form>
                         </div>

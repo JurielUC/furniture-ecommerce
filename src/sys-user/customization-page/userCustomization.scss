@@ -28,13 +28,6 @@ main {
             text-align: center;
             color: $header-color;
 
-            .choices-head {
-                width: 100%;
-                height: 500px;
-                background-color: $header-color;
-                color: $white-color;
-            }
-
             .choices {
                 @include flexBox();
                 width: 100%;

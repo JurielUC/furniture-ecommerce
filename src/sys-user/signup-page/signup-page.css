@@ -132,7 +132,7 @@ header nav {
   width: 50%;
   text-align: right;
 }
-header nav a {
+header nav .a {
   margin: 0 70px 0 0;
   text-decoration: none;
   color: #ffffff;
@@ -141,11 +141,11 @@ header nav a {
   font-size: 0.8rem;
   transition: 0.5s;
 }
-header nav a:hover {
+header nav .a:hover {
   border-bottom: 3px solid #ffffff;
   padding-bottom: 5px;
 }
-header nav a span {
+header nav .a span {
   position: absolute;
   width: 15px;
   height: 15px;
@@ -154,6 +154,48 @@ header nav a span {
   border-radius: 50%;
   text-align: center;
   font-family: "Times New Roman", Times, serif;
+}
+header nav .dropbtn {
+  margin: 0 70px 0 0;
+  color: #ffffff;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 400;
+  font-size: 0.8rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+header nav .dropdown {
+  position: relative;
+  display: inline-block;
+}
+header nav .dropdown-content {
+  display: none;
+  position: absolute;
+  right: 60px;
+  margin-top: 5px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+header nav .dropdown-content a {
+  color: black;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: block;
+}
+header nav .dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+header nav .dropdown:hover .dropdown-content {
+  display: block;
+}
+header nav .dropdown:hover .dropbtn {
+  border-bottom: 3px solid #ffffff;
+  padding-bottom: 5px;
 }
 
 .divider {

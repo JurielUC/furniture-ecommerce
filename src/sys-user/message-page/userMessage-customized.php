@@ -26,11 +26,16 @@
         </div>
         <!--Put your navigation here below-->
         <nav>
-            <a href="../home-page/userhome.php">Your Feed</a>
-            <a href="../message-page/userMessage.php" style="border-bottom: 3px solid white; padding-bottom: 5px;">Message</a>
-            <a href="../customization-page/userCustomization.php">Create Design</a>
-            <a href="../myprofile-page/userProfile.php">Profile</a>
-            <a href="../../php-database/user-logout.php">Logout</a>
+            <a class="a" href="../home-page/userhome.php">Your Feed</a>
+            <a class="a" href="../message-page/userMessage.php" style="border-bottom: 3px solid white; padding-bottom: 5px;">Message</a>
+            <div class="dropdown" style="float:right;">
+                <a class="dropbtn"><img src="../../../image/icon/down-chevron.png" alt="" width="13px" height="13px"> More</a>
+                <div class="dropdown-content">
+                    <a href="../customization-page/userCustomization.php">Create Design</a>
+                    <a href="../myprofile-page/userProfile.php">Profile</a>
+                    <a href="../../php-database/user-logout.php">Logout</a>
+                </div>
+            </div>
         </nav>
     </header>
     <div class="divider">

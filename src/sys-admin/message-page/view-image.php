@@ -18,7 +18,7 @@
 
 <body>
     <?php
-        $id=$_GET['id'];
+        $id=$_GET['cust_id'];
         $uid=$_GET['unique_id'];
         $status=$_GET['status'];
         $fname=$_GET['first_name'];

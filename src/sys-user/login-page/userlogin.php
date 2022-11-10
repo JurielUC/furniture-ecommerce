@@ -21,8 +21,8 @@
         </div>
         <!--Put your navigation here below-->
         <nav>
-            <a href="" style="border-bottom: 3px solid white; padding-bottom: 5px;">Login</a>
-            <a href="../signup-page/signup-page.php">Signup</a>
+            <a class="a" href="" style="border-bottom: 3px solid white; padding-bottom: 5px;">Login</a>
+            <a class="a" href="../signup-page/signup-page.php">Signup</a>
         </nav>
     </header>
     <div class="divider">

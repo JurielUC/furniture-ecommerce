@@ -49,7 +49,7 @@ header {
         width: 50%;
         text-align: right;
         
-        a {
+        .a {
             @include rightMargin();
 
             text-decoration: none;
@@ -74,6 +74,49 @@ header {
                 text-align: center;
                 font-family: $times;
             }
+        }
+
+        .dropbtn {
+            @include rightMargin();
+            color: $white-color;
+            text-decoration: none;
+            color: $white-color;
+            font-size: $nav-size;
+            font-weight: 400;
+            font-size: .8rem;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+          
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+          
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 60px;
+            margin-top: 5px;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+          
+        .dropdown-content a {
+            color: black;
+            padding: 8px 10px;
+            font-size: .9rem;
+            text-decoration: none;
+            display: block;
+        }
+          
+        .dropdown-content a:hover {background-color: #f1f1f1;}
+        .dropdown:hover .dropdown-content {display: block;}
+        .dropdown:hover .dropbtn {
+            border-bottom: 3px solid $white-color;
+            padding-bottom: 5px;
         }
     }
 }

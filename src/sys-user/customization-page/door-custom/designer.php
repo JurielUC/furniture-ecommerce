@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Customize Design</title>
+    <title>Door Customization</title>
 		
 	<!--<link href="css/normalize.css" rel="stylesheet">
 	
@@ -45,9 +45,6 @@
 	<main>
 		<div class="container">
             <section class="custo-cont">
-				<div class="choices-head">
-					Customize your Furniture
-				</div>
                 <div class="choices">
 					<?php
 						include 'tdesignAPI/new_applit.php';

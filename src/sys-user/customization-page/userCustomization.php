@@ -40,11 +40,16 @@
         </script>
         <!--Put your navigation here below-->
         <nav>
-            <a href="../home-page/userhome.php">Your Feed</a>
-            <a href="../message-page/userMessage.php"><span class="your_div"></span>Message</a>
-            <a style="border-bottom: 3px solid white; padding-bottom: 5px;" href="userCustomization.php">Create Design</a>
-            <a href="../myprofile-page/userProfile.php">Profile</a>
-            <a href="../../php-database/user-logout.php">Logout</a>
+            <a href="../home-page/userhome.php" class="a">Your Feed</a>
+            <a href="../message-page/userMessage.php" class="a"><span class="your_div"></span>Message</a>
+            <div class="dropdown" style="float:right;">
+                <a class="dropbtn"><img src="../../../image/icon/down-chevron.png" alt="" width="13px" height="13px"> More</a>
+                <div class="dropdown-content">
+                    <a href="userCustomization.php" style="background-color: #d9e2ef; border-bottom: 3px solid white; padding-bottom: 5px;">Create Design</a>
+                    <a href="../myprofile-page/userProfile.php">My Profile</a>
+                    <a href="../../php-database/user-logout.php">Logout</a>
+                </div>
+            </div>
         </nav>
     </header>
     <div class="divider">
@@ -62,17 +67,29 @@
                         <h1>Door</h1>
                         <img src="../../../image/door.png" alt="Door" width="180px">
                     </div>
-                    <div class="choice-child">
-                        <h1>Chair</h1>
-                        <img src="../../../image/chair.png" alt="Chair" width="180px">
+                    <div class="choice-child" onclick="myTableandChair()">
+                        <h1>Table & Chair</h1>
+                        <img src="../../../image/tableandchair.png" alt="Chair" width="180px">
                     </div>
-                    <div class="choice-child">
+                    <div class="choice-child" onclick="myBed()">
                         <h1>Bed</h1>
                         <img src="../../../image/bed.png" alt="Bed" width="180px">
                     </div>
                 </div>
             </section>
-            <script src="userCustomization.js"></script>
+            <script>
+                function myDoor() {
+                    window.open("door-custom/designer.php");
+                }
+
+                function myTableandChair() {
+                    window.open("table-custom/table-designer.php");
+                }
+
+                function myBed() {
+                    window.open("bed-custom/bed-designer.php");
+                }
+            </script>
         </div>
     </main>
 </body>

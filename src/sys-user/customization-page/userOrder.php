@@ -24,10 +24,16 @@
         </div>
         <!--Put your navigation here below-->
         <nav>
-            <a href="" style="border-bottom: 3px solid white; padding-bottom: 5px;">Your Feed</a>
-            <a href="">Message</a>
-            <a href="">Profile</a>
-            <a href="../../../php-database/user-logout.php">Logout</a>
+            <a href="../home-page/userhome.php" class="a">Your Feed</a>
+            <a href="../message-page/userMessage.php" class="a"><span class="your_div"></span>Message</a>
+            <div class="dropdown" style="float:right;">
+                <a class="dropbtn"><img src="../../../image/icon/down-chevron.png" alt="" width="13px" height="13px"> More</a>
+                <div class="dropdown-content">
+                    <a href="userCustomization.php">Create Design</a>
+                    <a href="../myprofile-page/userProfile.php">My Profile</a>
+                    <a href="../../php-database/user-logout.php">Logout</a>
+                </div>
+            </div>
         </nav>
     </header>
     <div class="divider">
@@ -93,7 +99,7 @@
                                 <div class="quantity">
                                     <input type="text" name="user_id" value="<?php echo $loggedin_uid;?>" hidden>
                                     <input type="text" name="cust_id" value="<?php echo $row['cust_id'];?>" hidden>
-                                    <input type="text" name="total_price" value="5000" hidden>
+                                    <input type="text" name="total_price" value="<?php echo $row['price']; ?>" hidden>
                                     <input type="number" name="quantity" id="quantity" value="<?php echo $row['qty'];?>" readonly>
                                     <p>pc/s</p>
                                 </div>
@@ -108,8 +114,9 @@
                         </div>
                         <div id="total-price">
                             <h4>Total Price</h4>
-                            <p>PHP 5000.00</p>
+                            <p>PHP <?php echo $row['price']; ?>.00</p>
                         </div>
+                        <p style="font-size: .8rem; color: #FF0000; margin-top: 10px; text-align: center;">Note: Expect additional charges from the shop depending on the carved design in solid wood.</p>
                     
                 </div>
                         <!--Alert-->
