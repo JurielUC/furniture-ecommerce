@@ -120,6 +120,13 @@ main {
 
                         .delete {
                             background-color: $red;
+                            padding: 4px 22px;
+                            margin: auto;
+                        }
+
+                        .del-block {
+                            opacity: 60%;
+                            cursor: not-allowed;
                         }
 
                         .success {

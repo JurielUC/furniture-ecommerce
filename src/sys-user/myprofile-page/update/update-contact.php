@@ -34,12 +34,12 @@
                 <div class="update-cont">
                     <div class="back-btn">
                         <button class="bck" onclick="window.location.href='../userProfile.php'"><img src="../../../../image/icon/arrow.png" alt="" width="15px" height="11px"></button>
-                        <h4>Update Address</h4>
+                        <h4>Update Contact No.</h4>
                     </div>
                     <div class="content-cont">
                         <form action="../../../php-database/update-user.php" method="post">
                             <div class="input">
-                                <label for="contact">Address</label>
+                                <label for="contact">Contact No.</label>
                                 <input type="text" name="unique_id" value="<?php echo $loggedin_uid; ?>" hidden>
                                 <input type="text" name="contact_no" id="contact" value="<?php echo $loggedin_cno; ?>">
                                 <input type="button" onclick="openAlert()" value="Update">

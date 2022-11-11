@@ -78,7 +78,7 @@
                 <div class="form-cont">
                     <form action="../../php-database/updatePost.php" method="post">
                         <input type="text" name="id" id="" value="<?php echo $row['id'];?>" hidden>
-                        <textarea name="long_desc" id="" cols="95" rows="3"><?php echo $row['long_desc'];?></textarea>
+                        <textarea name="long_desc" rows="3"><?php echo $row['long_desc'];?></textarea>
                         <div class="attach-submit">
                             <a onclick="openAlert()">Delete</a>
                             <input type="submit" value="Update">

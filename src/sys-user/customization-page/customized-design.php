@@ -75,12 +75,13 @@
                         </tr>
                         <?php
 
-                            $query = "SELECT * FROM tb_customize WHERE user_id = '$loggedin_uid' ORDER BY sent AND id ASC";
+                            $query = "SELECT * FROM tb_customize WHERE user_id = '$loggedin_uid' ORDER BY sent AND id DESC";
                             $result = mysqli_query($conn, $query);
                         
                             while ($row = mysqli_fetch_assoc($result))
                             {
                                 $custID = $row['cust_id'];
+                                $id = $row['id'];
                         ?>
                         <tr>
                             <td><?php echo $row['qty']; ?></td>
@@ -88,18 +89,27 @@
                             <td><?php echo $row['category']; ?></td>
                             <td><?php echo $row['note']; ?></td>
                             <td><button title="View Image" class="view" onclick="window.location.href='view-image.php?id=<?php echo $row['id']; ?>'"><img src="../../../image/icon/image.png" width="15px" height="15px" alt=""></button></td>
-                            <td><button title="Delete" class="delete" onclick="window.location.href='../../php-database/delete-customized.php?id=<?php echo $row['id']; ?>'"><img src="../../../image/icon/trash.png" width="15px" height="15px" alt=""></button></td>
+                            <td><?php 
+                                    $id=$row['id'];
+                                    if($row['sent'] == "0") {
+                                        echo "<a title='Delete' class='delete' href='../../php-database/delete-customized.php?id=$id;'><img src='../../../image/icon/trash.png' width='15px' height='15px'></a>";
+                                    }
+                                    else {
+                                        echo '<a title="Currently in Order" class="delete del-block"><img src="../../../image/icon/trash.png" width="15px" height="15px" alt=""></a>';
+                                    }
+                                ?>
+                            </td>
                             <td>
-                            <a title='Send to Shop' class='success' href='userOrder.php?cust_id=<?php echo $custID ?>'><img src='../../../image/icon/send-message.png' width='15px' height='15px'></a>
-                                <!--<?php 
+                            <!--<a title='Send to Shop' class='success' href='userOrder.php?cust_id=<?php echo $custID ?>'><img src='../../../image/icon/send-message.png' width='15px' height='15px'></a>-->
+                                <?php 
                                     $id=$row['id'];
                                     if($row['sent'] == "0") {
                                         echo "<a title='Send to Shop' class='success' href='userOrder.php?cust_id=$custID'><img src='../../../image/icon/send-message.png' width='15px' height='15px'></a>";
                                     }
                                     else {
-                                        echo '<a title="Resend" class="success"><img src="../../../image/icon/delivery.png" width="15px" height="15px" alt=""></a>';
+                                        echo '<a title="Currently in Order" class="success del-block"><img src="../../../image/icon/delivery.png" width="15px" height="15px" alt=""></a>';
                                     }
-                                ?>-->
+                                ?>
                             </td>
                         </tr>
                         <?php } ?>

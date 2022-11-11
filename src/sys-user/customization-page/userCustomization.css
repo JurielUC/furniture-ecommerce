@@ -339,6 +339,12 @@ main .container .custo-cont .customized-list table td .view {
 }
 main .container .custo-cont .customized-list table td .delete {
   background-color: #d9534f;
+  padding: 4px 22px;
+  margin: auto;
+}
+main .container .custo-cont .customized-list table td .del-block {
+  opacity: 60%;
+  cursor: not-allowed;
 }
 main .container .custo-cont .customized-list table td .success {
   background-color: #42ba96;

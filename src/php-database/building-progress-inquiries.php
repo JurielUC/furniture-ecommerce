@@ -25,7 +25,7 @@
             if ($result) {
                 $sql3 = mysqli_query($conn, "UPDATE tb_user SET recieved_msg = recieved_msg + 1 WHERE unique_id = '$uid'");
                 $sql2 = mysqli_query($conn, "INSERT INTO tb_pointmessage(message_to, message_from, message_content, sender_name, msg_timestamp, msg_file) VALUES('$uid', '$loggedin_uid', '$mc', '$loggedin_fname $loggedin_lname', '$timestamp', '0')");
-                header("location: ../sys-admin/message-page/adminMessage.php?unique_id=$uid & status=$status & first_name=$fname & last_name=$lname & myfile=$ppic");
+                header("location: ../sys-admin/message-page/adminMessage-inquiries.php?unique_id=$uid & status=$status & first_name=$fname & last_name=$lname & myfile=$ppic");
                     exit;
               } else {
                 echo "Error: " . $query . "<br>" . mysqli_error($conn);
@@ -42,7 +42,7 @@
             if ($result) {
                 $sql3 = mysqli_query($conn, "UPDATE tb_user SET recieved_msg = recieved_msg + 1 WHERE unique_id = '$uid'");
                 $sql2 = mysqli_query($conn, "INSERT INTO tb_pointmessage(message_to, message_from, message_content, sender_name, msg_timestamp, msg_file) VALUES('$uid', '$loggedin_uid', '$mc', '$loggedin_fname $loggedin_lname', '$timestamp', '0')");
-                header("location: ../sys-admin/message-page/adminMessage.php?unique_id=$uid & status=$status & first_name=$fname & last_name=$lname & myfile=$ppic");
+                header("location: ../sys-admin/message-page/adminMessage-inquiries.php?unique_id=$uid & status=$status & first_name=$fname & last_name=$lname & myfile=$ppic");
                     exit;
               } else {
                 echo "Error: " . $query . "<br>" . mysqli_error($conn);
@@ -59,7 +59,7 @@
             if ($result) {
                 $sql3 = mysqli_query($conn, "UPDATE tb_user SET recieved_msg = recieved_msg + 1 WHERE unique_id = '$uid'");
                 $sql2 = mysqli_query($conn, "INSERT INTO tb_pointmessage(message_to, message_from, message_content, sender_name, msg_timestamp, msg_file) VALUES('$uid', '$loggedin_uid', '$mc', '$loggedin_fname $loggedin_lname', '$timestamp', '0')");
-                header("location: ../sys-admin/message-page/adminMessage.php?unique_id=$uid & status=$status & first_name=$fname & last_name=$lname & myfile=$ppic");
+                header("location: ../sys-admin/message-page/adminMessage-inquiries.php?unique_id=$uid & status=$status & first_name=$fname & last_name=$lname & myfile=$ppic");
                     exit;
               } else {
                 echo "Error: " . $query . "<br>" . mysqli_error($conn);
@@ -76,7 +76,7 @@
             if ($result) {
                 $sql3 = mysqli_query($conn, "UPDATE tb_user SET recieved_msg = recieved_msg + 1 WHERE unique_id = '$uid'");
                 $sql2 = mysqli_query($conn, "INSERT INTO tb_pointmessage(message_to, message_from, message_content, sender_name, msg_timestamp, msg_file) VALUES('$uid', '$loggedin_uid', '$mc', '$loggedin_fname $loggedin_lname', '$timestamp', '0')");
-                header("location: ../sys-admin/message-page/adminMessage.php?unique_id=$uid & status=$status & first_name=$fname & last_name=$lname & myfile=$ppic");
+                header("location: ../sys-admin/message-page/adminMessage-inquiries.php?unique_id=$uid & status=$status & first_name=$fname & last_name=$lname & myfile=$ppic");
                     exit;
               } else {
                 echo "Error: " . $query . "<br>" . mysqli_error($conn);
@@ -94,7 +94,7 @@
                 $sql3 = mysqli_query($conn, "UPDATE tb_customize SET sent = '0' WHERE cust_id='$custID'");
                 $sql2 = mysqli_query($conn, "INSERT INTO tb_pointmessage(message_to, message_from, message_content, sender_name, msg_timestamp, msg_file) VALUES('$uid', '$loggedin_uid', '$mc', '$loggedin_fname $loggedin_lname', '$timestamp', '0')");
                 $sql4 = mysqli_query($conn, "UPDATE tb_user SET recieved_msg = recieved_msg + 1 WHERE unique_id = '$uid'");
-                header("location: ../sys-admin/message-page/adminMessage.php?unique_id=$uid & status=$status & first_name=$fname & last_name=$lname & myfile=$ppic");
+                header("location: ../sys-admin/message-page/adminMessage-inquiries.php?unique_id=$uid & status=$status & first_name=$fname & last_name=$lname & myfile=$ppic");
                     exit;
               } else {
                 echo "Error: " . $query . "<br>" . mysqli_error($conn);
@@ -107,7 +107,7 @@
             $result = mysqli_query($conn, $query);
 
             if ($result) {
-                header("location: ../sys-admin/message-page/adminMessage.php?unique_id=$uid & status=$status & first_name=$fname & last_name=$lname & myfile=$ppic");
+                header("location: ../sys-admin/message-page/adminMessage-inquiries.php?unique_id=$uid & status=$status & first_name=$fname & last_name=$lname & myfile=$ppic");
                     exit;
               } else {
                 echo "Error: " . $query . "<br>" . mysqli_error($conn);

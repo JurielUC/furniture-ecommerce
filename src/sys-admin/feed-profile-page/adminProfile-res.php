@@ -89,12 +89,12 @@
                 </div>
             </section>
             <section class="shopinfo-cont">
-                <div class="search-bar">
+                <!--<div class="search-bar">
                     <form action="">
                         <input type="text" placeholder="Search.." name="search">
                         <button type="submit">Search</button>
                     </form>
-                </div>  
+                </div> -->
                 <div class="shopinfo">
                     <?php include '../../php-database/shopinfo.php'; 
                         while($row = mysqli_fetch_assoc($result)) {

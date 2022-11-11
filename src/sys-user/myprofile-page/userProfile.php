@@ -66,9 +66,8 @@
                 </h3>
                 <div class="form-cont">
                     <form action="userPost.php" method="post">
-                        <textarea name="long_desc" id="" cols="95" rows="3" placeholder="Write something..." required></textarea>
+                        <textarea name="long_desc" rows="3" placeholder="Write something..." required></textarea>
                         <div class="attach-submit">
-                            <a class="customize" href="../customization-page/userCustomization.php">Create Design</a>
                             <input type="submit" value="Post">
                         </div>
                     </form>

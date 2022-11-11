@@ -374,6 +374,7 @@ main .container .shopinfo-cont .search-bar button:hover {
 main .container .shopinfo-cont .shopinfo {
   width: 380px;
   height: 83vh;
+  margin-top: 10px;
   color: #a8896c;
   background-color: #f2e5db;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;

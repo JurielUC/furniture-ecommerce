@@ -53,6 +53,7 @@
                 $dt=$row['datetime'];
                 $oq=$row['order_qty'];
                 $tp=$row['total_price'];
+                $custID=$row['cust_id'];
                 $pi=$row['img_front'];
                 $pn=$row['type'];
                 $pr=$row['category'];
@@ -133,13 +134,14 @@
                     <div class="progress-parent">
                         <div class="prog-child">
                             <h3>Progress Timeline <input type="submit" name="reset" value="Reset" form="form1"></h3>
-                            <form action="../../php-database/building-progress.php" id="form1">
+                            <form action="../../php-database/building-progress-inquiries.php" id="form1">
                                 <input type="text" name="trans_id" id="" value="<?php echo $tid; ?>" hidden>
                                 <input type="text" name="unique_id" id="" value="<?php echo $uid; ?>" hidden>
                                 <input type="text" name="status" id="" value="<?php echo $status; ?>" hidden>
                                 <input type="text" name="first_name" id="" value="<?php echo $fname; ?>" hidden>
                                 <input type="text" name="last_name" id="" value="<?php echo $lname; ?>" hidden>
                                 <input type="text" name="myfile" id="" value="<?php echo $ppic; ?>" hidden>
+                                <input type="text" name="cust_id" id="" value="<?php echo $custID; ?>" hidden>
                             <div class="progress-timeline">
                                 <div class="percentage">
                                     <input type="submit" name="zero" value="Done">
