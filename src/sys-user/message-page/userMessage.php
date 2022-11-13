@@ -189,6 +189,10 @@
                                     <p>&nbsp<?php echo $row['order_qty']; ?> pc/s</p>
                                 </div>
                                 <div class="d-t">
+                                    <p class="title">Payment Method:</p>
+                                    <p>&nbsp<?php echo $row['payment_method']; ?></p>
+                                </div>
+                                <div class="d-t">
                                     <p class="title">Total Price:</p>
                                     <p>&nbspPhp <?php echo $row['total_price']; ?>.00</p>
                                 </div>
@@ -279,6 +283,10 @@
                                     if($data['hundred'] == 'DONE') {
                                         echo "<a class='rate-order' style='text-align: center;' href='feedback.php?trans_id=$trans_id2'>Feedback</a>";
                                             }
+                                    
+                                    if($row['payment_method'] == 'GCash') {
+                                        echo "<a class='rate-order' style='text-align: center;' href='feedback.php?trans_id=$trans_id2'>GCashPayment</a>";
+                                    }
                                 ?>
                                 <div class="line"></div>
                             </div>

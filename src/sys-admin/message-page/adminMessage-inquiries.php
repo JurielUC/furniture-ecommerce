@@ -189,6 +189,10 @@
                                     <p>&nbsp<?php echo $row['order_qty']; ?> pc/s</p>
                                 </div>
                                 <div class="d-t">
+                                    <p class="title">Payment Method:</p>
+                                    <p>&nbsp<?php echo $row['payment_method']; ?></p>
+                                </div>
+                                <div class="d-t">
                                     <p class="title">Size:</p>
                                     <p>&nbsp<?php echo $row['size']; ?></p>
                                 </div>

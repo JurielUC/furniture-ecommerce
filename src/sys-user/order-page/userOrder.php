@@ -101,6 +101,7 @@
                             <select name="payment" id="payment-method" required>
                                 <option value="">Select...</option>
                                 <option value="COD">Cash On Delivery</option>
+                                <option value="GCash">GCash eWallet</option>
                             </select>
                         </div>
                         <div id="total-price">

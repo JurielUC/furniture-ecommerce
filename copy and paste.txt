@@ -122,3 +122,48 @@ Para sa building progress
     $result = mysqli_query($conn, $query);
 
 ?>
+
+Paymongo GCASH Payment Method API
+Name: Gil Reyes Furniture and Repair Shop
+Address: Sitio Malaya, Mahayahay, Lemery, Batangas, 4209
+Number: 09055811152
+Payment Links: https://pm.link/shop-RQOLQHSDBPHQWPHWKRGIRUJUIUV2017
+
+
+Hostinger: 
+Database: 
+-Password: 3N6vJNCVOo:p
+-DB Name: u248663554_db_ecommerce
+-Username: u248663554_dbecommerce
+
+Adyen Account:
+-Account: GilReyesFurnitureAndRepairShop
+-Username: admin
+-Password: @
+
+API KEY: AQE5hmfuXNWTK0Qc+iSXm2gKov2eW61YH51DTHBEw1mlmlROjsZ/AvVpCSeRZ98Uvz/4AaqTM6KaOGV3EMFdWw2+5HzctViMSCJMYAc=-ZYJWIfyIfKaOnd/0eNSZk5wr+XHFGBn2AnbCKlTyiYM=-bsfu=mI2pM.I*j_C
+
+CLIENT KEY: test_VF2YA4VTGBHGLI2J7DB7YWEC7MQ4XAQO
+
+HMAC KEY: 4A415D094777F7F298F0F9C17AFA16FE45A56C9079AB6E7830565AC3B9C51798
+================================================================
+Once commited in Hostinger copy this to dbconnect.php
+
+<?php
+    $servername = "localhost";
+    $username = "u248663554_dbecommerce";
+    $password = "3N6vJNCVOo:p";
+    $database = "u248663554_db_ecommerce";
+
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password);
+
+    mysqli_select_db($conn, $database);
+
+    // Check connection
+    if (!$conn) {
+        trigger_error(mysqli_connect_error());
+        echo 'not connected';
+        } //else echo 'Successfully Connected';
+?>
+================================================================
