@@ -285,7 +285,11 @@
                                             }
                                     
                                     if($row['payment_method'] == 'GCash') {
-                                        echo "<a class='rate-order' style='text-align: center;' href='feedback.php?trans_id=$trans_id2'>GCashPayment</a>";
+                                        $tprice = $row['total_price'];
+                                        echo "  <form action='../../adyen/gcash.php' method='post'>
+                                                    <input name='amount' type='hidden' value='$tprice'>
+                                                    <input type='submit' value='GCash Payment' class='rate-order' style='border: none;'>
+                                                </form>";
                                     }
                                 ?>
                                 <div class="line"></div>

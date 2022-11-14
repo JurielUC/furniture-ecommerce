@@ -173,3 +173,5 @@ PW: admin123
 
 Email: johnkyle.ramos@gilreyesfurniture.online
 PW: admin123
+
+<a class='rate-order' style='text-align: center;' href='feedback.php?trans_id=$trans_id2'>GCashPayment</a>";
