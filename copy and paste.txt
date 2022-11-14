@@ -167,3 +167,9 @@ Once commited in Hostinger copy this to dbconnect.php
         } //else echo 'Successfully Connected';
 ?>
 ================================================================
+
+Email: glydelann.reyes@gilreyesfurniture.online
+PW: admin123
+
+Email: johnkyle.ramos@gilreyesfurniture.online
+PW: admin123
