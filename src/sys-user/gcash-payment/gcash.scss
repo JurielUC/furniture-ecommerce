@@ -1,0 +1,53 @@
+@use '../../style/header/header';
+@use '../../style/globals' as *;
+
+header {
+    nav {
+        display: none;
+    }
+}
+
+main {
+    width: 100%;
+    height: 90vh;
+    @include flexBox();
+    justify-content: center;
+
+    .container {
+        width: 1120px;
+        height: 90vh;
+        @include flexBox();
+        justify-content: center;
+
+        .product-cont {
+            width: 430px;
+            height: 90vh;
+
+            .prod-back {
+                margin-top: 10px;
+                width: 420px;
+                height: 40px;
+                background-color: $header-color;
+                @include flexBox();
+                justify-content: baseline;
+                color: $white-color;
+                box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            
+                a {
+                    margin: 5px 20px 0 20px;
+                
+                }
+            }
+
+            .product {
+                height: 70vh;
+                width: 420px;
+                margin-top: 12px;
+                background-color: $divider-color;
+                overflow-y: scroll;
+                box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                
+            }
+        }
+    }
+}

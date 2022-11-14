@@ -7,6 +7,7 @@
 
     // Set your X-API-KEY with the API key from the Customer Area.
     $client = new \Adyen\Client();
+    $client->setEnvironment(\Adyen\Environment::TEST);
     $client->setXApiKey("AQE5hmfuXNWTK0Qc+iSXm2gKov2eW61YH51DTHBEw1mlmlROjsZ/AvVpCSeRZ98Uvz/4AaqTM6KaOGV3EMFdWw2+5HzctViMSCJMYAc=-ZYJWIfyIfKaOnd/0eNSZk5wr+XHFGBn2AnbCKlTyiYM=-bsfu=mI2pM.I*j_C");
     $service = new \Adyen\Service\Checkout($client);
     

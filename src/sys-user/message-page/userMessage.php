@@ -286,7 +286,7 @@
                                     
                                     if($row['payment_method'] == 'GCash') {
                                         $tprice = $row['total_price'];
-                                        echo "  <form action='../../adyen/gcash.php' method='post'>
+                                        echo "  <form action='../gcash-payment/' method='post'>
                                                     <input name='amount' type='hidden' value='$tprice'>
                                                     <input type='submit' value='GCash Payment' class='rate-order' style='border: none;'>
                                                 </form>";
