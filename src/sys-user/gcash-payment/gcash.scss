@@ -39,15 +39,113 @@ main {
                 }
             }
 
-            .product {
+            .gcash-cont {
                 height: 70vh;
                 width: 420px;
-                margin-top: 12px;
-                background-color: $divider-color;
+                margin-top: 5px;
+                background-color: $white-color;
                 overflow-y: scroll;
                 @include scroll();
+                text-align: center;
                 box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
                 
+                h1 {
+                    color: $header-color;
+                    padding: 5px 0;
+                    width: 100%;
+                    font-size: 1rem;
+                    border-bottom: 1px solid #aaaaaa;
+                }
+
+                img {
+                    margin: 10px 0;
+                    border-radius: 10px;
+                    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                }
+
+                .g-content {
+                    color: $header-color;
+                    width: 100%;
+                    padding: 10px;
+                    text-align: left;
+                    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                
+                    p {
+                        font-size: .9rem;
+                    }
+
+                    span {
+                        font-family: $times;
+                    }
+                }
+
+                .g-form {
+
+                    input[type=submit] {
+                        margin: 10px 0;
+                        font-family: $font-family;
+                        width: 100%;
+                        color: $white-color;
+                        background-color: #007dfe;
+                        border-radius: 5px;
+                        border: none;
+                        padding: 5px 0;
+                        transition: 0.3s;
+                        cursor: not-allowed;
+                        opacity: 80%;
+                        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                    }
+                }
+
+                .g-btn {
+                    padding: 10px 0;
+                    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+                    p {
+                        font-size: .8rem;
+                        color: $header-color;
+                        margin-bottom: 10px;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        margin: 10px 0;
+                        font-family: $font-family;
+                        color: $white-color;
+                        background-color: #007dfe;
+                        border-radius: 5px;
+                        border: none;
+                        padding: 5px 176px;
+                        transition: 0.3s;
+                        font-size: .9rem;
+                        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                        
+                        &:hover {
+                            opacity: 80%;
+                        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                        }
+                    }
+                }
+
+                .g-dl {
+                    padding: 5px 0;
+                    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+                    a {
+                        margin: 10px 0;
+                        font-family: $font-family;
+                        border-radius: 5px;
+                        border: none;
+                        padding: 5px 0;
+                        transition: 0.3s;
+                        font-size: .8rem;
+                        color: #007dfe;
+                        
+                        &:hover {
+                            opacity: 80%;
+                        }
+                    }
+                }
             }
         }
     }

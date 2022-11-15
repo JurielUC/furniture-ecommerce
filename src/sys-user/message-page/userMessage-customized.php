@@ -284,6 +284,16 @@
                                     if($data['hundred'] == 'DONE') {
                                         echo "<a class='rate-order' style='text-align: center;' href='feedback.php?trans_id=$trans_id2'>Feedback</a>";
                                             }
+
+                                            if($row['payment_method'] == 'GCash') {
+                                                $tprice = $row['total_price'];
+                                                echo "  <form action='../gcash-payment/' method='GET'>
+                                                            <input name='trans_id' type='hidden' value='$trans_id2'>
+                                                            <input type='submit' value='GCash Payment' class='rate-order' style='border: none;'>
+                                                        </form>";
+                                            } else {
+                                                echo "";
+                                            }
                                 ?>
                                 <div class="line"></div>
                             </div>

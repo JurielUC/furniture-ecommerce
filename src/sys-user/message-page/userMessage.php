@@ -286,8 +286,8 @@
                                     
                                     if($row['payment_method'] == 'GCash') {
                                         $tprice = $row['total_price'];
-                                        echo "  <form action='../gcash-payment/' method='post'>
-                                                    <input name='amount' type='hidden' value='$tprice'>
+                                        echo "  <form action='../gcash-payment/' method='GET'>
+                                                    <input name='trans_id' type='hidden' value='$trans_id2'>
                                                     <input type='submit' value='GCash Payment' class='rate-order' style='border: none;'>
                                                 </form>";
                                     }
@@ -300,6 +300,32 @@
                 </div>              
             </section>
             <script src="userMessage.js"></script>
+            <!--<script>
+                document.addEventListener('keydown', function() {
+                if (event.keyCode == 123) {
+                alert("You Can not Do This!");
+                return false;
+                } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+                alert("You Can not Do This!");
+                return false;
+                } else if (event.ctrlKey && event.keyCode == 85) {
+                alert("You Can not Do This!");
+                return false;
+                }
+                 }, false);
+            
+                if (document.addEventListener) {
+                    document.addEventListener('contextmenu', function(e) {
+                    alert("You Can not Do This!");
+                    e.preventDefault();
+                    }, false);
+                } else {
+                    document.attachEvent('oncontextmenu', function() {
+                    alert("You Can not Do This!");
+                    window.event.returnValue = false;
+                    });
+                }
+            </script>-->
         </div>
     </main>
 </body>

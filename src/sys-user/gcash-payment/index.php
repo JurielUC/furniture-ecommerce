@@ -17,7 +17,7 @@
     <!--Header and divider-->
     <header>
         <div class="app-name">
-            <a href="">
+            <a>
                 <img src="../../../image/logo.png" alt="">
                 <h1>Gil's Furniture Shop</h1>
             </a>
@@ -27,7 +27,17 @@
         <p>Wood Furniture Design Customization and Ordering System</p>
     </div>
     <!------------------------------------------------>
+    <?php
+        include '../../php-database/dbconnect.php';
 
+        $trans_id=$_GET['trans_id'];
+
+        $query = "SELECT * FROM tb_orderprocess WHERE trans_id = '$trans_id'";
+        $result = mysqli_query($conn, $query);
+
+        while ($row = mysqli_fetch_assoc($result))
+            { 
+    ?>
     <main>
         <div class="container">
             <section class="product-cont">
@@ -35,10 +45,57 @@
                     <a href="../message-page/userMessage.php"><img src="../../../image/icon/arrow.png" alt="" width="15px" height="15px"></a>
                     <p>GCash Payment</p>
                 </div>
-                <div class="product">
-                    
+                <div class="gcash-cont">
+                    <h1>Send Payment</h1>
+                    <img src="../../../image/gcash.png" alt="" height="100">
+                    <div class="g-content">
+                        <p><b>Transaction ID:</b>&nbsp <span><?php echo $row['trans_id']; ?></span></p>
+                        <p><b>Amount:</b>&nbsp PHP <span><?php echo $row['total_price']; ?></span></p>
+                    </div>
+                    <div class="g-form">
+                        <form action='' method='GET'>
+                            <input name='amount' type='hidden' value='<?php echo $row['total_price']; ?>'>
+                            <input type='submit' value='GCash Payment' disabled>
+                        </form>
+                    </div>
+                    <div class="g-btn">
+                        <p>You can use this QR Code to send your online payment</p>
+                        <a class="open" href="gcash-qr/" target="_blank">QR Code</a><br>
+                    </div>
+                    <div class="g-dl">
+                        <a class="download" href="gcash-qr/qr-code.jpg" download>Download QR Code</a>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
+    <?php } ?>
 </body>
+<script>
+    document.addEventListener('keydown', function() {
+    if (event.keyCode == 123) {
+      alert("You Can not Do This!");
+      return false;
+    } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+      alert("You Can not Do This!");
+       event.preventDefault();
+      return false;
+    } else if (event.ctrlKey && event.keyCode == 85) {
+      alert("You Can not Do This!");
+      return false;
+    }
+  }, false);
+  
+  if (document.addEventListener) {
+    document.addEventListener('contextmenu', function(e) {
+      alert("You Can not Do This!");
+      e.preventDefault();
+    }, false);
+  } else {
+    document.attachEvent('oncontextmenu', function() {
+      alert("You Can not Do This!");
+      window.event.returnValue = false;
+    });
+  }
+</script>
 </html>
