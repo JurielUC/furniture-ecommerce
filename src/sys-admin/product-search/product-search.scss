@@ -9,19 +9,19 @@ header {
 
 main {
     width: 100%;
-    height: 90vh;
+    height: 86vh;
     @include flexBox();
     justify-content: center;
 
     .container {
         width: 1120px;
-        height: 90vh;
+        height: 86vh;
         @include flexBox();
         justify-content: center;
 
         .product-cont {
             width: 740px;
-            height: 90vh;
+            height: 86vh;
 
             .search-back {
                 margin-top: 10px;
@@ -41,13 +41,14 @@ main {
 
             .product {
                 overflow-y: scroll;
-                height: 80vh;
+                height: 75vh;
                 width: 710px;
                 margin-top: 12px;
+                @include scroll();
                 
 
                 .display-div {
-                    width: 690px;
+                    width: 686px;
                     display: flex;
                     flex-wrap: wrap;
 

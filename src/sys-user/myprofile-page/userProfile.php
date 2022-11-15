@@ -128,12 +128,16 @@
                     </div>
                     <h3><img src="../../../image/icon/owner.png" alt="" width="15" height="15">&nbsp&nbspName</h3>
                     <p><?php echo $loggedin_fname; ?> <?php echo $loggedin_lname; ?> <button class="edit-btn" onclick="window.location.href='update/update-name.php'">Edit</button></p>
+                    <div class="info-line"></div>
                     <h3><img src="../../../image/icon/placeholder.png" alt="" width="15" height="15">&nbsp&nbspAddress</h3>
                     <p><?php echo $loggedin_address; ?> <button class="edit-btn" onclick="window.location.href='update/update-address.php'">Edit</button></p>
+                    <div class="info-line"></div>
                     <h3><img src="../../../image/icon/phone (1).png" alt="" width="15" height="15">&nbsp&nbspContact Number</h3>
                     <p><?php echo $loggedin_cno; ?> <button class="edit-btn" onclick="window.location.href='update/update-contact.php'">Edit</button></p>
+                    <div class="info-line"></div>
                     <h3><img src="../../../image/icon/gmail.png" alt="" width="15" height="15">&nbsp&nbspEmail</h3>
                     <p><?php echo $loggedin_session; ?></p>
+                    <div class="info-line"></div>
                     
                     <!--<button onclick="openProfile()">Update Info</button>-->
                     <button class="edt-pass" onclick="window.location.href='update/update-password.php'">Change Password</button>

@@ -212,14 +212,14 @@ header nav .dropdown:hover .dropbtn {
 
 main {
   width: 100%;
-  height: 90vh;
+  height: 86vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 main .container {
   width: 1120px;
-  height: 90vh;
+  height: 86vh;
   display: flex;
   align-items: center;
 }
@@ -231,7 +231,7 @@ main .container .message-pop {
 }
 main .container .post-cont {
   width: 740px;
-  height: 90vh;
+  height: 86vh;
 }
 main .container .post-cont .category button {
   font-family: "Poppins", sans-serif;
@@ -268,12 +268,32 @@ main .container .post-cont .form-cont {
 }
 main .container .post-cont .user-post-cont {
   overflow-y: scroll;
-  height: 80vh;
+  height: 70vh;
   width: 710px;
   margin-top: 12px;
 }
+main .container .post-cont .user-post-cont::-webkit-scrollbar {
+  display: block;
+  width: 5px;
+}
+main .container .post-cont .user-post-cont::-webkit-scrollbar-track {
+  background: transparent;
+}
+main .container .post-cont .user-post-cont::-webkit-scrollbar-thumb {
+  background-color: #a8896c;
+  border-right: none;
+  border-left: none;
+}
+main .container .post-cont .user-post-cont::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+  margin-bottom: 10px;
+}
+main .container .post-cont .user-post-cont::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+  margin-top: 10px;
+}
 main .container .post-cont .user-post-cont .user-post {
-  width: 690px;
+  width: 686px;
   background-color: #f2e5db;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -336,13 +356,14 @@ main .container .post-cont .user-post-cont .user-post .comment-send button {
   margin: 10px 0 10px 10px;
   border: none;
   background-color: #f2e5db;
+  transition: 0.3s;
 }
 main .container .post-cont .user-post-cont .user-post .comment-send button:hover {
   opacity: 80%;
 }
 main .container .shopinfo-cont {
   width: 380px;
-  height: 90vh;
+  height: 86vh;
 }
 main .container .shopinfo-cont .search-bar input[type=text] {
   width: 76%;
@@ -366,6 +387,7 @@ main .container .shopinfo-cont .search-bar button {
   color: #ffffff;
   background-color: #a8896c;
   cursor: pointer;
+  transition: 0.3s;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 main .container .shopinfo-cont .search-bar button:hover {
@@ -376,8 +398,29 @@ main .container .shopinfo-cont .shopinfo {
   height: 83vh;
   margin-top: 10px;
   color: #a8896c;
+  overflow-y: scroll;
   background-color: #f2e5db;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+main .container .shopinfo-cont .shopinfo::-webkit-scrollbar {
+  display: block;
+  width: 5px;
+}
+main .container .shopinfo-cont .shopinfo::-webkit-scrollbar-track {
+  background: transparent;
+}
+main .container .shopinfo-cont .shopinfo::-webkit-scrollbar-thumb {
+  background-color: #a8896c;
+  border-right: none;
+  border-left: none;
+}
+main .container .shopinfo-cont .shopinfo::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+  margin-bottom: 10px;
+}
+main .container .shopinfo-cont .shopinfo::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+  margin-top: 10px;
 }
 main .container .shopinfo-cont .shopinfo .profile-pic {
   display: flex;
@@ -394,10 +437,15 @@ main .container .shopinfo-cont .shopinfo h1 {
 }
 main .container .shopinfo-cont .shopinfo h3 {
   margin: 10px 0 0 10px;
+  font-size: 0.9rem;
 }
 main .container .shopinfo-cont .shopinfo p {
   margin-left: 30px;
   font-size: 0.8rem;
+}
+main .container .shopinfo-cont .shopinfo .info-line {
+  border-bottom: 1px solid #ffffff;
+  margin-top: 20px;
 }
 main .container .shopinfo-cont .shopinfo button {
   font-family: "Poppins", sans-serif;
@@ -409,6 +457,7 @@ main .container .shopinfo-cont .shopinfo button {
   background-color: #a8896c;
   border: none;
   border-radius: 5px;
+  transition: 0.3s;
 }
 main .container .shopinfo-cont .shopinfo button:hover {
   opacity: 80%;

@@ -106,21 +106,27 @@
                     </div>
                     <h3><img src="../../../image/icon/placeholder.png" alt="" width="15" height="15">&nbsp&nbspLocation</h3>
                     <p><?php echo $row["address"]; ?></p>
+                    <div class="info-line"></div>
                     <h3><img src="../../../image/icon/gmail.png" alt="" width="15" height="15">&nbsp&nbspEmail</h3>
                     <p><?php echo $row["email"]; ?></p>
+                    <div class="info-line"></div>
                     <h3><img src="../../../image/icon/phone (1).png" alt="" width="15" height="15">&nbsp&nbspContact Number</h3>
                     <p><?php echo $row["contact_no"]; ?></p>
+                    <div class="info-line"></div>
                     <h3><img src="../../../image/icon/owner.png" alt="" width="15" height="15">&nbsp&nbspBusiness Owner</h3>
                     <p><?php echo $row["name"]; ?></p>
+                    <div class="info-line"></div>
                     <h3 class="create-message" style="text-align: center;"><?php if(!empty($_GET['message'])) {
                         $message = $_GET['message'];
                         echo $message; }?>
                     </h3>
-                    
                     <button onclick="openBusinessInfo()">Update Info</button>
                     <button onclick="openAccountInfo()">Update Account</button>
                     <button onclick="window.location.href='add-admin.php'">Create New Account</button>
                     <button>Terms and Conditions</button>
+                    
+                    <div class="info-line"></div>
+                    
                 </div>           
             </section>
                                 <!--Display Popup Business Information when clicked-->

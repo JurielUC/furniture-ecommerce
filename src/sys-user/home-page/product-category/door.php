@@ -120,12 +120,16 @@
                     </div>
                     <h3><img src="../../../../image/icon/placeholder.png" alt="" width="15" height="15">&nbsp&nbspLocation</h3>
                     <p><?php echo $row["address"]; ?></p>
+                    <div class="info-line"></div>
                     <h3><img src="../../../../image/icon/gmail.png" alt="" width="15" height="15">&nbsp&nbspEmail</h3>
                     <a href="mailto:<?php echo $row['email']; ?>"><p><?php echo $row["email"]; ?></p></a>
+                    <div class="info-line"></div>
                     <h3><img src="../../../../image/icon/phone (1).png" alt="" width="15" height="15">&nbsp&nbspContact Number</h3>
                     <p><?php echo $row["contact_no"]; ?></p>
+                    <div class="info-line"></div>
                     <h3><img src="../../../../image/icon/owner.png" alt="" width="15" height="15">&nbsp&nbspBusiness Owner</h3>
                     <p><?php echo $row["name"]; ?></p>
+                    <div class="info-line"></div>
                     <?php } ?>
                 </div>             
             </section>

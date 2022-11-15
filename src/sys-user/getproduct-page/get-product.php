@@ -59,8 +59,6 @@
                 <div class="prod-back">
                     <a href="../home-page/userhome.php"><img src="../../../image/icon/arrow.png" alt="" width="15px" height="15px"></a>
                     <p>Product Information</p>
-                    <!--<button class="button-margin" title="View your cart" onclick="window.location.href='../cart-page/userCart.php'"><img src="../../../image/icon/view-cart.png" alt="" width="22px" height="22px"></button>-->
-                    <!--Alert box when the item is already available-->
                 </div>
                 <div class="product">
                     <div class="prod-img" onclick="openImage()">

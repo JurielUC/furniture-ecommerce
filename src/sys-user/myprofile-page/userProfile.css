@@ -212,20 +212,20 @@ header nav .dropdown:hover .dropbtn {
 
 main {
   width: 100%;
-  height: 90vh;
+  height: 86vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 main .container {
   width: 1120px;
-  height: 90vh;
+  height: 86vh;
   display: flex;
   align-items: center;
 }
 main .container .post-cont {
   width: 740px;
-  height: 90vh;
+  height: 86vh;
 }
 main .container .post-cont .prod-back {
   margin-top: 10px;
@@ -250,6 +250,7 @@ main .container .post-cont .category button {
   margin-top: 10px;
   cursor: pointer;
   color: #a8896c;
+  transition: 0.3s;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
 main .container .post-cont .category button:hover {
@@ -333,9 +334,29 @@ main .container .post-cont .form-cont .attach-submit .customize:hover {
 }
 main .container .post-cont .user-post-cont {
   overflow-y: scroll;
-  height: 63vh;
+  height: 56vh;
   width: 710px;
   margin-top: 12px;
+}
+main .container .post-cont .user-post-cont::-webkit-scrollbar {
+  display: block;
+  width: 5px;
+}
+main .container .post-cont .user-post-cont::-webkit-scrollbar-track {
+  background: transparent;
+}
+main .container .post-cont .user-post-cont::-webkit-scrollbar-thumb {
+  background-color: #a8896c;
+  border-right: none;
+  border-left: none;
+}
+main .container .post-cont .user-post-cont::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+  margin-bottom: 10px;
+}
+main .container .post-cont .user-post-cont::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+  margin-top: 10px;
 }
 main .container .post-cont .user-post-cont .user-post {
   width: 690px;
@@ -419,12 +440,12 @@ main .container .post-cont .user-post-cont .user-post .comment-send button:hover
 }
 main .container .shopinfo-cont {
   width: 380px;
-  height: 90vh;
+  height: 86vh;
 }
 main .container .shopinfo-cont .shopinfo {
   margin-top: 10px;
   width: 380px;
-  height: 78vh;
+  height: 82vh;
   color: #a8896c;
   background-color: #f2e5db;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
@@ -469,6 +490,7 @@ main .container .shopinfo-cont .shopinfo h1 {
 main .container .shopinfo-cont .shopinfo h3 {
   margin: 10px 0 0 10px;
   font-weight: 600;
+  font-size: 0.9rem;
 }
 main .container .shopinfo-cont .shopinfo p {
   margin-left: 30px;
@@ -488,6 +510,10 @@ main .container .shopinfo-cont .shopinfo p .edit-btn {
 main .container .shopinfo-cont .shopinfo p .edit-btn:hover {
   opacity: 80%;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+main .container .shopinfo-cont .shopinfo .info-line {
+  border-bottom: 1px solid #ffffff;
+  margin-top: 20px;
 }
 main .container .shopinfo-cont .shopinfo .edt-pass {
   font-family: "Poppins", sans-serif;
@@ -605,7 +631,7 @@ main .container .profile-popup .profile-popup-form .popup-header .profile-conten
 }
 main .container #for-edit {
   width: 1120px;
-  height: 90vh;
+  height: 86vh;
   display: flex;
   align-items: center;
   justify-content: center;
