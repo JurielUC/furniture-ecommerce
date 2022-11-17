@@ -145,6 +145,11 @@ main {
                             opacity: 80%;
                         }
                     }
+
+                    p {
+                        font-size: .8rem;
+                        color: $header-color;
+                    }
                 }
             }
         }

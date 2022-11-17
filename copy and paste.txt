@@ -184,3 +184,24 @@ PW: admin123
                 }
 
                 Hello World
+
+<link rel="icon" href="image/logo2.png">
+<link rel="icon" href="../../../image/logo2.png">
+<link rel="icon" href="../../../../image/logo2.png">
+
+Gil Reyes FRS
+
+Checking Product
+Preparing Product
+Preparing for Delivery
+Out for Delivery
+Order Recieved
+
+Order Confirmation
+Order Preparation
+Order Construction
+To Deliver
+Order Recieved
+
+<a href="https://www.termsfeed.com/live/79ba0df9-d899-4fe0-b52b-d9ff8541650e" target="_blank">Privacy Policy</a>
+<a href="https://www.termsandconditionsgenerator.com/live.php?token=V4T7YSVzAwu6Yb7EhVV3dax3YPNEOA1W" target="_blank">Terms and Conditions</a>

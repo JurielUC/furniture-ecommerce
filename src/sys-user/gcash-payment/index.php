@@ -65,6 +65,9 @@
                     <div class="g-dl">
                         <a class="download" href="gcash-qr/qr-code.jpg" download>Download QR Code</a>
                     </div>
+                    <div class="g-dl">
+                        <p>Send your payment reciept after paying for <br>shop confirmation.</p>
+                    </div>
                 </div>
             </section>
         </div>

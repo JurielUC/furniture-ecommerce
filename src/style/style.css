@@ -225,7 +225,7 @@ header nav .dropdown:hover .dropbtn {
   background-size: cover;
 }
 #landing-page .landing-text {
-  width: 700px;
+  width: 600px;
   height: 500px;
   display: flex;
   align-items: center;
@@ -234,7 +234,7 @@ header nav .dropdown:hover .dropbtn {
   justify-content: space-evenly;
 }
 #landing-page .landing-text h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #a8896c;
 }
 #landing-page .landing-text p {
@@ -255,8 +255,8 @@ header nav .dropdown:hover .dropbtn {
   opacity: 75%;
 }
 #landing-page .image-slide img {
-  width: 31.25rem;
-  height: 31.25rem;
+  width: 25rem;
+  height: 25rem;
   border-radius: 0 100px 0 100px;
 }
 

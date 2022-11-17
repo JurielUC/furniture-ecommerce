@@ -16,7 +16,7 @@
     background-size: cover;
 
     .landing-text {
-        width: 700px;
+        width: 600px;
         height: 500px;
         @include flexBox();
         flex-direction: column;
@@ -24,7 +24,7 @@
         justify-content: space-evenly;
 
         h1 {
-            font-size: $large;
+            font-size: 2.5rem;
             color: $header-color;
         }
 
@@ -51,8 +51,8 @@
 
     .image-slide {
         img {
-            width: 31.25rem;
-            height: 31.25rem;
+            width: 25rem;
+            height: 25rem;
             border-radius: 0 100px 0 100px;
         }
     }

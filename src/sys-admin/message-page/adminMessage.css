@@ -583,6 +583,23 @@ main .container .progress-cont .progress .progress-bar-cont .canvas .progress-ti
   opacity: 70%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .btn-print a {
+  font-family: "Poppins", sans-serif;
+  background-color: #a8896c;
+  border: 1px solid #f5ece3;
+  color: #ffffff;
+  margin-top: 100px;
+  padding: 5px 110px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .btn-print a:hover {
+  opacity: 70%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .line {
   border: 2px dotted #ffffff;
   margin-top: 10px;

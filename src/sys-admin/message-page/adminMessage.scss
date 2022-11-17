@@ -380,6 +380,25 @@ main {
                                         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                                     }
                                 }
+
+                                a {
+                                    font-family: $font-family;
+                                    background-color: $header-color;
+                                    border: 1px solid $loginbg-color;
+                                    color: $white-color;
+                                    margin-top: 100px;
+                                    padding: 5px 110px;
+                                    text-decoration: none;
+                                    font-size: 0.8rem;
+                                    cursor: pointer;
+                                    transition: 0.3s;
+                                    border-radius: 5px;
+                                    
+                                    &:hover {
+                                        opacity: 70%;
+                                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                                    }
+                                }
                             }
 
                             .line {

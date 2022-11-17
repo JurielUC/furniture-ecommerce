@@ -10,7 +10,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bed Customization</title>
+    <title>Bed Customization - Gil Reyes FRS</title>
+    <link rel="icon" href="../../../../image/logo2.png">
 		
 	<!--<link href="css/normalize.css" rel="stylesheet">
 	
@@ -35,7 +36,7 @@
         <div class="app-name">
             <a href="">
                 <img src="../../../../image/logo.png" alt="">
-                <h1 style="font-size: 2.7rem; font-family: 'Poppins', sans-serif; font-weight: 700; margin-bottom: 20px;">Gil's Furniture Shop</h1>
+                <h1 style="font-size: 2.7rem; font-family: 'Poppins', sans-serif; font-weight: 700; margin-bottom: 20px;">Gil Reyes FRS</h1>
             </a>
         </div>
     </header>

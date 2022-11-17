@@ -356,4 +356,8 @@ main .container .product-cont .gcash-cont .g-dl a {
 }
 main .container .product-cont .gcash-cont .g-dl a:hover {
   opacity: 80%;
+}
+main .container .product-cont .gcash-cont .g-dl p {
+  font-size: 0.8rem;
+  color: #a8896c;
 }/*# sourceMappingURL=gcash.css.map */

@@ -7,7 +7,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gil's Furniture</title>
+    <title>Gil Reyes FRS</title>
+    <link rel="icon" href="../../../image/logo2.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -21,7 +22,7 @@
         <div class="app-name">
             <a href="">
                 <img src="../../../image/logo.png" alt="">
-                <h1>Gil's Furniture Shop</h1>
+                <h1>Gil Reyes FRS</h1>
             </a>
         </div>
         <!--Put your navigation here below-->
@@ -245,7 +246,7 @@
                                         <p>0</p>
                                     </div>
                                     <div class="prog-desc">
-                                        <p>Lorem Ipsum</p>
+                                        <p>Checking Product</p>
                                     </div>
                                 </div>
                                 <div class="percentage">
@@ -256,7 +257,7 @@
                                         <p>25%</p>
                                     </div>
                                     <div class="prog-desc">
-                                        <p>Lorem Ipsum</p>
+                                        <p>Preparing Product</p>
                                     </div>
                                 </div>
                                 <div class="percentage">
@@ -267,7 +268,7 @@
                                         <p>50%</p>
                                     </div>
                                     <div class="prog-desc">
-                                        <p>Lorem Ipsum</p>
+                                        <p>Preparing for Delivery</p>
                                     </div>
                                 </div>
                                 <div class="percentage">
@@ -278,7 +279,7 @@
                                         <p>75%</p>
                                     </div>
                                     <div class="prog-desc">
-                                        <p>Lorem Ipsum</p>
+                                        <p>Out for Delivery</p>
                                     </div>
                                 </div>
                                 <div class="percentage">
@@ -289,12 +290,19 @@
                                         <p>100%</p>
                                     </div>
                                     <div class="prog-desc">
-                                        <p>Lorem Ipsum</p>   
+                                        <p>Order Recieved</p>   
                                     </div>
-                                </div>
+                                </div><br>
                                 <div class="btn-print">
-                                    <button onclick="window.location.href='progress.php?unique_id=<?php echo $uid; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & status=<?php echo $status; ?> & myfile=<?php echo $ppic; ?> & trans_id=<?php echo $trans_id2; ?> & datetime=<?php echo $dt; ?> & order_qty=<?php echo $oq; ?> & total_price=<?php echo $tp; ?> & product_img=<?php echo $pi; ?> & product_name=<?php echo $pn; ?> & price=<?php echo $pr; ?> & phone_no=<?php echo $cpn; ?> & address=<?php echo $addr; ?> & postal_code=<?php echo $pcode; ?> & house_no=<?php echo $hno; ?> & settings=<?php echo $sett; ?> & payment_method=<?php echo $paym; ?>'">Update Progress</button>
-                                    <button onclick="window.location.href='print.php?unique_id=<?php echo $uid; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & status=<?php echo $status; ?> & myfile=<?php echo $ppic; ?> & trans_id=<?php echo $trans_id2; ?> & datetime=<?php echo $dt; ?> & order_qty=<?php echo $oq; ?> & total_price=<?php echo $tp; ?> & product_img=<?php echo $pi; ?> & product_name=<?php echo $pn; ?> & price=<?php echo $pr; ?> & phone_no=<?php echo $cpn; ?> & address=<?php echo $addr; ?> & postal_code=<?php echo $pcode; ?> & house_no=<?php echo $hno; ?> & settings=<?php echo $sett; ?> & payment_method=<?php echo $paym; ?>'">Print</button>
+                                    <?php 
+                                        if($row['payment_method'] == 'GCash') {
+                                            echo "<a href='payment-confirmation.php?unique_id=$uid & first_name=$fname & last_name=$lname & status=$status & myfile=$ppic & trans_id=$trans_id2'>Confirm Payment</a>";
+                                        }
+                                    ?>
+                                    <div>
+                                        <button onclick="window.location.href='progress.php?unique_id=<?php echo $uid; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & status=<?php echo $status; ?> & myfile=<?php echo $ppic; ?> & trans_id=<?php echo $trans_id2; ?> & datetime=<?php echo $dt; ?> & order_qty=<?php echo $oq; ?> & total_price=<?php echo $tp; ?> & product_img=<?php echo $pi; ?> & product_name=<?php echo $pn; ?> & price=<?php echo $pr; ?> & phone_no=<?php echo $cpn; ?> & address=<?php echo $addr; ?> & postal_code=<?php echo $pcode; ?> & house_no=<?php echo $hno; ?> & settings=<?php echo $sett; ?> & payment_method=<?php echo $paym; ?>'">Update Progress</button>
+                                        <button onclick="window.location.href='print.php?unique_id=<?php echo $uid; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & status=<?php echo $status; ?> & myfile=<?php echo $ppic; ?> & trans_id=<?php echo $trans_id2; ?> & datetime=<?php echo $dt; ?> & order_qty=<?php echo $oq; ?> & total_price=<?php echo $tp; ?> & product_img=<?php echo $pi; ?> & product_name=<?php echo $pn; ?> & price=<?php echo $pr; ?> & phone_no=<?php echo $cpn; ?> & address=<?php echo $addr; ?> & postal_code=<?php echo $pcode; ?> & house_no=<?php echo $hno; ?> & settings=<?php echo $sett; ?> & payment_method=<?php echo $paym; ?>'">Print</button>
+                                    </div>
                                 </div>
                                 <div class="line"></div>
                             </div>
