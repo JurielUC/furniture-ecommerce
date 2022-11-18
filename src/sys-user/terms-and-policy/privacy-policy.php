@@ -1,13 +1,10 @@
-<!--session link-->
-<?php include '../../php-database/user-session.php'; ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gil Reyes FRS</title>
+    <title>Privacy Policy - Gil Reyes FRS</title>
     <link rel="icon" href="../../../image/logo2.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -46,8 +46,10 @@
             <div class="dropdown" style="float:right;">
                 <a class="dropbtn"><img src="../../../image/icon/down-chevron.png" alt="" width="13px" height="13px"> More</a>
                 <div class="dropdown-content">
-                    <a href="userCustomization.php" style="background-color: #d9e2ef; border-bottom: 3px solid white; padding-bottom: 5px;">Create Design</a>
+                    <a href="userCustomization.php" style="background-color: #d9e2ef; border-bottom: 3px solid white; padding-bottom: 5px;">Designs</a>
                     <a href="../myprofile-page/userProfile.php">My Profile</a>
+                    <a href="../terms-and-policy/privacy-policy.php" target="_blank">Privacy Policy</a>
+                    <a href="../terms-and-policy/terms-and-conditions.php" target="_blank">Terms of Use</a>
                     <a href="../../php-database/user-logout.php">Logout</a>
                 </div>
             </div>
@@ -61,7 +63,7 @@
         <div class="container">
             <section class="custo-cont">
                 <h1>Choose Furniture to Customize</h1><br>
-                <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem<br>accusantium doloremque laudantium, totam rem aperiam,<br>eaque ipsa quae ab illo inventore veritatis et quasi.</p>
+                <p>Create your own design by using this design customization feature.<br>Choose the type of furniture you want to customize.<br>This feature is limited to large screen devices.</p>
 
                 <div class="choices">
                     <div class="choice-child" onclick="myDoor()">

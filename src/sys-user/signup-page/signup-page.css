@@ -197,6 +197,9 @@ header nav .dropdown:hover .dropbtn {
   border-bottom: 3px solid #ffffff;
   padding-bottom: 5px;
 }
+header .nav-phone {
+  display: block;
+}
 
 .divider {
   display: flex;

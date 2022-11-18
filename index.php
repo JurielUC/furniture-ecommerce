@@ -46,39 +46,37 @@
                 <img src="./image/bg-img.jpg" alt="">
             </div>
         </section>
-        <!--<section id="product-list">
+        <?php 
+            include 'src/php-database/dbconnect.php';
+
+            $query = "SELECT * FROM tb_product ORDER BY id AND category DESC";
+            $result = mysqli_query($conn, $query);
+        ?>
+        <section id="product-list">
             <div class="product-cont">
                 <h1>PRODUCT</h1>
                 <br>
                 <div class="prod-cont-parent">
-                    <div class="prod-child">
-                        <div class="prod-content">
-                            <div class="prod-img">
-
-                            </div>
-                            <h2>Lorem Ipsum</h2>
-                            <p>Lorem ipsum dolor sit amet</p>
+                    <?php
+                        while ($row = mysqli_fetch_assoc($result))
+                        {
+                    ?>
+                    <div class="prod-content">
+                        <div class="img">
+                            <img src="src/sys-admin/product-page/<?php echo $row['product_img']; ?>" alt="">
                         </div>
-                        <div class="prod-content">
-                            <div class="prod-img">
-                                
-                            </div>
-                            <h2>Lorem Ipsum</h2>
-                            <p>Lorem ipsum dolor sit amet</p>
+                        <div class="pname">
+                            <h3><?php echo $row['product_name']; ?></h3>
                         </div>
-                        <div class="prod-content">
-                            <div class="prod-img">
-                                
-                            </div>
-                            <h2>Lorem Ipsum</h2>
-                            <p>Lorem ipsum dolor sit amet</p>
-                        </div>
+                        <p>PHP <?php echo $row['price']; ?>.00</p>
                     </div>
-                    <button title="See more"><img src="./image/icon/more.png" alt=""></button>
+                    <?php 
+                        }
+                    ?>
                 </div>
             </div>
         </section>
-        <section id="contact">
+        <!--<section id="contact">
             <div class="profile">
                 <div class="prof-cont">
                     <img src="./image/icon/account.png" alt="">

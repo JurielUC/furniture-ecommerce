@@ -174,6 +174,9 @@ PW: admin123
 Email: johnkyle.ramos@gilreyesfurniture.online
 PW: admin123
 
+gil.reyes@gilreyesfurniture.online
+@123Admin
+
 <a class='rate-order' style='text-align: center;' href='feedback.php?trans_id=$trans_id2'>GCashPayment</a>";
 
 <div class="info-line"></div>
@@ -207,3 +210,4 @@ Order Recieved
 <a href="https://www.termsandconditionsgenerator.com/live.php?token=V4T7YSVzAwu6Yb7EhVV3dax3YPNEOA1W" target="_blank">Terms and Conditions</a>
 
 training
+

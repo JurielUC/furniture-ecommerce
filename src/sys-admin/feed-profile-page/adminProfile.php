@@ -134,8 +134,10 @@
                         }
                     ?>
                     <button onclick="openAccountInfo()">Update Account</button>
-                    <button>Terms and Conditions</button>
+                    <button onclick="window.location.href='../../sys-user/terms-and-policy/privacy-policy.php';">Privacy Policy</button>
+                    <button onclick="window.location.href='../../sys-user/terms-and-policy/terms-and-conditions.php';">Terms of use</button>
                     <div class="margin-a"></div>
+                    
                     <?php 
                         $sql6 = "SELECT * FROM tb_admin WHERE id = '$loggedin_id'";
                         $result2 = mysqli_query($conn, $sql6);
