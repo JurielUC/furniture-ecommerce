@@ -56,7 +56,7 @@
         </nav>
         <div class="nav-phone">
             <div class="dropdown" style="float:right;">
-                <a class="dropbtn"><img src="../../../image/icon/down-chevron.png" alt="" width="13px" height="13px"> More</a>
+                <a class="dropbtn"><img src="../../../image/icon/down-chevron.png" alt="" width="13px" height="13px"> Menu</a>
                 <div class="dropdown-content">
                     <a href="" class="a" style="border-bottom: 3px solid white; padding-bottom: 5px;">Your Feed</a>
                     <a href="../message-page/userMessage.php" class="a"><span class="your_div"></span>Message</a>
@@ -120,14 +120,14 @@
                     </div>
                 </div>
             </section>
-            <section class="shopinfo-cont">
+            <section class="shopinfo-cont" id="shopinfo-cont">
                 <div class="search-bar">
                     <form action="../product-search/product-search.php" method=POST>
                         <input type="text" placeholder="Search.." name="product_name" required>
                         <button type="submit" name="search">Search</button>
                     </form>
                 </div>  
-                <div class="shopinfo">
+                <div class="shopinfo" id="shopinfo">
                     <?php include '../../php-database/shopinfo.php'; 
                         while($row = mysqli_fetch_assoc($result)) {
                     ?>
@@ -150,8 +150,21 @@
                     <?php } ?>
                 </div>             
             </section>
+            <section class="open-shopinfo">
+                <button id="open" onclick="openShopInfo()"><img src="../../../image/icon/up-arrow.png" alt="" width="30px" height="30px"></button>
+                <button id="close" onclick="closeShopInfo()"><img src="../../../image/icon/down-arrow.png" alt="" width="30px" height="30px"></button>
+            </section>
         </div>
-        <script src="userhome.js"></script>
+        <script>
+            function openShopInfo() {
+                document.getElementById("shopinfo").style.display = "block";
+                document.getElementById("close").style.display = "block";
+                }
+            function closeShopInfo() {
+                document.getElementById("shopinfo").style.display = "none";
+                document.getElementById("close").style.display = "none";
+                }
+        </script>
     </main>
 </body>
 </html>

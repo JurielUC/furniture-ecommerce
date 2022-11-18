@@ -127,6 +127,9 @@ header .app-name a img {
 header .app-name a h1 {
   font-size: 1.7rem;
 }
+header .nav-phone {
+  display: none;
+}
 header nav {
   width: 50%;
   text-align: right;
@@ -196,9 +199,6 @@ header nav .dropdown:hover .dropbtn {
   border-bottom: 3px solid #ffffff;
   padding-bottom: 5px;
 }
-header .nav-phone {
-  display: block;
-}
 
 .divider {
   display: flex;
@@ -220,21 +220,24 @@ main {
   align-items: center;
   justify-content: center;
 }
+main .open-shopinfo {
+  display: none;
+}
 main .container {
-  width: 1120px;
+  width: 70rem;
   height: 80vh;
   display: flex;
   align-items: center;
 }
 main .container .product-cont {
-  width: 740px;
+  width: 46.25rem;
   height: 80vh;
 }
 main .container .product-cont .category button {
   font-family: "Poppins", sans-serif;
   border: 2px solid #a8896c;
   background-color: #ffffff;
-  width: 100px;
+  width: 6.25rem;
   border-radius: 5px;
   margin-top: 10px;
   cursor: pointer;
@@ -253,7 +256,7 @@ main .container .product-cont .category .active {
 main .container .product-cont .product {
   overflow-y: scroll;
   height: 78vh;
-  width: 710px;
+  width: 44.375rem;
   margin-top: 12px;
 }
 main .container .product-cont .product::-webkit-scrollbar {
@@ -277,14 +280,14 @@ main .container .product-cont .product::-webkit-scrollbar-track-piece:start {
   margin-top: 10px;
 }
 main .container .product-cont .product .display-div {
-  width: 690px;
+  width: 43.125rem;
   display: flex;
   flex-wrap: wrap;
 }
 main .container .product-cont .product .display-div .prod-display {
   overflow: hidden;
-  width: 165px;
-  height: 250px;
+  width: 10.3125rem;
+  height: 15.625rem;
   margin-left: 6px;
   margin-top: 10px;
   text-align: center;
@@ -301,15 +304,15 @@ main .container .product-cont .product .display-div .prod-display:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 main .container .product-cont .product .display-div .prod-display .prod-img {
-  width: 150px;
-  height: 150px;
+  width: 9.375rem;
+  height: 9.375rem;
   background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 main .container .product-cont .product .display-div .prod-display .pname {
-  width: 140px;
+  width: 8.75rem;
   padding: 5px;
   overflow: hidden;
 }
@@ -322,7 +325,7 @@ main .container .product-cont .product .display-div .prod-display p {
   font-size: 0.8rem;
 }
 main .container .shopinfo-cont {
-  width: 380px;
+  width: 23.75rem;
   height: 80vh;
 }
 main .container .shopinfo-cont .search-bar input[type=text] {
@@ -353,7 +356,7 @@ main .container .shopinfo-cont .search-bar button:hover {
   opacity: 70%;
 }
 main .container .shopinfo-cont .shopinfo {
-  width: 380px;
+  width: 23.75rem;
   height: 78vh;
   color: #a8896c;
   background-color: #f2e5db;
@@ -396,4 +399,312 @@ main .container .shopinfo-cont .shopinfo p {
 main .container .shopinfo-cont .shopinfo .info-line {
   border-bottom: 1px solid #ffffff;
   margin-top: 20px;
+}
+
+@media (max-width: 575px) {
+  header {
+    height: 50px;
+  }
+  header .app-name a {
+    margin-left: 20px;
+  }
+  header .app-name a img {
+    width: 20px;
+    height: 20px;
+  }
+  header .app-name a h1 {
+    font-size: 0.9rem;
+  }
+  header .block {
+    display: none;
+  }
+  header .nav-phone {
+    display: block;
+    width: 50%;
+    text-align: right;
+  }
+  header .nav-phone .a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 400;
+    font-size: 0.8rem;
+    transition: 0.5s;
+  }
+  header .nav-phone .a:hover {
+    border-bottom: 3px solid #ffffff;
+    padding-bottom: 5px;
+  }
+  header .nav-phone .a span {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    margin-left: -15px;
+    color: #ffffff;
+    background-color: #ee0000;
+    border-radius: 50%;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+  }
+  header .nav-phone .dropbtn {
+    margin-right: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 400;
+    font-size: 0.8rem;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  header .nav-phone .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  header .nav-phone .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 20px;
+    margin-top: 5px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  header .nav-phone .dropdown-content a {
+    color: black;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: block;
+  }
+  header .nav-phone .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  header .nav-phone .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  header .nav-phone .dropdown:hover .dropbtn {
+    border-bottom: 3px solid #ffffff;
+    padding-bottom: 5px;
+  }
+  .divider p {
+    margin-left: 20px;
+    font-size: 0.4rem;
+  }
+  main .container {
+    width: 100%;
+  }
+  main .container .product-cont {
+    width: 100%;
+  }
+  main .container .product-cont .category {
+    margin-top: 40px;
+  }
+  main .container .product-cont .category button {
+    width: 7.3rem;
+    font-size: 0.6rem;
+    margin-top: 5px;
+  }
+  main .container .product-cont .product {
+    width: 100%;
+    height: 68vh;
+  }
+  main .container .product-cont .product .display-div {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  main .container .product-cont .product .display-div .prod-display {
+    width: 10.5rem;
+    height: 15rem;
+  }
+  main .container .product-cont .product .display-div .prod-display .prod-img {
+    width: 10rem;
+    height: 10rem;
+  }
+  main .container .shopinfo-cont {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 62px;
+  }
+  main .container .shopinfo-cont .shopinfo {
+    display: none;
+    width: 100%;
+    position: absolute;
+    -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+  }
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  main .container .open-shopinfo {
+    display: block;
+    position: absolute;
+    -webkit-animation: fadeIn 2s;
+            animation: fadeIn 2s;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #a8896c;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  main .container .open-shopinfo button {
+    position: absolute;
+    bottom: 0;
+    left: 152px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #a8896c;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  }
+  main .container .open-shopinfo #close {
+    display: none;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  main .container {
+    width: 61rem;
+  }
+  main .container .product-cont {
+    width: 40rem;
+  }
+  main .container .product-cont .category button {
+    width: 5.8rem;
+  }
+  main .container .product-cont .product {
+    width: 37rem;
+  }
+  main .container .product-cont .product .display-div {
+    width: 36rem;
+  }
+  main .container .product-cont .product .display-div .prod-display {
+    width: 8.5rem;
+    height: 13.5rem;
+  }
+  main .container .product-cont .product .display-div .prod-display .prod-img {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+  main .container .shopinfo-cont {
+    width: 23rem;
+  }
+  main .container .shopinfo-cont .shopinfo {
+    width: 23rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  main .container {
+    width: 100%;
+  }
+  main .container .product-cont {
+    width: 100%;
+  }
+  main .container .product-cont .category button {
+    width: 7.7rem;
+    font-size: 1rem;
+    margin-top: 30px;
+  }
+  main .container .product-cont .product {
+    width: 100%;
+  }
+  main .container .product-cont .product .display-div {
+    width: 100%;
+    margin-bottom: 80px;
+  }
+  main .container .product-cont .product .display-div .prod-display {
+    width: 11.5rem;
+    height: 17rem;
+  }
+  main .container .product-cont .product .display-div .prod-display .prod-img {
+    width: 10.5rem;
+    height: 10.5rem;
+  }
+  main .container .shopinfo-cont {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 70px;
+  }
+  main .container .shopinfo-cont .shopinfo {
+    display: none;
+    width: 100%;
+    position: absolute;
+    -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+  }
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  main .container .open-shopinfo {
+    display: block;
+    position: absolute;
+    -webkit-animation: fadeIn 2s;
+            animation: fadeIn 2s;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #a8896c;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  main .container .open-shopinfo button {
+    position: absolute;
+    bottom: 0;
+    left: 350px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #a8896c;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  }
+  main .container .open-shopinfo #close {
+    display: none;
+  }
 }/*# sourceMappingURL=userhome.css.map */

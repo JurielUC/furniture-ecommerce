@@ -45,6 +45,10 @@ header {
         }
     }
 
+    .nav-phone {
+        display: none;
+    }
+
     nav {
         width: 50%;
         text-align: right;
@@ -118,10 +122,6 @@ header {
             border-bottom: 3px solid $white-color;
             padding-bottom: 5px;
         }
-    }
-
-    .nav-phone {
-        display: block;
     }
 }
 

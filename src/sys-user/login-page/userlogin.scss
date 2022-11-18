@@ -88,3 +88,41 @@ main {
         }
     }
 }
+
+//Media Queries/Responsive design
+@include extra-small {
+    //header
+    header {
+        height: 50px;
+
+        .app-name {
+            a {
+                margin-left: 20px;
+                
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                h1 {
+                    font-size: .9rem;
+                }
+            }
+        }
+
+        nav {
+            .a {
+                margin-right: 20px;
+                font-size: .7rem;
+
+            }
+        }
+    }
+
+    .divider {
+         p {
+            margin-left: 20px;
+            font-size: .4rem;
+         }
+    }
+}

@@ -127,6 +127,9 @@ header .app-name a img {
 header .app-name a h1 {
   font-size: 1.7rem;
 }
+header .nav-phone {
+  display: none;
+}
 header nav {
   width: 50%;
   text-align: right;
@@ -195,9 +198,6 @@ header nav .dropdown:hover .dropdown-content {
 header nav .dropdown:hover .dropbtn {
   border-bottom: 3px solid #ffffff;
   padding-bottom: 5px;
-}
-header .nav-phone {
-  display: block;
 }
 
 .divider {
@@ -292,4 +292,28 @@ main section p a {
 }
 main section p a:hover {
   opacity: 80%;
+}
+
+@media (max-width: 575px) {
+  header {
+    height: 50px;
+  }
+  header .app-name a {
+    margin-left: 20px;
+  }
+  header .app-name a img {
+    width: 20px;
+    height: 20px;
+  }
+  header .app-name a h1 {
+    font-size: 0.9rem;
+  }
+  header nav .a {
+    margin-right: 20px;
+    font-size: 0.7rem;
+  }
+  .divider p {
+    margin-left: 20px;
+    font-size: 0.4rem;
+  }
 }/*# sourceMappingURL=userlogin.css.map */
