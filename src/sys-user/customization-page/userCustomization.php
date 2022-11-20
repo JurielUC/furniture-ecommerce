@@ -40,20 +40,34 @@
             setInterval(ajaxCall, (2 * 1000)); // x * 1000 to get it in seconds
         </script>
         <!--Put your navigation here below-->
-        <nav>
+        <nav class="block"> 
             <a href="../home-page/userhome.php" class="a">Your Feed</a>
             <a href="../message-page/userMessage.php" class="a"><span class="your_div"></span>Message</a>
             <div class="dropdown" style="float:right;">
                 <a class="dropbtn"><img src="../../../image/icon/down-chevron.png" alt="" width="13px" height="13px"> More</a>
                 <div class="dropdown-content">
                     <a href="userCustomization.php" style="background-color: #d9e2ef; border-bottom: 3px solid white; padding-bottom: 5px;">Designs</a>
-                    <a href="../myprofile-page/userProfile.php">My Profile</a>
+                    <a href="../myprofile-page/userProfile.php">Profile</a>
                     <a href="../terms-and-policy/privacy-policy.php" target="_blank">Privacy Policy</a>
                     <a href="../terms-and-policy/terms-and-conditions.php" target="_blank">Terms of Use</a>
                     <a href="../../php-database/user-logout.php">Logout</a>
                 </div>
             </div>
         </nav>
+        <div class="nav-phone">
+            <div class="dropdown" style="float:right;">
+                <a class="dropbtn"><img src="../../../image/icon/down-chevron.png" alt="" width="13px" height="13px"> Menu</a>
+                <div class="dropdown-content">
+                    <a href="../home-page/userhome.php" class="a">Your Feed</a>
+                    <a href="../message-page/userMessage.php" class="a"><span class="your_div"></span>Message</a>
+                    <a href="userCustomization.php" style="border-bottom: 3px solid white; padding-bottom: 5px;">Designs</a>
+                    <a href="../myprofile-page/userProfile.php">Profile</a>
+                    <a href="../terms-and-policy/privacy-policy.php" target="_blank">Privacy Policy</a>
+                    <a href="../terms-and-policy/terms-and-conditions.php" target="_blank">Terms of Use</a>
+                    <a href="../../php-database/user-logout.php">Logout</a>
+                </div>
+            </div>
+        </div>
     </header>
     <div class="divider">
         <p>Wood Furniture Design Customization and Ordering System</p>

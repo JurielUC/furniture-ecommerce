@@ -206,3 +206,148 @@ main {
 
     }
 }
+
+@include extra-small {
+    //header
+    header {
+        height: 50px;
+
+        .app-name {
+            a {
+                margin-left: 20px;
+                
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                h1 {
+                    font-size: .9rem;
+                }
+            }
+        }
+
+    }
+
+    .divider {
+         p {
+            margin-left: 20px;
+            font-size: .4rem;
+         }
+    }
+
+    //main
+    //container
+    //product-cont
+    main {
+        .container {
+            width: 100%;
+
+            .product-cont {
+                width: 100%;
+                height: 80vh;
+
+                .prod-back {
+                    width: 100%;
+                    height: 30px;
+                    margin-top: -20px;
+
+                    a {
+                        margin-bottom: 7px;
+                        img {
+                            width: 10px;
+                            height: 10px;
+                        }
+                    }
+                    
+                    p {
+                        font-size: .8rem;
+                        margin-left: -10px;
+                    }
+                }
+    
+                .product {
+                    width: 100%;
+                    height: 100%;
+    
+                    .prod-img {
+                        width: 100%;
+                        height: 360px;
+
+                        img {
+                            width: 90%;
+                        }
+                    }
+
+                    .p-name-price {
+                        .pn {
+                            h3 {
+                                font-size: 1rem;
+                            }
+                        }
+
+                        .p {
+                            p {
+                                font-size: .8rem;
+                            }
+                        }
+                    }
+
+                    .des-size {
+                        .category {
+                            margin-bottom: 30px;
+                        }
+
+                        .category, .descrip, .size {
+                            p {
+                                font-size: .8rem;
+                            }
+                        }
+                    }
+                }
+
+                .checkout {
+                    width: 100%;
+                    height: 40px;
+                    position: fixed;
+                    bottom: 0;
+
+                    .qty {
+                        label {
+                            font-size: .8rem;
+                        }
+                    }
+
+                    button {
+                        width: 140px;
+                        height: 30px;
+                    }
+                }
+            }
+
+            .image-popup {
+
+                .image-popup-form {
+                    width: 100%;
+                    align-items: center;
+                    background-color: rgba(0, 0, 0, 0.575);
+                    
+                    .update-popup-close {
+                        width: 30px;
+                        height: 30px;
+
+                        img {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+
+                    .display-image {
+                        width: 100%;
+                        height: min-content;
+                    }
+                }
+            }
+        }
+    }
+}

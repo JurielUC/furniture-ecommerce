@@ -1,0 +1,128 @@
+//get product media queries
+//Media Queries/Responsive design
+@include extra-small {
+    //header
+    header {
+        height: 50px;
+
+        .app-name {
+            a {
+                margin-left: 20px;
+                
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                h1 {
+                    font-size: .9rem;
+                }
+            }
+        }
+
+    }
+
+    .divider {
+         p {
+            margin-left: 20px;
+            font-size: .4rem;
+         }
+    }
+
+    //main
+    //container
+    //product-cont
+    main {
+        .container {
+            width: 100%;
+
+            .product-cont {
+                width: 100%;
+
+                .category {
+                    margin-top: 40px;
+
+                    button {
+                        width: 7.3rem;
+                        font-size: .6rem;
+                        margin-top: 5px;
+                    }
+                }
+    
+                .product {
+                    width: 100%;
+                    height: 68vh;
+    
+                    .display-div {
+                        width: 100%;
+                        margin-bottom: 40px;
+
+                        .prod-display {
+                            width: 10.5rem;
+                            height: 15rem;
+
+                            .prod-img {
+                                width: 10rem;
+                                height: 10rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .shopinfo-cont {
+                position: absolute;
+                width: 100%;
+                height: 0;
+                top: 62px;
+
+                .shopinfo {
+                    display: none;
+                    width: 100%;
+                    position: absolute;
+                    animation: fadeIn .5s;
+
+                    @keyframes fadeIn {
+                        0% { opacity: 0; }
+                        100% { opacity: 1; }
+                      }
+                }
+            }
+
+            .open-shopinfo {
+                display: block;
+                position: absolute;
+                animation: fadeIn 2s;
+                bottom: 0;
+                width: 100%;
+                height: 30px;
+                background-color: $header-color;
+                text-align: center;
+                box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+
+                @keyframes fadeIn {
+                    0% { opacity: 0; }
+                    100% { opacity: 1; }
+                  }
+
+                button {
+                    position: absolute;
+                    bottom: 0;
+                    left: 152px;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background-color: $header-color;
+                    border: none;
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+                }
+
+                #close {
+                    display: none;
+                }
+            }
+        }
+    }
+
+}
+

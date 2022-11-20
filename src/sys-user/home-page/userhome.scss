@@ -358,7 +358,7 @@ main {
                     display: none;
                     width: 100%;
                     position: absolute;
-                    animation: fadeIn 1s;
+                    animation: fadeIn .5s;
 
                     @keyframes fadeIn {
                         0% { opacity: 0; }
@@ -498,6 +498,7 @@ main {
                 .shopinfo {
                     display: none;
                     width: 100%;
+                    height: 88vh;
                     position: absolute;
                     animation: fadeIn 1s;
 

@@ -532,8 +532,8 @@ main .container .shopinfo-cont .shopinfo .info-line {
     display: none;
     width: 100%;
     position: absolute;
-    -webkit-animation: fadeIn 1s;
-            animation: fadeIn 1s;
+    -webkit-animation: fadeIn 0.5s;
+            animation: fadeIn 0.5s;
   }
   @-webkit-keyframes fadeIn {
     0% {
@@ -653,6 +653,7 @@ main .container .shopinfo-cont .shopinfo .info-line {
   main .container .shopinfo-cont .shopinfo {
     display: none;
     width: 100%;
+    height: 88vh;
     position: absolute;
     -webkit-animation: fadeIn 1s;
             animation: fadeIn 1s;

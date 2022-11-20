@@ -23,13 +23,6 @@
                 <h1>Gil Reyes FRS</h1>
             </a>
         </div>
-        <!--Put your navigation here below-->
-        <nav>
-            <a href="" style="border-bottom: 3px solid white; padding-bottom: 5px;">Your Feed</a>
-            <a href="">Message</a>
-            <a href="">Profile</a>
-            <a href="../../../php-database/user-logout.php">Logout</a>
-        </nav>
     </header>
     <div class="divider">
         <p>Wood Furniture Design Customization and Ordering System</p>
@@ -112,7 +105,7 @@
                         <label for="quantity">Quantity:</label>
                         <input type="text" name="id" value="<?php echo $id; ?>" hidden>
                         <input type="text" name="price" value="<?php echo $row['price']; ?>" hidden>
-                        <input type="number" name="quantity" id="quantity" value="1" min="1" max="<?php echo $row['quantity'] ?>">
+                        <input type="number" name="quantity" required id="quantity" value="1" min="1" max="<?php echo $row['quantity'] ?>">
                     </div>
                     <button type="submit">Order Now</button>
                 </div>

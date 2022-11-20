@@ -318,4 +318,24 @@ main .container .product-cont .product .display-div .prod-display p {
   margin-top: 10px;
   white-space: nowrap;
   font-size: 0.8rem;
+}
+
+@media (max-width: 575px) {
+  header {
+    height: 50px;
+  }
+  header .app-name a {
+    margin-left: 20px;
+  }
+  header .app-name a img {
+    width: 20px;
+    height: 20px;
+  }
+  header .app-name a h1 {
+    font-size: 0.9rem;
+  }
+  .divider p {
+    margin-left: 20px;
+    font-size: 0.4rem;
+  }
 }/*# sourceMappingURL=product-search.css.map */

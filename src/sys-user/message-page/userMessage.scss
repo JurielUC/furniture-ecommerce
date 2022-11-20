@@ -385,6 +385,495 @@ main {
                         }
                     }
                 }
+
+                
+            }
+        }
+
+        .open-progress {
+            display: none;
+        }
+    }
+}
+
+//Media Queries/Responsive design
+@include extra-small {
+    //header
+    header {
+        height: 50px;
+        z-index: 999;
+
+        .app-name {
+            a {
+                margin-left: 20px;
+                
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                h1 {
+                    font-size: .9rem;
+                }
+            }
+        }
+
+        .block {
+            display: none;
+        }
+
+        .nav-phone {
+            display: block;
+            width: 50%;
+            text-align: right;
+
+            .a {
+                text-decoration: none;
+                color: $white-color;
+                font-size: $nav-size;
+                font-weight: 400;
+                font-size: .8rem;
+                transition: 0.5s;
+        
+                &:hover {
+                    border-bottom: 3px solid $white-color;
+                    padding-bottom: 5px;
+                }
+        
+                span {
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    margin-left: -15px;
+                    color: $white-color;
+                    background-color: #ee0000;
+                    border-radius: 50%;
+                    text-align: center;
+                    font-family: $times;
+                }
+            }
+            .dropbtn {
+                margin-right: 20px;
+                color: $white-color;
+                text-decoration: none;
+                color: $white-color;
+                font-size: $nav-size;
+                font-weight: 400;
+                font-size: .8rem;
+                transition: 0.5s;
+                cursor: pointer;
+            }
+              
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+              
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                right: 20px;
+                margin-top: 5px;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+              
+            .dropdown-content a {
+                color: black;
+                padding: 8px 10px;
+                font-size: .9rem;
+                text-decoration: none;
+                display: block;
+            }
+              
+            .dropdown-content a:hover {background-color: #f1f1f1;}
+            .dropdown:hover .dropdown-content {display: block;}
+            .dropdown:hover .dropbtn {
+                border-bottom: 3px solid $white-color;
+                padding-bottom: 5px;
+            }
+        }
+    }
+
+    .divider {
+         p {
+            margin-left: 20px;
+            font-size: .4rem;
+         }
+    }
+
+    //main
+    main {
+
+        .container {
+            width: 100%;
+
+            .message-cont {
+                width: 100%;
+                height: min-content;
+                position: fixed;
+                bottom: 68px;
+                z-index: 99;
+                
+                .message-head {
+                    width: 100%;
+                    height: 40px;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    .shop {
+                        font-size: .8rem;
+                    }
+
+                    .refresh-btn {
+                        margin-left: 80px;
+
+                        .your_div {
+                            font-size: .6rem;
+                        }
+
+                        a {
+                            font-size: .6rem;
+                        }
+                    }
+                }
+
+                .message-box {
+                    width: 100%;
+                    height: 60vh;
+                    border: none;
+                    box-shadow: none;
+                    position: relative;
+                    z-index: 99;
+                    background-color: $white-color;
+
+                    .message-me {
+                        .message-one {
+                            img {
+                                width: 98%;
+                            }
+
+                            p {
+                                font-size: .9rem;
+                            }
+                        }
+                    }
+
+                    .message-admin {
+                        .message-two {
+                            img {
+                                width: 98%;
+                            }
+
+                            p {
+                                font-size: .9rem;
+                            }
+                        }
+                    }
+                }
+
+                .message-input {
+                    width: 100%;
+                    height: 60px;
+                    border-radius: 0;
+                    margin-bottom: 0;
+                    position: fixed;
+                    bottom: 0;
+                }
+            }
+
+
+            .progress-cont {
+                width: 100%;
+
+                .progress {
+                    display: none;
+                    width: 100%;
+                    position: fixed;
+                    bottom: 0;
+                    height: 75vh;
+
+                    .progress-header {
+                        width: 100%;
+
+                        h2 {
+                            font-size: 1rem;
+                        }
+
+                        button {
+                            font-size: .7rem;
+                        }
+                    }
+
+                    .progress-bar-cont {
+                        width: 100%;
+
+                        .canvas {
+                            height: 85%;
+                        }
+                    }
+                    
+                }
+            }
+
+            .open-progress {
+                display: block;
+                position: absolute;
+                animation: fadeIn .5s;
+                top: 70px;
+                width: 100%;
+                height: 30px;
+                z-index: 97;
+
+                @keyframes fadeIn {
+                    0% { opacity: 0; }
+                    100% { opacity: 1; }
+                  }
+
+                button {
+                    position: absolute;
+                    top: 0;
+                    left: 10px;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background-color: $header-color;
+                    border: none;
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+                }
+
+                #close {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@include md-only {
+    //main
+    main {
+
+        .container {
+            width: 100%;
+
+            .message-cont {
+                width: 100%;
+                height: min-content;
+                position: fixed;
+                bottom: 68px;
+                z-index: 99;
+                
+                .message-head {
+                    width: 100%;
+                    height: 40px;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    .shop {
+                        font-size: .8rem;
+                    }
+
+                    .refresh-btn {
+                        margin-left: 80px;
+
+                        .your_div {
+                            font-size: .6rem;
+                        }
+
+                        a {
+                            font-size: .6rem;
+                        }
+                    }
+                }
+
+                .message-box {
+                    width: 100%;
+                    height: 60vh;
+                    border: none;
+                    box-shadow: none;
+                    position: relative;
+                    z-index: 99;
+                    background-color: $white-color;
+
+                    .message-me {
+                        .message-one {
+                            img {
+                                width: 98%;
+                            }
+
+                            p {
+                                font-size: .9rem;
+                            }
+                        }
+                    }
+
+                    .message-admin {
+                        .message-two {
+                            img {
+                                width: 98%;
+                            }
+
+                            p {
+                                font-size: .9rem;
+                            }
+                        }
+                    }
+                }
+
+                .message-input {
+                    width: 100%;
+                    height: 60px;
+                    border-radius: 0;
+                    margin-bottom: 0;
+                    position: fixed;
+                    bottom: 0;
+                }
+            }
+
+
+            .progress-cont {
+                width: 100%;
+
+                .progress {
+                    display: none;
+                    width: 100%;
+                    position: fixed;
+                    bottom: 0;
+                    height: 75vh;
+
+                    .progress-header {
+                        width: 100%;
+
+                        h2 {
+                            font-size: 1rem;
+                        }
+
+                        button {
+                            font-size: .7rem;
+                        }
+                    }
+
+                    .progress-bar-cont {
+                        width: 100%;
+
+                        .canvas {
+                            height: 85%;
+                        }
+                    }
+                    
+                }
+            }
+
+            .open-progress {
+                display: block;
+                position: absolute;
+                animation: fadeIn .5s;
+                top: 100px;
+                width: 100%;
+                height: 30px;
+                z-index: 97;
+
+                @keyframes fadeIn {
+                    0% { opacity: 0; }
+                    100% { opacity: 1; }
+                  }
+
+                button {
+                    position: absolute;
+                    top: 0;
+                    left: 10px;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background-color: $header-color;
+                    border: none;
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+                }
+
+                #close {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@include lg-only {
+    main {
+        .container {
+            width: 950px;
+
+            .message-cont {
+                width: 600px;
+
+                .message-head {
+                    width: 550px;
+
+                    .refresh-btn {
+                        margin-left: 170px;
+                    }
+                }
+
+                .message-box {
+                    width: 550px;
+                    height: 62vh;
+
+                    .message {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .message-input {
+                    width: 550px;
+                }
+            }
+
+            .progress-cont {
+                width: 350px;
+
+                .progress {
+                    width: 350px;
+
+                    .progress-header {
+                        width: 350px;
+                    }
+
+                    .progress-bar-cont {
+                        width: 350px;
+
+                        .canvas {
+                            width: 330px;
+
+                            .order {
+                                .spe-order {
+                                    width: 310px;
+                                }
+                            }
+
+                            .progress-timeline {
+
+                                .percentage {
+                                    width: 310px;
+                                }
+
+                                .rate-order {
+                                    padding: 3px 100px;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

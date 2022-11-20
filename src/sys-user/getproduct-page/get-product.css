@@ -390,4 +390,102 @@ main .image-popup .image-popup-form .update-popup-close:hover {
 }
 main .image-popup .image-popup-form .update-popup-close .display-image {
   height: 80vh;
+}
+
+@media (max-width: 575px) {
+  header {
+    height: 50px;
+  }
+  header .app-name a {
+    margin-left: 20px;
+  }
+  header .app-name a img {
+    width: 20px;
+    height: 20px;
+  }
+  header .app-name a h1 {
+    font-size: 0.9rem;
+  }
+  .divider p {
+    margin-left: 20px;
+    font-size: 0.4rem;
+  }
+  main .container {
+    width: 100%;
+  }
+  main .container .product-cont {
+    width: 100%;
+    height: 80vh;
+  }
+  main .container .product-cont .prod-back {
+    width: 100%;
+    height: 30px;
+    margin-top: -20px;
+  }
+  main .container .product-cont .prod-back a {
+    margin-bottom: 7px;
+  }
+  main .container .product-cont .prod-back a img {
+    width: 10px;
+    height: 10px;
+  }
+  main .container .product-cont .prod-back p {
+    font-size: 0.8rem;
+    margin-left: -10px;
+  }
+  main .container .product-cont .product {
+    width: 100%;
+    height: 100%;
+  }
+  main .container .product-cont .product .prod-img {
+    width: 100%;
+    height: 360px;
+  }
+  main .container .product-cont .product .prod-img img {
+    width: 90%;
+  }
+  main .container .product-cont .product .p-name-price .pn h3 {
+    font-size: 1rem;
+  }
+  main .container .product-cont .product .p-name-price .p p {
+    font-size: 0.8rem;
+  }
+  main .container .product-cont .product .des-size .category {
+    margin-bottom: 30px;
+  }
+  main .container .product-cont .product .des-size .category p, main .container .product-cont .product .des-size .descrip p, main .container .product-cont .product .des-size .size p {
+    font-size: 0.8rem;
+  }
+  main .container .product-cont .checkout {
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+  }
+  main .container .product-cont .checkout .qty label {
+    font-size: 0.8rem;
+  }
+  main .container .product-cont .checkout button {
+    width: 140px;
+    height: 30px;
+  }
+  main .container .image-popup .image-popup-form {
+    width: 100%;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.575);
+  }
+  main .container .image-popup .image-popup-form .update-popup-close {
+    width: 30px;
+    height: 30px;
+  }
+  main .container .image-popup .image-popup-form .update-popup-close img {
+    width: 30px;
+    height: 30px;
+  }
+  main .container .image-popup .image-popup-form .display-image {
+    width: 100%;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+  }
 }/*# sourceMappingURL=get-product.css.map */

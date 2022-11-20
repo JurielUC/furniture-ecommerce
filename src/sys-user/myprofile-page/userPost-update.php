@@ -39,7 +39,7 @@
             setInterval(ajaxCall, (2 * 1000)); // x * 1000 to get it in seconds
         </script>
         <!--Put your navigation here below-->
-        <nav>
+        <nav class="block">
             <a href="../home-page/userhome.php" class="a">Your Feed</a>
             <a href="../message-page/userMessage.php" class="a"><span class="your_div"></span>Message</a>
             <div class="dropdown" style="float:right;">
@@ -53,6 +53,20 @@
                 </div>
             </div>
         </nav>
+        <div class="nav-phone">
+            <div class="dropdown" style="float:right;">
+                <a class="dropbtn"><img src="../../../image/icon/down-chevron.png" alt="" width="13px" height="13px"> Menu</a>
+                <div class="dropdown-content">
+                    <a href="../home-page/userhome.php" class="a">Your Feed</a>
+                    <a href="../message-page/userMessage.php" class="a"><span class="your_div"></span>Message</a>
+                    <a href="../customization-page/userCustomization.php">Designs</a>
+                    <a href="../myprofile-page/userProfile.php" style="border-bottom: 3px solid white; padding-bottom: 5px;">Profile</a>
+                    <a href="../terms-and-policy/privacy-policy.php" target="_blank">Privacy Policy</a>
+                    <a href="../terms-and-policy/terms-and-conditions.php" target="_blank">Terms of Use</a>
+                    <a href="../../php-database/user-logout.php">Logout</a>
+                </div>
+            </div>
+        </div>
     </header>
     <div class="divider">
         <p>Wood Furniture Design Customization and Ordering System</p>
@@ -61,7 +75,7 @@
 
     <main>
         <div class="container">
-            <section class="post-cont">
+            <section class="post-cont" id="post-cont">
 
                 <?php
 
@@ -106,7 +120,7 @@
                         ?>
             </section>
             <section class="shopinfo-cont"> 
-                <div class="shopinfo">
+                <div class="shopinfo"  id="shopinfo">
                     <h1><u>My Profile</u></h1>
                     <div class="profile-pic">
                         <img src="../signup-page/<?php echo $loggedin_mf; ?>" alt="" width="100px" height="100px">
@@ -127,12 +141,28 @@
                     
                     <!--<button onclick="openProfile()">Update Info</button>-->
                     <button class="edt-pass" onclick="window.location.href='update/update-password.php'">Change Password</button>
-                    <button class="edt-pass" onclick="window.location.href='../customization-page/customized-design.php'">Customized Design List</button>
+                    <button class="edt-pass dl-btn" onclick="window.location.href='../customization-page/customized-design.php'">Customized Design List</button>
                 </div>              
+            </section>
+            <section class="open-shopinfo">
+                <button id="open" onclick="openShopInfo()"><img src="../../../image/icon/up-arrow.png" alt="" width="30px" height="30px"></button>
+                <button id="close" onclick="closeShopInfo()"><img src="../../../image/icon/down-arrow.png" alt="" width="30px" height="30px"></button>
             </section>
         </div>
         <script src="userProfile.js"></script>
         <script src="../../js/alert.js"></script>
+        <script>
+            function openShopInfo() {
+                document.getElementById("shopinfo").style.display = "block";
+                document.getElementById("close").style.display = "block";
+                document.getElementById("post-cont").style.display = "none";
+                }
+            function closeShopInfo() {
+                document.getElementById("shopinfo").style.display = "none";
+                document.getElementById("close").style.display = "none";
+                document.getElementById("post-cont").style.display = "block";
+                }
+        </script>
     </main>
 </body>
 </html>

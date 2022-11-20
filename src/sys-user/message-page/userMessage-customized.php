@@ -26,7 +26,7 @@
             </a>
         </div>
         <!--Put your navigation here below-->
-        <nav>
+        <nav class="block">
             <a class="a" href="../home-page/userhome.php">Your Feed</a>
             <a class="a" href="../message-page/userMessage.php" style="border-bottom: 3px solid white; padding-bottom: 5px;">Message</a>
             <div class="dropdown" style="float:right;">
@@ -40,6 +40,20 @@
                 </div>
             </div>
         </nav>
+        <div class="nav-phone">
+            <div class="dropdown" style="float:right;">
+                <a class="dropbtn"><img src="../../../image/icon/down-chevron.png" alt="" width="13px" height="13px"> Menu</a>
+                <div class="dropdown-content">
+                    <a class="a" href="../home-page/userhome.php">Your Feed</a>
+                    <a class="a" href="../message-page/userMessage.php" style="border-bottom: 3px solid white; padding-bottom: 5px;">Message</a>
+                    <a href="../customization-page/userCustomization.php">Designs</a>
+                    <a href="../myprofile-page/userProfile.php">Profile</a>
+                    <a href="../terms-and-policy/privacy-policy.php" target="_blank">Privacy Policy</a>
+                    <a href="../terms-and-policy/terms-and-conditions.php" target="_blank">Terms of Use</a>
+                    <a href="../../php-database/user-logout.php">Logout</a>
+                </div>
+            </div>
+        </div>
     </header>
     <div class="divider">
         <p>Wood Furniture Design Customization and Ordering System</p>
@@ -48,7 +62,7 @@
 
     <main>
         <div class="container">
-            <section class="message-cont">
+            <section class="message-cont" id="message-cont">
                 <div class="message-head">
                     <!--Auto reload script-->
                     <script>
@@ -144,7 +158,7 @@
                 </div>
             </section>
             <section class="progress-cont"> 
-                <div class="progress">
+                <div class="progress" id="progress">
                     <div class="progress-header">
                         <h2>Customized Order</h2>
                         <div class="dropdown" style="float:right;">
@@ -305,7 +319,23 @@
                     </div>
                 </div>              
             </section>
+            <section class="open-progress">
+                <button id="open" onclick="openShopInfo()"><img src="../../../image/icon/arrows-p.png" alt="" width="30px" height="30px"></button>
+                <button id="close" onclick="closeShopInfo()"><img src="../../../image/icon/x.png" alt="" width="30px" height="30px"></button>
+            </section>
             <script src="userMessage.js"></script>
+            <script>
+                function openShopInfo() {
+                    document.getElementById("progress").style.display = "block";
+                    document.getElementById("close").style.display = "block";
+                    document.getElementById("message-cont").style.display = "none";
+                    }
+                function closeShopInfo() {
+                    document.getElementById("progress").style.display = "none";
+                    document.getElementById("close").style.display = "none";
+                    document.getElementById("message-cont").style.display = "block";
+                    }
+            </script>
         </div>
     </main>
 </body>

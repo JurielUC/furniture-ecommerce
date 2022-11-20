@@ -391,4 +391,110 @@ main .container .custo-cont .customized-list table td .success {
 }
 .image-cont .front img, .image-cont .back img {
   height: 100%;
+}
+
+@media (max-width: 575px) {
+  header {
+    height: 50px;
+    z-index: 999;
+  }
+  header .app-name a {
+    margin-left: 20px;
+  }
+  header .app-name a img {
+    width: 20px;
+    height: 20px;
+  }
+  header .app-name a h1 {
+    font-size: 0.9rem;
+  }
+  header .block {
+    display: none;
+  }
+  header .nav-phone {
+    display: block;
+    width: 50%;
+    text-align: right;
+  }
+  header .nav-phone .a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 400;
+    font-size: 0.8rem;
+    transition: 0.5s;
+  }
+  header .nav-phone .a:hover {
+    border-bottom: 3px solid #ffffff;
+    padding-bottom: 5px;
+  }
+  header .nav-phone .a span {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    margin-left: -15px;
+    color: #ffffff;
+    background-color: #ee0000;
+    border-radius: 50%;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+  }
+  header .nav-phone .dropbtn {
+    margin-right: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 400;
+    font-size: 0.8rem;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  header .nav-phone .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  header .nav-phone .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 20px;
+    margin-top: 5px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  header .nav-phone .dropdown-content a {
+    color: black;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: block;
+  }
+  header .nav-phone .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  header .nav-phone .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  header .nav-phone .dropdown:hover .dropbtn {
+    border-bottom: 3px solid #ffffff;
+    padding-bottom: 5px;
+  }
+  .divider p {
+    margin-left: 20px;
+    font-size: 0.4rem;
+  }
+  main .container {
+    width: 100%;
+  }
+  main .container .custo-cont {
+    width: 100%;
+  }
+  main .container .custo-cont .customized-list {
+    width: 100%;
+  }
+  main .container .custo-cont .customized-list table {
+    width: 100%;
+  }
 }/*# sourceMappingURL=userCustomization.css.map */
