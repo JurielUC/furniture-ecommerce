@@ -47,7 +47,7 @@
                 <a class="dropbtn"><img src="../../../image/icon/down-chevron.png" alt="" width="13px" height="13px"> More</a>
                 <div class="dropdown-content">
                     <a href="../customization-page/userCustomization.php">Designs</a>
-                    <a href="../myprofile-page/userProfile.php" style="background-color: #d9e2ef; border-bottom: 3px solid white; padding-bottom: 5px;">My Profile</a>
+                    <a href="../myprofile-page/userProfile.php" style="background-color: #d9e2ef; border-bottom: 3px solid white; padding-bottom: 5px;">Profile</a>
                     <a href="../terms-and-policy/privacy-policy.php" target="_blank">Privacy Policy</a>
                     <a href="../terms-and-policy/terms-and-conditions.php" target="_blank">Terms of Use</a>
                     <a href="../../php-database/user-logout.php">Logout</a>
@@ -98,7 +98,7 @@
                             include '../../php-database/post-display.php';
 
                             if (mysqli_num_rows($result) == 0) {
-                                echo "<div class='nodata' style='width: 690px; height: 50vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
+                                echo "<div class='nodata' style='width: 100%; height: 50vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
                                     <img src='../../../image/icon/file.png' width='120px' height='120px'>
                                     <p>No Post</p>
                                     </div>";

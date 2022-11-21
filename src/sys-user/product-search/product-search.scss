@@ -129,4 +129,40 @@ main {
             font-size: .4rem;
          }
     }
+
+    main {
+        .container {
+            width: 100%;
+
+            .product-cont {
+                width: 100%;
+
+                .search-back {
+                    width: 100%;
+                    height: 30px;
+
+                    a {
+                        img {
+                            width: 12px;
+                            height: 12px;
+                            margin-bottom: 3px;
+                        }
+                    }
+
+                    p {
+                        font-size: .8rem;
+                        margin-left: -12px;
+                    }
+                }
+
+                .product {
+                    width: 100%;
+
+                    .display-div {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }

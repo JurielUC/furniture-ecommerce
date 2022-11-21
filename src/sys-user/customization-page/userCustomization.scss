@@ -9,19 +9,79 @@
 
 main {
     width: 100%;
-    height: 90vh;
     @include flexBox();
     justify-content: center;
 
     .container {
         width: 1120px;
-        height: 80vh;
         @include flexBox();
         justify-content: center;
+        flex-direction: column;
+
+        .existing-design {
+            height: 80vh;
+            text-align: center;
+
+            h1 {
+                color: $header-color;
+            }
+
+            p {
+                color: $header-color;
+
+            }
+
+            .prod-cont-parent {
+                width: 900px;
+                height: 70vh;
+                display: flex;
+                flex-wrap: wrap;
+                overflow-y: scroll;
+                @include scroll();
+    
+                .prod-content {
+                    cursor: pointer;
+                    width: 212px;
+                    height: 300px;
+                    color: $header-color;
+                    background-color: $divider-color;
+                    margin: 5px;
+                    text-align: center;
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    
+                    &:hover {
+                        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+                    }
+    
+                    .img {
+                        width: 187px;
+                        height: 200px;
+                        background-color: $white-color;
+                        margin: auto;
+                        margin-top: 10px;
+                        @include flexBox();
+                        justify-content: center;
+    
+                        img {
+                            width: 100%;
+                        }
+                    }
+    
+                    .pname {
+                        margin: 10px 10px 0 10px;
+                        overflow: hidden;
+                        
+                        h3 {
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
 
         .custo-cont {
             width: 1000px;
-            height: 80vh;
+            height: 95vh;
             @include flexBox();
             flex-direction: column;
             justify-content: center;
@@ -294,6 +354,7 @@ main {
             .custo-cont {
                 width: 100%;
 
+                //customized-design
                 .customized-list {
                     width: 100%;
 
@@ -302,6 +363,52 @@ main {
                     }
                 }
             }
+
+            .custo-none {
+                display: none;
+            }
+
+            .existing-design {
+                width: 100%;
+                height: 90vh;
+
+                p {
+                    font-size: .8rem;
+                    
+                }
+
+                .prod-cont-parent {
+                    width: 100%;
+                    height: 80vh;
+
+                    .prod-content {
+                        width: 167px;
+                        height: 250px;
+
+                        .img {
+                            width: 90%;
+                            height: 150px;
+                        }
+                    }
+                }
+            }
         }
+    }
+
+    .image-cont {
+        width: 100%;
+
+        .front, .back {
+            width: 100%;
+            height: min-content;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .svg {
+        background-image: none;
     }
 }

@@ -815,6 +815,15 @@ main .container .open-progress {
     border: none;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
   }
+  main .container .open-progress button span {
+    width: 100px;
+    color: #ffffff;
+    font-size: 0.7rem;
+    padding: 9px 10px;
+    background-color: #a8896c;
+    position: absolute;
+    border-radius: 0 10px 0 0;
+  }
   main .container .open-progress #close {
     display: none;
   }

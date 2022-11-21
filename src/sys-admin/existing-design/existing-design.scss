@@ -1,0 +1,537 @@
+@use '../../style/header/header';
+@use '../../style/globals' as *;
+
+main {
+    width: 100%;
+    height: 86vh;
+    @include flexBox();
+    justify-content: center;
+
+    .container {
+        width: 740px;
+        height: 86vh;
+        @include flexBox();
+
+        .product-cont {
+            width: 740px;
+            height: 86vh;
+
+            .create-message {
+                font-size: 20px;
+                color: $header-color;
+                margin: 10px;
+                text-align: center;
+            }
+
+            .addItem-cont {
+                margin-top: 10px;
+                width: 710px;
+                height: 160px;
+                background-color: $divider-color;
+                color: $header-color;
+                border-radius: 10px 0 10px 0;
+                box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            
+                .pps {
+                    @include flexBox();
+                    margin-top: 10px;
+                    width: 710px;
+                    justify-content: center;
+
+                    .first {
+                        display: flex;
+                        flex-direction: column;
+                        text-align: left;
+                        margin: 10px 10px 0 10px;
+
+                        input {
+                            width: 320px;
+                            font-family: $font-family;
+                            padding: 5px 8px;
+                            display: inline-block;
+                            border: 1px solid $header-color;
+                            border-radius: 5px;
+                            box-sizing: border-box;
+                            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                        
+                            &:focus {
+                                outline: none;
+                                border: 1px solid $mt-color;
+                            }
+                        }
+                    }
+                }
+
+                .description {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 10px;
+
+                    .sel-img {
+                        width: 710px;
+
+                        select {
+                            width: 320px;
+                            font-family: $font-family;
+                            margin-left: 15px;
+                            padding: 2px 8px;
+                            display: inline-block;
+                            border: 1px solid $header-color;
+                            border-radius: 5px;
+                            box-sizing: border-box;
+                            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                        }
+
+                        input[type=file] {
+                            width: 320px;
+                            font-family: $font-family;
+                            cursor: pointer;
+                            padding: 3px 4px;
+                            margin-left: 16px;
+                            display: inline-block;
+                            border: 1px solid $header-color;
+                            border-radius: 5px;
+                            box-sizing: border-box;
+                            background-color: $white-color;
+                            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                        }
+
+                    }
+                }
+
+                .sib {
+                    @include flexBox();
+                    margin-top: 10px;
+                    width: 710px;
+                    justify-content: center;
+
+                    .submit {
+                        width: 710px;
+                        text-align: end;
+
+                        input[type=number] {
+                            font-family: $font-family;
+                            padding: 2px 8px;
+                            display: inline-block;
+                            border: 1px solid $header-color;
+                            border-radius: 5px;
+                            box-sizing: border-box;
+                            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                        }
+
+                        button {
+                            font-family: $font-family;
+                            width: 100px;
+                            background-color: $header-color;
+                            border-color: $header-color;
+                            border-radius: 5px;
+                            margin-right: 22px;
+                            padding: 3px 4px;
+                            color: $white-color;
+                            cursor: pointer;
+                        }
+                    }
+
+                }
+            }
+
+            .category {
+                margin-top: 10px;
+
+                button {
+                    font-family: $font-family;
+                    border: 2px solid $header-color;
+                    background-color: $white-color;
+                    width: 100px;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                    color: $header-color;
+                    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+
+                    &:hover {
+                        color: $white-color;
+                        background-color: $header-color;
+                    }
+                }
+
+                .active {
+                    color: $white-color;
+                    background-color: $header-color;
+                }
+            }
+
+            .product {
+                overflow-y: scroll;
+                @include scroll();
+                height: 55vh;
+                width: 710px;
+                margin-top: 12px;
+                
+                .display-div {
+                    width: 686px;
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .prod-display {
+                        width: 165px;
+                        height: 250px;
+                        margin-left: 6px;
+                        margin-top: 10px;
+                        text-align: center;
+                        @include flexBox();
+                        justify-content: center;
+                        flex-direction: column;
+                        cursor: pointer;
+                        color: $header-color;
+                        background-color: $divider-color;
+                        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    
+                        &:hover {
+                            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                        }
+                        
+                        .prod-img {
+                            width: 150px;
+                            height: 150px;
+                            background-color: $white-color;
+                            @include flexBox();
+                            justify-content: center;
+                        }
+
+                        .pname {
+                            width: 140px;
+                            padding: 5px;
+                            overflow: hidden;
+
+                            h4 {
+                                white-space: nowrap;
+                            }
+                        }
+
+                        p {
+                            margin-top: 3px;
+                            white-space: nowrap;
+                            font-size: .8rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .update-cont {
+            width: 500px;
+            height: 200px;
+            background-color: $divider-color;
+            margin: auto;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-radius: 10px;
+
+            .back-btn {
+                width: 500px;
+                height: 50px;
+                background-color: $header-color;
+                border-radius: 10px 10px 0 0;
+                @include flexBox();
+
+                .bck {
+                    background-color: $header-color;
+                    border: none;
+                    margin: 0 10px 0 10px;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 80%;
+                    }
+                }
+
+                h4 {
+                    color: $white-color;
+                    font-weight: 600;
+                }
+
+                .upd-del-btn {
+                    margin-left: 120px;
+
+                    .upd, .del {
+                        background-color: $divider-color;
+                        font-family: $font-family;
+                        font-size: .9rem;
+                        width: 80px;
+                        border: none;
+                        border-radius: 5px;
+                        color: $header-color;
+                        transition: 0.3s;
+                        cursor: pointer;
+
+                        &:hover {
+                            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                        }
+                    }
+                }
+            }
+
+            .content-cont {
+                width: 500px;
+                height: 200px;
+
+                .input {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 10px 50px;
+
+                    label {
+                        color: $header-color;
+                    }
+
+                    input[type=text], input[type=file] {
+                        padding: 5px 5px;
+                        font-family: $font-family;
+                        margin-bottom: 10px;
+                        border: 1px solid $header-color;
+                        border-radius: 5px;
+                        outline: none;
+                    }
+
+                    textarea {
+                        padding: 5px 5px;
+                        font-family: $font-family;
+                        margin-bottom: 10px;
+                        border: 1px solid $header-color;
+                        border-radius: 5px;
+                        outline: none;
+                        resize: none;
+                    }
+
+                    select {
+                        padding: 5px 5px;
+                        font-family: $font-family;
+                        margin-bottom: 10px;
+                        border: 1px solid $header-color;
+                        border-radius: 5px;
+                        outline: none;
+                    }
+
+                    input[type=submit] {
+                        padding: 5px 5px;
+                        cursor: pointer;
+                        font-family: $font-family;
+                        color: $white-color;
+                        background-color: $header-color;
+                        border-radius: 5px;
+                        border: none;
+
+                        &:hover {
+                            opacity: 80%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .sml-cont {
+            width: 500px;
+            height: 600px;
+            background-color: $divider-color;
+            margin: auto;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-radius: 10px;
+
+            .create-message {
+                font-size: 20px;
+                color: $header-color;
+                margin: 10px;
+                text-align: center;
+            }
+
+            .back-btn {
+                width: 500px;
+                height: 50px;
+                background-color: $header-color;
+                border-radius: 10px 10px 0 0;
+                @include flexBox();
+
+                .bck {
+                    background-color: $header-color;
+                    border: none;
+                    margin: 0 10px 0 10px;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 80%;
+                    }
+                }
+
+                h4 {
+                    color: $white-color;
+                    font-weight: 600;
+                }
+
+                .upd-del-btn {
+                    margin-left: 120px;
+
+                    .upd, .del {
+                        background-color: $divider-color;
+                        font-family: $font-family;
+                        font-size: .9rem;
+                        width: 80px;
+                        border: none;
+                        border-radius: 5px;
+                        color: $header-color;
+                        transition: 0.3s;
+                        cursor: pointer;
+
+                        &:hover {
+                            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                        }
+                    }
+                }
+            }
+
+            .update-cont {
+                width: 500px;
+                height: 550px;
+            }
+
+            .content-cont {
+                width: 500px;
+                height: 550px;
+
+                .ed-prod {
+                    width: 500px;
+                    display: flex;
+
+                    .ep-image {
+                        width: 250px;
+                        height: 250px;
+                        @include flexBox();
+                        justify-content: center;
+                        cursor: pointer;
+
+                        img {
+                            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                            border-radius: 10px;
+                        }
+
+                        button {
+                            position: absolute;
+                            background-color: $header-color;
+                            padding: 1px 20px;
+                            color: $white-color;
+                            font-family: $font-family;
+                            border: none;
+                            border-radius: 10px;
+                            cursor: pointer;
+                            transition: 0.3s;
+                            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    
+                            &:hover {
+                                opacity: 80%;
+                                box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+                            }
+                        }
+                    }
+
+                    .ep-size-price {
+                        width: 250px;
+                        height: 250px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        
+                        div {
+                            margin: 10px 0 0 10px;
+                            color: $header-color;
+
+                            p {
+                                .edit-btn {
+                                    background-color: $header-color;
+                                    padding: 1px 20px;
+                                    color: $white-color;
+                                    font-family: $font-family;
+                                    border: none;
+                                    border-radius: 10px;
+                                    cursor: pointer;
+                                    transition: 0.3s;
+                                    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    
+                                    &:hover {
+                                        opacity: 80%;
+                                        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .ep-name-desc {
+
+                    div {
+                        margin: 10px 0 0 10px;
+                        color: $header-color;
+
+                        p {
+                            .edit-btn {
+                                background-color: $header-color;
+                                padding: 1px 20px;
+                                color: $white-color;
+                                font-family: $font-family;
+                                border: none;
+                                border-radius: 10px;
+                                cursor: pointer;
+                                transition: 0.3s;
+                                box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    
+                                &:hover {
+                                    opacity: 80%;
+                                    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        } 
+    }
+    //pop up image
+    .image-popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 99999;
+        background-color: rgba(0, 0, 0, 0.575);
+
+            .image-popup-form {
+                height: 100vh;
+                width: 400px;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                background-color: $divider-color;
+
+                .update-popup-close {
+                    border-radius: 100%;
+                    border: none;
+                    transition: 0.3s;
+                    cursor: pointer;
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+
+                    &:hover {
+                        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+                    }
+
+                .display-image {
+                    height: 80vh;
+                }
+            }
+        }
+
+    }
+}

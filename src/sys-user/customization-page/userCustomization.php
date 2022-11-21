@@ -73,9 +73,9 @@
         <p>Wood Furniture Design Customization and Ordering System</p>
     </div>
     <!------------------------------------------------>
-    <main class="svg">
+    <main>
         <div class="container">
-            <section class="custo-cont">
+            <section class="custo-cont custo-none">
                 <h1>Choose Furniture to Customize</h1><br>
                 <p>Create your own design by using this design customization feature.<br>Choose the type of furniture you want to customize.<br>This feature is limited to large screen devices.</p>
 
@@ -92,6 +92,34 @@
                         <h1>Bed</h1>
                         <img src="../../../image/bed.png" alt="Bed" width="180px">
                     </div>
+                </div>
+            </section>
+            <?php 
+                include '../../php-database/dbconnect.php';
+
+                $query = "SELECT * FROM tb_designs ORDER BY id AND category DESC";
+                $result = mysqli_query($conn, $query);
+            ?>
+            <section class="existing-design">
+                <h1>Existing Designs</h1>
+                <p>Theser are the existing furniture designs made by <b>Gil Reyes Furniture and Repair Shop</b>.</p>
+                <div class="prod-cont-parent">
+                    <?php
+                        while ($row = mysqli_fetch_assoc($result))
+                        {
+                    ?>
+                    <div class="prod-content">
+                        <div class="img">
+                            <img src="../../sys-admin/existing-design/<?php echo $row['ed_img']; ?>" alt="">
+                        </div>
+                        <div class="pname">
+                            <h3><?php echo $row['type']; ?></h3>
+                        </div>
+                        <p>PHP <?php echo $row['price']; ?>.00</p>
+                    </div>
+                    <?php 
+                        }
+                    ?>
                 </div>
             </section>
             <script>

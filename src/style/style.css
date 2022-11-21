@@ -291,8 +291,6 @@ header nav .dropdown:hover .dropbtn {
   display: flex;
   flex-wrap: wrap;
   overflow-y: scroll;
-  background-color: #ffffff;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
 }
 #product-list .product-cont .prod-cont-parent::-webkit-scrollbar {
   display: block;
@@ -314,7 +312,23 @@ header nav .dropdown:hover .dropbtn {
   background: transparent;
   margin-top: 10px;
 }
+#product-list .product-cont .prod-cont-parent .see-more {
+  cursor: pointer;
+  width: 212px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  color: #a8896c;
+  opacity: 75%;
+}
+#product-list .product-cont .prod-cont-parent .see-more:hover {
+  opacity: 100%;
+}
 #product-list .product-cont .prod-cont-parent .prod-content {
+  cursor: pointer;
   width: 212px;
   height: 300px;
   color: #a8896c;

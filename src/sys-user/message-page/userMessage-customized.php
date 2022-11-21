@@ -320,7 +320,7 @@
                 </div>              
             </section>
             <section class="open-progress">
-                <button id="open" onclick="openShopInfo()"><img src="../../../image/icon/arrows-p.png" alt="" width="30px" height="30px"></button>
+                <button id="open" onclick="openShopInfo()"><img src="../../../image/icon/arrows-p.png" alt="" width="30px" height="30px"><span>Order Progress</span></button>
                 <button id="close" onclick="closeShopInfo()"><img src="../../../image/icon/x.png" alt="" width="30px" height="30px"></button>
             </section>
             <script src="userMessage.js"></script>

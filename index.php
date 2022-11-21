@@ -49,12 +49,12 @@
         <?php 
             include 'src/php-database/dbconnect.php';
 
-            $query = "SELECT * FROM tb_product ORDER BY id AND category DESC";
+            $query = "SELECT * FROM tb_product ORDER BY id AND category DESC LIMIT 15";
             $result = mysqli_query($conn, $query);
         ?>
         <section id="product-list">
             <div class="product-cont">
-                <h1>PRODUCT</h1>
+                <h1>Our Product</h1>
                 <br>
                 <div class="prod-cont-parent">
                     <?php
@@ -73,6 +73,10 @@
                     <?php 
                         }
                     ?>
+                    <div class="see-more">
+                        <img src="image/icon/more.png" alt="" width="50px" height="50px">
+                        <h3>See More</h3>
+                    </div>
                 </div>
             </div>
         </section>

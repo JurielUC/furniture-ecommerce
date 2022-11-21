@@ -46,7 +46,7 @@
                 <a class="dropbtn"><img src="../../../image/icon/down-chevron.png" alt="" width="13px" height="13px"> More</a>
                 <div class="dropdown-content">
                     <a href="../customization-page/userCustomization.php">Designs</a>
-                    <a href="../myprofile-page/userProfile.php" style="background-color: #d9e2ef; border-bottom: 3px solid white; padding-bottom: 5px;">My Profile</a>
+                    <a href="../myprofile-page/userProfile.php" style="background-color: #d9e2ef; border-bottom: 3px solid white; padding-bottom: 5px;">Profile</a>
                     <a href="../terms-and-policy/privacy-policy.php" target="_blank">Privacy Policy</a>
                     <a href="../terms-and-policy/terms-and-conditions.php" target="_blank">Terms of Use</a>
                     <a href="../../php-database/user-logout.php">Logout</a>

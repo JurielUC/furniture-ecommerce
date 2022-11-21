@@ -221,21 +221,90 @@ header nav .dropdown:hover .dropbtn {
 
 main {
   width: 100%;
-  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 main .container {
   width: 1120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .container .existing-design {
   height: 80vh;
+  text-align: center;
+}
+main .container .existing-design h1 {
+  color: #a8896c;
+}
+main .container .existing-design p {
+  color: #a8896c;
+}
+main .container .existing-design .prod-cont-parent {
+  width: 900px;
+  height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+main .container .existing-design .prod-cont-parent::-webkit-scrollbar {
+  display: block;
+  width: 5px;
+}
+main .container .existing-design .prod-cont-parent::-webkit-scrollbar-track {
+  background: transparent;
+}
+main .container .existing-design .prod-cont-parent::-webkit-scrollbar-thumb {
+  background-color: #a8896c;
+  border-right: none;
+  border-left: none;
+}
+main .container .existing-design .prod-cont-parent::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+  margin-bottom: 10px;
+}
+main .container .existing-design .prod-cont-parent::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+  margin-top: 10px;
+}
+main .container .existing-design .prod-cont-parent .prod-content {
+  cursor: pointer;
+  width: 212px;
+  height: 300px;
+  color: #a8896c;
+  background-color: #f2e5db;
+  margin: 5px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+main .container .existing-design .prod-cont-parent .prod-content:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+main .container .existing-design .prod-cont-parent .prod-content .img {
+  width: 187px;
+  height: 200px;
+  background-color: #ffffff;
+  margin: auto;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+main .container .existing-design .prod-cont-parent .prod-content .img img {
+  width: 100%;
+}
+main .container .existing-design .prod-cont-parent .prod-content .pname {
+  margin: 10px 10px 0 10px;
+  overflow: hidden;
+}
+main .container .existing-design .prod-cont-parent .prod-content .pname h3 {
+  white-space: nowrap;
+}
 main .container .custo-cont {
   width: 1000px;
-  height: 80vh;
+  height: 95vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -496,5 +565,42 @@ main .container .custo-cont .customized-list table td .success {
   }
   main .container .custo-cont .customized-list table {
     width: 100%;
+  }
+  main .container .custo-none {
+    display: none;
+  }
+  main .container .existing-design {
+    width: 100%;
+    height: 90vh;
+  }
+  main .container .existing-design p {
+    font-size: 0.8rem;
+  }
+  main .container .existing-design .prod-cont-parent {
+    width: 100%;
+    height: 80vh;
+  }
+  main .container .existing-design .prod-cont-parent .prod-content {
+    width: 167px;
+    height: 250px;
+  }
+  main .container .existing-design .prod-cont-parent .prod-content .img {
+    width: 90%;
+    height: 150px;
+  }
+  .image-cont {
+    width: 100%;
+  }
+  .image-cont .front, .image-cont .back {
+    width: 100%;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+  }
+  .image-cont .front img, .image-cont .back img {
+    width: 100%;
+  }
+  .svg {
+    background-image: none;
   }
 }/*# sourceMappingURL=userCustomization.css.map */
