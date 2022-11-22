@@ -102,15 +102,15 @@
             ?>
             <section class="existing-design">
                 <h1>Existing Designs</h1>
-                <p>Theser are the existing furniture designs made by <b>Gil Reyes Furniture and Repair Shop</b>.</p>
+                <p>These are the existing furniture designs made by <b>Gil Reyes Furniture and Repair Shop</b>.</p>
                 <div class="prod-cont-parent">
                     <?php
                         while ($row = mysqli_fetch_assoc($result))
                         {
                     ?>
-                    <div class="prod-content">
+                    <div class="prod-content" onclick="window.location.href='../getproduct-page/get-designs.php?id=<?php echo $row['id']; ?>';">
                         <div class="img">
-                            <img src="../../sys-admin/existing-design/<?php echo $row['ed_img']; ?>" alt="">
+                            <img src="<?php echo $row['ed_img']; ?>" alt="">
                         </div>
                         <div class="pname">
                             <h3><?php echo $row['type']; ?></h3>

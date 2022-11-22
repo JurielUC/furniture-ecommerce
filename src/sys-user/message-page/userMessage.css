@@ -988,11 +988,17 @@ main .container .open-progress {
   main .container .progress-cont .progress .progress-header {
     width: 350px;
   }
+  main .container .progress-cont .progress .progress-header h2 {
+    font-size: 1rem;
+  }
   main .container .progress-cont .progress .progress-bar-cont {
     width: 350px;
   }
   main .container .progress-cont .progress .progress-bar-cont .canvas {
     width: 330px;
+  }
+  main .container .progress-cont .progress .progress-bar-cont .canvas .cancel-order {
+    padding: 3px 102px 3px 102px;
   }
   main .container .progress-cont .progress .progress-bar-cont .canvas .order .spe-order {
     width: 310px;

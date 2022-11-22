@@ -21,7 +21,8 @@ main {
     #message {
         display:none;
         position: absolute;
-        bottom: 80px;
+        top: 0;
+        z-index: 999;
         width: 300px;
         height: 150px;
         background-color: $loginbg-color;
@@ -103,8 +104,14 @@ main {
             justify-content: center;
             flex-direction: column;
 
+            .check-box {
+                width: 80%;
+                position: relative;
+                left: 0;
+            }
+
             input[type=email], input[type=text], input[type=password] {
-                width: 130%;
+                width: 80%;
                 padding: 10px 8px;
                 margin: 3px 0;
                 display: inline-block;
@@ -119,7 +126,7 @@ main {
                 margin: 10px 0;
                 border: none;
                 cursor: pointer;
-                width: 130%;
+                width: 80%;
                 &:hover {
                     opacity: 70%;
                 }

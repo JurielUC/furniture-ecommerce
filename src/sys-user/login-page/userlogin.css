@@ -253,6 +253,13 @@ main section .container {
   justify-content: center;
   flex-direction: column;
 }
+main section .container .check-box {
+  width: 100%;
+  position: relative;
+  left: -25px;
+  display: flex;
+  align-items: center;
+}
 main section .container input[type=email] {
   width: 130%;
   padding: 10px 8px;

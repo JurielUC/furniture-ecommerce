@@ -234,7 +234,8 @@ main .create-message {
 main #message {
   display: none;
   position: absolute;
-  bottom: 80px;
+  top: 0;
+  z-index: 999;
   width: 300px;
   height: 150px;
   background-color: #f5ece3;
@@ -326,8 +327,13 @@ main section .container {
   justify-content: center;
   flex-direction: column;
 }
+main section .container .check-box {
+  width: 80%;
+  position: relative;
+  left: 0;
+}
 main section .container input[type=email], main section .container input[type=text], main section .container input[type=password] {
-  width: 130%;
+  width: 80%;
   padding: 10px 8px;
   margin: 3px 0;
   display: inline-block;
@@ -341,7 +347,7 @@ main section .container button {
   margin: 10px 0;
   border: none;
   cursor: pointer;
-  width: 130%;
+  width: 80%;
 }
 main section .container button:hover {
   opacity: 70%;

@@ -1,3 +1,5 @@
+
+
 <!--session link-->
 <?php include '../../php-database/user-session.php'; ?>
 
@@ -23,13 +25,6 @@
                 <h1>Gil Reyes FRS</h1>
             </a>
         </div>
-        <!--Put your navigation here below-->
-        <nav>
-            <a href="" style="border-bottom: 3px solid white; padding-bottom: 5px;">Your Feed</a>
-            <a href="">Message</a>
-            <a href="">Profile</a>
-            <a href="../../../php-database/user-logout.php">Logout</a>
-        </nav>
     </header>
     <div class="divider">
         <p>Wood Furniture Design Customization and Ordering System</p>
@@ -45,16 +40,30 @@
                 </div>
                 <div class="product">
                     <?php 
-                        include '../../php-database/dbconnect.php';
 
-                        if(isset($_POST['search'])) {
+                        if(isset($_POST['search']))
+                        {
+                            $valueToSearch = $_POST['valueToSearch'];
+                            // search in all table columns
+                            // using concat mysql function
+                            $query = "SELECT * FROM tb_product WHERE CONCAT(`id`, `product_name`) LIKE '%".$valueToSearch."%'";
+                            $search_result = filterTable($query);
+                            
+                        }
+                        else {
+                            $query = "SELECT * FROM tb_product";
+                            $search_result = filterTable($query);
+                        }
 
-                            $prodname=$_POST['product_name'];
-
-                            $query="SELECT * FROM tb_product WHERE product_name='$prodname' ORDER BY id DESC";
-                            $result = mysqli_query($conn, $query);
+                        // function to connect and execute the query
+                        function filterTable($query)
+                        {
+                            include '../../php-database/dbconnect.php';
+                            $filter_Result = mysqli_query($conn, $query);
+                            return $filter_Result;
+                        }
                         
-                            if (mysqli_num_rows($result) == 0) {
+                            if (mysqli_num_rows($search_result) == 0) {
                             echo "<div class='nodata' style='width: 100%; height: 80vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
                                 <img src='../../../image/icon/file.png' width='120px' height='120px'>
                                 <p>No result</p>
@@ -64,7 +73,7 @@
                     <div class="display-div">
                         <!--Put php codes for product display here-->
                         <?php
-                            while ($row = mysqli_fetch_assoc($result))
+                            while ($row = mysqli_fetch_assoc($search_result))
                             {
                         ?>
                                 <div class="prod-display" onclick="window.location.href='../getproduct-page/get-product.php?id=<?php echo $row['id']; ?> & product_name=<?php echo $row['product_name']; ?> & price=<?php echo $row['price']; ?> & size=<?php echo $row['size']; ?> & p_description=<?php echo $row['p_description']; ?> & category=<?php echo $row['category']; ?> & product_img=<?php echo $row['product_img']; ?>';"onclick="window.location.href='../getproduct-page/get-product.php?id=<?php echo $row['id']; ?> & product_name=<?php echo $row['product_name']; ?> & price=<?php echo $row['price']; ?> & size=<?php echo $row['size']; ?> & p_description=<?php echo $row['p_description']; ?> & category=<?php echo $row['category']; ?> & product_img=<?php echo $row['product_img']; ?>';">
@@ -79,7 +88,6 @@
                                 </div>
                         <?php
                             }
-                        }
                         ?>
                     </div>
                 </div>

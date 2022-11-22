@@ -69,18 +69,20 @@
                     <label for="psw">Password</label>
                     <input type="password" placeholder="Password" name="u_password" autocomplete="off" id="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
                     
-                    <div class="check-box" style="width: 170px; text-align: left;">
+                    <div class="check-box">
                         <input type="checkbox" id="showpass" onclick="myFunction()">
                         <label class="checkbox" for="showpass" style="font-size: .9rem;">Show Password</label><br>
 
                         <input type="checkbox" id="checkme"/>
-                        <label class="checkbox" for="checkme" style="font-size: .9rem;">I hereby certify that all information above are true.</label><br>
+                        <label class="checkbox" for="checkme" style="font-size: .9rem;">I agree to the Terms of use and Privacy Policy.</label><br>
                     </div>
                     
                     <button type="submit" name='submit' disabled="disabled" id="sendNewSms">Submit</button>
                 </div>
             </form>
-            <p>Already have Account? <a href="../login-page/userlogin.php"><b>LOGIN</b></a></p>
+            <p style="text-align: center;">Already have Account? <a href="../login-page/userlogin.php" target="_blank"><b>LOGIN</b></a><br><a href="../terms-and-policy/terms-and-conditions.php"><b><u>Terms of Use</u></b></a><br>
+            <a href="../terms-and-policy/privacy-policy.php" target="_blank"><b><u>Privacy Policy</u></b></a></p>
+            
         </section>
     </main>
     <script src="signup-page.js"></script>

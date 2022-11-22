@@ -857,6 +857,10 @@ main {
 
                     .progress-header {
                         width: 350px;
+
+                        h2 {
+                            font-size: 1rem;
+                        }
                     }
 
                     .progress-bar-cont {
@@ -864,6 +868,10 @@ main {
 
                         .canvas {
                             width: 330px;
+
+                            .cancel-order {
+                                padding: 3px 102px 3px 102px;
+                            }
 
                             .order {
                                 .spe-order {

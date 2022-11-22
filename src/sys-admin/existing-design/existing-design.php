@@ -104,7 +104,7 @@
                                 <div class="prod-display" onclick="window.location.href='';">
                                     <div class="prod-img">
                                         <!--put image here-->
-                                        <img src="<?php echo $row['ed_img']; ?>" alt="" width="100%">
+                                        <img src="../../sys-user/customization-page/<?php echo $row['ed_img']; ?>" alt="" width="100%">
                                     </div>
                                     <div class="pname">
                                         <h4><?php echo $row['type']; ?></h3>

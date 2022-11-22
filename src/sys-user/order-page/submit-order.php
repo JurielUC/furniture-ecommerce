@@ -31,6 +31,7 @@
         $sql2 = "INSERT INTO tb_pointmessage(message_to, message_from, message_content, sender_name, msg_timestamp) VALUES('1135622190', '$user_id', '$mc', '$name', '$timestamp'";
 
         $sql4 = mysqli_query($conn, "UPDATE tb_user SET unread_msg = unread_msg + 1 WHERE unique_id = '$user_id'");
+        $sql5 = mysqli_query($conn, "UPDATE tb_user SET all_msg = all_msg + 1 WHERE unique_id = '$user_id'");
         $sql3 = mysqli_query($conn, "DELETE FROM tb_cart WHERE user_id = '$user_id'");
         
         header("location: ../message-page/userMessage.php");

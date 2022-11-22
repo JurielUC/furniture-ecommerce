@@ -79,7 +79,7 @@
                 <div class="customized-list">
                     <table>
                         <tr>
-                            <th colspan="7"><h2>Customized Design List</h2></th>
+                            <th colspan="7"><h2>Design List</h2></th>
                         </tr>
                         <tr>
                             <th width="5%">Qty</th>

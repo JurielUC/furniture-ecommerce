@@ -31,6 +31,7 @@
         $sql2 = mysqli_query($conn, "INSERT INTO tb_pointmessage(message_to, message_from, message_content, sender_name, msg_timestamp, msg_file) VALUES('1135622190', '$user_id', '$mc', '$name', '$timestamp', '0')");
 
         $sql4 = mysqli_query($conn, "UPDATE tb_user SET unread_msg = unread_msg + 1 WHERE unique_id = '$user_id'");
+        $sql5 = mysqli_query($conn, "UPDATE tb_user SET all_msg = all_msg + 1 WHERE unique_id = '$user_id'");
         $sql3 = mysqli_query($conn, "UPDATE tb_customize SET sent = '1' WHERE cust_id='$prod_id'");
         
         header("location: ../message-page/userMessage-customized.php");

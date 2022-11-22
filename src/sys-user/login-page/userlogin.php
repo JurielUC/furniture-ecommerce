@@ -56,7 +56,7 @@
                     <input type="password" placeholder="Password" id="psw" name="u_password" required autocomplete="off">
 
                     <div class="check-box">
-                        <input type="checkbox" style="margin-left: -115px;" id="showpass" onclick="showPass()">
+                        <input type="checkbox" id="showpass" onclick="showPass()">
                         <label class="checkbox" for="showpass" style="font-size: .9rem;">Show Password</label><br>
                     </div>
 

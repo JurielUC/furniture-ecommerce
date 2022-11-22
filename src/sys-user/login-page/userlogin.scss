@@ -40,6 +40,14 @@ main {
             justify-content: center;
             flex-direction: column;
 
+            .check-box {
+                width: 100%;
+                position: relative;
+                left: -25px;
+                display: flex;
+                align-items: center;
+            }
+
             input[type=email] {
                 width: 130%;
                 padding: 10px 8px;

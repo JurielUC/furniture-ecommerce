@@ -145,7 +145,7 @@
 }
 
 //Design for contact page
-/*#contact {
+#contact {
     @include screen-size();
     @include flexBox();
 
@@ -240,7 +240,7 @@
         }
     }
 
-    /*.contact-form {
+    .contact-form {
         width: 50%;
         height: 100vh;
         @include flexBox();
@@ -342,7 +342,46 @@
             }
         }
     }
-}*/
+}
+
+footer {
+    height: 200px;
+    width: 100%;
+    @include flexBox();
+    flex-direction: column;
+    background-color: $divider-color;
+
+    .line {
+        width: 80%;
+        border-bottom: 1px solid $header-color;
+    }
+
+    section {
+        width: 80%;
+        margin: 20px 0;
+
+        h4 {
+            font-size: .7rem;
+        }
+
+        p {
+            font-size: .6rem;
+
+            .ghub {
+                color: #000000;
+                text-decoration: none;
+            }
+
+            a {
+                color: $header-color;
+
+                &:hover {
+                    opacity: 80%;
+                }
+            }
+        }
+    }
+}
 
 
 

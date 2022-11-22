@@ -8,8 +8,7 @@
         while($row = mysqli_fetch_assoc($result))
             {
                 $prodID=$row['product_id'];
-                $qty=$row['order_qty'];
-                $sql4 = mysqli_query($conn, "UPDATE tb_product SET quantity = quantity + $qty WHERE id = '{$prodID}'");
+                $sql4 = mysqli_query($conn, "UPDATE tb_customize SET sent = '0' WHERE cust_id = '{$prodID}'");
             }
 
     $sql = "DELETE FROM tb_orderprocess WHERE trans_id = '$id'";

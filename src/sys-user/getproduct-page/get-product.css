@@ -313,6 +313,12 @@ main .container .product-cont .product .des-size .descrip, main .container .prod
 main .container .product-cont .product .des-size .descrip p, main .container .product-cont .product .des-size .size p, main .container .product-cont .product .des-size .category p {
   font-size: 0.9rem;
 }
+main .container .product-cont .product .des-size .descrip textarea, main .container .product-cont .product .des-size .descrip input, main .container .product-cont .product .des-size .size textarea, main .container .product-cont .product .des-size .size input {
+  width: 100%;
+  padding: 5px;
+  font-family: "Poppins", sans-serif;
+  resize: none;
+}
 main .container .product-cont .checkout {
   margin-top: 5px;
   width: 420px;

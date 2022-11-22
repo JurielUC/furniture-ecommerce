@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gil Reyes Furniture and Repair Shop: The shop offers different kinds of wood furniture products like doors, tables, chairs, beds, etc. It's located at Barangay Mahayahay, Lemery, Batangas. Currently, its service and delivery are available in the Batangas area only.">
     <title>Welcome to Gil RFRS</title>
     <link rel="icon" href="image/logo2.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +16,7 @@
     <!--Header and divider-->
     <header>
         <div class="app-name">
-            <a href="">
+            <a href="#landing-page">
                 <img src="./image/logo.png" alt="">
                 <h1>Gil Reyes FRS</h1>
             </a>
@@ -58,10 +59,11 @@
                 <br>
                 <div class="prod-cont-parent">
                     <?php
+                        $message='Login to see this furniture.';
                         while ($row = mysqli_fetch_assoc($result))
                         {
                     ?>
-                    <div class="prod-content">
+                    <div class="prod-content" onclick="window.location.href='./src/sys-user/login-page/userlogin.php?message=<?php echo $message; ?>'">
                         <div class="img">
                             <img src="src/sys-admin/product-page/<?php echo $row['product_img']; ?>" alt="">
                         </div>
@@ -73,7 +75,10 @@
                     <?php 
                         }
                     ?>
-                    <div class="see-more">
+                    <?php 
+                        $message='Login to see more wood furniture.';
+                    ?>
+                    <div class="see-more" onclick="window.location.href='./src/sys-user/login-page/userlogin.php?message=<?php echo $message; ?>'">
                         <img src="image/icon/more.png" alt="" width="50px" height="50px">
                         <h3>See More</h3>
                     </div>
@@ -131,5 +136,22 @@
             </div>
         </section>-->
     </main>
+    <footer>
+        <section>
+            <div class="devs">
+                <h4>Developers/Researchers</h4>
+                <p><a class="ghub" href="https://github.com/JurielUC" target="_blank">Juriel Comia</a></p>
+                <p>Glydel Ann Reyes</p>
+                <p>John Kyle Ramos</p>
+            </div>
+        </section>
+        <div class="line"></div>
+        <section>
+            <div>
+                <p>© Gil Reyes Furniture and Repair Shop. All Rights Reserved.</p>
+                <p><a href="src/sys-user/terms-and-policy/terms-and-conditions.php" target="_blank">Terms of Use</a> | <a href="src/sys-user/terms-and-policy/privacy-policy.php" target="_blank">Privacy Policy</a></p>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>

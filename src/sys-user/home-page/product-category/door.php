@@ -123,7 +123,7 @@
             <section class="shopinfo-cont">
                 <div class="search-bar">
                     <form action="../../product-search/product-search.php" method=POST>
-                        <input type="text" placeholder="Search.." name="product_name" required>
+                        <input type="text" placeholder="Search.." name="valueToSearch" required>
                         <button type="submit" name="search">Search</button>
                     </form>
                 </div>  
