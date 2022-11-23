@@ -77,12 +77,12 @@
 		<!--=============================================================-->
 		<div id='options'>
 			<div class="T_type">
-				<div id="radio1" ><img src="tdesignAPI/images/menu_icons/submenu/doorone.png" width="100%" height="100%" />
+				<div id="radio1" ><img src="tdesignAPI/images/menu_icons/submenu/chairone.png" width="100%" height="100%" />
 				</div>
-				<div id="radio2" ><img src="tdesignAPI/images/menu_icons/submenu/doortwo.png" width="100%" height="100%" />
+				<div id="radio2" ><img src="tdesignAPI/images/menu_icons/submenu/chairtwo.png" width="100%" height="100%" />
 				</div>
-				<!--<div id="radio3" ><img src="tdesignAPI/images/menu_icons/submenu/hoodie.jpg" width="100%" height="100%" />
-				</div>-->
+				<div id="radio3" ><img src="tdesignAPI/images/menu_icons/submenu/chairthree.png" width="100%" height="100%" />
+				</div>
 			</div>
 
 			<div class="color_pick">
@@ -219,9 +219,9 @@
 		<!--======================view start=======================================-->
 
 		<div id='view_mode'>
-			<div  class="mode"><img id="o_front" src="tdesignAPI/images/product/door-one/color-one/color-one_front.png" width="100%" height="80%" />FRONT
+			<div  class="mode"><img id="o_front" src="tdesignAPI/images/product/chair-one/1-color/1-color_front.png" width="100%" height="80%" />TABLE
 			</div>
-			<div  class="mode"><img id="o_back" src="tdesignAPI/images/product/door-one/color-one/color-one_back.png" width="100%" height="80%" />BACK
+			<div  class="mode"><img id="o_back" src="tdesignAPI/images/product/chair-one/1-color/1-color_back.png" width="100%" height="80%" />CHAIR
 			</div>
 			<div class="mode">
 				<i class="fa fa-binoculars fa-4x preview_images" id="preview_images" data-toggle="modal" data-target=".bs-example-modal-lg"></i>Preview
@@ -246,28 +246,43 @@
 						<tr style="border-bottom: 1px solid #ffffff;">
 							<th><h4><b>Price List</b></h4></th>
 						</tr>
+
 						<tr style="border-bottom: 1px solid #ffffff;">
-							<th><h5><b>Single Door</b></h5></th>
+							<th><h5><b>Size</b></h5></th>
 						</tr>
 						<tr style="border-bottom: 1px solid #ffffff;">
-							<td><p>Plywood</p></td>
-							<td><p><b>2200.00</b></p></td>
+							<td><p>2 Seater</p></td>
+							<td><p><b>3600.00</b></p></td>
 						</tr>
 						<tr style="border-bottom: 1px solid #ffffff;">
-							<td><p>Solid Wood</p></td>
+							<td><p>4 Seater</p></td>
+							<td><p><b>5100.00</b></p></td>
+						</tr>
+						<tr style="border-bottom: 1px solid #ffffff;">
+							<td><p>6 Seater</p></td>
 							<td><p><b>5800.00</b></p></td>
 						</tr>
 						<tr style="border-bottom: 1px solid #ffffff;">
-							<th><h5><b>Double Door</b></h5></th>
+							<td><p>8 Seater</p></td>
+							<td><p><b>6500.00</b></p></td>
 						</tr>
 						<tr style="border-bottom: 1px solid #ffffff;">
-							<td><p>Plywood</p></td>
-							<td><p><b>4400.00</b></p></td>
+							<td><p>10 Seater</p></td>
+							<td><p><b>8100.00</b></p></td>
+						</tr>
+
+						<tr style="border-bottom: 1px solid #ffffff;">
+							<th><h5><b>Type(Wood)</b></h5></th>
 						</tr>
 						<tr style="border-bottom: 1px solid #ffffff;">
-							<td><p>Solid Wood</p></td>
-							<td><p><b>9600.00</b></p></td>
+							<td><p>Akasya</p></td>
+							<td><p><b>+800.00</b></p></td>
 						</tr>
+						<tr style="border-bottom: 1px solid #ffffff;">
+							<td><p>Mahogany</p></td>
+							<td><p><b>+500.00</b></p></td>
+						</tr>
+			
 						<tr>
 							<td colspan="2"><p style="font-size: .9rem; color: #FF0000; margin-top: 10px;">Note: Expect additional charges from the shop depending on the carved design in solid wood.</p></td>
 						</tr>
@@ -322,14 +337,22 @@
 										<tr>
 											<td><b>Size</b></td>
 											<td><b></b></td>
-											<td><b>Type</b></td>
+											<td><b>Type(Wood)</b></td>
 											<td><b>Qty</b></td>
 											<!--<td><b>XXL</b></td>
 											<td><b>Total</b></td>-->
 										</tr>
 										<tr>
 											<td colspan="2">
-											<input id="small2" onchange="changeval2()" placeholder="(ex. 90inches x 36inches)"  name="size" type="text" class="form-control small input-md"/>
+											<!--<input id="small2" onchange="changeval2()" placeholder="(ex. 90inches x 36inches)"  name="size" type="text" class="form-control small input-md"/>-->
+											<select name="size" id="large2" onchange="changeval2()" class="form-control large input-md">
+												<option value="">Select...</option>
+												<option value="8 Seater">2 Seater</option>
+												<option value="4 Seater">4 Seater</option>
+												<option value="6 Seater">6 Seater</option>
+												<option value="8 Seater">8 Seater</option>
+												<option value="10 Seater">10 Seater</option>
+											</select>
 											</td>
 
 											<!--<td>
@@ -340,10 +363,8 @@
 											<!--<input id="large2" onchange="changeval2()"  name="type" type="text" class="form-control large input-md"/>-->
 											<select name="type" id="large2" onchange="changeval2()" class="form-control large input-md">
 												<option value="">Select...</option>
-												<option value="Single-Plywood">Single Plywood</option>
-												<option value="Single-Solidwood">Single Solid</option>
-												<option value="Double-Plywood">Double Plywood</option>
-												<option value="Double-Solidwood">Double Solid</option>
+												<option value="Akasya">Akasya</option>
+												<option value="Mahogany">Mahogany</option>
 											</select>
 											</td>
 

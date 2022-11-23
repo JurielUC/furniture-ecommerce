@@ -16,7 +16,7 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-    <!--Header and divider-->
+    <!--<!--Header and divider
     <header>
         <div class="app-name">
             <a href="">
@@ -24,7 +24,7 @@
                 <h1>Gil Reyes FRS</h1>
             </a>
         </div>
-        <!--Put your navigation here below-->
+        <!--Put your navigation here below
         <nav>
             <a class="a" href="../product-page/adminProduct.php">Product</a>
             <a class="a" href="../feed-profile-page/adminProfile.php">Shop Feed</a>
@@ -34,7 +34,7 @@
     <div class="divider">
         <p>Wood Furniture Design Customization and Ordering System</p>
     </div>
-    <!------------------------------------------------>
+    ------------------------------------------------>
     <?php
         include '../../php-database/dbconnect.php';
 
@@ -79,18 +79,18 @@
                 printWindow.print();
             }
         </script>
-            <div class="sml-cont">
-                <div class="back-btn">
+            <div class="sml-cont" style="background-color: #ffffff; box-shadow: none;">
+                <!--<div class="back-btn">
                     <button onclick="window.location.href='adminMessage.php?unique_id=<?php echo $uid; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & status=<?php echo $status; ?> & myfile=<?php echo $ppic; ?>'"><img src="../../../image/icon/arrow.png" alt="" width="15px" height="11px"></button>
                     <h4>Order Information</h4>
 
                     <button class="print-btn" download onclick="PrintDiv();" title="Print"><img src="../../../image/icon/print.png" alt="" width="15px" height="15px"> Print</button>
-                </div>
+                </div>-->
                 <div class="content-cont">
                     <div class="print-canvas" id="pdf">
                         <div class="shopname">
                             <h3>Gil Furniture and Repair Shop</h3>
-                            <p>Matingain 2, Lemery, Batangas</p>
+                            <p>Mahayahay, Lemery, Batangas</p>
                         </div>
                         <div class="details">
                             <div class="details-set">

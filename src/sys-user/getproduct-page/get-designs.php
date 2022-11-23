@@ -73,7 +73,7 @@
                         </div>
                         <div class="size">
                             <h5>Size</h5>
-                            <input placeholder="Size" type="text" name="size" form="form1">
+                            <input placeholder="Size" required type="text" name="size" form="form1">
                         </div>
                         <div class="category">
                             <h5>Category</h5>

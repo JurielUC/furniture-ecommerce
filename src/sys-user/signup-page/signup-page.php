@@ -80,7 +80,7 @@
                     <button type="submit" name='submit' disabled="disabled" id="sendNewSms">Submit</button>
                 </div>
             </form>
-            <p style="text-align: center;">Already have Account? <a href="../login-page/userlogin.php" target="_blank"><b>LOGIN</b></a><br><a href="../terms-and-policy/terms-and-conditions.php"><b><u>Terms of Use</u></b></a><br>
+            <p style="text-align: center;">Already have Account? <a href="../login-page/userlogin.php"><b>LOGIN</b></a><br><a href="../terms-and-policy/terms-and-conditions.php"  target="_blank"><b><u>Terms of Use</u></b></a><br>
             <a href="../terms-and-policy/privacy-policy.php" target="_blank"><b><u>Privacy Policy</u></b></a></p>
             
         </section>

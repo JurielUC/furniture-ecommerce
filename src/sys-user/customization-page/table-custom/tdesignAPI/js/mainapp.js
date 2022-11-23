@@ -1,4 +1,4 @@
-var $type="door-one",$color="color-one",$y_pos="front",$nos_icons=0,$nos_text=0,$custom_img=0;
+var $type="chair-one",$color="1-color",$y_pos="front",$nos_icons=0,$nos_text=0,$custom_img=0;
 $(document).ready(function(){
 	
 	//ONLOAD
@@ -36,18 +36,18 @@ $(document).ready(function(){
 	
 	/*=========================SWITCH MENU OVER=====================*/
 	/*==========================select type=====================*/
-	$("#radio1").click(function(){	//tee
-		$type="door-one";
+	$("#radio1").click(function(){	
+		$type="chair-one";
 		change_it();
 		
 	});
-	$("#radio2").click(function(){	//polo
-		$type="door-two";
+	$("#radio2").click(function(){
+		$type="chair-two";
 		change_it();
 		
 	});
-	/*$("#radio3").click(function(){	//hoodie
-		$type="hoodie";
+	$("#radio3").click(function(){
+		$type="chair-three";
 		change_it();
 	});
 	/*==========================select type over=====================*/
@@ -73,63 +73,63 @@ $(document).ready(function(){
 /*==========================select back or front OVER=====================*/
 /*==========================select COLOR=====================*/
 	$('#colorone').click(function(){
-				$color="color-one";
+				$color="1-color";
 				change_it();
 	});
 	$('#colortwo').click(function(){
-				$color="color-two";
+				$color="2-color";
 				change_it();
 	});
 	$('#colorthree').click(function(){
-				$color="color-three";
+				$color="3-color";
 				change_it();
 	});
 	$('#colorfour').click(function(){
-				$color="color-four";
+				$color="4-color";
 				change_it();
 	});
 	$('#colorfive').click(function(){
-				$color="color-five";
+				$color="5-color";
 				change_it();
 	});
 	$('#colorsix').click(function(){
-				$color="color-six";
+				$color="6-color";
 				change_it();
 	});
 	$('#colorseven').click(function(){
-				$color="color-seven";
+				$color="7-color";
 				change_it();
 	});
 	$('#coloreight').click(function(){
-				$color="color-eight";
+				$color="8-color";
 				change_it();
 	});
 	$('#colornine').click(function(){
-				$color="color-nine";
+				$color="9-color";
 				change_it();
 	});
 	$('#colorten ').click(function(){
-				$color="color-ten";
+				$color="10-color";
 				change_it();
 	});
 	$('#coloreleven').click(function(){
-				$color="color-eleven";
+				$color="11-color";
 				change_it();
 	});
 	$('#colortwelve').click(function(){
-				$color="color-twelve";
+				$color="12-color";
 				change_it();
 	});
 	$('#colorthirteen').click(function(){
-				$color="color-thirteen";
+				$color="13-color";
 				change_it();
 	});
 	$('#colorfifteen').click(function(){
-				$color="color-fifteen";
+				$color="14-color";
 				change_it();
 	});
 	$('#colorsixteen').click(function(){
-				$color="color-sixteen";
+				$color="16-color";
 				change_it();
 	});
 	function change_it(){

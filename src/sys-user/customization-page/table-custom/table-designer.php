@@ -34,7 +34,7 @@
 	<!--Header and divider-->
     <header>
         <div class="app-name">
-            <a href="">
+            <a>
                 <img src="../../../../image/logo.png" alt="">
                 <h1 style="font-size: 2.7rem; font-family: 'Poppins', sans-serif; font-weight: 700; margin-bottom: 20px;">Gil Reyes FRS</h1>
             </a>
