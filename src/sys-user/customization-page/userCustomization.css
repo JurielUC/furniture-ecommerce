@@ -323,7 +323,7 @@ main .container .custo-cont .choices .choice-child {
   width: 300px;
   height: 300px;
   background-color: #ffffff;
-  border: 3px solid #a8896c;
+  border: 2px solid #a8896c;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -342,6 +342,12 @@ main .container .custo-cont .choices .choice-child h1 {
   width: 200px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 3px;
+}
+main .container .custo-cont .choices .dead {
+  opacity: 50%;
+}
+main .container .custo-cont .choices .dead:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 main .container .custo-cont .form {
   height: 80vh;

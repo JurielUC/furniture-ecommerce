@@ -298,6 +298,20 @@ main {
                                 .title {
                                     font-weight: 600;
                                 }
+
+                                a {
+                                    font-size: .7rem;
+                                    text-decoration: none;
+                                    background-color: $header-color;
+                                    color: $white-color;
+                                    padding: 2px 5px;
+                                    border-radius: 5px;
+                                    transition: 0.3s;
+
+                                    &:hover {
+                                        opacity: 80%;
+                                    }
+                                }
                             }
                         }
 

@@ -85,6 +85,20 @@
                 </div>
             </div>
         </section>
+        <section id="customization">
+            <h1>Customization Feature</h1>
+            <div class="custo-content">
+                <div class="custo-img">
+                    <img src="image/custo.gif" alt="" width="500px">
+                </div>
+
+                <div class="custo-desc">
+                    <p>Create your own design by using this design customization feature.
+                        Choose the type of furniture you want to customize.
+                        This feature is limited to large screen devices.</p>
+                </div>
+            </div>
+        </section>
         <!--<section id="contact">
             <div class="profile">
                 <div class="prof-cont">

@@ -519,6 +519,18 @@ main .container .progress-cont .progress .progress-bar-cont .canvas .tran-cont .
 main .container .progress-cont .progress .progress-bar-cont .canvas .tran-cont .p-s .title, main .container .progress-cont .progress .progress-bar-cont .canvas .tran-cont .d-t .title {
   font-weight: 600;
 }
+main .container .progress-cont .progress .progress-bar-cont .canvas .tran-cont .p-s a, main .container .progress-cont .progress .progress-bar-cont .canvas .tran-cont .d-t a {
+  font-size: 0.7rem;
+  text-decoration: none;
+  background-color: #a8896c;
+  color: #ffffff;
+  padding: 2px 5px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+main .container .progress-cont .progress .progress-bar-cont .canvas .tran-cont .p-s a:hover, main .container .progress-cont .progress .progress-bar-cont .canvas .tran-cont .d-t a:hover {
+  opacity: 80%;
+}
 main .container .progress-cont .progress .progress-bar-cont .canvas .order {
   display: flex;
   justify-content: center;

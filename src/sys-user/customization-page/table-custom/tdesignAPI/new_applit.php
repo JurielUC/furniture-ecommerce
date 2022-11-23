@@ -284,10 +284,10 @@
 						</tr>
 			
 						<tr>
-							<td colspan="2"><p style="font-size: .9rem; color: #FF0000; margin-top: 10px;">Note: Expect additional charges from the shop depending on the carved design in solid wood.</p></td>
+							<td colspan="2"><p style="font-size: .9rem; color: #FF0000; margin-top: 10px;">Note: Expect additional charges from the shop depending on the carved design.</p></td>
 						</tr>
 						<tr>
-							<td colspan="2"><p style="font-size: .9rem; color: #FF0000; margin-top: 10px;">Note: Carving is available in solid wood only.</p></td>
+							<td colspan="2"><p style="font-size: .9rem; color: #FF0000; margin-top: 10px;">Note: The price of the chair will be given by the shop upon your conversation through message.</p></td>
 						</tr>
 					</table>
 				</div>
@@ -345,9 +345,9 @@
 										<tr>
 											<td colspan="2">
 											<!--<input id="small2" onchange="changeval2()" placeholder="(ex. 90inches x 36inches)"  name="size" type="text" class="form-control small input-md"/>-->
-											<select name="size" id="large2" onchange="changeval2()" class="form-control large input-md">
+											<select name="size" id="small2" onchange="changeval2()" class="form-control small input-md">
 												<option value="">Select...</option>
-												<option value="8 Seater">2 Seater</option>
+												<option value="2 Seater">2 Seater</option>
 												<option value="4 Seater">4 Seater</option>
 												<option value="6 Seater">6 Seater</option>
 												<option value="8 Seater">8 Seater</option>

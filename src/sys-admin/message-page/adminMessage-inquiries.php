@@ -199,7 +199,8 @@
                                 </div>
                                 <div class="d-t">
                                     <p class="title">Total Price:</p>
-                                    <p>&nbspPhp <?php echo $row['total_price']; ?>.00</p>
+                                    <p>&nbspPhp <?php echo $row['total_price']; ?>.00&nbsp&nbsp</p>
+                                    <a href="edit-amount.php?id=<?php echo $row['trans_id']; ?> & unique_id=<?php echo $uid; ?> & status=<?php echo $status; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & myfile=<?php echo $ppic; ?>">Edit Amount</a>
                                 </div>
                                 <div class="d-t">
                                     <p><b>Note:</b> <br><?php echo $row['note']; ?></p>

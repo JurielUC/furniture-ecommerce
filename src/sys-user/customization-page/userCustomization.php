@@ -88,9 +88,10 @@
                         <h1>Table & Chair</h1>
                         <img src="../../../image/tableandchair.png" alt="Chair" width="180px">
                     </div>
-                    <div class="choice-child" onclick="myBed()">
+                    <div class="choice-child dead" onclick="myBed()">
                         <h1>Bed</h1>
                         <img src="../../../image/bed.png" alt="Bed" width="180px">
+                        <p>Currently Unavailable</p>
                     </div>
                 </div>
             </section>
@@ -131,9 +132,9 @@
                     window.open("table-custom/table-designer.php");
                 }
 
-                function myBed() {
+                /*function myBed() {
                     window.open("bed-custom/bed-designer.php");
-                }
+                }*/
             </script>
         </div>
     </main>

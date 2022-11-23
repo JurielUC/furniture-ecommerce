@@ -557,7 +557,7 @@ main .container .inbox-cont .inbox .inbox-message-cont .inbox-message .msg-num {
 }
 main .container .update-cont {
   width: 500px;
-  height: 200px;
+  height: 250px;
   background-color: #f2e5db;
   margin: auto;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
