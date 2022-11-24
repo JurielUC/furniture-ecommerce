@@ -99,6 +99,33 @@
                 </div>
             </div>
         </section>
+        <section id="contact-us">
+            <h1>Contact Us</h1>
+            <div class="au-content">
+                <div class="contact-info">
+                    <div class="infor">
+                        <img src="image/icon/address-loc.png" alt="" width="70px" >
+                        <h4>ADDRESS</h4>
+                        <p>Sitio Malaya, Mahayahay, Lemery, Batangas, 4209</p>
+                    </div>
+                    <div class="infor">
+                        <img src="image/icon/email-loc.png" alt="" width="70px" >
+                        <h4>EMAIL</h4>
+                        <p>gil.reyes@gilreyesfurniture<br>.online</p>
+                    </div>
+                    <div class="infor">
+                        <img src="image/icon/call-loc.png" alt="" width="70px" >
+                        <h4>CALL US</h4>
+                        <p>+63 915 584 2350</p>
+                    </div>
+                    <div class="infor">
+                        <img src="image/icon/user-loc.png" alt="" width="70px" >
+                        <h4>OWNER</h4>
+                        <p>Gil Reyes</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!--<section id="contact">
             <div class="profile">
                 <div class="prof-cont">
