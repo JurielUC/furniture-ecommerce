@@ -126,56 +126,6 @@
                 </div>
             </div>
         </section>
-        <!--<section id="contact">
-            <div class="profile">
-                <div class="prof-cont">
-                    <img src="./image/icon/account.png" alt="">
-                    <br>
-                    <h1>Lorem Ipsum</h1>
-                    <p>Shop Owner</p>
-
-                    <div class="location">
-                        <p><img src="./image/icon/phone.png" alt="">&nbsp09123456789</p>
-                        <p class="loc"><img src="./image/icon/gps.png" alt="">&nbspBrgy. Mahayahay, Lemery, Batangas</p>
-                    </div>
-                    <div class="google-map">
-                        <img src="./image/map.png" alt="">
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="contact-form">
-                <div class="contact-cont">
-                    <h1>Contact Us</h1>
-                    <p>Let's get this conversation started. Tell us a bit about yourself, and we'll get in touch as soon as we can.</p>
-                    <form action="">
-                        <div class="form-inputs">
-                            <div class="input">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" id="name" placeholder="Name">
-                            </div>
-                            <div class="input">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" id="email" placeholder="Email">
-                            </div>
-                            <div class="input">
-                                <label for="number">Phone Number</label>
-                                <input type="text" name="number" id="number" placeholder="Phone Number">
-                            </div>
-                            <div class="input">
-                                <label for="message">Message</label>
-                                <textarea name="message" id="" cols="30" rows="10" placeholder="Write your message here..."></textarea>
-                            </div>
-
-                            <div class="button">
-                                <input class="submit" type="submit" value="Submit">
-                            </div>
-                        </div>
-
-                    </form>
-                </div>
-            </div>
-        </section>-->
     </main>
     <footer>
         <section>

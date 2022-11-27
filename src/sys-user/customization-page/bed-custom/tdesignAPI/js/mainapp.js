@@ -334,5 +334,5 @@ function readURL(input) {
 }
 
 function myHelp() {
-	var myWindow = window.open("https://www.youtube.com/", "", "width=1000,height=1000");
+	var myWindow = window.open("../help.php", "", "width=1000,height=1000");
   }

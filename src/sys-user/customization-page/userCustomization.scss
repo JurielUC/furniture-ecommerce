@@ -207,6 +207,29 @@ main {
             }
         }
     }
+
+    .help-cont {
+        width: 90%;
+        height: 100vh;
+        text-align: center;
+        
+        h1 {
+            color: $header-color;
+        }
+
+        table {
+            width: 100%;
+
+            tr {
+                td {
+                    text-align: left;
+                     h4, p {
+                        margin-left: 20px;
+                     }
+                }
+            }
+        }
+    }
 }
 
 .image-cont {
@@ -247,6 +270,8 @@ main {
         }
     }
 }
+
+
 
 @include extra-small {
     //header

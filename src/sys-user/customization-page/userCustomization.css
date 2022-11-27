@@ -429,6 +429,23 @@ main .container .custo-cont .customized-list table td .success {
   padding: 4px 22px;
   margin: auto;
 }
+main .help-cont {
+  width: 90%;
+  height: 100vh;
+  text-align: center;
+}
+main .help-cont h1 {
+  color: #a8896c;
+}
+main .help-cont table {
+  width: 100%;
+}
+main .help-cont table tr td {
+  text-align: left;
+}
+main .help-cont table tr td h4, main .help-cont table tr td p {
+  margin-left: 20px;
+}
 
 .image-cont {
   color: #ffffff;
