@@ -77,9 +77,9 @@
 		<!--=============================================================-->
 		<div id='options'>
 			<div class="T_type">
-				<div id="radio1" ><img src="tdesignAPI/images/menu_icons/submenu/doorone.png" width="100%" height="100%" />
+				<div id="radio1" ><img src="tdesignAPI/images/menu_icons/submenu/bedone.png" width="100%" height="100%" />
 				</div>
-				<div id="radio2" ><img src="tdesignAPI/images/menu_icons/submenu/doortwo.png" width="100%" height="100%" />
+				<div id="radio2" ><img src="tdesignAPI/images/menu_icons/submenu/bedtwo.png" width="100%" height="100%" />
 				</div>
 				<!--<div id="radio3" ><img src="tdesignAPI/images/menu_icons/submenu/hoodie.jpg" width="100%" height="100%" />
 				</div>-->
@@ -219,9 +219,9 @@
 		<!--======================view start=======================================-->
 
 		<div id='view_mode'>
-			<div  class="mode"><img id="o_front" src="tdesignAPI/images/product/door-one/color-one/color-one_front.png" width="100%" height="80%" />FRONT
+			<div  class="mode"><img id="o_front" src="tdesignAPI/images/product/bed-one/color-one/color-one_front.png" width="100%" height="80%" />FRONT
 			</div>
-			<div  class="mode"><img id="o_back" src="tdesignAPI/images/product/door-one/color-one/color-one_back.png" width="100%" height="80%" />BACK
+			<div  class="mode"><img id="o_back" src="tdesignAPI/images/product/bed-one/color-one/color-one_back.png" width="100%" height="80%" />SIDE
 			</div>
 			<div class="mode">
 				<i class="fa fa-binoculars fa-4x preview_images" id="preview_images" data-toggle="modal" data-target=".bs-example-modal-lg"></i>Preview

@@ -83,6 +83,10 @@
 				</div>
 				<div id="radio3" ><img src="tdesignAPI/images/menu_icons/submenu/chairthree.png" width="100%" height="100%" />
 				</div>
+				<div id="radio4" ><img src="tdesignAPI/images/menu_icons/submenu/chairfour.png" width="100%" height="100%" />
+				</div>
+				<div id="radio5" ><img src="tdesignAPI/images/menu_icons/submenu/chairfive.png" width="100%" height="100%" />
+				</div>
 			</div>
 
 			<div class="color_pick">

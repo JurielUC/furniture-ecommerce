@@ -1,4 +1,4 @@
-var $type="door-one",$color="color-one",$y_pos="front",$nos_icons=0,$nos_text=0,$custom_img=0;
+var $type="bed-one",$color="color-one",$y_pos="front",$nos_icons=0,$nos_text=0,$custom_img=0;
 $(document).ready(function(){
 	
 	//ONLOAD
@@ -37,12 +37,12 @@ $(document).ready(function(){
 	/*=========================SWITCH MENU OVER=====================*/
 	/*==========================select type=====================*/
 	$("#radio1").click(function(){	//tee
-		$type="door-one";
+		$type="bed-one";
 		change_it();
 		
 	});
 	$("#radio2").click(function(){	//polo
-		$type="door-two";
+		$type="bed-two";
 		change_it();
 		
 	});

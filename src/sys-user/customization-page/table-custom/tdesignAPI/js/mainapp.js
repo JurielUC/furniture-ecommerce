@@ -49,6 +49,17 @@ $(document).ready(function(){
 	$("#radio3").click(function(){
 		$type="chair-three";
 		change_it();
+
+	});
+	$("#radio4").click(function(){
+		$type="chair-four";
+		change_it();
+
+	});
+	$("#radio5").click(function(){
+		$type="chair-five";
+		change_it();
+
 	});
 	/*==========================select type over=====================*/
 	/*==========================select back or front=====================*/

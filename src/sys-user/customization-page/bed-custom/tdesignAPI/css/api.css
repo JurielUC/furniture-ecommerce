@@ -53,11 +53,11 @@ span.glyphicon {
 	opacity: 80%;
 }
 .sel_type{
-	background:url(../images/menu_icons/doorone.png) no-repeat;
+	background:url(../images/menu_icons/bedone.png) no-repeat;
 	background-size:42px 42px;
 }
 .sel_type:hover{
-	background:url(../images/menu_icons/doorone.png) #f5ece3 no-repeat;
+	background:url(../images/menu_icons/bedone.png) #f5ece3 no-repeat;
 	background-size:42px 42px;
 	opacity: 80%;
 }
