@@ -46,7 +46,7 @@
                             $valueToSearch = $_POST['valueToSearch'];
                             // search in all table columns
                             // using concat mysql function
-                            $query = "SELECT * FROM tb_product WHERE CONCAT(`id`, `product_name`) LIKE '%".$valueToSearch."%'";
+                            $query = "SELECT * FROM tb_product WHERE quantity > 0 AND CONCAT(`id`, `product_name`) LIKE '%".$valueToSearch."%'";
                             $search_result = filterTable($query);
                             
                         }
