@@ -81,8 +81,12 @@
 				</div>
 				<div id="radio2" ><img src="tdesignAPI/images/menu_icons/submenu/doortwo.png" width="100%" height="100%" />
 				</div>
-				<!--<div id="radio3" ><img src="tdesignAPI/images/menu_icons/submenu/hoodie.jpg" width="100%" height="100%" />
-				</div>-->
+				<div id="radio3" ><img src="tdesignAPI/images/menu_icons/submenu/doorthree.png" width="100%" height="100%" />
+				</div>
+				<div id="radio4" ><img src="tdesignAPI/images/menu_icons/submenu/doorfour.png" width="100%" height="100%" />
+				</div>
+				<div id="radio5" ><img src="tdesignAPI/images/menu_icons/submenu/doorfive.png" width="100%" height="100%" />
+				</div>
 			</div>
 
 			<div class="color_pick">

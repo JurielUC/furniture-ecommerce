@@ -36,19 +36,30 @@ $(document).ready(function(){
 	
 	/*=========================SWITCH MENU OVER=====================*/
 	/*==========================select type=====================*/
-	$("#radio1").click(function(){	//tee
+	$("#radio1").click(function(){
 		$type="door-one";
 		change_it();
 		
 	});
-	$("#radio2").click(function(){	//polo
+	$("#radio2").click(function(){
 		$type="door-two";
 		change_it();
 		
 	});
-	/*$("#radio3").click(function(){	//hoodie
-		$type="hoodie";
+	$("#radio3").click(function(){
+		$type="door-three";
 		change_it();
+
+	});
+	$("#radio4").click(function(){
+		$type="door-four";
+		change_it();
+
+	});
+	$("#radio5").click(function(){
+		$type="door-five";
+		change_it();
+		
 	});
 	/*==========================select type over=====================*/
 	/*==========================select back or front=====================*/
