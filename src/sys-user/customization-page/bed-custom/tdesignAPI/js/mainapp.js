@@ -36,18 +36,18 @@ $(document).ready(function(){
 	
 	/*=========================SWITCH MENU OVER=====================*/
 	/*==========================select type=====================*/
-	$("#radio1").click(function(){	//tee
+	$("#radio1").click(function(){
 		$type="bed-one";
 		change_it();
 		
 	});
-	$("#radio2").click(function(){	//polo
+	$("#radio2").click(function(){
 		$type="bed-two";
 		change_it();
 		
 	});
-	/*$("#radio3").click(function(){	//hoodie
-		$type="hoodie";
+	$("#radio3").click(function(){
+		$type="bed-three";
 		change_it();
 	});
 	/*==========================select type over=====================*/

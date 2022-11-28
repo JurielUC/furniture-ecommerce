@@ -120,8 +120,8 @@
                             <h4>Total Price</h4>
                             <p>PHP <?php echo $row['price']; ?>.00</p>
                         </div>
-                        <p style="font-size: .8rem; color: #FF0000; margin-top: 10px; text-align: center;">Note: Expect additional charges from the shop depending on the carved design.</p>
-                        <p style="font-size: .8rem; color: #FF0000; margin-top: 10px; text-align: center;">Note: There will be some changes to the price depending on the conversation.</p>
+                        <p style="font-size: .8rem; color: #FF0000; margin-top: 10px; text-align: center;">Note: Expect additional charges from the shop depending on the design and wood type.</p>
+                        <p style="font-size: .8rem; color: #FF0000; margin-top: 10px; text-align: center;">Note: There will be some changes to the price depending on the agreement.</p>
                     
                 </div>
                         <!--Alert-->

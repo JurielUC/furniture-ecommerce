@@ -48,7 +48,7 @@
             <form action="signup-create.php" method="POST" enctype="multipart/form-data">
                 <div class="profile-photo">
                     <label for="myfile">Profile Picture</label>
-                    <input type="file" id="myfile" name="myfile" accept="image/*">
+                    <input type="file" id="myfile" name="myfile" accept="image/*" required>
                 </div>
                 <div class="container">
                     <label for="fname">First Name</label>

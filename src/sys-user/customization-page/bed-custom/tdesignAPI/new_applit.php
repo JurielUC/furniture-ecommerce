@@ -81,8 +81,8 @@
 				</div>
 				<div id="radio2" ><img src="tdesignAPI/images/menu_icons/submenu/bedtwo.png" width="100%" height="100%" />
 				</div>
-				<!--<div id="radio3" ><img src="tdesignAPI/images/menu_icons/submenu/hoodie.jpg" width="100%" height="100%" />
-				</div>-->
+				<div id="radio3" ><img src="tdesignAPI/images/menu_icons/submenu/bedthree.png" width="100%" height="100%" />
+				</div>
 			</div>
 
 			<div class="color_pick">
@@ -247,29 +247,27 @@
 							<th><h4><b>Price List</b></h4></th>
 						</tr>
 						<tr style="border-bottom: 1px solid #ffffff;">
-							<th><h5><b>Single Door</b></h5></th>
+							<td><p>Single</p></td>
+							<td><p><b>9500.00</b></p></td>
 						</tr>
 						<tr style="border-bottom: 1px solid #ffffff;">
-							<td><p>Plywood</p></td>
-							<td><p><b>2200.00</b></p></td>
+							<td><p>Double (48)</p></td>
+							<td><p><b>12500.00</b></p></td>
 						</tr>
 						<tr style="border-bottom: 1px solid #ffffff;">
-							<td><p>Solid Wood</p></td>
-							<td><p><b>5800.00</b></p></td>
+							<td><p>Double (54)</p></td>
+							<td><p><b>13500.00</b></p></td>
 						</tr>
 						<tr style="border-bottom: 1px solid #ffffff;">
-							<th><h5><b>Double Door</b></h5></th>
+							<td><p>Family</p></td>
+							<td><p><b>14500.00</b></p></td>
 						</tr>
 						<tr style="border-bottom: 1px solid #ffffff;">
-							<td><p>Plywood</p></td>
-							<td><p><b>4400.00</b></p></td>
-						</tr>
-						<tr style="border-bottom: 1px solid #ffffff;">
-							<td><p>Solid Wood</p></td>
-							<td><p><b>9600.00</b></p></td>
+							<td><p>King/Queen</p></td>
+							<td><p><b>17000.00</b></p></td>
 						</tr>
 						<tr>
-							<td colspan="2"><p style="font-size: .9rem; color: #FF0000; margin-top: 10px;">Note: Expect additional charges from the shop depending on the carved design in solid wood.</p></td>
+							<td colspan="2"><p style="font-size: .9rem; color: #FF0000; margin-top: 10px;">Note: Expect additional charges from the shop depending on the design and wood type.</p></td>
 						</tr>
 						<tr>
 							<td colspan="2"><p style="font-size: .9rem; color: #FF0000; margin-top: 10px;">Note: Carving is available in solid wood only.</p></td>
@@ -329,7 +327,14 @@
 										</tr>
 										<tr>
 											<td colspan="2">
-											<input id="small2" onchange="changeval2()" placeholder="(ex. 90inches x 36inches)"  name="size" type="text" class="form-control small input-md"/>
+												<select name="size" id="small2" onchange="changeval2()" class="form-control small input-md">
+													<option value="">Select...</option>
+													<option value="Single">Single (36x75)</option>
+													<option value="Double-s">Double (48x75)</option>
+													<option value="Double-b">Double (54x75)</option>
+													<option value="Family">Family (60x75)</option>
+													<option value="King Queen">King/Queen (75x75)</option>
+												</select>
 											</td>
 
 											<!--<td>
@@ -340,10 +345,9 @@
 											<!--<input id="large2" onchange="changeval2()"  name="type" type="text" class="form-control large input-md"/>-->
 											<select name="type" id="large2" onchange="changeval2()" class="form-control large input-md">
 												<option value="">Select...</option>
-												<option value="Single-Plywood">Single Plywood</option>
-												<option value="Single-Solidwood">Single Solid</option>
-												<option value="Double-Plywood">Double Plywood</option>
-												<option value="Double-Solidwood">Double Solid</option>
+												<option value="Plywood">Plywood</option>
+												<option value="Akasya">Akasya</option>
+												<option value="Mahogany">Mahogany</option>
 											</select>
 											</td>
 
