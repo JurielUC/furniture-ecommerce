@@ -85,10 +85,10 @@
                             <th width="5%">Qty</th>
                             <th width="10%">Type</th>
                             <th width="10%">Category</th>
-                            <th width="30%">Note</th>
+                            <th width="15%">Price</th>
                             <th width="10%">Image</th>
-                            <th width="5%"></th>
-                            <th width="5%"></th>
+                            <th width="5%">Delete</th>
+                            <th width="5%">Select</th>
                         </tr>
                         <?php
 
@@ -104,7 +104,7 @@
                             <td><?php echo $row['qty']; ?></td>
                             <td><?php echo $row['type']; ?></td>
                             <td><?php echo $row['category']; ?></td>
-                            <td><?php echo $row['note']; ?></td>
+                            <td>PHP <?php echo $row['price']; ?>.00</td>
                             <td><button title="View Image" class="view" onclick="window.location.href='view-image.php?id=<?php echo $row['id']; ?>'"><img src="../../../image/icon/image.png" width="15px" height="15px" alt=""></button></td>
                             <td><?php 
                                     $id=$row['id'];
@@ -120,16 +120,42 @@
                             <!--<a title='Send to Shop' class='success' href='userOrder.php?cust_id=<?php echo $custID ?>'><img src='../../../image/icon/send-message.png' width='15px' height='15px'></a>-->
                                 <?php 
                                     $id=$row['id'];
-                                    if($row['sent'] == "0") {
-                                        echo "<a title='Send to Shop' class='success' href='userOrder.php?cust_id=$custID'><img src='../../../image/icon/send-message.png' width='15px' height='15px'></a>";
+                                    if($row['selected'] == "0") {
+                                        echo "<a title='Select' class='delete' href='../../php-database/select-custo.php?cust_id=$custID'><img src='../../../image/icon/add.png' width='15px' height='15px'></a>";
                                     }
                                     else {
-                                        echo '<a title="Currently in Order" class="success del-block"><img src="../../../image/icon/delivery.png" width="15px" height="15px" alt=""></a>';
+                                        echo "<a title='Unselect' class='success' href='../../php-database/unselect-custo.php?cust_id=$custID'><img src='../../../image/icon/check-mark.png' width='15px' height='15px' alt=''></a>";
                                     }
                                 ?>
                             </td>
                         </tr>
                         <?php } ?>
+                        <tr>
+                            <td colspan="3"><p><b>Total Amount</b></p></td>
+                            <td><b>PHP 
+                                <?php 
+                                    $query2 = "SELECT SUM(price) AS total_amount FROM tb_customize WHERE user_id = '$loggedin_uid' AND selected = '1'";
+                                    $result2 = mysqli_query($conn, $query2);
+
+                                    while ($row = mysqli_fetch_assoc($result2))
+                                        {       
+                                            echo $row['total_amount'];
+                                        }
+                                ?></b>
+                            </td>
+                            <td></td>
+                            <td colspan="2">
+                                <?php 
+                                    $query3 = "SELECT COUNT(selected) AS total_selected FROM tb_customize WHERE user_id = '$loggedin_uid' AND selected = '1'";
+                                    $result3 = mysqli_query($conn, $query3);
+
+                                    while ($row = mysqli_fetch_assoc($result3))
+                                        {       
+                                ?>
+                                <a title='<?php echo $row['total_selected']; ?> product selected.' class='success place-order' href='../../php-database/unselect-custo.php'>Check Out(<?php echo $row['total_selected']; ?>)</a>
+                                <?php } ?>
+                            </td>
+                        </tr>
                         
                     </table>
                 </div>

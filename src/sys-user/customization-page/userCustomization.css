@@ -429,6 +429,15 @@ main .container .custo-cont .customized-list table td .success {
   padding: 4px 22px;
   margin: auto;
 }
+main .container .custo-cont .customized-list table td .place-order {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #a8896c;
+}
 main .help-cont {
   width: 90%;
   height: 100vh;

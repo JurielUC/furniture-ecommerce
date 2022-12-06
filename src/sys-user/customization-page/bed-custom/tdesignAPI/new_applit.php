@@ -64,14 +64,10 @@
 
 			</div>
 			<div class="menu_option sel_art" title="Choose Style">
-				<i class="fa fa-camera-retro fa-3x"></i>
+				<i class="fa fa-puzzle-piece fa-3x"></i>
 			</div>
 			<div class="menu_option sel_custom_icon" title="Upload Image">
 				<span class="glyphicon glyphicon-open"></span>
-			</div>
-			<div class="menu_option sel_text" title="Text">
-				<i class="fa fa-font fa-3x"></i>
-
 			</div>
 		</div>
 		<!--=============================================================-->
@@ -126,8 +122,85 @@
 
 				</form>
 			</div>
+		</div>
+		<!--=============================================================-->
+		<!--=========================preview start====================================-->
 
-			<div class="custom_font">
+		<div id='preview_t'>
+			<div id="preview_front">
+				<div class="front_print">
+
+				</div>
+			</div>
+			<div id="preview_back">
+				<div class="back_print">
+
+				</div>
+			</div>
+
+		</div>
+		<!--=============================================================-->
+		<!--======================view start=======================================-->
+
+		<div id='view_mode'>
+			<div  class="mode"><img id="o_front" src="tdesignAPI/images/product/bed-one/color-one/color-one_front.png" width="100%" height="80%" />FRONT
+			</div>
+			<div  class="mode"><img id="o_back" src="tdesignAPI/images/product/bed-one/color-one/color-one_back.png" width="100%" height="80%" />SIDE
+			</div>
+			<div class="mode">
+				<i class="fa fa-binoculars fa-4x preview_images" id="preview_images" data-toggle="modal" data-target=".bs-example-modal-lg"></i>Preview
+			</div>
+			<div class="menu_option sel_text" title="Text">
+				<i class="fa fa-font fa-3x"></i>Label
+
+			</div>
+		</div>
+		<!--=====================View Ends========================================-->
+		<div id="overview">
+			<div class="">
+
+				<button type="button" class="btn btn-primary btn-block preview_images"  data-toggle="modal" data-target=".bs-example-modal-lg">
+					Proceed
+				</button>
+				<button type="button" class="btn btn-primary btn-block" onclick="myHelp()" >
+					Help
+				</button>
+
+				<div class="pricing">
+					<table style="width: 100%;">
+						<tr style="border-bottom: 1px solid #ffffff;">
+							<th><h4><b>Price List</b></h4></th>
+						</tr>
+						<tr style="border-bottom: 1px solid #ffffff;">
+							<td><p>Single</p></td>
+							<td><p><b>9500.00</b></p></td>
+						</tr>
+						<tr style="border-bottom: 1px solid #ffffff;">
+							<td><p>Double (48)</p></td>
+							<td><p><b>12500.00</b></p></td>
+						</tr>
+						<tr style="border-bottom: 1px solid #ffffff;">
+							<td><p>Double (54)</p></td>
+							<td><p><b>13500.00</b></p></td>
+						</tr>
+						<tr style="border-bottom: 1px solid #ffffff;">
+							<td><p>Family</p></td>
+							<td><p><b>14500.00</b></p></td>
+						</tr>
+						<tr style="border-bottom: 1px solid #ffffff;">
+							<td><p>King/Queen</p></td>
+							<td><p><b>17000.00</b></p></td>
+						</tr>
+						<tr>
+							<td colspan="2"><p style="font-size: .9rem; color: #FF0000; margin-top: 10px;">Note: Expect additional charges from the shop depending on the design and wood type.</p></td>
+						</tr>
+						<tr>
+							<td colspan="2"><p style="font-size: .9rem; color: #FF0000; margin-top: 10px;">Note: Carving is available in solid wood only.</p></td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="custom_font">
 
 				<select id="fs" onchange="changeFont(this.value);">
 					<option value="arial">Arial</option>
@@ -198,91 +271,9 @@
 				</button>
 
 			</div>
-		</div>
-		<!--=============================================================-->
-		<!--=========================preview start====================================-->
-
-		<div id='preview_t'>
-			<div id="preview_front">
-				<div class="front_print">
-
-				</div>
-			</div>
-			<div id="preview_back">
-				<div class="back_print">
-
-				</div>
-			</div>
-
-		</div>
-		<!--=============================================================-->
-		<!--======================view start=======================================-->
-
-		<div id='view_mode'>
-			<div  class="mode"><img id="o_front" src="tdesignAPI/images/product/bed-one/color-one/color-one_front.png" width="100%" height="80%" />FRONT
-			</div>
-			<div  class="mode"><img id="o_back" src="tdesignAPI/images/product/bed-one/color-one/color-one_back.png" width="100%" height="80%" />SIDE
-			</div>
-			<div class="mode">
-				<i class="fa fa-binoculars fa-4x preview_images" id="preview_images" data-toggle="modal" data-target=".bs-example-modal-lg"></i>Preview
-			</div>
-		</div>
-		<!--=====================View Ends========================================-->
-		<div id="overview">
-			<div class="">
-
-				<button type="button" class="btn btn-primary btn-block preview_images"  data-toggle="modal" data-target=".bs-example-modal-lg">
-					Proceed
-				</button>
-				<button type="button" class="btn btn-primary btn-block" onclick="myHelp()" >
-					Help
-				</button>
-				<!--<button type="button" class="btn btn-danger btn-block" onclick="window.location.href='../userCustomization.php';" >
-					Back
-				</button>-->
-
-				<div class="pricing">
-					<table style="width: 100%;">
-						<tr style="border-bottom: 1px solid #ffffff;">
-							<th><h4><b>Price List</b></h4></th>
-						</tr>
-						<tr style="border-bottom: 1px solid #ffffff;">
-							<td><p>Single</p></td>
-							<td><p><b>9500.00</b></p></td>
-						</tr>
-						<tr style="border-bottom: 1px solid #ffffff;">
-							<td><p>Double (48)</p></td>
-							<td><p><b>12500.00</b></p></td>
-						</tr>
-						<tr style="border-bottom: 1px solid #ffffff;">
-							<td><p>Double (54)</p></td>
-							<td><p><b>13500.00</b></p></td>
-						</tr>
-						<tr style="border-bottom: 1px solid #ffffff;">
-							<td><p>Family</p></td>
-							<td><p><b>14500.00</b></p></td>
-						</tr>
-						<tr style="border-bottom: 1px solid #ffffff;">
-							<td><p>King/Queen</p></td>
-							<td><p><b>17000.00</b></p></td>
-						</tr>
-						<tr>
-							<td colspan="2"><p style="font-size: .9rem; color: #FF0000; margin-top: 10px;">Note: Expect additional charges from the shop depending on the design and wood type.</p></td>
-						</tr>
-						<tr>
-							<td colspan="2"><p style="font-size: .9rem; color: #FF0000; margin-top: 10px;">Note: Carving is available in solid wood only.</p></td>
-						</tr>
-					</table>
-				</div>
 			</div>
 		</div>
 	</div>
-
-	<!-- Large modal -->
-	<!--
-	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-lg">
-	<div class="modal-content"> -->
 
 	<div class="layer">
 		<div class="modal-content">
@@ -296,13 +287,6 @@
 
 				<div id="image_reply"></div>
 				<div class="modal-footer">
-					<!--	<span > Price : </span>
-
-					<form method="POST" enctype="multipart/form-data" id="imageFileForm" action="checkout/checkout.php">
-					<input type="hidden" name="img_front" id="img_front" value="" />
-					<input type="hidden" name="img_back" id="img_back" value="" />
-					<button type="submit" class="btn btn-primary">Proceed</button>
-					</form>-->
 					<div class="row">
 						<form method="POST" enctype="multipart/form-data" id="imageFileForm" action="../customizePlacement.php">
 							<div class="col-md-1">
@@ -322,8 +306,6 @@
 											<td><b></b></td>
 											<td><b>Type</b></td>
 											<td><b>Qty</b></td>
-											<!--<td><b>XXL</b></td>
-											<td><b>Total</b></td>-->
 										</tr>
 										<tr>
 											<td colspan="2">
@@ -337,12 +319,7 @@
 												</select>
 											</td>
 
-											<!--<td>
-											<input id="medium2" onchange="changeval2()"  name="length" type="text" class="form-control medium input-md"/>
-											</td>-->
-
 											<td>
-											<!--<input id="large2" onchange="changeval2()"  name="type" type="text" class="form-control large input-md"/>-->
 											<select name="type" id="large2" onchange="changeval2()" class="form-control large input-md">
 												<option value="">Select...</option>
 												<option value="Plywood">Plywood</option>
@@ -355,12 +332,6 @@
 											<input id="xlarge2" onchange="changeval2()"  name="qty" type="number" value="0" class="form-control xlarge input-md" min=0 max=20 />
 											</td>
 
-											
-											
-											<!--<
-											<td>
-											<input id="total2" name="total" type="number" value="1" class="form-control total input-md" disabled min=1 max=99999 />
-											</td>-->
 										</tr>
 										<tr>
 											<td colspan="4">
@@ -387,41 +358,8 @@
 		</div>
 	</div>
 
-	<!--	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-lg">
-	<div class="modal-content">
-	<div class="modal-header">
-	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-	<h4 class="modal-title">Showcase</h4>
-	</div>
-	<div class="modal-body">
-
-	<div id="image_reply">
-	</div>
-	</div>
-	<div class="modal-footer">
-	<span > Price : </span>
-	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	<form method="POST" enctype="multipart/form-data" id="imageFileForm" action="checkout/checkout.php">
-	<input type="hidden" name="img_front" id="img_front" value="" />
-	<input type="hidden" name="img_back" id="img_back" value="" />
-	<button type="submit" class="btn btn-primary">Proceed</button>
-	</form>
-	</div>
-	</div>
-	</div>
-	</div>
-	-->
-
-	<!--			<button type="button" class="btn btn-primary">Proceed</button>
-	</div>
-	</div>
-	</div> -->
-
 </div>
 <script>
-	//$('input[type=file]').bootstrapFileInput();
-	//$('.file-inputs').bootstrapFileInput();
 	function readURL(input) {
 		if (input.files && input.files[0]) {
 			var reader = new FileReader();
