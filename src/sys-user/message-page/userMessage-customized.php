@@ -213,6 +213,29 @@
                                     <p class="title">Total Price:</p>
                                     <p>&nbspPhp <?php echo $row['total_price']; ?>.00</p>
                                 </div>
+                                <div class="d-t">
+                                    <p class="title">Downpayment Amount:</p>
+                                    <p>&nbspPhp <?php   $tprice = $row['total_price'];
+                                                        $percent = 20;
+
+                                                        $dp = ($percent / 100) * $tprice;
+
+                                                        echo $dp; ?>
+                                    </p>
+                                </div>
+                                <?php
+                                    if($row['downpayment'] == '1') {
+
+                                        $new_amount = $tprice - $dp;
+
+                                        echo   "<div class='d-t'>
+                                                    <p class='title'>Remaining Balance:</p>
+                                                    <p>&nbspPhp $new_amount
+                                                    </p>
+                                                </div>";
+                                    }
+                                ?>
+
                             </div>
                             <div class="order">
                                 <p>Your Order:</p>
@@ -250,7 +273,7 @@
                                         <p>0</p>
                                     </div>
                                     <div class="prog-desc">
-                                        <p>Order Confirmation</p>
+                                        <p>Downpayment</p>
                                     </div>
                                 </div>
                                 <div class="percentage">
@@ -298,16 +321,26 @@
                                     </div>
                                 </div>
                                 <?php
+                                    if($row['downpayment'] == '0') {
+                                        $tprice = $row['total_price'];
+                                        echo "  <p class='text-note'>Please send your downpayment before we process your order.</p>
+                                        
+                                                <form action='../gcash-payment/downpayment.php' method='GET'>
+                                                    <input name='trans_id' type='hidden' value='$trans_id2'>
+                                                    <input type='submit' value='GCash Downpayment' class='dp-order' style='border: none;'>
+                                                </form>";
+                                    }
+
                                     if($data['hundred'] == 'DONE') {
                                         echo "<a class='rate-order' style='text-align: center;' href='feedback.php?trans_id=$trans_id2'>Feedback</a>";
                                             }
 
-                                            if($row['payment_method'] == 'GCash') {
-                                                $tprice = $row['total_price'];
-                                                echo "  <form action='../gcash-payment/' method='GET'>
-                                                            <input name='trans_id' type='hidden' value='$trans_id2'>
-                                                            <input type='submit' value='GCash Payment' class='rate-order' style='border: none;'>
-                                                        </form>";
+                                    if($row['payment_method'] == 'GCash' && $row['downpayment'] == '1') {
+                                        $tprice = $row['total_price'];
+                                        echo "  <form action='../gcash-payment/' method='GET'>
+                                                    <input name='trans_id' type='hidden' value='$trans_id2'>
+                                                    <input type='submit' value='GCash Payment' class='rate-order' style='border: none;'>
+                                                </form>";
                                             } else {
                                                 echo "";
                                             }

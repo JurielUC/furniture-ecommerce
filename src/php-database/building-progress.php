@@ -17,13 +17,14 @@
 
     if(isset($_REQUEST["zero"]))
         {
-            $mc="Your order percentage with Transaction ID of <b>$trans_id</b> is now 25%.";
+            $mc="We already recieved your downpayment. Thank you! Your order percentage with Transaction ID of <b>$trans_id</b> is now 25%.";
 
             $query = "UPDATE tb_progress SET zero='$done', two_five='$process', fifty='$empty', seven_five='$empty', hundred='$empty' WHERE trans_id='$trans_id'";
             $result = mysqli_query($conn, $query);
 
             if ($result) {
                 $sql3 = mysqli_query($conn, "UPDATE tb_user SET recieved_msg = recieved_msg + 1 WHERE unique_id = '$uid'");
+                $sql4 = mysqli_query($conn, "UPDATE tb_orderprocess SET downpayment = '1' WHERE trans_id = '$trans_id'");
                 $sql2 = mysqli_query($conn, "INSERT INTO tb_pointmessage(message_to, message_from, message_content, sender_name, msg_timestamp, msg_file) VALUES('$uid', '$loggedin_uid', '$mc', '$loggedin_fname $loggedin_lname', '$timestamp', '0')");
                 header("location: ../sys-admin/message-page/adminMessage.php?unique_id=$uid & status=$status & first_name=$fname & last_name=$lname & myfile=$ppic");
                     exit;
