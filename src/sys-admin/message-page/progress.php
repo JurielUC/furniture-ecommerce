@@ -149,7 +149,7 @@
                                         <p>0</p>
                                     </div>
                                     <div class="prog-desc">
-                                        <p>Checking Product</p>
+                                        <p>Downpayment</p>
                                     </div>
                                 </div>
                                 <div class="percentage">

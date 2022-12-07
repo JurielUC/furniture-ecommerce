@@ -378,6 +378,27 @@ main {
                                 }
                             }
 
+                            .dp-order {
+                                padding: 3px 97px 3px 97px;
+                                color: $white-color;
+                                text-decoration: none;
+                                cursor: pointer;
+                                font-family: $font-family;
+                                background-color: $header-color;
+                                margin-top: 10px;
+                                transition: 0.3s;
+    
+                                &:hover {
+                                    opacity: 75%;
+                                }
+                            }
+
+                            .text-note {
+                                color: $red;
+                                text-align: center;
+                                margin-top: 10px;
+                            }
+
                             .line {
                                 border: 2px dotted $white-color;
                                 margin-top: 10px;

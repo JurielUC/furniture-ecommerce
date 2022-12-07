@@ -365,7 +365,7 @@
 								<input type="hidden" name="img_front" id="img_front" value="" />
 								<input type="hidden" name="img_back" id="img_back" value="" />
 								<button type="submit" name="door" class="btn btn-primary">
-									Order Now!
+									Save
 								</button>
 							</div>
 						</form>

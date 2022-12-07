@@ -102,6 +102,34 @@
                             <h4>Total Price</h4>
                             <p>PHP <?php echo $row['total_price'];?></p>
                         </div>
+                        <div id="total-price">
+                            <h4>Downpayment</h4>
+                            <p>PHP 
+                                <?php
+                                    $tprice = $row['total_price'];
+                                    $percent = 20;
+
+                                    $dp = ($percent / 100) * $tprice;
+
+                                    echo $dp;
+                            
+                                ?>
+                            </p>
+                        </div>
+                        <div id="total-price">
+                            <h4>Amount after DPayment</h4>
+                            <p>PHP 
+                                <?php
+                                    $new_amount = $tprice - $dp;
+
+                                    echo $new_amount;
+                            
+                                ?>
+                            </p>
+                        </div>
+                        <span class="span-note">
+                            <p>Once your order has been accepted. You have to send your downpayment first before we process your order.</p>
+                        </span>
                     
                 </div>
                         <!--Alert-->

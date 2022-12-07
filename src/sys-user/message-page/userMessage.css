@@ -592,6 +592,24 @@ main .container .progress-cont .progress .progress-bar-cont .canvas .progress-ti
 main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .rate-order:hover {
   opacity: 75%;
 }
+main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .dp-order {
+  padding: 3px 97px 3px 97px;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  background-color: #a8896c;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .dp-order:hover {
+  opacity: 75%;
+}
+main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .text-note {
+  color: #d9534f;
+  text-align: center;
+  margin-top: 10px;
+}
 main .container .progress-cont .progress .progress-bar-cont .canvas .progress-timeline .line {
   border: 2px dotted #ffffff;
   margin-top: 10px;

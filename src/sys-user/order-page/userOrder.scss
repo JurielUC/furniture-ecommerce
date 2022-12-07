@@ -224,6 +224,13 @@ main {
                         color: $header-color;
                     }
                 }
+
+                .span-note {
+                    width: 100%;
+                    text-align: center;
+                    color: #ff0000;
+                    font-size: .8rem;
+                }
             }
 
             .checkout {

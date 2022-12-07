@@ -249,7 +249,7 @@
                                         <p>0</p>
                                     </div>
                                     <div class="prog-desc">
-                                        <p>Checking Product</p>
+                                        <p>Downpayment</p>
                                     </div>
                                 </div>
                                 <div class="percentage">
@@ -296,12 +296,23 @@
                                         <p>Order Recieved</p>   
                                     </div>
                                 </div>
+                                
                                 <?php
+                                    if($row['downpayment'] == '0') {
+                                        $tprice = $row['total_price'];
+                                        echo "  <p class='text-note'>Please send your downpayment before we process your order.</p>
+                                        
+                                                <form action='../gcash-payment/downpayment.php' method='GET'>
+                                                    <input name='trans_id' type='hidden' value='$trans_id2'>
+                                                    <input type='submit' value='GCash Downpayment' class='dp-order' style='border: none;'>
+                                                </form>";
+                                    }
+
                                     if($data['hundred'] == 'DONE') {
                                         echo "<a class='rate-order' style='text-align: center;' href='feedback.php?trans_id=$trans_id2'>Feedback</a>";
                                             }
                                     
-                                    if($row['payment_method'] == 'GCash') {
+                                    if($row['payment_method'] == 'GCash' && $row['downpayment'] == '1') {
                                         $tprice = $row['total_price'];
                                         echo "  <form action='../gcash-payment/' method='GET'>
                                                     <input name='trans_id' type='hidden' value='$trans_id2'>

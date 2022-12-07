@@ -413,6 +413,12 @@ main .container .product-cont .product #total-price p {
   margin-right: 10px;
   color: #a8896c;
 }
+main .container .product-cont .product .span-note {
+  width: 100%;
+  text-align: center;
+  color: #ff0000;
+  font-size: 0.8rem;
+}
 main .container .product-cont .checkout {
   margin-top: 5px;
   width: 420px;

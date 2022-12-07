@@ -47,11 +47,10 @@
                     <p>GCash Payment</p>
                 </div>
                 <div class="gcash-cont">
-                    <h1>Send Payment</h1>
+                    <h1>Send Downpayment</h1>
                     <img src="../../../image/gcash.png" alt="" height="100">
                     <div class="g-content">
                         <p><b>Transaction ID:</b>&nbsp <span><?php echo $row['trans_id']; ?></span></p>
-                        <p><b>Amount:</b>&nbsp PHP <span><?php echo $row['total_price']; ?></span></p>
                         <p><b>Downpayment Amount:</b>&nbsp PHP <span><?php
                                                             $tprice = $row['total_price'];
                                                             $percent = 20;
@@ -61,28 +60,22 @@
                                                             echo $dp;
                                                     
                                                         ?></span></p>
-                        <p><b>Remaining Balance:</b>&nbsp PHP <span><?php
-                                                            $new_amount = $tprice - $dp;
-
-                                                            echo $new_amount;
-                                                    
-                                                        ?></span></p>
                     </div>
                     <div class="g-form">
                         <form action='' method='GET'>
                             <input name='amount' type='hidden' value='<?php echo $row['total_price']; ?>'>
-                            <input type='submit' value='GCash Payment' disabled>
+                            <input type='submit' value='GCash Payment' title='Direct Payment is currently unavailable' disabled>
                         </form>
                     </div>
                     <div class="g-btn">
-                        <p>You can use this QR Code to send your online payment</p>
+                        <p>You can use this QR Code to send your downpayment</p>
                         <a class="open" href="gcash-qr/" target="_blank">QR Code</a><br>
                     </div>
                     <div class="g-dl">
                         <a class="download" href="gcash-qr/qr-code.jpg" download>Download QR Code</a>
                     </div>
                     <div class="g-dl">
-                        <p>Send your payment reciept after paying for <br>shop confirmation.</p>
+                        <p>Send your payment reciept after paying your downpayment for <br>shop confirmation.</p>
                     </div>
                 </div>
             </section>
