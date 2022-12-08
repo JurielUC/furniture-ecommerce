@@ -160,7 +160,7 @@
                         <?php 
                             include '../../php-database/dbconnect.php';
 
-                            $query = "SELECT * FROM tb_orderprocess INNER JOIN tb_customize ON tb_orderprocess.product_id = tb_customize.cust_id WHERE tb_orderprocess.user_id = '$uid' ORDER BY tb_orderprocess.id DESC";
+                            $query = "SELECT * FROM tb_orderprocess WHERE tb_orderprocess.user_id = '$uid' ORDER BY tb_orderprocess.id DESC";
                             $result = mysqli_query($conn, $query);
                         ?>
                         <div class="canvas">
@@ -194,26 +194,18 @@
                                     <p>&nbsp<?php echo $row['payment_method']; ?></p>
                                 </div>
                                 <div class="d-t">
-                                    <p class="title">Size:</p>
-                                    <p>&nbsp<?php echo $row['size']; ?></p>
-                                </div>
-                                <div class="d-t">
                                     <p class="title">Total Price:</p>
                                     <p>&nbspPhp <?php echo $row['total_price']; ?>.00&nbsp&nbsp</p>
                                     <a href="edit-amount.php?id=<?php echo $row['trans_id']; ?> & unique_id=<?php echo $uid; ?> & status=<?php echo $status; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & myfile=<?php echo $ppic; ?>">Edit Amount</a>
                                 </div>
-                                <div class="d-t">
-                                    <p><b>Note:</b> <br><?php echo $row['note']; ?></p>
-                                </div>
                             </div>
                             <div class="order">
                                 <p>Your Order:</p>
-                                <div class="spe-order" onclick="window.location.href='view-image.php?cust_id=<?php echo $row['cust_id']; ?> & unique_id=<?php echo $uid; ?> & status=<?php echo $status; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & myfile=<?php echo $ppic; ?>'">
-                                    <img src="../../sys-user/customization-page/<?php echo $row['img_front']; ?>" alt="" height="50px">
-                                    <img src="../../sys-user/customization-page/<?php echo $row['img_back']; ?>" alt="" height="50px">
+                                <div class="spe-order" onclick="window.location.href='view-image.php?trans_id=<?php echo $row['trans_id']; ?> & unique_id=<?php echo $uid; ?> & status=<?php echo $status; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & myfile=<?php echo $ppic; ?>'">
+                                    <img src="../../../image/icon/clipboard.png" alt="" height="50px">
                                     <div>
-                                        <h4><?php echo $row['type']; ?></h4>
-                                        <p><?php echo $row['category']; ?></p>
+                                        <h4>View</h4>
+                                        <p>Order(s)</p>
                                     </div>
                                 </div>
                             </div>
@@ -224,9 +216,6 @@
                                 $dt=$row['datetime'];
                                 $oq=$row['order_qty'];
                                 $tp=$row['total_price'];
-                                $pi=$row['img_front'];
-                                $pn=$row['type'];
-                                $pr=$row['category'];
                                 $cpn=$row['phone_no'];
                                 $addr=$row['address'];
                                 $pcode=$row['postal_code'];

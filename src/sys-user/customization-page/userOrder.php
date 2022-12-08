@@ -47,18 +47,6 @@
     <main>
         <div class="container">
             <section class="product-cont">
-                    <?php 
-                        require_once '../../php-database/dbconnect.php';
-
-                        $custID=$_GET['cust_id'];
-                        
-                        $query = "SELECT * FROM tb_customize WHERE cust_id=$custID";
-                        $result = mysqli_query($conn, $query);
-
-                        while($row = mysqli_fetch_assoc($result))
-                        {
-
-                    ?>
                 <div class="prod-back">
                     <a href="customized-design.php"><img src="../../../image/icon/arrow.png" alt="" width="15px" height="15px"></a>
                     <p>Checkout</p>
@@ -86,7 +74,20 @@
                         </div>
                         <div id="selected-product">
                             <h3><u>Customized Furniture</u></h3>
+                                <?php 
+                                    require_once '../../php-database/dbconnect.php';
+
+                                    $trans_id=$_GET['trans_id'];
+                                    
+                                    $query = "SELECT * FROM tb_customize WHERE trans_id=$trans_id";
+                                    $result = mysqli_query($conn, $query);
+
+                                    while($row = mysqli_fetch_assoc($result))
+                                    {
+
+                                ?>
                             <div class="spe-product">
+                                
                                 <div class="img-name">
                                     <div class="image">
                                         <img src="<?php echo $row['img_front']; ?>" alt="" width="60px">
@@ -96,18 +97,21 @@
                                     </div>
                                     <div class="name-product">
                                         <h4><?php echo $row['type']; ?></h4>
-                                        <p><?php echo $row['category']; ?></p>
+                                        <p><?php echo $row['price']; ?></p>
                                     </div>
                                 </div>
+                                
                                 <div class="quantity">
                                     <input type="text" name="user_id" value="<?php echo $loggedin_uid;?>" hidden>
-                                    <input type="text" name="cust_id" value="<?php echo $row['cust_id'];?>" hidden>
-                                    <input type="text" name="total_price" value="<?php echo $row['price']; ?>" hidden>
+                                    <input type="text" name="cust_id" value="<?php echo $row['selected'];?>" hidden>
+                                    <input type="text" name="trans_id" value="<?php echo $row['trans_id'];?>" hidden>
                                     <input type="number" name="quantity" id="quantity" value="<?php echo $row['qty'];?>" readonly>
                                     <p>pc/s</p>
                                 </div>
                             </div>
+                            <?php } ?>
                         </div>
+                        
                         <div id="payment">
                             <label for="payment-method">Payment Method</label>
                             <select name="payment" id="payment-method" required>
@@ -118,7 +122,17 @@
                         </div>
                         <div id="total-price">
                             <h4>Total Price</h4>
-                            <p>PHP <?php echo $row['price']; ?>.00</p>
+                            <p>PHP <?php 
+                                    $query2 = "SELECT SUM(price) AS total_amount FROM tb_customize WHERE user_id = '$loggedin_uid' AND trans_id = '$trans_id'";
+                                    $result2 = mysqli_query($conn, $query2);
+
+                                    while ($row = mysqli_fetch_assoc($result2))
+                                        {       
+                                            $ta = $row['total_amount'];
+                                            echo $ta;
+                                            echo "<input type='text' name='total_price' value='$ta' hidden>";
+                                        }
+                                        ?></p>
                         </div>
                         <p style="font-size: .8rem; color: #FF0000; margin-top: 10px; text-align: center;">Note: Expect additional charges from the shop depending on the design and wood type.</p>
                         <p style="font-size: .8rem; color: #FF0000; margin-top: 10px; text-align: center;">Note: There will be some changes to the price depending on the agreement.</p>
@@ -142,7 +156,6 @@
                 <div class="checkout">
                     <button onclick="openAlert()">Place Order</button>
                 </div>
-                <?php } ?>
             </section>
         </div>
         <script src="../../js/alert.js"></script>

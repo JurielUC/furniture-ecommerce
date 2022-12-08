@@ -128,7 +128,7 @@
                             </p>
                         </div>
                         <span class="span-note">
-                            <p>Once your order has been accepted. You have to send your downpayment first before we process your order.</p>
+                            <p>Once your order has been accepted. You have to send your downpayment via GCASH first before we process your order.</p>
                         </span>
                     
                 </div>

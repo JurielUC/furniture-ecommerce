@@ -92,7 +92,7 @@
                         </tr>
                         <?php
 
-                            $query = "SELECT * FROM tb_customize WHERE user_id = '$loggedin_uid' ORDER BY sent AND id DESC";
+                            $query = "SELECT * FROM tb_customize WHERE user_id = '$loggedin_uid' AND selected <= '1' ORDER BY sent AND id DESC";
                             $result = mysqli_query($conn, $query);
                         
                             while ($row = mysqli_fetch_assoc($result))
@@ -149,10 +149,12 @@
                                     $query3 = "SELECT COUNT(selected) AS total_selected FROM tb_customize WHERE user_id = '$loggedin_uid' AND selected = '1'";
                                     $result3 = mysqli_query($conn, $query3);
 
+                                    $trans_id = rand(time(), 100000000);
+
                                     while ($row = mysqli_fetch_assoc($result3))
                                         {       
                                 ?>
-                                <a title='<?php echo $row['total_selected']; ?> product selected.' class='success place-order' href='../../php-database/unselect-custo.php'>Check Out(<?php echo $row['total_selected']; ?>)</a>
+                                <a title='<?php echo $row['total_selected']; ?> product selected.' class='success place-order' href='../../php-database/multiple-order.php?trans_id=<?php echo $trans_id ?> & user_id=<?php echo $loggedin_uid ?>'>Check Out(<?php echo $row['total_selected']; ?>)</a>
                                 <?php } ?>
                             </td>
                         </tr>

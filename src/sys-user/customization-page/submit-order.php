@@ -12,7 +12,7 @@
     $qty=$_REQUEST['quantity'];
     $payment=$_REQUEST['payment'];
     $t_price=$_REQUEST['total_price'];
-    $trans_id = rand(time(), 100000000);
+    $trans_id=$_REQUEST['trans_id'];
     date_default_timezone_set('Asia/Manila');
     $timestamp = date("Y-m-d H:i:s");
     $mc="$name sent you an order.";
