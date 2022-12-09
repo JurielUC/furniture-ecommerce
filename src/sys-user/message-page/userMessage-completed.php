@@ -212,7 +212,30 @@
                                     <p class="title">Total Price:</p>
                                     <p>&nbspPhp <?php echo $row['total_price']; ?>.00</p>
                                 </div>
+                                <div class="d-t">
+                                    <p class="title">Downpayment Amount:</p>
+                                    <p>&nbspPhp <?php   $tprice = $row['total_price'];
+                                                        $percent = 20;
+
+                                                        $dp = ($percent / 100) * $tprice;
+
+                                                        echo $dp; ?>
+                                    </p>
+                                </div>
+                                <?php
+                                    if($row['downpayment'] == '1') {
+
+                                        $new_amount = $tprice - $dp;
+
+                                        echo   "<div class='d-t'>
+                                                    <p class='title'>Remaining Balance:</p>
+                                                    <p>&nbspPhp $new_amount
+                                                    </p>
+                                                </div>";
+                                    }
+                                ?>
                             </div>
+                            
                             <div class="order">
                                 <p>Your Order:</p>
                                 <div class="spe-order">

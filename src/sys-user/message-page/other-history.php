@@ -176,7 +176,7 @@
                         <?php 
                             include '../../php-database/dbconnect.php';
 
-                            $query = "SELECT * FROM tb_ordercompleted INNER JOIN tb_customize ON tb_ordercompleted.product_id = tb_customize.cust_id WHERE tb_ordercompleted.user_id = '$loggedin_uid' ORDER BY tb_ordercompleted.id DESC";
+                            $query = "SELECT * FROM tb_ordercompleted WHERE user_id = '$loggedin_uid' AND customize = '2'  ORDER BY id DESC";
                             $result = mysqli_query($conn, $query);
                         ?>
                         <div class="canvas">
@@ -212,15 +212,36 @@
                                     <p class="title">Total Price:</p>
                                     <p>&nbspPhp <?php echo $row['total_price']; ?>.00</p>
                                 </div>
+                                <div class="d-t">
+                                    <p class="title">Downpayment Amount:</p>
+                                    <p>&nbspPhp <?php   $tprice = $row['total_price'];
+                                                        $percent = 20;
+
+                                                        $dp = ($percent / 100) * $tprice;
+
+                                                        echo $dp; ?>
+                                    </p>
+                                </div>
+                                <?php
+                                    if($row['downpayment'] == '1') {
+
+                                        $new_amount = $tprice - $dp;
+
+                                        echo   "<div class='d-t'>
+                                                    <p class='title'>Remaining Balance:</p>
+                                                    <p>&nbspPhp $new_amount
+                                                    </p>
+                                                </div>";
+                                    }
+                                ?>
                             </div>
                             <div class="order">
                                 <p>Your Order:</p>
-                                <div class="spe-order">
-                                    <img src="../customization-page/<?php echo $row['img_front']; ?>" alt="" height="50px">
-                                    <img src="../customization-page/<?php echo $row['img_back']; ?>" alt="" height="50px">
+                                <div class="spe-order" onclick="window.location.href='ordered-item-list.php?trans_id=<?php echo $row['trans_id']; ?>'">
+                                    <img src="../../../image/icon/clipboard.png" alt="" height="50px">
                                     <div>
-                                        <h4><?php echo $row['type']; ?></h4>
-                                        <p>Php <?php echo $row['category']; ?>.00</p>
+                                        <h4>View</h4>
+                                        <p>Order(s)</p>
                                     </div>
                                 </div>
                             </div>

@@ -773,6 +773,7 @@ main .container .sml-cont .content-cont .progress-parent .prog-child .progress-t
   width: 195px;
 }
 main .container .sml-cont .content-cont .print-canvas {
+  overflow-y: scroll;
   width: 400px;
   height: 486px;
   background-color: #ffffff;
@@ -780,15 +781,35 @@ main .container .sml-cont .content-cont .print-canvas {
   margin-top: 20px;
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
+main .container .sml-cont .content-cont .print-canvas::-webkit-scrollbar {
+  display: block;
+  width: 5px;
+}
+main .container .sml-cont .content-cont .print-canvas::-webkit-scrollbar-track {
+  background: transparent;
+}
+main .container .sml-cont .content-cont .print-canvas::-webkit-scrollbar-thumb {
+  background-color: #a8896c;
+  border-right: none;
+  border-left: none;
+}
+main .container .sml-cont .content-cont .print-canvas::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+  margin-bottom: 10px;
+}
+main .container .sml-cont .content-cont .print-canvas::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+  margin-top: 10px;
+}
 main .container .sml-cont .content-cont .print-canvas .shopname {
-  width: 400px;
+  width: 380px;
   text-align: center;
 }
 main .container .sml-cont .content-cont .print-canvas .shopname p {
   font-size: 0.6rem;
 }
 main .container .sml-cont .content-cont .print-canvas .details {
-  width: 400px;
+  width: 380px;
   margin-top: 10px;
 }
 main .container .sml-cont .content-cont .print-canvas .details .details-set {
@@ -805,7 +826,7 @@ main .container .sml-cont .content-cont .print-canvas .details .details-set .hal
   font-size: 0.8rem;
 }
 main .container .sml-cont .content-cont .print-canvas .details .details-set .whole {
-  width: 400px;
+  width: 380px;
 }
 main .container .sml-cont .content-cont .print-canvas .details .details-set .whole h5, main .container .sml-cont .content-cont .print-canvas .details .details-set .whole p {
   margin-left: 5px;
@@ -815,9 +836,9 @@ main .container .sml-cont .content-cont .print-canvas .details .details-set .who
 }
 main .container .sml-cont .content-cont .print-canvas .details .details-set .prod-display {
   display: flex;
-  width: 386px;
+  width: 380px;
   margin-left: 5px;
-  margin-top: 40px;
+  margin-top: 10px;
   border: 1px solid #a8896c;
   color: #a8896c;
 }

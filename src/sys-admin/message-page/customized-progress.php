@@ -45,7 +45,7 @@
         $ppic=$_GET['myfile'];
         $tid=$_GET['trans_id'];
         
-        $query = "SELECT * FROM tb_orderprocess INNER JOIN tb_customize ON tb_orderprocess.product_id = tb_customize.cust_id WHERE trans_id = '$tid'";
+        $query = "SELECT * FROM tb_orderprocess WHERE trans_id = '$tid' AND customize = '1'";
         $result = mysqli_query($conn, $query);
 
         while ($row = mysqli_fetch_assoc($result))
@@ -54,10 +54,6 @@
                 $dt=$row['datetime'];
                 $oq=$row['order_qty'];
                 $tp=$row['total_price'];
-                $custID=$row['cust_id'];
-                $pi=$row['img_front'];
-                $pn=$row['type'];
-                $pr=$row['category'];
                 $cpn=$row['phone_no'];
                 $addr=$row['address'];
                 $pcode=$row['postal_code'];
@@ -116,11 +112,10 @@
                     </div>
                     <div class="product-parent">
                         <div class="prod-child">
-                            <img src="../../sys-user/customization-page/<?php echo $row['img_front']; ?>" alt="" height="100px">
-                            <img src="../../sys-user/customization-page/<?php echo $row['img_back']; ?>" alt="" height="100px">
+                            <img src="../../../image/icon/clipboard.png" alt="" height="100px">
                             <div>
-                                <h2><?php echo $pn; ?></h2>
-                                <p><?php echo $pr; ?></p>
+                                <h2>View</h2>
+                                <p>Order(s)</p>
                             </div>
                         </div>
                     </div>
@@ -153,7 +148,7 @@
                                         <p>0</p>
                                     </div>
                                     <div class="prog-desc">
-                                        <p>Order Confirmation</p>
+                                        <p>Downpayment</p>
                                     </div>
                                 </div>
                                 <div class="percentage">

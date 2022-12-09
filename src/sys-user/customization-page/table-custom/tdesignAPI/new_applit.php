@@ -156,7 +156,7 @@
 				<i class="fa fa-binoculars fa-4x preview_images" id="preview_images" data-toggle="modal" data-target=".bs-example-modal-lg"></i>Preview
 			</div>
 			<div class="menu_option sel_text" title="Text">
-				<i class="fa fa-font fa-3x"></i>Label
+				<i class="fa fa-font fa-4x"></i>Label
 
 			</div>
 		</div>

@@ -48,7 +48,12 @@
         <div class="container">
             <section class="product-cont">
                 <div class="prod-back">
-                    <a href="customized-design.php"><img src="../../../image/icon/arrow.png" alt="" width="15px" height="15px"></a>
+                    <?php 
+                        require_once '../../php-database/dbconnect.php';
+
+                        $trans_id=$_GET['trans_id'];
+                    ?>
+                    <a href="../../php-database/back-to-customized.php?trans_id=<?php echo $trans_id; ?>"><img src="../../../image/icon/arrow.png" alt="" width="15px" height="15px"></a>
                     <p>Checkout</p>
                 </div>
                 <div class="product">
@@ -75,9 +80,6 @@
                         <div id="selected-product">
                             <h3><u>Customized Furniture</u></h3>
                                 <?php 
-                                    require_once '../../php-database/dbconnect.php';
-
-                                    $trans_id=$_GET['trans_id'];
                                     
                                     $query = "SELECT * FROM tb_customize WHERE trans_id=$trans_id";
                                     $result = mysqli_query($conn, $query);
@@ -105,7 +107,7 @@
                                     <input type="text" name="user_id" value="<?php echo $loggedin_uid;?>" hidden>
                                     <input type="text" name="cust_id" value="<?php echo $row['selected'];?>" hidden>
                                     <input type="text" name="trans_id" value="<?php echo $row['trans_id'];?>" hidden>
-                                    <input type="number" name="quantity" id="quantity" value="<?php echo $row['qty'];?>" readonly>
+                                    <input type="number" id="quantity" value="<?php echo $row['qty'];?>" readonly>
                                     <p>pc/s</p>
                                 </div>
                             </div>
@@ -121,6 +123,20 @@
                             </select>
                         </div>
                         <div id="total-price">
+                            <h4>Total Quantity</h4>
+                            <p><?php 
+                                    $query2 = "SELECT SUM(qty) AS total_quantity FROM tb_customize WHERE user_id = '$loggedin_uid' AND trans_id = '$trans_id'";
+                                    $result2 = mysqli_query($conn, $query2);
+
+                                    while ($row = mysqli_fetch_assoc($result2))
+                                        {       
+                                            $tq = $row['total_quantity'];
+                                            echo $tq;
+                                            echo "<input type='text' name='quantity' value='$tq' hidden>";
+                                        }
+                                        ?> pc(s)</p>
+                        </div>
+                        <div id="total-price">
                             <h4>Total Price</h4>
                             <p>PHP <?php 
                                     $query2 = "SELECT SUM(price) AS total_amount FROM tb_customize WHERE user_id = '$loggedin_uid' AND trans_id = '$trans_id'";
@@ -134,6 +150,33 @@
                                         }
                                         ?></p>
                         </div>
+                        <div id="total-price">
+                            <h4>Downpayment</h4>
+                            <p>PHP 
+                                <?php
+                                    $percent = 20;
+
+                                    $dp = ($percent / 100) * $ta;
+
+                                    echo $dp;
+                            
+                                ?>
+                            </p>
+                        </div>
+                        <div id="total-price">
+                            <h4>Amount after DPayment</h4>
+                            <p>PHP 
+                                <?php
+                                    $new_amount = $ta - $dp;
+
+                                    echo $new_amount;
+                            
+                                ?>
+                            </p>
+                        </div>
+                        <span class="span-note">
+                            <p>Once your order has been accepted. You have to send your downpayment via GCASH first before we process your order.</p>
+                        </span>
                         <p style="font-size: .8rem; color: #FF0000; margin-top: 10px; text-align: center;">Note: Expect additional charges from the shop depending on the design and wood type.</p>
                         <p style="font-size: .8rem; color: #FF0000; margin-top: 10px; text-align: center;">Note: There will be some changes to the price depending on the agreement.</p>
                     

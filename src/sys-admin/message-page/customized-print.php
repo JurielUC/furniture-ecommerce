@@ -45,7 +45,7 @@
         $ppic=$_GET['myfile'];
         $tid=$_GET['trans_id'];
         
-        $query = "SELECT * FROM tb_orderprocess INNER JOIN tb_customize ON tb_orderprocess.product_id = tb_customize.cust_id WHERE trans_id = '$tid'";
+        $query = "SELECT * FROM tb_orderprocess WHERE trans_id = '$tid' AND customize = '1'";
         $result = mysqli_query($conn, $query);
 
         while ($row = mysqli_fetch_assoc($result))
@@ -54,9 +54,6 @@
                 $dt=$row['datetime'];
                 $oq=$row['order_qty'];
                 $tp=$row['total_price'];
-                $pi=$row['img_front'];
-                $pn=$row['type'];
-                $pr=$row['category'];
                 $cpn=$row['phone_no'];
                 $addr=$row['address'];
                 $pcode=$row['postal_code'];
@@ -132,23 +129,44 @@
                             </div>
                             <div class="details-set">
                                 <div class="half">
-                                    <h5>Price per piece:</h5>
-                                    <p>PHP <?php echo $pr; ?>.00</p>
-                                </div>
-                                <div class="half">
                                     <h5>Total:</h5>
                                     <p>PHP <?php echo $tp; ?>.00</p>
                                 </div>
+                                <div class="half">
+                                    <h5>Downpayment:</h5>
+                                    <p>PHP <?php   $tprice = $row['total_price'];
+                                                        $percent = 20;
+
+                                                        $dp = ($percent / 100) * $tprice;
+
+                                                        echo $dp; ?></p>
+                                </div>
                             </div>
                             <div class="details-set">
+                                <div class="half">
+                                    <h5>Remaining Balance:</h5>
+                                    <p>PHP <?php   $new_amount = $tprice - $dp;
+                                        echo $new_amount;
+                                    ?></p>
+                                </div>
+                            </div>
+                            <div class="details-set" style="display: flex; flex-direction: column;">
+                                <?php 
+                                    $query2 = "SELECT * FROM tb_customize WHERE trans_id = '$tid'";
+                                    $result2 = mysqli_query($conn, $query2);
+                            
+                                    while ($row2 = mysqli_fetch_assoc($result2))
+                                        {  
+                                ?>
                                 <div class="prod-display">
-                                    <img src="../../sys-user/customization-page/<?php echo $row['img_front']; ?>" alt="" height="100px">
-                                    <img src="../../sys-user/customization-page/<?php echo $row['img_back']; ?>" alt="" height="100px"> 
+                                    <img src="../../sys-user/customization-page/<?php echo $row2['img_front']; ?>" alt="" height="100px">
+                                    <img src="../../sys-user/customization-page/<?php echo $row2['img_back']; ?>" alt="" height="100px"> 
                                     <div>
-                                        <h2><?php echo $pn; ?></h2>
-                                        <p><?php echo $pr; ?></p>
+                                        <h2><?php echo $row2['type']; ?></h2>
+                                        <p><?php echo $tp; ?></p>
                                     </div>
                                 </div>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>

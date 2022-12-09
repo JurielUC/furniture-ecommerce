@@ -152,10 +152,18 @@
                                     $trans_id = rand(time(), 100000000);
 
                                     while ($row = mysqli_fetch_assoc($result3))
-                                        {       
+                                        {     
+                                            $ts = $row['total_selected'];
+                                            if($row['total_selected'] == '0') {
+                                                echo "<a title='$ts product selected.' class='success place-order' href=''>Check Out(0)</a>";
+                                            } 
+                                            else {
+                                                echo "<a title='$ts product selected.' class='success place-order' href='../../php-database/multiple-order.php?trans_id=$trans_id & user_id=$loggedin_uid'>Check Out($ts)</a>";
+                                            }
+                                        } 
                                 ?>
-                                <a title='<?php echo $row['total_selected']; ?> product selected.' class='success place-order' href='../../php-database/multiple-order.php?trans_id=<?php echo $trans_id ?> & user_id=<?php echo $loggedin_uid ?>'>Check Out(<?php echo $row['total_selected']; ?>)</a>
-                                <?php } ?>
+                                <!--<a title='<?php echo $row['total_selected']; ?> product selected.' class='success place-order' href='../../php-database/multiple-order.php?trans_id=<?php echo $trans_id ?> & user_id=<?php echo $loggedin_uid ?>'>Check Out(<?php echo $row['total_selected']; ?>)</a>
+                                 } ?>-->
                             </td>
                         </tr>
                         

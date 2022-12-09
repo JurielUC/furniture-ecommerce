@@ -601,6 +601,8 @@ main {
                 }
 
                 .print-canvas {
+                    overflow-y: scroll;
+                    @include scroll();
                     width: 400px;
                     height: 486px;
                     background-color: $white-color;
@@ -609,7 +611,7 @@ main {
                     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
                     
                     .shopname {
-                        width: 400px;
+                        width: 380px;
                         text-align: center;
 
                         p {
@@ -618,7 +620,7 @@ main {
                     }
                     
                     .details {
-                        width: 400px;
+                        width: 380px;
                         margin-top: 10px;
 
                         .details-set {
@@ -638,7 +640,7 @@ main {
                             }
 
                             .whole {
-                                width: 400px;
+                                width: 380px;
 
                                 h5, p {
                                     margin-left: 5px;
@@ -651,9 +653,9 @@ main {
 
                             .prod-display {
                                 display: flex;
-                                width: 386px;
+                                width: 380px;
                                 margin-left: 5px;
-                                margin-top: 40px;
+                                margin-top: 10px;
                                 border: 1px solid $header-color;
                                 color: $header-color;
 

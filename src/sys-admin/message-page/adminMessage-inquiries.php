@@ -160,7 +160,7 @@
                         <?php 
                             include '../../php-database/dbconnect.php';
 
-                            $query = "SELECT * FROM tb_orderprocess WHERE tb_orderprocess.user_id = '$uid' ORDER BY tb_orderprocess.id DESC";
+                            $query = "SELECT * FROM tb_orderprocess WHERE user_id = '$uid' AND customize = '1'  ORDER BY id DESC";
                             $result = mysqli_query($conn, $query);
                         ?>
                         <div class="canvas">
@@ -198,10 +198,32 @@
                                     <p>&nbspPhp <?php echo $row['total_price']; ?>.00&nbsp&nbsp</p>
                                     <a href="edit-amount.php?id=<?php echo $row['trans_id']; ?> & unique_id=<?php echo $uid; ?> & status=<?php echo $status; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & myfile=<?php echo $ppic; ?>">Edit Amount</a>
                                 </div>
+                                <div class="d-t">
+                                    <p class="title">Downpayment Amount:</p>
+                                    <p>&nbspPhp <?php   $tprice = $row['total_price'];
+                                                        $percent = 20;
+
+                                                        $dp = ($percent / 100) * $tprice;
+
+                                                        echo $dp; ?>
+                                    </p>
+                                </div>
+                                <?php
+                                    if($row['downpayment'] == '1') {
+
+                                        $new_amount = $tprice - $dp;
+
+                                        echo   "<div class='d-t'>
+                                                    <p class='title'>Remaining Balance:</p>
+                                                    <p>&nbspPhp $new_amount
+                                                    </p>
+                                                </div>";
+                                    }
+                                ?>
                             </div>
                             <div class="order">
                                 <p>Your Order:</p>
-                                <div class="spe-order" onclick="window.location.href='view-image.php?trans_id=<?php echo $row['trans_id']; ?> & unique_id=<?php echo $uid; ?> & status=<?php echo $status; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & myfile=<?php echo $ppic; ?>'">
+                                <div class="spe-order" onclick="window.location.href='ordered-item-list.php?trans_id=<?php echo $row['trans_id']; ?> & unique_id=<?php echo $uid; ?> & status=<?php echo $status; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & myfile=<?php echo $ppic; ?>'">
                                     <img src="../../../image/icon/clipboard.png" alt="" height="50px">
                                     <div>
                                         <h4>View</h4>
@@ -245,7 +267,7 @@
                                         <p>0</p>
                                     </div>
                                     <div class="prog-desc">
-                                        <p>Order Confirmation</p>
+                                        <p>Downpayment</p>
                                     </div>
                                 </div>
                                 <div class="percentage">
@@ -299,8 +321,8 @@
                                         }
                                     ?>
                                     <div> 
-                                        <button onclick="window.location.href='customized-progress.php?unique_id=<?php echo $uid; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & status=<?php echo $status; ?> & myfile=<?php echo $ppic; ?> & trans_id=<?php echo $trans_id2; ?> & datetime=<?php echo $dt; ?> & order_qty=<?php echo $oq; ?> & total_price=<?php echo $tp; ?> & product_img=<?php echo $pi; ?> & product_name=<?php echo $pn; ?> & price=<?php echo $pr; ?> & phone_no=<?php echo $cpn; ?> & address=<?php echo $addr; ?> & postal_code=<?php echo $pcode; ?> & house_no=<?php echo $hno; ?> & settings=<?php echo $sett; ?> & payment_method=<?php echo $paym; ?>'">Update Progress</button>
-                                        <button onclick="window.location.href='customized-print.php?unique_id=<?php echo $uid; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & status=<?php echo $status; ?> & myfile=<?php echo $ppic; ?> & trans_id=<?php echo $trans_id2; ?> & datetime=<?php echo $dt; ?> & order_qty=<?php echo $oq; ?> & total_price=<?php echo $tp; ?> & product_img=<?php echo $pi; ?> & product_name=<?php echo $pn; ?> & price=<?php echo $pr; ?> & phone_no=<?php echo $cpn; ?> & address=<?php echo $addr; ?> & postal_code=<?php echo $pcode; ?> & house_no=<?php echo $hno; ?> & settings=<?php echo $sett; ?> & payment_method=<?php echo $paym; ?>'">Print</button>
+                                        <button onclick="window.location.href='customized-progress.php?unique_id=<?php echo $uid; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & status=<?php echo $status; ?> & myfile=<?php echo $ppic; ?> & trans_id=<?php echo $trans_id2; ?> & datetime=<?php echo $dt; ?> & order_qty=<?php echo $oq; ?> & total_price=<?php echo $tp; ?> & phone_no=<?php echo $cpn; ?> & address=<?php echo $addr; ?> & postal_code=<?php echo $pcode; ?> & house_no=<?php echo $hno; ?> & settings=<?php echo $sett; ?> & payment_method=<?php echo $paym; ?>'">Update Progress</button>
+                                        <button onclick="window.location.href='customized-print.php?unique_id=<?php echo $uid; ?> & first_name=<?php echo $fname; ?> & last_name=<?php echo $lname; ?> & status=<?php echo $status; ?> & myfile=<?php echo $ppic; ?> & trans_id=<?php echo $trans_id2; ?> & datetime=<?php echo $dt; ?> & order_qty=<?php echo $oq; ?> & total_price=<?php echo $tp; ?> & phone_no=<?php echo $cpn; ?> & address=<?php echo $addr; ?> & postal_code=<?php echo $pcode; ?> & house_no=<?php echo $hno; ?> & settings=<?php echo $sett; ?> & payment_method=<?php echo $paym; ?>'">Print</button>
                                     </div>
                                     </div>
                                 <div class="line"></div>

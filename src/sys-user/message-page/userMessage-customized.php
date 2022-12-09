@@ -177,7 +177,7 @@
                         <?php 
                             include '../../php-database/dbconnect.php';
 
-                            $query = "SELECT * FROM tb_orderprocess INNER JOIN tb_customize ON tb_orderprocess.product_id = tb_customize.cust_id WHERE tb_orderprocess.user_id = '$loggedin_uid' ORDER BY tb_orderprocess.id DESC";
+                            $query = "SELECT * FROM tb_orderprocess WHERE user_id = '$loggedin_uid' AND customize = '1'  ORDER BY id DESC";
                             $result = mysqli_query($conn, $query);
                         ?>
                         <div class="canvas">
@@ -239,12 +239,11 @@
                             </div>
                             <div class="order">
                                 <p>Your Order:</p>
-                                <div class="spe-order">
-                                    <img src="../customization-page/<?php echo $row['img_front']; ?>" alt="" height="50px">
-                                    <img src="../customization-page/<?php echo $row['img_back']; ?>" alt="" height="50px">
+                                <div class="spe-order" onclick="window.location.href='ordered-item-list.php?trans_id=<?php echo $row['trans_id']; ?>'">
+                                    <img src="../../../image/icon/clipboard.png" alt="" height="50px">
                                     <div>
-                                        <h4><?php echo $row['type']; ?></h4>
-                                        <p><?php echo $row['category']; ?></p>
+                                        <h4>View</h4>
+                                        <p>Order(s)</p>
                                     </div>
                                 </div>
                             </div>

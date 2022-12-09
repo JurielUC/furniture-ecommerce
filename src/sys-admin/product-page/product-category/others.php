@@ -75,6 +75,8 @@
                                 <input type="file" id="myfile" name="product_img" accept="image/*" style="color: #000000;" required>
                             </div>
                             <div class="submit">
+                                <label for="quantity">QTY:</label>
+                                <input type="number" name="quantity" id="quantity" value="1" min="1" max="30">
                                 <button type="submit">Post</button>
                             </div>
                         </div>
@@ -131,7 +133,7 @@
                 <div class="inbox">
                     <div class="inbox-header">
                         <h2>Inbox</h2>
-                        <p>(2 message/s)</p>
+                        <p></p>
                     </div>
                     <div class="inbox-message-cont">
                         <!--put php for message display here-->

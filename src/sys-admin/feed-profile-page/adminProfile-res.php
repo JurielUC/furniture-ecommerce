@@ -120,6 +120,7 @@
                         $message = $_GET['message'];
                         echo $message; }?>
                     </h3>
+                    <button onclick="window.location.href='../existing-design/existing-design.php';">Sales Report</button>
                     <button onclick="window.location.href='../existing-design/existing-design.php';">Add Design</button>
                     <?php 
                         $sql6 = "SELECT * FROM tb_admin WHERE id = '$loggedin_id'";
