@@ -39,55 +39,33 @@
         <div class="container">
             <section class="post-cont">
                 <div class="form-cont">
-                    <h1>Customer's Post/Feedback</h1>
+                    <h1>Sales Report</h1>
                 </div>
                 <div class="category">
-                    <button class="active" onclick="window.location.href='adminProfile.php';">Without Response</button>
-                    <button onclick="window.location.href='adminProfile-res.php';">With Response</button>
+                    <form action="" method="get">
+                        <label for="from">From: </label>
+                        <input type="date" name="from" id="from">
+                        <label for="to">To: </label>
+                        <input type="date" name="to" id="to">
+                        <input type="submit" value="SHOW">
+                    </form>
                 </div>
                 <div class="user-post-cont">
-                        <?php 
-                            include '../../php-database/admin-userpost-display.php';
+                    
+                    <?php
+                    
+                        $query2 = "SELECT * FROM tb_ordercompleted WHERE datetime BETWEEN '2022-12-01' AND '2022-12-31'";
+                        $result2 = mysqli_query($conn, $query2);
 
-                            if (mysqli_num_rows($result) == 0) {
-                                echo "<div class='nodata' style='width: 690px; height: 80vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
-                                    <img src='../../../image/icon/file.png' width='120px' height='120px'>
-                                    <p>No Post</p>
-                                    </div>";
-                                }
-                        ?>
-                        <?php
-                                while ($row = mysqli_fetch_assoc($result))
-                                {   
-                            ?>
-                    <div class="user-post">
-                        <div class="pp-name-date">
-                            <div class="pp-name">
-                                <img src="../../sys-user/signup-page/<?php echo $row['myfile']; ?>" alt="" width="35px" height="35px">
-                                <h2><?php echo $row['fname']; ?> <?php echo $row['lname']; ?></h2>
-                            </div>
+                        while($row2 = mysqli_fetch_assoc($result2)) {
                             
-                            <p><?php echo $row['date_time']; ?></p>
-                        </div>
-                        <div class="caption-attachment">
-                            <p><?php echo $row['long_desc']; ?></p>
-                        </div>
-                        <div class="comment-send">
-                            <form action="../../php-database/comment.php" method="post">
-                                <input type="text" name="unique_id" value="<?php echo $loggedin_uid; ?>" hidden>
-                                <input type="text" name="post_id" value="<?php echo $row['id']; ?>" hidden>
-                                <textarea name="comment" cols="85" rows="2" placeholder="Response..."></textarea>
-                                <button type="submit"><img src="../../../image/icon/send.png" alt="" width="40px" height="40px"></button>
-                            </form>
-                        </div>
-
-                        <div class="divider-lang" style="height: 10px;">
-
-                        </div>
-                    </div>
+                            ?>
+                            <p><?php echo $row2['trans_id']; ?></p>
                     <?php 
                         }
+
                     ?>
+                    
                 </div>
             </section>
             <section class="shopinfo-cont">
@@ -121,7 +99,7 @@
                         $message = $_GET['message'];
                         echo $message; }?>
                     </h3>
-                    <button onclick="window.location.href='sales-report.php';">Sales Report</button>
+                    <button onclick="window.location.href='';">Sales Report</button>
                     <button onclick="window.location.href='../existing-design/existing-design.php';">Add Design</button>
                     <?php 
                         $sql6 = "SELECT * FROM tb_admin WHERE id = '$loggedin_id'";

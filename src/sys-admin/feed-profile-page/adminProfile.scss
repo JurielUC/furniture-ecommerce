@@ -47,6 +47,37 @@ main {
                     color: $white-color;
                     background-color: $header-color;
                 }
+
+                input[type=date] {
+                    margin-top: 10px;
+                    font-family: $font-family;
+                    padding: 3px 8px;
+                    display: inline-block;
+                    width: 230px;
+                    border: 1px solid $header-color;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                        
+                    &:focus {
+                        outline: none;
+                        border: 1px solid $mt-color;
+                    }
+                }
+
+                input[type=submit] {
+                    width: 163px;
+                    padding: 6px 0;
+                    background-color: $header-color;
+                    border-radius: 5px;
+                    color: $white-color;
+                    border: none;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 80%;
+                    }
+
+                }
             }
 
             .form-cont {

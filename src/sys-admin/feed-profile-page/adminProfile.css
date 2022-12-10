@@ -256,6 +256,32 @@ main .container .post-cont .category .active {
   color: #ffffff;
   background-color: #a8896c;
 }
+main .container .post-cont .category input[type=date] {
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+  padding: 3px 8px;
+  display: inline-block;
+  width: 230px;
+  border: 1px solid #a8896c;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+main .container .post-cont .category input[type=date]:focus {
+  outline: none;
+  border: 1px solid #dbb07b;
+}
+main .container .post-cont .category input[type=submit] {
+  width: 163px;
+  padding: 6px 0;
+  background-color: #a8896c;
+  border-radius: 5px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+main .container .post-cont .category input[type=submit]:hover {
+  opacity: 80%;
+}
 main .container .post-cont .form-cont {
   display: flex;
   align-items: center;

@@ -15,14 +15,15 @@
     $trans_id = rand(time(), 100000000);
     date_default_timezone_set('Asia/Manila');
     $timestamp = date("Y-m-d H:i:s");
+    $date = date("Y-m-d");
     //$mc = "New order request. Accept it!";
 
     //insert data to tb_user table
     $sql = "INSERT INTO tb_orderprocess(trans_id, user_id, product_id, 
         fullname, phone_no, address, postal_code, 
-        house_no, settings, order_qty, payment_method, total_price, datetime) VALUES('$trans_id', '$user_id', 
+        house_no, settings, order_qty, payment_method, total_price, datetime, date) VALUES('$trans_id', '$user_id', 
         '$prod_id','$name', '$phone_no', '$address', '$postal', '$h_no', '$settings', 
-        '$qty', '$payment', '$t_price', '$timestamp')";
+        '$qty', '$payment', '$t_price', '$timestamp', '$date')";
     
     //$sql2 = "INSERT INTO tb_pointmessage(message_to, message_from, message_content, sender_name, msg_timestamp) VALUES('1135622190', '$user_id', '$mc', '$name', '$timestamp'";
 
