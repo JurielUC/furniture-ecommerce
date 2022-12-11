@@ -38,42 +38,122 @@
     <main>
         <div class="container">
             <section class="post-cont">
+                <?php
+                    include '../../php-database/dbconnect.php';
+
+                    $to=$_GET['to'];
+                    $from=$_GET['from'];
+                ?>
                 <div class="form-cont">
                     <h1>Sales Report</h1>
                 </div>
                 <div class="category">
-                    <form action="sales-report-res.php" method="get">
+                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="get">
                         <label for="from">From: </label>
-                        <input type="date" name="from" id="from">
+                        <input type="date" name="from" id="from" value="<?php echo $from ?>">
                         <label for="to">To: </label>
-                        <input type="date" name="to" id="to">
+                        <input type="date" name="to" id="to" value="<?php echo $to ?>">
                         <input type="submit" value="SHOW">
                     </form>
                 </div>
                 <div class="user-post-cont">
                     <div class="trans-tally">
                         <div class="sold tally-cont">
-                            <div class="tally-text">
-                                <div>
-                                    <h5>No. of product sold</h5>
+                                <div class="tally-text">
+                                    <div>
+                                        <h5>No. of product sold</h5>
+                                    </div>
+                                    <!--PHP code to get number of item sold-->
+                                    <?php 
+                                        $sql5 = "SELECT SUM(order_qty) AS total FROM tb_ordercompleted WHERE date BETWEEN '$from' AND '$to'";
+                                        $res5 = mysqli_query($conn, $sql5);
+
+                                        while($ps = mysqli_fetch_assoc($res5)){
+                                            $nps=$ps['total'];
+                                            if($nps == NULL){
+                                                echo "<div class='res'><h1>0</h1></div>";
+                                            }else{
+                                                echo "<div class='res'><h1>$nps</h1></div>";
+                                            }
+                                        }
+                                    ?>
                                 </div>
-                                <div class='res'><h1>0</h1></div>
-                            </div>
-                            <div class="tally-icon">
-                                <img src="../../../image/icon/sold-out.png" alt="" width="70px">
-                            </div>
-                        </div>
-                        <div class="transaction-no tally-cont">
-                            <div class="tally-text">
-                                <div>
-                                    <h5>No. of transactions</h5>
+                                <div class="tally-icon">
+                                    <img src="../../../image/icon/sold-out.png" alt="" width="70px">
                                 </div>
-                                <div class='res'><h1>0</h1></div>
                             </div>
-                            <div class="tally-icon">
-                                <img src="../../../image/icon/transaction.png" alt="" width="70px">
+                            <div class="transaction-no tally-cont">
+                                <div class="tally-text">
+                                    <div>
+                                        <h5>No. of transactions</h5>
+                                    </div>
+                                    <!--PHP code to get number of item sold-->
+                                    <?php 
+                                        $sql6 = "SELECT COUNT(order_qty) AS total_trans FROM tb_ordercompleted WHERE date BETWEEN '$from' AND '$to'";
+                                        $res6 = mysqli_query($conn, $sql6);
+
+                                        while($ps6 = mysqli_fetch_assoc($res6)){
+                                            $nps6=$ps6['total_trans'];
+                                            echo "<div class='res'><h1>$nps6</h1></div>";
+                                        }
+                                    ?>
+                                </div>
+                                <div class="tally-icon">
+                                    <img src="../../../image/icon/transaction.png" alt="" width="70px">
+                                </div>
                             </div>
+                    </div>
+                    <div class="total-sale">
+                        <div class="total-sale-desc"><p>Total Sales Revenue from <b><?php echo $from; ?></b> to <b><?php echo $to; ?></b></p></div>
+                        <div class="total-sale-res">
+                            <img src="../../../image/icon/philippine-peso.png" alt="" width="20px">&nbsp
+                            <?php 
+                                $sql7 = "SELECT SUM(total_price) AS tprice FROM tb_ordercompleted WHERE date BETWEEN '$from' AND '$to'";
+                                $res7 = mysqli_query($conn, $sql7);
+
+                                while($ps7 = mysqli_fetch_assoc($res7)){
+                                    $nps7=$ps7['tprice'];
+                                    if($nps7 == NULL){
+                                        echo "<h3>0.00</h3>";
+                                    }else{
+                                        echo "<h3>$nps7.00</h3>";
+                                    }
+                                }
+                            ?>
+                            <p></p>
                         </div>
+                    </div>
+                    <div class="trans-table">
+                        <table>
+                            <tr class="table-head">
+                                <th width="25%">Transaction ID</th>
+                                <th width="25%">User ID</th>
+                                <th width="25%">Date</th>
+                                <th width="25%">Total Amount</th>
+                            </tr>
+                            <?php 
+                                $sql8 = "SELECT * FROM tb_ordercompleted WHERE date BETWEEN '$from' AND '$to'";
+                                $res8 = mysqli_query($conn, $sql8);
+
+                                if (mysqli_num_rows($res8) == 0) {
+                                    echo "<div class='nodata' style='position: absolute; width: 690px; height: 50vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
+                                        <img src='../../../image/icon/file.png' width='120px' height='120px'>
+                                        <p>No Transactions</p>
+                                        </div>";
+                                    }
+
+                                while($row8 = mysqli_fetch_assoc($res8)){
+                            ?>
+                            <tr class="table-data">
+                                <td><?php echo $row8['trans_id']; ?></td>
+                                <td><?php echo $row8['user_id']; ?></td>
+                                <td><?php echo $row8['datetime']; ?></td>
+                                <td>PHP <?php echo $row8['total_price']; ?>.00</td>
+                            </tr>
+                            <?php 
+                                }
+                            ?>
+                        </table>
                     </div>
                     
                 </div>
