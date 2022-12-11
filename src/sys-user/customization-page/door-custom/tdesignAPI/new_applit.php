@@ -182,8 +182,12 @@
 							<td><p><b>2200.00</b></p></td>
 						</tr>
 						<tr style="border-bottom: 1px solid #ffffff;">
-							<td><p>Solid Wood</p></td>
-							<td><p><b>5800.00</b></p></td>
+							<td><p>Mahogany Single</p></td>
+							<td><p><b>5500.00</b></p></td>
+						</tr>
+						<tr style="border-bottom: 1px solid #ffffff;">
+							<td><p>Akasya Single</p></td>
+							<td><p><b>7500.00</b></p></td>
 						</tr>
 						<tr style="border-bottom: 1px solid #ffffff;">
 							<th><h5><b>Double Door</b></h5></th>
@@ -193,7 +197,11 @@
 							<td><p><b>4400.00</b></p></td>
 						</tr>
 						<tr style="border-bottom: 1px solid #ffffff;">
-							<td><p>Solid Wood</p></td>
+							<td><p>Mahogany Double</p></td>
+							<td><p><b>9600.00</b></p></td>
+						</tr>
+						<tr style="border-bottom: 1px solid #ffffff;">
+							<td><p>Akasya Double</p></td>
 							<td><p><b>9600.00</b></p></td>
 						</tr>
 						<tr>
